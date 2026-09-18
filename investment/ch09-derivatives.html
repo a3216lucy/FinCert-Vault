@@ -1,0 +1,1319 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>衍生性金融商品與選擇權｜投資學 CH09</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    />
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div id="site-nav"></div>
+      <div class="content">
+        <header class="masthead">
+          <div class="masthead-inner">
+            <span class="eyebrow">證券商高級業務員 · 投資學 · 第 9 章</span>
+            <h1>衍生性金融商品與選擇權</h1>
+          </div>
+        </header>
+        <p class="crumb">
+          <a href="/index.html">高業考前重點</a> ／ 投資學 ／ 第 9 章
+        </p>
+
+        <main>
+          <section class="unit">
+            <div class="unit-head"><h2>衍生性金融商品概述</h2></div>
+            <div class="explain">
+              <ul>
+                <li>
+                  <strong>衍生性金融商品</strong
+                  >：由兩種以上傳統現貨、基礎金融商品或遠期工具結合所衍生的契約，可管理風險與發現價格
+                </li>
+                <li>
+                  <ul>
+                    <li>
+                      <strong>遠期契約</strong
+                      >：雙方約定未來特定時間，依約定條件買賣某標的物，在店頭市場交易
+                    </li>
+                    <li>
+                      <strong>期貨契約</strong>：標準化的遠期契約，在交易所內交易
+                    </li>
+                    <li>
+                      <strong>交換契約</strong
+                      >：雙方約定未來特定時間，依約交付交換某標的物
+                    </li>
+                    <li>
+                      <strong>選擇權契約</strong
+                      >：雙方約定未來特定時間，「買方有權利買或賣」而「賣方有義務賣或買」某標的物
+                    </li>
+                    <li>
+                      <strong>認購（售）權證</strong
+                      >：持有者可在未來一段時間內，用約定價格買（賣）股票的權利
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="unit">
+            <div class="unit-head"><h2>選擇權基本概念</h2></div>
+            <div class="explain">
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th></th>
+                    <th>選擇權買方</th>
+                    <th>選擇權賣方</th>
+                  </tr>
+                  <tr>
+                    <td>權利義務</td>
+                    <td>有權利要求賣方履約</td>
+                    <td>有義務必須履約</td>
+                  </tr>
+                  <tr>
+                    <td>代價</td>
+                    <td>支付權利金給賣方</td>
+                    <td>收取權利金，支付保證金並承擔風險</td>
+                  </tr>
+                  <tr>
+                    <td>最大風險</td>
+                    <td>損失權利金（有限）</td>
+                    <td>全部損失（風險可能無限大）</td>
+                  </tr>
+                  <tr>
+                    <td>利潤</td>
+                    <td>高</td>
+                    <td>固定（權利金）</td>
+                  </tr>
+                </table>
+              </div>
+              <p class="sub-label">
+                四種交易口訣（買入 +、賣出 －；買權 +、賣權 －）：
+              </p>
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th></th>
+                    <th>買權 (+)</th>
+                    <th>賣權 (－)</th>
+                  </tr>
+                  <tr>
+                    <td><strong>買入 (+)</strong></td>
+                    <td>正正得正・預期大漲</td>
+                    <td>正負得負・預期大跌</td>
+                  </tr>
+                  <tr>
+                    <td><strong>賣出 (－)</strong></td>
+                    <td>負正得負・預期小跌</td>
+                    <td>負負得正・預期小漲</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（9 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q1</p>
+                <p class="qtext">
+                  下列何者屬於衍生性金融商品？甲.特別股；乙.選擇權；丙.期貨；丁.遠期契約
+                </p>
+                <div class="opts">
+                  <div class="opt">A．僅甲、乙</div>
+                  <div class="opt right">B．僅乙、丙、丁</div>
+                  <div class="opt">C．僅甲、乙、丁</div>
+                  <div class="opt">D．甲、乙、丙、丁</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >特別股屬於傳統現貨（股權工具），非衍生性金融商品；選擇權、期貨、遠期契約皆為衍生性金融商品。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q2</p>
+                <p class="qtext">有關選擇權之敘述，何者「正確」？</p>
+                <div class="opts">
+                  <div class="opt">A．選擇權的買方須繳交保證金</div>
+                  <div class="opt">B．選擇權的買方風險無限</div>
+                  <div class="opt">C．選擇權之賣方潛在獲利無限</div>
+                  <div class="opt right">D．選擇權的買方須繳交權利金</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >賣方才要繳保證金，且賣方風險無限、獲利有限；買方繳權利金，風險有限（僅損失權利金）。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q3</p>
+                <p class="qtext">有關選擇權之敘述，何者「正確」？</p>
+                <div class="opts">
+                  <div class="opt">A．選擇權的買方須繳交保證金</div>
+                  <div class="opt">B．選擇權的買方風險無限</div>
+                  <div class="opt">C．選擇權之賣方潛在獲利無限</div>
+                  <div class="opt right">D．選項 ABC 皆非</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>賣方繳保證金，且風險無限獲利有限。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q21</p>
+                <p class="qtext">
+                  於臺灣期貨交易所掛牌之股票選擇權權利金，其每日漲跌幅限制之說明，下列何者「正確」？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．無漲跌幅之限制</div>
+                  <div class="opt">
+                    B．每日漲跌幅點數為前一交易日權利金收盤價之 10%
+                  </div>
+                  <div class="opt">
+                    C．每日漲跌幅點數為約定標的物價值之當日最大變動金額之
+                    10%
+                  </div>
+                  <div class="opt right">
+                    D．每日漲跌幅點數為約定標的物價值之當日最大變動金額除以權利金乘數
+                  </div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >每日漲跌幅點數＝約定標的物價值之當日最大變動金額除以權利金乘數。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q22</p>
+                <p class="qtext">
+                  有關股票選擇權權利金報價單位，何者「正確」？甲.1
+                  點價值為新臺幣 200 元；乙.權利金未滿 5 點：0.01
+                  點；丙.權利金在 15 點以上，未滿 50 點：0.1 點
+                </p>
+                <div class="opts">
+                  <div class="opt">A．僅甲、乙</div>
+                  <div class="opt right">B．僅乙、丙</div>
+                  <div class="opt">C．僅甲、丙</div>
+                  <div class="opt">D．甲、乙、丙</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>權利金 1
+                  點價值應為新臺幣 2,000 元，非 200 元，甲錯誤；乙、丙正確。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q23</p>
+                <p class="qtext">
+                  有關我國「櫃買選擇權契約規定」之敘述，何者為真？甲.為美式選擇權；乙.到期月份為自交易當月起連續三個月份，另加上三、六、九、十二月中二個接續的季月
+                </p>
+                <div class="opts">
+                  <div class="opt">A．甲、乙皆是</div>
+                  <div class="opt">B．僅甲</div>
+                  <div class="opt right">C．僅乙</div>
+                  <div class="opt">D．甲、乙皆非</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>臺灣選擇權為歐式選擇權，非美式，甲錯誤；到期月份規定乙正確。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q24</p>
+                <p class="qtext">
+                  對普通股股東而言，可以把普通股看成是：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．買公司資產，再賣一個買權</div>
+                  <div class="opt">B．買公司資產，再賣一個賣權</div>
+                  <div class="opt">C．買公司資產，再買一個買權</div>
+                  <div class="opt right">D．買公司資產，再買一個賣權</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >股東持有公司資產，同時等同持有一個保障下檔風險的賣權（有限責任）。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q25</p>
+                <p class="qtext">
+                  股票選擇權契約調整規定中，有關現金股利部分之敘述何者「正確」？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．交易人可要求延期至取得股利後交割</div>
+                  <div class="opt">B．一律按現金股利殖利率調整</div>
+                  <div class="opt right">
+                    C．現金股利殖利率未逾 2% 者不予調整
+                  </div>
+                  <div class="opt">D．現金股利殖利率逾 1% 以上者才調整</div>
+                </div>
+                <p class="why"><strong>解析：</strong>零散的考點。</p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q26</p>
+                <p class="qtext">
+                  臺灣期貨交易所之個股選擇權之交易標的敘述何者「正確」？甲、上市櫃公司之普通股；乙、上市櫃公司之特別股；丙、上市櫃公司之受益憑證；丁、原則上契約單位為
+                  1,000 股的標的證券
+                </p>
+                <div class="opts">
+                  <div class="opt">A．僅甲、乙</div>
+                  <div class="opt right">B．僅甲、丙</div>
+                  <div class="opt">C．僅甲、丙、丁</div>
+                  <div class="opt">D．甲、乙、丙、丁</div>
+                </div>
+                <p class="why"><strong>解析：</strong>零散的考點。</p>
+              </div>
+            </details>
+          </section>
+
+          <section class="unit">
+            <div class="unit-head">
+              <h2>選擇權價值與影響因素</h2>
+            </div>
+            <div class="diagram-card">
+              <svg viewBox="0 0 260 130">
+                <line
+                  x1="15"
+                  y1="100"
+                  x2="250"
+                  y2="100"
+                  stroke="var(--ink-20)"
+                />
+                <rect
+                  x="15"
+                  y="25"
+                  width="90"
+                  height="75"
+                  fill="var(--jade-soft)"
+                  stroke="var(--jade)"
+                  stroke-width="1.5"
+                />
+                <text
+                  x="20"
+                  y="16"
+                  font-size="13"
+                  fill="var(--jade)"
+                  class="mono"
+                >
+                  內含價值
+                </text>
+                <rect
+                  x="105"
+                  y="65"
+                  width="90"
+                  height="35"
+                  fill="var(--gold-soft)"
+                  stroke="var(--gold)"
+                  stroke-width="1.5"
+                />
+                <text
+                  x="110"
+                  y="55"
+                  font-size="13"
+                  fill="var(--gold)"
+                  class="mono"
+                >
+                  時間價值
+                </text>
+                <text x="15" y="120" font-size="13" fill="var(--ink-70)">
+                  權利金 ＝ 內含價值 ＋ 時間價值
+                </text>
+              </svg>
+            </div>
+            <div class="formula">
+              <div class="formula-line">權利金 ＝ 內含價值 ＋ 時間價值</div>
+            </div>
+            <div class="explain">
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th>因素</th>
+                    <th>買權（權利金）價格</th>
+                    <th>賣權（權利金）價格</th>
+                  </tr>
+                  <tr>
+                    <td>標的物價格越高</td>
+                    <td class="warn">越高</td>
+                    <td>越低</td>
+                  </tr>
+                  <tr>
+                    <td>履約價格越高</td>
+                    <td>越低</td>
+                    <td class="warn">越高</td>
+                  </tr>
+                  <tr>
+                    <td>標的物價格波動越高</td>
+                    <td class="warn">越高</td>
+                    <td class="warn">越高</td>
+                  </tr>
+                  <tr>
+                    <td>到期期間越長</td>
+                    <td>越高</td>
+                    <td>越高</td>
+                  </tr>
+                  <tr>
+                    <td>無風險利率越高</td>
+                    <td>越高</td>
+                    <td>越低</td>
+                  </tr>
+                </table>
+              </div>
+              <ul>
+                <li>
+                  選擇權目前賺錢狀態稱為<strong>價內</strong>，賠錢則為<strong>價外</strong>，不賺不賠稱為<strong
+                    >價平</strong
+                  >
+                </li>
+                <li>
+                  <ul>
+                    <li>內含價值為履約價與標的物的差值</li>
+                    <li>時間價值隨到期日越近而越低</li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li>美式選擇權：期限內隨時能履約</li>
+                    <li>
+                      <strong>歐式選擇權</strong>：到期才能履約，<strong
+                        >臺灣為歐式</strong
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（17 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q4</p>
+                <p class="qtext">
+                  某一標的物市價 40 元，執行價格 43 元之賣權價格為 5
+                  元，則此賣權之內含價值為何？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．5 元</div>
+                  <div class="opt right">B．3 元</div>
+                  <div class="opt">C．2 元</div>
+                  <div class="opt">D．0 元</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>賣權現在執行可用 43 元賣出市價 40
+                  元的標的，可賺 3 元，代表內含價值為 3 元。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q9</p>
+                <p class="qtext">
+                  小真支付 5 元之權利金買進一賣權，該賣權履約價格為 100
+                  元，請問標的物價格為多少時，才能使小真損益兩平？
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．95 元</div>
+                  <div class="opt">B．100 元</div>
+                  <div class="opt">C．90 元</div>
+                  <div class="opt">D．105 元</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>買進賣權代表看空，損益兩平點 ＝ 履約價
+                  100 － 權利金 5 ＝ 95 元。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q20</p>
+                <p class="qtext">
+                  在其他條件不變下，當履約價格（strike
+                  price）下降時，歐式買權（European
+                  call）的價格會＿＿，而美式賣權（American put）的價格會＿＿
+                </p>
+                <div class="opts">
+                  <div class="opt">A．上升；上升</div>
+                  <div class="opt">B．下降；上升</div>
+                  <div class="opt right">C．上升；下降</div>
+                  <div class="opt">D．下降；下降</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >履約價降低：買權更容易獲利（價格上升）；賣權更難獲利（價格下降）。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q5</p>
+                <p class="qtext">
+                  某甲購買 7 月份到期，履約價格為 28 元之 1 口中鋼買權。若於
+                  7 月到期日當天中鋼收盤價為 36 元，某甲可否提出履約申請？
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．可以</div>
+                  <div class="opt">B．不可以</div>
+                  <div class="opt">C．視賣方而定</div>
+                  <div class="opt">D．視手中有無中鋼現股而定</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>36 元標的可用 28
+                  元買進，甲買入買權可申請履約。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q6</p>
+                <p class="qtext">
+                  假設有一買權的履約價格為 52 元，權利金 3
+                  元，其標的物價格目前為 49 元，請問該買權的履約價值為何？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．3 元</div>
+                  <div class="opt">B．2 元</div>
+                  <div class="opt">C．1 元</div>
+                  <div class="opt right">D．0 元</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>49 元標的要用 52
+                  元買入，代表沒有履約的價值。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q7</p>
+                <p class="qtext">
+                  假設一個履約價格為 $50 的買權，其市場價格等於
+                  $2，而標的股價目前為 $45，則下列敘述何者正確？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．該買權的內含價值等於 $3</div>
+                  <div class="opt">B．標的股價至少會上漲到 $52</div>
+                  <div class="opt">C．買權投資人已經獲利 $5</div>
+                  <div class="opt right">D．該買權的時間價值等於 $2</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>目前標的股價為
+                  45，代表 50 元履約的買權內含價值為
+                  0，也就是權利金＝時間價值。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q8</p>
+                <p class="qtext">
+                  小花購買了履約價為 0.60 美元，每單位 0.06
+                  美元權利金的加幣賣權，並假設每口選擇權合約規模為 50,000
+                  加幣（單位），購買當時的即期匯率為 0.61
+                  美元，試計算每口選擇權的時間價值：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．$0</div>
+                  <div class="opt">B．$2,000</div>
+                  <div class="opt">C．$2,500</div>
+                  <div class="opt right">D．$3,000</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>履約價 0.6 代表可用 0.6
+                  賣出，但目前匯率 0.61，代表此賣權無內含價值，購買的權利金全部為時間價值：每口
+                  50,000 單位 × 每單位 0.06 美元 ＝ $3,000。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q10</p>
+                <p class="qtext">
+                  假設目前市場上對於 VR（虛擬實境）很看好，所以投資人對於從事
+                  VR
+                  的白水木公司股價看多，如果當你也認同時，請問以下幾種方式，可以讓你獲利？I.買入白水木公司買權；II.買入白水木公司賣權；III.賣出白水木公司買權；IV.賣出白水木公司賣權
+                </p>
+                <div class="opts">
+                  <div class="opt">A．1 種</div>
+                  <div class="opt right">B．2 種</div>
+                  <div class="opt">C．3 種</div>
+                  <div class="opt">D．4 種</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>看多可獲利：買入買權（I）、賣出賣權（IV），故
+                  2 種。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q11</p>
+                <p class="qtext">
+                  當標的資產（underlying asset）市價高於選擇權的履約價格（striking
+                  price）時，請問：賣權（put option）處於下列何種情況？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．價平（at the money）</div>
+                  <div class="opt">B．價內（in the money）</div>
+                  <div class="opt right">C．價外（out of the money）</div>
+                  <div class="opt">D．權利金（premium）</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>標的市價高於履約價時，賣權執行沒有價值，屬於價外。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q12</p>
+                <p class="qtext">
+                  某甲買進一口履約價為 50 元之仁寶賣權，並賣出一口履約價為
+                  39 元之仁寶賣權，則某甲應繳交保證金為：
+                </p>
+                <div class="opts">
+                  <div class="opt">
+                    A．買進與賣出部位之履約價差乘以履約價格乘數
+                  </div>
+                  <div class="opt right">B．不需要繳交保證金</div>
+                  <div class="opt">C．僅需繳交賣出部位之保證金</div>
+                  <div class="opt">D．僅需繳交買進部位之保證金</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >賣出賣權需要繳交保證金，但同時買入一口同樣標的且履約價更高的賣權，代表保證能負擔損失，所以不需付保證金。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q13</p>
+                <p class="qtext">
+                  在決定選擇權價值的諸多因素中，除了定價公式本身可能需要由買方與賣方協議說明各自立場外，最能解釋彼此報價不同的關鍵因素為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．標的物價格</div>
+                  <div class="opt">B．利率水準</div>
+                  <div class="opt right">C．標的物價格波動性</div>
+                  <div class="opt">D．履約價格</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>標的物價格波動性是解釋選擇權報價差異最關鍵的因素。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q14</p>
+                <p class="qtext">何項因素將使買進選擇權的價格提高？</p>
+                <div class="opts">
+                  <div class="opt">A．標的物價格越低</div>
+                  <div class="opt">B．執行價格越高</div>
+                  <div class="opt right">C．到期期間越長</div>
+                  <div class="opt">D．股價波動較小</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>到期期間越長，時間價值越高，選擇權價格越高。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q15</p>
+                <p class="qtext">下列哪一種變化不會使買權的價值隨之增加？</p>
+                <div class="opts">
+                  <div class="opt right">A．發放股利</div>
+                  <div class="opt">B．無風險利率高</div>
+                  <div class="opt">C．標的物價格波動性高</div>
+                  <div class="opt">D．標的物價格高</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >發放股利會使標的物除息後價格下降，反而使買權價值降低。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q16</p>
+                <p class="qtext">下列何者可增加買權的價值？</p>
+                <div class="opts">
+                  <div class="opt">A．距到期日的時間縮短</div>
+                  <div class="opt right">B．利率較高</div>
+                  <div class="opt">C．標的資產價值變動小</div>
+                  <div class="opt">D．選項 ABC 皆是</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>無風險利率越高，買權價值越高。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q17</p>
+                <p class="qtext">
+                  下列何者會使得股票賣權（Put Option）的價值增加？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．標的股票價格增加</div>
+                  <div class="opt">B．執行價格（Exercise Price）下降</div>
+                  <div class="opt">C．標的股票的波動性減少</div>
+                  <div class="opt right">D．到期日變長</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>到期日變長，時間價值增加，賣權價值增加。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q18</p>
+                <p class="qtext">
+                  一般來說，不論是買權（Call Options）或賣權（Put
+                  Options），距到期日愈近，則時間價值：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．視情況而定</div>
+                  <div class="opt right">B．愈低</div>
+                  <div class="opt">C．愈高</div>
+                  <div class="opt">D．時間與權利金價格無關</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>距到期日愈近，時間價值愈低。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q19</p>
+                <p class="qtext">認購權證只能在到期日履約者為：</p>
+                <div class="opts">
+                  <div class="opt">A．美式認購權證</div>
+                  <div class="opt right">B．歐式認購權證</div>
+                  <div class="opt">C．歐式、美式認購權證均可</div>
+                  <div class="opt">D．選項(A)(B)(C)皆非</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>歐式選擇權只能在到期日履約，美式選擇權期限內隨時可履約。
+                </p>
+              </div>
+            </details>
+          </section>
+
+          <section class="unit">
+            <div class="unit-head"><h2>期貨</h2></div>
+            <div class="explain">
+              <ul>
+                <li>
+                  <strong>期貨</strong
+                  >：雙方約定於未來某一時間，依標準合約約定的價格與規格在交易所買賣特定資產
+                </li>
+                <li>
+                  交易雙方都有特定權利義務，為防其中一方付不出錢，須支付<strong
+                    >保證金</strong
+                  >（保證賠得起的錢）
+                  <ul>
+                    <li>
+                      <strong>原始保證金</strong>：一開始繳交
+                    </li>
+                    <li>
+                      <strong>維持保證金</strong
+                      >：維持與商品市價的特定比例，當原始保證金低於維持保證金，投資人需補繳保證金至原始保證金水準
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th></th>
+                    <th>選擇權</th>
+                    <th>期貨</th>
+                  </tr>
+                  <tr>
+                    <td>權利義務</td>
+                    <td>買方有權利、賣方有義務</td>
+                    <td>均有權利與義務</td>
+                  </tr>
+                  <tr>
+                    <td>權利金</td>
+                    <td>買方付給賣方</td>
+                    <td>無</td>
+                  </tr>
+                  <tr>
+                    <td>保證金</td>
+                    <td>賣方支付</td>
+                    <td>買賣雙方皆須支付</td>
+                  </tr>
+                </table>
+              </div>
+              <ul>
+                <li>
+                  期貨功能：避險、<strong>價格發現</strong>（期貨價格是現貨價格的領先指標）、投機
+                </li>
+                <li>
+                  股價指數期貨交割方式為<strong>現金交割</strong>
+                  <ul>
+                    <li>金融保險類期貨每點 1,000 元，小型期貨（MTX）每點 50 元</li>
+                  </ul>
+                </li>
+                <li>
+                  臺指期貨到期月份：當月起連續 3 個月＋3、6、9、12 月中 3
+                  個接續季月
+                </li>
+                <li>
+                  <strong>臺指選擇權</strong
+                  >到期月份：當月起連續 3 個月＋3、6、9、12 月中
+                  <strong>2 個</strong>接續季月（比期貨少 1 個季月）
+                </li>
+              </ul>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（11 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q27</p>
+                <p class="qtext">
+                  一般而言，期貨交易對散戶（自然人）所提供的功能是：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．避險功能大於投機功能</div>
+                  <div class="opt right">B．投機功能大於避險功能</div>
+                  <div class="opt">C．投機與避險二者約略相當</div>
+                  <div class="opt">D．難以論定</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>散戶（自然人）從事期貨交易多屬投機性質，投機功能大於避險功能。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q28</p>
+                <p class="qtext">
+                  所謂期貨的「價格發現」功能，意味著期貨價格是現貨價格的：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．落後指標</div>
+                  <div class="opt">B．同時指標</div>
+                  <div class="opt right">C．領先指標</div>
+                  <div class="opt">D．選項 ABC 皆非</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>期貨價格反映市場對未來現貨價格的預期，是現貨價格的領先指標。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q29</p>
+                <p class="qtext">
+                  下列何者須繳保證金？甲.買期貨；乙.賣期貨；丙.買選擇權；丁.賣選擇權
+                </p>
+                <div class="opts">
+                  <div class="opt">A．僅甲、乙、丙</div>
+                  <div class="opt">B．僅乙、丙、丁</div>
+                  <div class="opt right">C．僅甲、乙、丁</div>
+                  <div class="opt">D．甲、乙、丙、丁</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>期貨買賣雙方皆須繳保證金；選擇權僅賣方須繳保證金，買方僅需支付權利金。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q30</p>
+                <p class="qtext">
+                  下列交易何者須繳保證金？甲.買期貨；乙.融券賣出股票；丙.買選擇權
+                </p>
+                <div class="opts">
+                  <div class="opt">A．僅甲</div>
+                  <div class="opt">B．僅甲、丙</div>
+                  <div class="opt right">C．僅甲、乙</div>
+                  <div class="opt">D．甲、乙、丙</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>買期貨、融券賣出股票皆須繳保證金；買選擇權僅需支付權利金，不須繳保證金。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q31</p>
+                <p class="qtext">股價指數期貨之契約規格中，其交割方式為何？</p>
+                <div class="opts">
+                  <div class="opt">A．股票指數交割</div>
+                  <div class="opt">B．指數交割</div>
+                  <div class="opt right">C．現金交割</div>
+                  <div class="opt">D．股票交割</div>
+                </div>
+                <p class="why"><strong>解析：</strong>股價指數期貨為現金交割。</p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q32</p>
+                <p class="qtext">
+                  假設目前臺灣證券交易所股價指數小型期貨（MTX）為 6,500
+                  點，則其一口契約價值為新臺幣？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．500,000 元</div>
+                  <div class="opt">B．300,000 元</div>
+                  <div class="opt">C．1,000,000 元</div>
+                  <div class="opt right">D．325,000 元</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>1 點 50 元，一口 ＝ 6,500×50 ＝ 325,000
+                  元。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q33</p>
+                <p class="qtext">
+                  2019 年 5 月底可以交易的臺指期貨契約到期月份，包括：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．5 月、6 月、7 月、8 月、9 月、10 月</div>
+                  <div class="opt">B．6 月、7 月、8 月、9 月、10 月、11 月</div>
+                  <div class="opt">C．6 月、7 月、9 月、12 月、隔年 3 月</div>
+                  <div class="opt right">
+                    D．6 月、7 月、8 月、9 月、12 月、隔年 3 月
+                  </div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >當月起連續 3 個月（6、7、8 月）＋3、6、9、12
+                  月中 3 個接續季月（9 月、12 月、隔年 3 月）。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q34</p>
+                <p class="qtext">
+                  臺灣 50 指數 ETF 與臺灣 50 指數期貨的比較，下列何者正確？甲.
+                  ETF 可長期投資，期貨則有期限限制；乙. ETF
+                  與股票交易相同，期貨為保證金交易；丙. ETF
+                  可累積現金股利，期貨沒有股利分派
+                </p>
+                <div class="opts">
+                  <div class="opt">A．僅甲、乙</div>
+                  <div class="opt">B．僅乙、丙</div>
+                  <div class="opt">C．僅甲、丙</div>
+                  <div class="opt right">D．甲、乙、丙</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>甲、乙、丙敘述皆正確。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q35</p>
+                <p class="qtext">
+                  假設 6 個月的利率為 0.5%，國庫券的現貨價格為 97，在未來 6
+                  個月裡國庫券利息給付之現值為 1，則 6
+                  個月的國庫債券期貨的價值為多少？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．96</div>
+                  <div class="opt">B．97</div>
+                  <div class="opt right">C．96.48</div>
+                  <div class="opt">D．98.7</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>國庫券期貨不參與除息，要扣除利息計算：(97－1)×(1+0.005)＝96.48。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q36</p>
+                <p class="qtext">
+                  公司銷售商品至美國而有美元應收帳款，以下哪個策略無法規避匯率風險？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．賣美元期貨</div>
+                  <div class="opt">B．賣遠期美元</div>
+                  <div class="opt">C．買美元賣權</div>
+                  <div class="opt right">D．賣臺灣存託憑證</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >有美元應收帳款，要避免美元跌價以防換回的台幣變少，賣臺灣存託憑證與美元匯率風險無關。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q37</p>
+                <p class="qtext">
+                  若美國之無風險利率為 4%，澳洲之無風險利率為 3%，當即期匯率
+                  1.67
+                  A$/$（A$：澳幣；$：美元）時，試問：一年期澳幣對美元匯率期貨契約之最適價格應為多少？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．1.687A$/$</div>
+                  <div class="opt right">B．1.654A$/$</div>
+                  <div class="opt">C．1.638A$/$</div>
+                  <div class="opt">D．1.778A$/$</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>利率平價理論公式：遠期匯率 ＝
+                  即期匯率×<span class="frac"
+                    ><span class="num">1+本國利率</span
+                    ><span class="den">1+外國利率</span></span
+                  >，即期匯率標示 A$/$，代表本國是澳洲、外國是美國<br />→
+                  <span class="frac"
+                    ><span class="num">1.03</span
+                    ><span class="den">1.04</span></span
+                  >×1.67 A$/$ ＝ 1.654 A$/$。
+                </p>
+              </div>
+            </details>
+          </section>
+
+          <section class="unit">
+            <div class="unit-head"><h2>權證</h2></div>
+            <div class="formula">
+              <div class="formula-line">
+                槓桿比率 ＝
+                <span class="frac"
+                  ><span class="num">標的證券價格</span
+                  ><span class="den">權證價格</span></span
+                >
+              </div>
+              <div class="formula-line">
+                漲跌停價 ＝ 標的證券漲跌停價格 × 執行比例
+              </div>
+            </div>
+            <div class="explain">
+              <ul>
+                <li>
+                  股票買權稱認購權證，賣權稱認售權證
+                  <ul>
+                    <li>交易單位為 1,000 單位，採集合競價</li>
+                    <li>
+                      履約方式：給付證券、現金結算（需負擔手續費、認購股款、證交稅），也有分美式與歐式
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li>權證價值 ＝ 內含價值 ＋ 時間價值</li>
+                    <li>內含價值 ＝ 證券市價 － 權證履約價格</li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="callout-line">
+                券商發行認購權證後為規避風險，應「買入並持有適當數量」標的股票
+                <span class="arrow">➜ 考點注意</span>
+              </div>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（7 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q38</p>
+                <p class="qtext">
+                  其他條件不變下，權證價值之敘述何者「正確」？甲.股價上漲，認售權證價值下跌；乙.履約價格越高，認購權證價值越高；丙.存續期間愈長，認購權證價值愈高，認售權證價值愈低；丁.股價波動大，認購權證及認售權證價值提高
+                </p>
+                <div class="opts">
+                  <div class="opt">A．僅甲、乙</div>
+                  <div class="opt right">B．僅甲、丁</div>
+                  <div class="opt">C．僅乙、丙</div>
+                  <div class="opt">D．甲、乙、丙、丁</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >乙：履約價格越高，認購權證價值越低（非越高）；丙：存續期間愈長，認購、認售權證價值皆愈高（非認售權證愈低），乙、丙敘述錯誤。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q39</p>
+                <p class="qtext">
+                  理論上，其他條件不變下，當市場利率下跌則認購權證價格會：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．上漲</div>
+                  <div class="opt right">B．下跌</div>
+                  <div class="opt">C．不變</div>
+                  <div class="opt">D．不一定</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>無風險利率越低，認購權證價值越低。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q40</p>
+                <p class="qtext">
+                  執行認購權證之權利時，在現金給付之情形下，需交付：甲.手續費；乙.認購股款；丙.證券交易稅
+                </p>
+                <div class="opts">
+                  <div class="opt">A．僅乙</div>
+                  <div class="opt">B．僅甲、乙</div>
+                  <div class="opt">C．僅甲、丙</div>
+                  <div class="opt right">D．甲、乙、丙</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>現金給付需交付手續費、認購股款、證券交易稅。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q41</p>
+                <p class="qtext">
+                  標的物市價 81 元，執行價格 75 元，認購權證 45
+                  元，則該認購權證之槓桿比率為何？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．2.5</div>
+                  <div class="opt">B．2</div>
+                  <div class="opt right">C．1.8</div>
+                  <div class="opt">D．1.5</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>槓桿比率 ＝
+                  <span class="frac"
+                    ><span class="num">標的證券價格</span
+                    ><span class="den">權證價格</span></span
+                  >
+                  ＝
+                  <span class="frac"
+                    ><span class="num">81</span
+                    ><span class="den">45</span></span
+                  >
+                  ＝ 1.8。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q42</p>
+                <p class="qtext">
+                  假設前一營業日 H 公司股價收盤為 30 元，其認購權證之履約價格為
+                  25 元，權利金為 3.5 元，若執行比例為 1.3，請問今天 H
+                  公司權證之最大上漲幅度為？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．7.00%</div>
+                  <div class="opt">B．8.40%</div>
+                  <div class="opt">C．120.57%</div>
+                  <div class="opt right">D．111.43%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>最大上漲金額 ＝ 30 元×10%×1.3 ＝ 3.9
+                  元<br />漲幅 ＝
+                  <span class="frac"
+                    ><span class="num">3.9</span
+                    ><span class="den">3.5</span></span
+                  >
+                  ＝ 111.43%。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q43</p>
+                <p class="qtext">
+                  某證券商發行甲股票之認購權證，為規避風險該券商應採取何種行動？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．售出或放空適當數量的甲股票</div>
+                  <div class="opt right">B．買入並持有適當數量的甲股票</div>
+                  <div class="opt">C．買入並持有適當數量的政府公債</div>
+                  <div class="opt">D．售出或放空適當數量的股價指數期貨</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>券商為避免股價過度上漲，因買入適當數量的股票。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q44</p>
+                <p class="qtext">
+                  某認購權證之發行總認購股數為 2,000 萬股，當其避險比率為
+                  0.4 時，則理論上發行券商應持有之避險部位為多少？
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．800 萬股</div>
+                  <div class="opt">B．2,100 萬股</div>
+                  <div class="opt">C．1,500 萬股</div>
+                  <div class="opt">D．1,000 萬股</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>2,000 萬股 × 避險比率 0.4 ＝ 800 萬股。
+                </p>
+              </div>
+            </details>
+          </section>
+
+          <section class="unit">
+            <div class="unit-head"><h2>結構型商品與可轉債資產交換</h2></div>
+            <div class="explain">
+              <ul>
+                <li>
+                  結構型商品由「一個固定收益商品 ＋
+                  一個選擇權」組成，固定收益商品通常為零息債券，提供保本功能，選擇權提供更高報酬可能
+                </li>
+                <li>
+                  <strong>股權連結商品（高收益債券）</strong>：固定收益商品 ＋
+                  <strong>賣出</strong>選擇權
+                </li>
+                <li>
+                  <strong>保本型商品</strong>：固定收益商品 ＋
+                  <strong>買入</strong>選擇權，選擇權所需權利金可靠固定收益商品的利息補回
+                  <ul>
+                    <li>
+                      本金可獲得一定比例保障（<strong>不一定</strong>是 100% 保障）
+                    </li>
+                    <li>
+                      報酬公式：保本率 ＋ 參與率 × 連結標的報酬
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>可轉債資產交換</strong
+                  >：券商將可轉換公司債拆成「債券」與「選擇權」分賣給債券投資人及選擇權投資人
+                  <ul>
+                    <li>
+                      債券投資人：可按時收到利息（來自券商），但轉換權在證券商，所以無法享有股價上漲的好處
+                    </li>
+                    <li>
+                      選擇權投資人：支付權利金，享有價格上漲之利益，並可於選擇權到期日前隨時履約
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  其他特性：
+                  <ul>
+                    <li>活絡證券商資金之運用</li>
+                    <li>承作天期常為投資人賣回日，附加可提前贖回條款</li>
+                    <li>券商承作總額限制受券商信用評等、資本淨值所影響</li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="callout-line">
+                資產交換可能被提前解約的情形：可轉債發行公司提前贖回、可轉債發行公司發生違約情事、可轉債價格上漲（價格上漲時券商有誘因提前解約，執行債券買回權）
+                <span class="arrow">➜ 考點注意</span>
+              </div>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（10 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q45</p>
+                <p class="qtext">
+                  有關股權連結商品的敘述，何者「正確」？甲.投資人為選擇權之買方；乙.報酬與契約期間長短有關；丙.又稱高收益債券（High
+                  Yield Notes）
+                </p>
+                <div class="opts">
+                  <div class="opt">A．僅甲、乙</div>
+                  <div class="opt">B．僅甲、丙</div>
+                  <div class="opt right">C．僅乙、丙</div>
+                  <div class="opt">D．甲、乙、丙</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >股權連結商品是投資人賣出選擇權，非買方，甲錯誤；乙、丙正確。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q46</p>
+                <p class="qtext">
+                  就投資者角度而言，股權連結商品的組合成分為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．買進固定收益證券與買進股票</div>
+                  <div class="opt">B．買進固定收益證券與買進選擇權</div>
+                  <div class="opt right">C．買進固定收益證券與賣出選擇權</div>
+                  <div class="opt">D．賣出固定收益證券與買進選擇權</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>股權連結商品 ＝ 固定收益證券 ＋
+                  賣出選擇權。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q47</p>
+                <p class="qtext">
+                  有關結構型商品的敘述，「正確」的有：甲、又稱連動型債券；乙、股權連結商品及保本型商品皆屬於結構型商品；丙、保本型商品於商品到期時本金可以完全保障
+                </p>
+                <div class="opts">
+                  <div class="opt">A．僅甲</div>
+                  <div class="opt">B．僅乙</div>
+                  <div class="opt right">C．僅甲、乙</div>
+                  <div class="opt">D．甲、乙、丙</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>保本型商品是保證一定百分比（如
+                  90%）的本金，所以不一定是本金完全保障，丙錯誤。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q48</p>
+                <p class="qtext">
+                  保本型商品的特色為：甲.投資人在可預知最大風險之下，享有獲得高報酬的機會；乙.保證一定百分比的本金發還
+                </p>
+                <div class="opts">
+                  <div class="opt">A．僅甲</div>
+                  <div class="opt">B．僅乙</div>
+                  <div class="opt right">C．甲、乙皆正確</div>
+                  <div class="opt">D．甲、乙皆不正確</div>
+                </div>
+                <p class="why"><strong>解析：</strong>甲、乙皆正確。</p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q49</p>
+                <p class="qtext">
+                  某證券公司發行一年期結構型債券（Structured
+                  Notes）的贖回金額公式如下：贖回金額＝投資本金×{1＋Max[5%,(10%×S&amp;P500
+                  指數成長率)]}下列有關此債券的敘述，何者為正確？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．為不保本，參與率 5% 的股權連結商品(ELN)</div>
+                  <div class="opt">
+                    B．為不保本，參與率 100% 的股權連結商品(ELN)
+                  </div>
+                  <div class="opt">
+                    C．為 100% 保本，參與率 15% 的保本型商品(PGN)
+                  </div>
+                  <div class="opt right">
+                    D．為 105% 保本，參與率 10% 的保本型商品(PGN)
+                  </div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>最低 1+5% 保本型商品，最高為 1+指數成長率×10%
+                  參與率的報酬，故為 105% 保本、參與率 10% 的保本型商品。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q50</p>
+                <p class="qtext">
+                  轉換公司債資產交換對證券商的優點，何者「正確」？甲.活絡證券商資金之運用；乙.承擔發行公司之信用風險以獲取較高收益
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．僅甲</div>
+                  <div class="opt">B．僅乙</div>
+                  <div class="opt">C．甲、乙皆正確</div>
+                  <div class="opt">D．甲、乙皆不正確</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >證券商從事資產交換是拆分並轉嫁信用風險給選擇權投資人，並非自行承擔以獲取較高收益，乙錯誤。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q51</p>
+                <p class="qtext">
+                  投資人和證券商進行轉換公司債資產交換取得之債券，有關公司債轉換權屬於何方擁有？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．投資人一方</div>
+                  <div class="opt right">B．證券商一方</div>
+                  <div class="opt">C．發行公司一方</div>
+                  <div class="opt">D．投資人和證券商雙方均擁有</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>轉換權在證券商，債券投資人僅按時收到利息，無法享有股價上漲的好處。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q52</p>
+                <p class="qtext">
+                  國內轉換公司債資產交換約定之到期日通常為標的轉換公司債之：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．贖回日</div>
+                  <div class="opt">B．到期日</div>
+                  <div class="opt right">C．賣回日</div>
+                  <div class="opt">D．發行公司除權除息日</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>約定到期日通常為標的轉換公司債之賣回日。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q53</p>
+                <p class="qtext">
+                  證券商從事結構型商品與轉換公司債資產交換交易業務，其承作總額度的限制受何者影響？甲.市場利率高低；乙.證券商之信用評等；丙.證券商之資本淨值
+                </p>
+                <div class="opts">
+                  <div class="opt">A．僅甲、乙</div>
+                  <div class="opt">B．僅甲、丙</div>
+                  <div class="opt right">C．僅乙、丙</div>
+                  <div class="opt">D．甲、乙、丙</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>承作總額度受證券商信用評等、資本淨值影響，與市場利率高低無關。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q54</p>
+                <p class="qtext">
+                  假如投資可轉換公司債資產交換的買權，買方如果發生資產交換提前被解約的情形，下列哪些情形「不是」可能發生的情形？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．可轉債發行公司提前贖回</div>
+                  <div class="opt">B．可轉債價格上漲</div>
+                  <div class="opt">C．可轉債發行公司發生違約情事</div>
+                  <div class="opt right">D．可轉債價格下跌</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >提前解約情形包含發行公司提前贖回、發生違約情事、可轉債價格上漲（券商有誘因提前解約），可轉債價格下跌不是解約情形。
+                </p>
+              </div>
+            </details>
+          </section>
+        </main>
+
+        <nav class="chapter-nav">
+          <a class="prev" href="/investment/ch08-efficient-market.html"
+            ><span class="dir">← 上一章</span>投資態度、策略與效率市場</a
+          >
+          <a class="next" href="/investment/ch10-economic-indicators.html"
+            ><span class="dir">下一章 →</span>經濟指標與貨幣政策</a
+          >
+        </nav>
+      </div>
+    </div>
+    <script src="/assets/nav.js"></script>
+  </body>
+</html>

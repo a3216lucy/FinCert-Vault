@@ -1,0 +1,1157 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>債券存續期間與價格｜投資學 CH03</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    />
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div id="site-nav"></div>
+      <div class="content">
+        <header class="masthead">
+          <div class="masthead-inner">
+            <span class="eyebrow">證券商高級業務員 · 投資學 · 第 3 章</span>
+            <h1>債券存續期間與價格</h1>
+          </div>
+        </header>
+        <p class="crumb">
+          <a href="/index.html">高業考前重點</a> ／ 投資學 ／ 第 3 章
+        </p>
+
+        <main>
+          <section class="unit">
+            <div class="unit-head">
+              <h2>債券定價</h2>
+            </div>
+            <div class="diagram-card">
+              <svg viewBox="0 0 230 100">
+                <line x1="14" y1="70" x2="205" y2="70" stroke="var(--ink-20)" />
+                <circle cx="14" cy="70" r="3.5" fill="var(--ink)" />
+                <circle cx="80" cy="70" r="3.5" fill="var(--jade)" />
+                <circle cx="140" cy="70" r="3.5" fill="var(--jade)" />
+                <circle cx="200" cy="70" r="3.5" fill="var(--seal)" />
+                <text
+                  x="14"
+                  y="90"
+                  font-size="10"
+                  fill="var(--ink-40)"
+                  class="mono"
+                  text-anchor="middle"
+                >
+                  今
+                </text>
+                <text
+                  x="80"
+                  y="90"
+                  font-size="10"
+                  fill="var(--jade)"
+                  class="mono"
+                  text-anchor="middle"
+                >
+                  利息
+                </text>
+                <text
+                  x="140"
+                  y="90"
+                  font-size="10"
+                  fill="var(--jade)"
+                  class="mono"
+                  text-anchor="middle"
+                >
+                  利息
+                </text>
+                <text
+                  x="200"
+                  y="90"
+                  font-size="10"
+                  fill="var(--seal)"
+                  class="mono"
+                  text-anchor="middle"
+                >
+                  利息+本金
+                </text>
+                <path
+                  d="M 80 63 Q 48 38 17 66"
+                  fill="none"
+                  stroke="var(--ink-40)"
+                  stroke-dasharray="3 2"
+                  marker-end="url(#a3)"
+                />
+                <path
+                  d="M 140 63 Q 78 18 19 63"
+                  fill="none"
+                  stroke="var(--ink-40)"
+                  stroke-dasharray="3 2"
+                  marker-end="url(#a3)"
+                />
+                <path
+                  d="M 200 63 Q 105 5 21 60"
+                  fill="none"
+                  stroke="var(--ink-40)"
+                  stroke-dasharray="3 2"
+                  marker-end="url(#a3)"
+                />
+                <defs>
+                  <marker
+                    id="a3"
+                    markerWidth="6"
+                    markerHeight="6"
+                    refX="3"
+                    refY="3"
+                    orient="auto"
+                  >
+                    <path d="M0,0 L6,3 L0,6 Z" fill="var(--ink-40)" />
+                  </marker>
+                </defs>
+                <text x="55" y="15" font-size="10" fill="var(--ink-40)">
+                  全部折現回今天
+                </text>
+              </svg>
+            </div>
+            <div class="formula">
+              <div class="formula-line">
+                現值 ＝ 未來每筆現金流，分別按殖利率折現後加總
+              </div>
+              <div class="formula-line">
+                折現因子 ＝
+                <span class="frac"
+                  ><span class="num">1</span
+                  ><span class="den">(1+i)ⁿ</span></span
+                >
+              </div>
+            </div>
+            <div class="explain">
+              <ul>
+                <li>
+                  把最後一年本金、以及每一年的利息，都用殖利率分別折現回現在，再全部加總，就是債券現在的價值（市價）
+                </li>
+                <li>隨著到期日接近，債券價格會逐漸向面額貼近（不論折價或溢價）</li>
+                <li>
+                  <ul>
+                    <li>
+                      <strong>殖利率 ＞ 票面利率</strong>：折價發行（市價 ＜
+                      面額）
+                    </li>
+                    <li>
+                      <strong>殖利率 ＝ 票面利率</strong>：平價發行（市價 ＝
+                      面額）
+                    </li>
+                    <li>
+                      <strong>殖利率 ＜ 票面利率</strong>：溢價發行（市價 ＞
+                      面額）
+                    </li>
+                  </ul>
+                  ➜
+                  當票面利率高於你要求的報酬率時，你會願意出更多錢買這張債券
+                </li>
+              </ul>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（11 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q1</p>
+                <p class="qtext">
+                  甲債券 6 個月的折現因子（Discount Factor）為 0.97，在 6
+                  個月後該債券之價格為 15,000 元，目前該債券之價格為多少？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．14,700 元</div>
+                  <div class="opt right">B．14,550 元</div>
+                  <div class="opt">C．15,000 元</div>
+                  <div class="opt">D．16,000 元</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>6 個月後的 15,000 等於現在的
+                  15,000×0.97＝14,550 元。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q2</p>
+                <p class="qtext">
+                  一個剛發行的 1 年期債券，面額為
+                  $10,000，每半年付息一次，其債息分別依序為 $300 和
+                  $500，若目前同類型債券之市場殖利率為
+                  10%，試計算該債券價格約為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．$8,950</div>
+                  <div class="opt right">B．$9,810</div>
+                  <div class="opt">C．$9,831</div>
+                  <div class="opt">D．$10,293</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>每半年付息一次，票面利率為 10% ÷ 2 ＝
+                  5%<br />300/(1+5%) ＋ 500/(1+5%)² ＋ 10,000/(1+5%)² ≈ 9,810。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q3</p>
+                <p class="qtext">
+                  發行面額 $10,000 的 1
+                  年期債券，每半年付息一次，其債息分別依序為 $300 和
+                  $500，若目前同類型債券之市場殖利率為 10%，則當利率下跌 100bps
+                  時該債券價格變動的金額約為多少？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．$88</div>
+                  <div class="opt right">B．$92</div>
+                  <div class="opt">C．$97</div>
+                  <div class="opt">D．$99</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>初始殖利率 10%，半年為 5%，初始債券價格
+                  ≈ 9,810<br />新殖利率下跌 100bps(1%) 變為 9%，半年為
+                  4.5%，新債券價格 ≈ 9,902<br />債券價格變動金額 ＝ 9,902－9,810
+                  ＝ 92。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q4</p>
+                <p class="qtext">
+                  一個剛發行 5 年期債券，面額 $100,000，票面利率
+                  10%，每半年付息一次，發行時殖利率為 8%，發行價格為
+                  $108,111，若殖利率維持不變，試計算該債券半年後的價格約為多少？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．$106,760</div>
+                  <div class="opt right">B．$107,435</div>
+                  <div class="opt">C．$111,760</div>
+                  <div class="opt">D．$112,435</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >每期利息＝100,000×5%＝5,000<br />每期殖利率 4%<br />半年後價格＝108,111×1.04－利息
+                  5,000＝107,435。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q5</p>
+                <p class="qtext">
+                  假設期望殖利率固定不變，債券愈趨近到期日時，下列敘述何者正確？甲.折價債券價格會趨近債券面額；乙.溢價債券價格會趨近債券面額；丙.溢價債券價格會遠離債券面額
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．僅甲、乙</div>
+                  <div class="opt">B．僅甲、丙</div>
+                  <div class="opt">C．僅乙、丙</div>
+                  <div class="opt">D．甲、乙、丙</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>折價債券與溢價債券價格都會隨到期日接近而趨近面額，丙敘述錯誤。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q6</p>
+                <p class="qtext">
+                  一般而言，公司債贖回條款(call provision)中的贖回溢價(call
+                  premium)距到期日愈近會：
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．愈小</div>
+                  <div class="opt">B．愈大</div>
+                  <div class="opt">C．不變</div>
+                  <div class="opt">D．不確定</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>贖回溢價會隨到期日接近而遞減。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q7</p>
+                <p class="qtext">
+                  當市場利率或殖利率大於債券之票面利率時，該債券應屬：
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．折價</div>
+                  <div class="opt">B．溢價</div>
+                  <div class="opt">C．平價</div>
+                  <div class="opt">D．無法判斷</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>殖利率大於票面利率時，債券以折價發行。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q8</p>
+                <p class="qtext">
+                  甲債券 3 年後到期，其面額為 100,000 元，每年付息一次 8,000
+                  元，若該債券以 95,000 元賣出，則其到期殖利率為：
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．大於 8%</div>
+                  <div class="opt">B．等於 8%</div>
+                  <div class="opt">C．小於 8%</div>
+                  <div class="opt">D．等於 5%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>價格 95,000 小於面額
+                  100,000（折價），代表殖利率會大於票面利率 8%。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q9</p>
+                <p class="qtext">
+                  發行五年到期的公債，票面利率為 9%，目前之到期殖利率為
+                  10%，若利率維持不變，則一年後此債券之價格將：
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．上漲</div>
+                  <div class="opt">B．下跌</div>
+                  <div class="opt">C．不變</div>
+                  <div class="opt">D．無法判定</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>殖利率大於票面利率，代表為折價狀態，隨著時間過去，債券價格會上漲接近債券面額。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q10</p>
+                <p class="qtext">
+                  已知一債券的票面利率為 8%，面額為 100 元，5
+                  年後到期，每半年付息一次，且目前此債券的殖利率為 5%，則此債券目前的價格約為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．93.372 元</div>
+                  <div class="opt">B．97.523 元</div>
+                  <div class="opt">C．100 元</div>
+                  <div class="opt right">D．113.128 元</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>殖利率（5%）低於票面利率（8%）代表溢價，價格會高於
+                  100 元。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q11</p>
+                <p class="qtext">
+                  已知一債券的票面利率為 7%，面額為 2,000 元，10
+                  年後到期，每年付息一次，且目前此債券的殖利率為 7%，則此債券目前的價格為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．2,200 元</div>
+                  <div class="opt right">B．2,000 元</div>
+                  <div class="opt">C．1,000 元</div>
+                  <div class="opt">D．1,800 元</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>殖利率＝票面利率 → 債券價格＝面額。
+                </p>
+              </div>
+            </details>
+          </section>
+
+          <section class="unit">
+            <div class="unit-head">
+              <h2>票面利率、當期收益率與到期收益率</h2>
+            </div>
+            <div class="explain">
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th></th>
+                    <th>票面利率</th>
+                    <th>當期收益率</th>
+                    <th>到期收益率（YTM）</th>
+                  </tr>
+                  <tr>
+                    <td>意義</td>
+                    <td>發行時的利率</td>
+                    <td>持有一期的實際報酬率<br />（債券年息／市價）</td>
+                    <td>投資人期望的報酬率，持有至到期的實際報酬率</td>
+                  </tr>
+                  <tr>
+                    <td>折價狀態</td>
+                    <td colspan="2">
+                      票面利率 &lt; 當期收益率 &lt; 到期收益率
+                    </td>
+                    <td>市價 &lt; 面額</td>
+                  </tr>
+                  <tr>
+                    <td>溢價狀態</td>
+                    <td colspan="2">
+                      票面利率 &gt; 當期收益率 &gt; 到期收益率
+                    </td>
+                    <td>市價 &gt; 面額</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="callout-line">
+                到期收益率的前提：每期收到的利息再投資時，報酬率必須與到期收益率相同
+                <span class="arrow">➜ 考點注意</span>
+              </div>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（6 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q12</p>
+                <p class="qtext">一般俗稱的債券殖利率是指下列何者？</p>
+                <div class="opts">
+                  <div class="opt right">A．到期收益率</div>
+                  <div class="opt">B．當期收益率</div>
+                  <div class="opt">C．贖回收益率</div>
+                  <div class="opt">D．票面利率</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >俗稱的「殖利率」即到期收益率（YTM），代表投資人持有至到期的實際報酬率。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q13</p>
+                <p class="qtext">
+                  關於折價買入並持有至到期之公司債，下列敘述何者正確？
+                </p>
+                <div class="opts">
+                  <div class="opt">
+                    A．持有人於買入當期之現時收益率(Current Yield)低於票面利率
+                  </div>
+                  <div class="opt right">
+                    B．持有人於持有期間各期之到期收益率(YTM)不變（以會計資料計算）
+                  </div>
+                  <div class="opt">
+                    C．持有人於持有期間各期所收取現金之總額高於買入價格加計各期利息收入之總額
+                  </div>
+                  <div class="opt">
+                    D．持有人於持有期間各期所收取現金之總額低於買入價格加計各期利息收入之總額
+                  </div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >折價債券當期收益率高於票面利率（排除A）；持有至到期，各期 YTM
+                  維持不變。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q14</p>
+                <p class="qtext">尚未對通貨膨脹率作調整的報酬率稱為：</p>
+                <div class="opts">
+                  <div class="opt">A．設定報酬率</div>
+                  <div class="opt right">B．名目報酬率</div>
+                  <div class="opt">C．超額報酬率</div>
+                  <div class="opt">D．實質報酬率</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >未考慮通膨調整的報酬率為名目報酬率；扣除通膨後才是實質報酬率。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q15</p>
+                <p class="qtext">
+                  債券的報價若採以價格報價，則其報價的指數等於：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．債券價格／殖利率</div>
+                  <div class="opt">B．債券價格／票面利率</div>
+                  <div class="opt right">C．債券價格／債券面額</div>
+                  <div class="opt">D．債券價格／到期期間</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>價格報價的報價指數 ＝ 債券價格 ÷
+                  債券面額。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q16</p>
+                <p class="qtext">如何計算債券當期收益率？</p>
+                <div class="opts">
+                  <div class="opt">A．債券年息／債券面額</div>
+                  <div class="opt">B．資本利得／債券面額</div>
+                  <div class="opt right">C．債券年息／債券市價</div>
+                  <div class="opt">D．資本利得／債券市價</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>當期收益率 ＝ 債券年息 ÷
+                  債券市價（見下題實際計算範例）。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q17</p>
+                <p class="qtext">
+                  一債券票面利率為 4%，面額 2,000 元，目前債券為 1,600 元，15
+                  年後到期，每年付息一次，則其當期收益率（Current Yield）約為：
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．5%</div>
+                  <div class="opt">B．9%</div>
+                  <div class="opt">C．10%</div>
+                  <div class="opt">D．12%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >當期收益率＝債券年息(4%×2,000)÷債券市價(1,600)＝5%。
+                </p>
+              </div>
+            </details>
+          </section>
+
+          <section class="unit">
+            <div class="unit-head"><h2>債券存續期間（Duration）</h2></div>
+            <div class="formula">
+              <div class="formula-line">
+                修正存續期間 ＝
+                <span class="frac"
+                  ><span class="num">存續期間</span
+                  ><span class="den">1 ＋ YTM</span></span
+                >
+              </div>
+              <div class="formula-line">
+                永續債券存續期間 ＝ 1 ＋
+                <span class="frac"
+                  ><span class="num">1</span
+                  ><span class="den">殖利率</span></span
+                >
+              </div>
+              <div class="formula-line">
+                價格變動率 ≈ －修正存續期間 × 殖利率變動（Δy）
+              </div>
+            </div>
+            <div class="explain">
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th>因素</th>
+                    <th>存續期間</th>
+                  </tr>
+                  <tr>
+                    <td>到期日越長</td>
+                    <td class="warn">越長</td>
+                  </tr>
+                  <tr>
+                    <td>票面利率越高</td>
+                    <td class="warn">越短</td>
+                  </tr>
+                  <tr>
+                    <td>到期殖利率越高</td>
+                    <td class="warn">越短</td>
+                  </tr>
+                </table>
+              </div>
+              <ul>
+                <li>
+                  存續期間＝債券的平均回本時間，與到期日不同（因為可能每年都會收到利息，不需等到期就可能回本）
+                </li>
+                <li>
+                  <ul>
+                    <li>付息債券：存續期間 &lt; 到期期限</li>
+                    <li><strong>零息債券：存續期間 ＝ 到期期限</strong></li>
+                  </ul>
+                </li>
+                <li>
+                  存續期間可衡量債券價格對利率的敏感度（利率風險）：存續期間越長，對利率變化越敏感
+                </li>
+              </ul>
+              <div class="callout-line">
+                深度折價債券可能出現「到期期間越長、存續期間反而縮短」的特殊情況
+                <span class="arrow">➜ 死背答案，不用推導</span>
+              </div>
+              <div class="callout-line">
+                <strong>利率變動的投資組合調整：</strong><br />市場利率<strong
+                  >上升</strong
+                >→人們賣出固定票面利率債券→債券價格下跌，此時存續期間越長跌幅越大，<strong
+                  >存續期間越短對投資人越有利</strong
+                >，應將<strong>票面利率低</strong>的債券換成<strong
+                  >票面利率高</strong
+                >的債券<br />市場利率<strong>下跌</strong
+                >→人們買入固定票面利率債券→債券價格上漲，此時存續期間越長漲幅越大，<strong
+                  >存續期間越長對投資人越有利</strong
+                >，應將<strong>票面利率高</strong>的債券換成<strong
+                  >票面利率低</strong
+                >的債券
+                <span class="arrow">➜ 常考應用題</span>
+              </div>
+              <div class="callout-line">
+                <strong>浮動利率債： <br /> </strong
+                >信用風險不變時，存續期間約等於距離<strong>下一次利率重設日</strong>的時間，不是剩餘到期年限<br />
+                1 bp ＝ 0.01% ＝ 0.0001。<br />
+                <span class="arrow">➜ 修正存續期間計算</span>
+              </div>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（12 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q18</p>
+                <p class="qtext">
+                  已知一永續債券每年付息一次，其殖利率為
+                  5%，則此永續債券之存續期間（Duration）為幾年？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．20 年</div>
+                  <div class="opt right">B．21 年</div>
+                  <div class="opt">C．22 年</div>
+                  <div class="opt">D．25 年</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>1 ＋
+                  <span class="frac"
+                    ><span class="num">1</span
+                    ><span class="den">0.05</span></span
+                  >
+                  ＝ 21 年。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q19</p>
+                <p class="qtext">
+                  關於債券的存續期間的意涵，下列描述何者為「非」？
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．表示債券的到期期間</div>
+                  <div class="opt">B．衡量債券的各期現金流入的平均到期期間</div>
+                  <div class="opt">C．是債券價格變動對利率變動的敏感程度</div>
+                  <div class="opt">D．存續期間越長，表示債券的利率風險越高</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >存續期間是平均回本時間，並非到期期間本身（付息債券存續期間
+                  &lt; 到期期間），A 敘述錯誤。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q20</p>
+                <p class="qtext">下列敘述何者正確？</p>
+                <div class="opts">
+                  <div class="opt">A．債券到期期限愈短，利率風險愈大</div>
+                  <div class="opt right">B．債券的存續期間愈長，利率風險愈高</div>
+                  <div class="opt">C．債券的票面利率愈低，利率風險愈低</div>
+                  <div class="opt">D．低票面利率債券之利率敏感性低於高票面利率債券</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >存續期間越長，利率風險越高；低票面利率代表存續期間長，利率敏感性其實較高，A、C、D
+                  皆錯誤。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q21</p>
+                <p class="qtext">當利率上升時，對債券價格與再投資報酬率之影響為何？</p>
+                <div class="opts">
+                  <div class="opt">A．債券價格與再投資報酬率皆上升</div>
+                  <div class="opt">B．債券價格上升但再投資報酬率下跌</div>
+                  <div class="opt">C．債券價格與再投資報酬率皆下跌</div>
+                  <div class="opt right">D．債券價格下跌但再投資報酬率上升</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >市場利率上升會導致債券價格下跌，但仍可收到固定的債券利息，若以利息購買相同的債券，可以用較便宜的價格買入，所以再投資報酬率會上升。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q22</p>
+                <p class="qtext">
+                  其它條件不變，當市場利率下降時，持有存續期間（Duration）長的債券較存續期間短的債券：
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．獲利多</div>
+                  <div class="opt">B．損失多</div>
+                  <div class="opt">C．獲利少</div>
+                  <div class="opt">D．損失少</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >市場利率下降，債券價格上漲，存續期間越長，漲幅越大，獲利越多。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q23</p>
+                <p class="qtext">
+                  甲債券之存續期間（Duration）為 3 年；乙債券之存續期間為 4
+                  年；丙債券之存續期間為 5 年；當市場利率下跌 0.1%
+                  時，對何種債券之價格影響幅度最大？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．甲</div>
+                  <div class="opt">B．乙</div>
+                  <div class="opt right">C．丙</div>
+                  <div class="opt">D．三者皆同</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >存續期間越長，對利率變化越敏感，丙（5年）價格影響幅度最大。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q24</p>
+                <p class="qtext">
+                  下列何種債券有可能出現到期期間越長，而存續期間反而縮短情況？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．平價債券</div>
+                  <div class="opt right">B．深度溢價債券</div>
+                  <div class="opt">C．深度折價債券</div>
+                  <div class="opt">D．以上皆非</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >本題與存續期間公式有關，較複雜且非主要考點，建議直接背答案：深度折價債券可能出現此特殊情況（原書標記
+                  C，此處依原書公告答案為準）。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q25</p>
+                <p class="qtext">
+                  假設到期年數與殖利率不變，下列何種債券之存續期間「最短」？
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．溢價債券</div>
+                  <div class="opt">B．折價債券</div>
+                  <div class="opt">C．平價債券</div>
+                  <div class="opt">D．零息債券</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >溢價債券票面利率較高，每次拿到的利息多，回本較快，存續期間最短。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q26</p>
+                <p class="qtext">
+                  一個三年期、每年付息一次並重設票息的浮動利率債券，在發行時的票面利率為
+                  Index + 5.5%。假設在發行三個月後，市場指標利率下跌為
+                  4.5%，債券信用風險維持不變，則此債券的存續期間約為多少？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．0.68 年</div>
+                  <div class="opt right">B．0.75 年</div>
+                  <div class="opt">C．1.50 年</div>
+                  <div class="opt">D．2.75 年</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >若債券信用風險不變，浮動利率債券存續期間等於距離下次利率重設日的期間<br />發行三個月後，距離下次付息還有
+                  0.75 年，即其存續期間 ＝ 0.75 年。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q28</p>
+                <p class="qtext">
+                  下列何者是影響債券存續期間（Duration）的因素？甲.到期期間；乙.票面利率；丙.到期殖利率；丁.票面值
+                </p>
+                <div class="opts">
+                  <div class="opt">A．僅甲、丙</div>
+                  <div class="opt">B．僅乙、丙、丁</div>
+                  <div class="opt right">C．僅甲、乙、丙</div>
+                  <div class="opt">D．甲、乙、丙、丁</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >影響存續期間的三大因素為到期日、票面利率、到期殖利率；票面值（面額）不影響存續期間。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q29</p>
+                <p class="qtext">
+                  債券之價格(P)與殖利率(Y)的函數為
+                  P=f(Y)，在價格敏感性衡量上，債券（面額 100
+                  元）價格對殖利率的第一階導函數 dP/dY＝－49 元，當利率上升
+                  100bp(1bp＝0.01%)，可解釋為債券價格將：
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．下跌 0.49 元</div>
+                  <div class="opt">B．下跌 4.9 元</div>
+                  <div class="opt">C．上漲 0.49 元</div>
+                  <div class="opt">D．上漲 4.9 元</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>殖利率上升則債券價格下跌，dP/dY＝－49
+                  代表利率上升 1% 價格會下降 49 元<br />當利率上升
+                  100bp：－49×100×0.01% ＝ 債券價格下跌 0.49 元。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q30</p>
+                <p class="qtext">
+                  假設有一債券的存續期間為 10，當時的殖利率（YTM）為
+                  5%，請問當其 YTM 變動 1bp 時，該債券價格變動的百分比為何？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．10%</div>
+                  <div class="opt">B．200%</div>
+                  <div class="opt">C．0.072468%</div>
+                  <div class="opt right">D．0.095238%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>修正存續期間＝<span class="frac"
+                    ><span class="num">10</span
+                    ><span class="den">1.05</span></span
+                  >＝9.5238<br />殖利率變動 1bp＝0.0001，價格變動
+                  9.5238×0.0001＝0.095238%。
+                </p>
+              </div>
+            </details>
+          </section>
+
+          <section class="unit">
+            <div class="unit-head"><h2>馬凱爾定律</h2></div>
+            <div class="explain">
+              <ul>
+                <li>債券價格與殖利率呈<strong>反向</strong>關係</li>
+                <li>到期期間愈長，債券價格對殖利率的敏感性愈大</li>
+                <li>
+                  敏感性的增加程度隨到期期間延長而<strong>遞減</strong>（不是等比例增加）
+                </li>
+                <li>
+                  殖利率下降使價格上漲的幅度，<strong>高於</strong>殖利率上揚使價格下跌的幅度
+                </li>
+                <li>
+                  <strong>低</strong
+                  >票面利率債券之殖利率敏感性<strong>高於</strong>高票面利率債券
+                </li>
+              </ul>
+              <div class="callout-line">
+                免疫投資策略：將債券組合存續期間調整至與持有期間一致，規避「利率風險」
+                <span class="arrow">➜ 考點注意</span>
+              </div>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（11 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q27</p>
+                <p class="qtext">
+                  當經濟景氣開始走下坡，而利率似又有下跌之趨勢時，投資人應投資下列哪一證券市場？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．股市</div>
+                  <div class="opt">B．貨幣市場</div>
+                  <div class="opt right">C．債券市場</div>
+                  <div class="opt">D．選項 ABC 皆可</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >利率下跌會使債券價格上漲（反向關係），此時布局債券市場最有利。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q31</p>
+                <p class="qtext">
+                  當利率有下跌趨勢時，下列哪一種證券投資較有利？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．票券</div>
+                  <div class="opt right">B．二十年後到期之公債</div>
+                  <div class="opt">C．一年期可轉換定存單</div>
+                  <div class="opt">D．十年後到期之公債</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >債券價格與利率呈反向關係，到期期間愈長對殖利率敏感性愈大，利率下跌時二十年期公債漲幅最大。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q32</p>
+                <p class="qtext">
+                  甲、乙兩種具有相同票面利率、面額及到期殖利率之中央政府債券，目前均屬溢價債券，若甲債券尚餘
+                  4 年到期，乙債券尚餘 2 年到期，則：
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．甲債券溢價額較乙債券溢價額大</div>
+                  <div class="opt">B．甲債券溢價額與乙債券溢價額相等</div>
+                  <div class="opt">C．甲債券溢價額較乙債券溢價額小</div>
+                  <div class="opt">D．無法比較</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >到期期間愈長，債券價格對殖利率的敏感性愈大，甲債券（4年）溢價額較乙債券（2年）大。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q33</p>
+                <p class="qtext">
+                  在其他條件相同下，債券價格對殖利率敏感性之變化幅度會因到期期間愈長而：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．遞增</div>
+                  <div class="opt">B．不變</div>
+                  <div class="opt right">C．遞減</div>
+                  <div class="opt">D．無從得知</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >敏感性的增加程度隨到期期間延長而遞減，不是等比例增加。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q34</p>
+                <p class="qtext">
+                  根據馬凱爾五大定理，一債券到期殖利率上升一碼與下降一碼所產生之折價額與溢價額比較為何？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．溢價額小於折價額</div>
+                  <div class="opt">B．折價額等於溢價額</div>
+                  <div class="opt right">C．折價額小於溢價額</div>
+                  <div class="opt">D．無法比較</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >殖利率下降使價格上漲的幅度，高於殖利率上揚使價格下跌的幅度，故折價額小於溢價額。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q35</p>
+                <p class="qtext">
+                  有甲、乙和丙三種債券，其到期日依序為 10 年、5 年、3
+                  年，且其他條件相同時，則當殖利率上漲 1% 時，何種債券價格波動幅度最大？
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．甲債券</div>
+                  <div class="opt">B．乙債券</div>
+                  <div class="opt">C．丙債券</div>
+                  <div class="opt">D．無從得知</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >到期期間愈長，債券價格對殖利率的敏感性愈大，甲債券（10年）波動幅度最大。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q36</p>
+                <p class="qtext">
+                  有甲、乙和丙三種債券，其票面利率依序為 10%、8%、6%且其他條件相同時，則當殖利率上漲
+                  1% 時，何種債券價格波動幅度最大？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．甲債券</div>
+                  <div class="opt">B．乙債券</div>
+                  <div class="opt right">C．丙債券</div>
+                  <div class="opt">D．無從得知</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >低票面利率債券之殖利率敏感性高於高票面利率債券，丙（6%）波動幅度最大。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q37</p>
+                <p class="qtext">
+                  在其他條件相同下，當殖利率變動 1% 時，低票面利率債券價格的變動會比高票面利率債券價格的變動：
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．大</div>
+                  <div class="opt">B．一樣</div>
+                  <div class="opt">C．小</div>
+                  <div class="opt">D．不一定</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >低票面利率債券之殖利率敏感性高於高票面利率債券。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q38</p>
+                <p class="qtext">下列敘述何者「不正確」？</p>
+                <div class="opts">
+                  <div class="opt">A．短期利率波動幅度會大於長期利率</div>
+                  <div class="opt">B．當市場利率高於債券票面利率時，債券將折價發行</div>
+                  <div class="opt">C．當市場利率高於票面利率時，公司較不可能將債券贖回</div>
+                  <div class="opt right">D．短期債券對利率變動之敏感度高於長期債券</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >到期期間愈長，債券價格對殖利率的敏感性愈大，長期債券對利率變動之敏感度高於短期債券，D
+                  不正確。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q39</p>
+                <p class="qtext">
+                  若債券殖利率不隨到期期間改變，則當債券越接近到期期間時，其溢價或折價的縮小變化速度：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．遞減</div>
+                  <div class="opt">B．不變</div>
+                  <div class="opt right">C．遞增</div>
+                  <div class="opt">D．溢價遞增折價遞減</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >債券越接近到期日，溢價或折價縮小的速度會遞增（加速趨近面額）。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q40</p>
+                <p class="qtext">
+                  債券組合管理中的免疫策略（Immunization
+                  Strategies）可規避何種風險？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．信用風險</div>
+                  <div class="opt">B．流動性風險</div>
+                  <div class="opt right">C．利率風險</div>
+                  <div class="opt">D．個別公司風險</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >免疫策略將債券組合存續期間調整至與持有期間一致，用以規避利率風險。
+                </p>
+              </div>
+            </details>
+          </section>
+
+          <section class="unit">
+            <div class="unit-head"><h2>利率期限結構（殖利率曲線）</h2></div>
+            <div class="formula">
+              <div class="formula-line">
+                <span
+                  >兩年期即期利率： (1＋r<sub>2</sub>)<sup>2</sup> ＝
+                  (1＋r<sub>1</sub>) × (1＋一年後預期一年期利率)</span
+                >
+              </div>
+            </div>
+            <div class="explain">
+              <ul>
+                <li>
+                  <strong>預期理論</strong
+                  >：殖利率曲線樣子決定於市場對未來一連串短期利率的預期
+                </li>
+                <li>
+                  <strong>流動性溢酬理論</strong
+                  >：長天期債券流動性較短天期債券差，所以享有較高的殖利率 ——
+                  此理論認為 殖利率曲線斜率 必為 正值
+                </li>
+                <li>
+                  <strong>市場區隔理論</strong>：
+                  <ul>
+                    <li>
+                      不同到期日的債券難以互相取代，因此形成彼此區隔的債券市場
+                    </li>
+                    <li>長期利率上揚或下跌，短期利率將不受影響</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（7 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q41</p>
+                <p class="qtext">利率期限結構是利用下列何者導出？</p>
+                <div class="opts">
+                  <div class="opt">A．可轉換公司債</div>
+                  <div class="opt">B．永續債券</div>
+                  <div class="opt right">C．無風險零息公債</div>
+                  <div class="opt">D．特別股</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >利率期限結構（殖利率曲線）是以無風險零息公債，利用殖利率為縱軸、到期期間為橫軸畫出。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q42</p>
+                <p class="qtext">殖利率曲線是描述哪兩者之間的關係？</p>
+                <div class="opts">
+                  <div class="opt">A．殖利率與價格</div>
+                  <div class="opt right">B．殖利率與到期期間</div>
+                  <div class="opt">C．殖利率與存續期間</div>
+                  <div class="opt">D．殖利率與票面利率</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>殖利率曲線以殖利率為縱軸、到期期間為橫軸。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q43</p>
+                <p class="qtext">
+                  一年期的利率為 4.8%，二年期的利率為
+                  5.13%。請問一年後之預期一年期利率為何？（假設利率為實質年利率）
+                </p>
+                <div class="opts">
+                  <div class="opt">A．5.02%</div>
+                  <div class="opt">B．5.23%</div>
+                  <div class="opt right">C．5.46%</div>
+                  <div class="opt">D．5.51%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>2 年期利率 5.13% ＝ (第 1 年 1 年期
+                  4.8% ＋ 第 2 年 1 年期利率) / 2 → 第 2 年 1 年期利率 ＝
+                  5.46%。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q44</p>
+                <p class="qtext">
+                  若殖利率曲線為正斜率，在利率期限結構（Term
+                  Structure）中的流動性偏好理論（the Liquidity Preference
+                  Theory）中，投資人認為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．短期債券比長期債券有較高的報酬率</div>
+                  <div class="opt">B．長短期債券有相同的報酬率</div>
+                  <div class="opt right">C．長期債券比短期債券有較高的報酬率</div>
+                  <div class="opt">D．以上皆有可能</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >流動性偏好（溢酬）理論認為長天期債券流動性較差，須享有較高的殖利率補償。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q45</p>
+                <p class="qtext">
+                  市場上的長期利率，乃是代表市場投資人對未來「一連串」短期利率的預期，稱為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．平均理論</div>
+                  <div class="opt right">B．預期理論</div>
+                  <div class="opt">C．流動性溢酬理論</div>
+                  <div class="opt">D．市場區隔理論</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >預期理論認為殖利率曲線樣子決定於市場對未來一連串短期利率的預期。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q46</p>
+                <p class="qtext">
+                  主張不同到期日的債券難以相互取代，且不同到期日有不同的資金供給者與需求者、形成彼此區隔的債券市場為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．流動性偏好理論</div>
+                  <div class="opt">B．預期理論</div>
+                  <div class="opt right">C．市場區隔理論</div>
+                  <div class="opt">D．以上皆非</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >市場區隔理論主張不同到期日的債券難以互相取代，形成彼此區隔的市場。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q47</p>
+                <p class="qtext">
+                  在利率期限結構中的市場區隔理論（Market Segmentation
+                  Theory）中，理論上如果長期利率下跌，則短期利率將：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．上漲</div>
+                  <div class="opt right">B．不受影響</div>
+                  <div class="opt">C．下跌</div>
+                  <div class="opt">D．選項 ABC 皆錯誤</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >市場區隔理論認為長短期市場彼此區隔，長期利率不論上揚或下跌，短期利率將不受影響。
+                </p>
+              </div>
+            </details>
+          </section>
+        </main>
+
+        <nav class="chapter-nav">
+          <a class="prev" href="/investment/ch02-bond-features.html"
+            ><span class="dir">← 上一章</span>債券特性與種類</a
+          >
+          <a class="next" href="/investment/ch04-stock-valuation.html"
+            ><span class="dir">下一章 →</span>股價評估與報酬率</a
+          >
+        </nav>
+      </div>
+    </div>
+    <script src="/assets/nav.js"></script>
+  </body>
+</html>

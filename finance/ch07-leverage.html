@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>損益兩平與槓桿比率｜財務分析 CH07</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    />
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div id="site-nav"></div>
+      <div class="content">
+        <header class="masthead">
+          <div class="masthead-inner">
+            <span class="eyebrow">證券商高級業務員 · 財務分析 · 第 7 章</span>
+            <h1>損益兩平與槓桿比率</h1>
+          </div>
+        </header>
+        <p class="crumb">
+          <a href="/index.html">高業考前重點</a> ／ 財務分析 ／ 第 7 章
+        </p>
+
+        <main>
+          <section class="unit">
+            <div class="unit-head"><h2>損益兩平點</h2></div>
+            <div class="diagram-card">
+              <svg viewBox="0 0 300 170" role="img" aria-label="損益兩平圖，收入線與總成本線交會處為損益兩平點">
+                <line x1="38" y1="136" x2="276" y2="136" stroke="var(--ink-20)" />
+                <line x1="38" y1="136" x2="38" y2="20" stroke="var(--ink-20)" />
+                <line x1="38" y1="104" x2="270" y2="104" stroke="var(--gold)" stroke-dasharray="4 3" />
+                <line x1="38" y1="136" x2="264" y2="32" stroke="var(--jade)" stroke-width="2.5" />
+                <line x1="38" y1="104" x2="264" y2="52" stroke="var(--seal)" stroke-width="2.5" />
+                <circle cx="184" cy="69" r="4" fill="var(--gold)" />
+                <line x1="184" y1="69" x2="184" y2="136" stroke="var(--gold)" stroke-dasharray="3 3" />
+                <text x="258" y="22" font-size="10" fill="var(--jade)" class="mono" text-anchor="end">銷貨收入</text>
+                <text x="258" y="64" font-size="10" fill="var(--seal)" class="mono" text-anchor="end">總成本</text>
+                <text x="42" y="99" font-size="9" fill="var(--gold)" class="mono">固定成本</text>
+                <text x="184" y="61" font-size="9" fill="var(--gold)" class="mono" text-anchor="middle">損益兩平點</text>
+                <text x="184" y="153" font-size="9" fill="var(--ink-40)" class="mono" text-anchor="middle">損益兩平銷售量</text>
+                <text x="274" y="153" font-size="9" fill="var(--ink-40)" class="mono" text-anchor="end">銷售量</text>
+                <text x="16" y="25" font-size="9" fill="var(--ink-40)" class="mono">金額</text>
+              </svg>
+            </div>
+            <div class="formula">
+              <div class="formula-line">
+                （銷售單價 － 單位變動成本）× 銷售數量 － 固定成本 ＝ 公司獲利
+              </div>
+              <div class="formula-line">
+                產品單位價格 × 銷售量 ＝ 總變動成本 ＋ 固定成本 ＝
+                單位變動成本 × 銷售量 ＋ 固定成本
+              </div>
+              <div class="formula-line">
+                損益兩平銷售量 ＝
+                <span class="frac"
+                  ><span class="num">固定成本</span
+                  ><span class="den">單位售價 － 單位變動成本</span></span
+                >
+              </div>
+              <div class="formula-line">
+                生產總成本 ＝ 銷貨成本 ＋ 營業費用 ＝ 固定成本 ＋ 總變動成本
+              </div>
+            </div>
+            <div class="explain">
+              <ul>
+                <li>
+                  <strong>固定成本</strong
+                  >：不隨銷售量增加而提高，如銷貨成本中的廠房租金、營業費用中的研發費用
+                </li>
+                <li>
+                  <strong>變動成本</strong
+                  >：會隨銷售量增加而提高，如原料成本、產品運費、繳納商品的貨物稅
+                </li>
+                <li>
+                  損益兩平點的假設：<strong
+                    >產品售價不變、每單位產品變動成本不變、產品組合比率不變</strong
+                  >
+                </li>
+                <li>
+                  希望降低損益兩平點，必須提高銷貨收入或降低變動成本，固定成本基本上不能動
+                </li>
+              </ul>
+              <div class="callout-line">
+                邊際貢獻 ＝ 銷貨收入－總變動成本<br />
+                邊際貢獻率 ＝
+                <span class="frac"
+                  ><span class="num">邊際貢獻</span
+                  ><span class="den">銷貨收入</span></span
+                ><br />
+                變動成本下降，邊際貢獻就會上升<br />
+                損益兩平時：邊際貢獻 ＝ 固定成本<br />
+                <span class="arrow">➜ 考點注意</span>
+              </div>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（2 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q9</p>
+                <p class="qtext">
+                  雪見公司所生產的礦泉水每瓶售價 $20，其中變動成本占
+                  80%，已知目前每年產量為 50,000
+                  瓶，該公司剛好損益兩平，請問其固定成本為？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．$80,000</div>
+                  <div class="opt right">B．$200,000</div>
+                  <div class="opt">C．$240,000</div>
+                  <div class="opt">D．$160,000</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>每瓶固定成本 ＝ 20×20% ＝ 4 元<br />總固定成本
+                  ＝ 50,000×4 ＝ 200,000。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q14</p>
+                <p class="qtext">
+                  某企業今年度的銷貨收入為 300 萬元，變動成本為 180
+                  萬元，固定成本為 90 萬元，預估明年度固定成本為 120
+                  萬元，邊際貢獻率不變，但企業希望明年度的淨利能達 50
+                  萬元，請問其目標銷貨收入成長率應為多少？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．16.7%</div>
+                  <div class="opt right">B．41.7%</div>
+                  <div class="opt">C．0%</div>
+                  <div class="opt">D．33.3%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>邊際貢獻率 ＝
+                  <span class="frac"
+                    ><span class="num">300－180</span
+                    ><span class="den">300</span></span
+                  >
+                  ＝ 0.4<br />明年銷貨收入 ＝
+                  明年固定成本120＋淨利50＋變動成本(設為X) ＝ 170＋X<br />邊際貢獻率0.4
+                  ＝
+                  <span class="frac"
+                    ><span class="num">170+X－X</span
+                    ><span class="den">170+X</span></span
+                  >
+                  → 解得明年銷貨收入425萬<br />成長率 ＝
+                  <span class="frac"
+                    ><span class="num">425－300</span
+                    ><span class="den">300</span></span
+                  >
+                  ＝ 41.7%。
+                </p>
+              </div>
+            </details>
+          </section>
+
+          <section class="unit">
+            <div class="unit-head"><h2>營業槓桿度（DOL）</h2></div>
+            <div class="formula">
+              <div class="formula-line">
+                營業槓桿度 ＝
+                <span class="frac"
+                  ><span class="num">邊際貢獻</span
+                  ><span class="den">營業利益</span></span
+                >
+                ＝
+                <span class="frac"
+                  ><span class="num">邊際貢獻</span
+                  ><span class="den">邊際貢獻 － 固定成本</span></span
+                >
+                ＝
+                <span class="frac"
+                  ><span class="num"
+                    >EBIT（息前稅前淨利）變動百分比</span
+                  ><span class="den">銷售量變動百分比</span></span
+                >
+              </div>
+            </div>
+            <div class="explain">
+              <ul>
+                <li>
+                  公司使用固定成本的程度：企業固定成本越高，營業槓桿度越高
+                </li>
+              </ul>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（1 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q19</p>
+                <p class="qtext">
+                  久久公司 X1 年度的營業收入為 $2,000,000，營業利益為
+                  $400,000，變動營業成本及費用 $600,000，則 X1
+                  年度其營業槓桿度為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．1.8</div>
+                  <div class="opt">B．2</div>
+                  <div class="opt">C．2.5</div>
+                  <div class="opt right">D．3.5</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>邊際貢獻 ＝ 銷貨收入－總變動成本 ＝
+                  2,000,000－600,000 ＝ 1,400,000<br />營業槓桿度 ＝
+                  <span class="frac"
+                    ><span class="num">1,400,000</span
+                    ><span class="den">400,000</span></span
+                  >
+                  ＝ 3.5。
+                </p>
+              </div>
+            </details>
+          </section>
+
+          <section class="unit">
+            <div class="unit-head">
+              <h2>財務槓桿度（DFL）與綜合槓桿度（DCL）</h2>
+            </div>
+            <div class="formula">
+              <div class="formula-line">
+                財務槓桿度 ＝
+                <span class="frac"
+                  ><span class="num">EBIT</span
+                  ><span class="den">EBIT － 利息費用</span></span
+                >
+                ＝
+                <span class="frac"
+                  ><span class="num">EPS 變動百分比</span
+                  ><span class="den">EBIT 變動百分比</span></span
+                >
+              </div>
+              <div class="formula-line">
+                綜合槓桿度 ＝ 營業槓桿度 × 財務槓桿度 ＝
+                <span class="frac"
+                  ><span class="num">EPS 變動百分比</span
+                  ><span class="den">銷貨收入變動百分比</span></span
+                >
+                ＝
+                <span class="frac"
+                  ><span class="num">邊際貢獻</span
+                  ><span class="den">營業利益 － 利息費用</span></span
+                >
+              </div>
+            </div>
+            <div class="explain">
+              <ul>
+                <li>
+                  財務槓桿度：公司因舉債而必須支付利息的程度，評估利息支出對每股稅後盈餘（EPS）的影響程度，又稱「財務槓桿係數」
+                </li>
+                <li>
+                  綜合槓桿度：評估所有營業成本與財務成本費用，對 EPS
+                  的影響程度
+                </li>
+                <li>
+                  易混淆的三個指標：
+                  <ul>
+                    <li>
+                      財務槓桿度＝<span class="frac"
+                        ><span class="num">EBIT</span
+                        ><span class="den">EBIT－利息費用</span></span
+                      >
+                    </li>
+                    <li>
+                      財務槓桿比率（權益乘數）＝<span class="frac"
+                        ><span class="num">資產總額</span
+                        ><span class="den">權益總額</span></span
+                      >
+                    </li>
+                    <li>
+                      財務槓桿指數＝<span class="frac"
+                        ><span class="num">普通股權益報酬率</span
+                        ><span class="den">總資產報酬率</span></span
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（1 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q25</p>
+                <p class="qtext">
+                  若南勢公司的財務槓桿程度為 1.9，EBIT 變動 10%，則：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．銷售量變動 10%</div>
+                  <div class="opt right">B．每股盈餘變動 19%</div>
+                  <div class="opt">C．淨利變動 18%</div>
+                  <div class="opt">D．營業毛利變動 10%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>財務槓桿度1.9 ＝ EPS變動百分比 /
+                  EBIT變動百分比10% → EPS變動百分比 ＝ 19%。
+                </p>
+              </div>
+            </details>
+          </section>
+        </main>
+
+        <nav class="chapter-nav">
+          <a class="prev" href="/finance/ch06-income-statement.html"
+            ><span class="dir">← 上一章</span>綜合損益表</a
+          >
+          <a class="next" href="/finance/ch08-eps-quality.html"
+            ><span class="dir">下一章 →</span>盈餘計算與評估品質</a
+          >
+        </nav>
+      </div>
+    </div>
+    <script src="/assets/nav.js"></script>
+  </body>
+</html>

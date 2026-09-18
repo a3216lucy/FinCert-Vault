@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>E(R)、CML、SML｜投資學 CH07</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    />
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div id="site-nav"></div>
+      <div class="content">
+        <header class="masthead">
+          <div class="masthead-inner">
+            <span class="eyebrow">證券商高級業務員 · 投資學 · 第 7 章</span>
+            <h1>E(R)、CML、SML</h1>
+          </div>
+        </header>
+        <p class="crumb">
+          <a href="/index.html">高業考前重點</a> ／ 投資學 ／ 第 7 章
+        </p>
+
+        <main>
+          <section class="unit">
+            <div class="unit-head"><h2>分散風險與相關係數</h2></div>
+            <div class="formula">
+              <div class="formula-line">
+                <span
+                  >σ<sub>p</sub> ＝ √[w<sub>A</sub><sup>2</sup>σ<sub>A</sub
+                  ><sup>2</sup>＋w<sub>B</sub><sup>2</sup>σ<sub>B</sub
+                  ><sup>2</sup
+                  >＋2w<sub>A</sub>w<sub>B</sub>ρ<sub>AB</sub>σ<sub>A</sub>σ<sub>B</sub>]</span
+                >
+              </div>
+            </div>
+            <div class="explain">
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th>相關係數</th>
+                    <th>相關性</th>
+                    <th>特性</th>
+                  </tr>
+                  <tr>
+                    <td>－1</td>
+                    <td>完全負相關</td>
+                    <td>
+                      兩證券組成的投資組合標準差為 0，分散效果最佳，是無風險組合
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>0</td>
+                    <td>無相關</td>
+                    <td>表示兩證券價格走勢無關係</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>完全正相關</td>
+                    <td>
+                      兩證券價格走勢一樣，持有相關係數為 1
+                      的證券沒有分散風險的效果
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <ul>
+                <li>
+                  僅有<strong>非系統風險</strong>可靠分散降低，可利用持有多種證券、或加入相關係數較低（或負相關）的證券
+                </li>
+                <li>
+                  相關係數僅介於 1~－1 之間，只要相關係數不為
+                  1，都有分散效果，但投資組合必須找低度相關的證券，分散效果才大
+                </li>
+              </ul>
+              <p class="sub-label">若投資組合證券數增加越多：</p>
+              <ul>
+                <li>非系統風險：將遞減趨近於 0</li>
+                <li>系統風險：趨近於個別證券系統風險的加權平均</li>
+                <li>總風險：將趨近於系統風險，報酬率主要受市場因素影響</li>
+              </ul>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（8 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q1</p>
+                <p class="qtext">
+                  下列何者最「不可能」是兩檔股票報酬率之間的相關係數（coefficient
+                  of correlation）？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．0.84</div>
+                  <div class="opt right">B．1.27</div>
+                  <div class="opt">C．0</div>
+                  <div class="opt">D．-0.46</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>相關係數僅介於 -1～1 之間，1.27
+                  超出此範圍，不可能是相關係數。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q2</p>
+                <p class="qtext">
+                  在不能賣空前提下，最有效的分散風險是兩種股票報酬率的相關係數為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．1</div>
+                  <div class="opt">B．0</div>
+                  <div class="opt right">C．-1</div>
+                  <div class="opt">D．-0.5</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>相關係數為 -1（完全負相關）時分散效果最佳。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q3</p>
+                <p class="qtext">
+                  由兩種股票組成的投資組合圖形中，當其報酬率相關係數等於多少時，其各組合點為一直線？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．0</div>
+                  <div class="opt">B．0.5</div>
+                  <div class="opt right">C．1</div>
+                  <div class="opt">D．-1</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>相關係數為 1（完全正相關）時，投資組合的風險報酬點為一直線。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q4</p>
+                <p class="qtext">於風險分散的敘述中，何者為「不正確」？</p>
+                <div class="opts">
+                  <div class="opt">
+                    A．投資組合內，個別資產相關係數為 0 時，有風險分散的效果
+                  </div>
+                  <div class="opt">
+                    B．透過投資組合的方式可以避免風險過度集中於單一投資標的
+                  </div>
+                  <div class="opt right">
+                    C．不可賣空下，相關係數愈大，分散的效果愈佳
+                  </div>
+                  <div class="opt">D．分散的效果視組合內個別資產間的相關係數而定</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>相關係數愈大，分散效果愈差（相關係數為 1
+                  時完全沒有分散效果），C 敘述不正確。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q5</p>
+                <p class="qtext">
+                  投資組合之風險來自於：甲.個股報酬率之相關係數；乙.市場之風險
+                </p>
+                <div class="opts">
+                  <div class="opt">A．僅甲</div>
+                  <div class="opt">B．僅乙</div>
+                  <div class="opt right">C．甲、乙均是</div>
+                  <div class="opt">D．甲、乙均不是</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>投資組合風險同時受個股間相關係數（影響分散效果）與市場系統風險影響。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q6</p>
+                <p class="qtext">哪一項投資組合的非系統風險較小？</p>
+                <div class="opts">
+                  <div class="opt">A．電子產業之股票型基金</div>
+                  <div class="opt right">
+                    B．依臺灣公司治理 100 指數發行之 ETF
+                  </div>
+                  <div class="opt">C．某績優公司個別股票</div>
+                  <div class="opt">D．綠能產業趨勢基金</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>涵蓋越多產業或公司，非系統風險越小；ETF
+                  追蹤 100 家公司指數，分散程度最高。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q7</p>
+                <p class="qtext">
+                  一般而言，何種股票型共同基金的分散風險的效果最大？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．大型股基金</div>
+                  <div class="opt">B．中小型基金</div>
+                  <div class="opt right">C．全球基金</div>
+                  <div class="opt">D．亞洲基金</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>投資範圍涵蓋全球，產業與地區分散程度最高，分散風險效果最大。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q8</p>
+                <p class="qtext">
+                  全球股市的互動性愈高，意味著全球化投資在投資風險的分散效果：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．提高</div>
+                  <div class="opt right">B．降低</div>
+                  <div class="opt">C．不變</div>
+                  <div class="opt">D．不確定</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >全球股市互動性（相關性）愈高，代表跨國分散投資的相關係數愈接近
+                  1，分散風險的效果愈差（降低）。
+                </p>
+              </div>
+            </details>
+          </section>
+
+          <section class="unit">
+            <div class="unit-head">
+              <h2>效率前緣線（Efficient Frontier）</h2>
+            </div>
+            <div class="diagram-card">
+              <svg viewBox="0 0 200 120">
+                <line x1="26" y1="14" x2="26" y2="100" stroke="var(--ink-20)" />
+                <line
+                  x1="26"
+                  y1="100"
+                  x2="186"
+                  y2="100"
+                  stroke="var(--ink-20)"
+                />
+                <path
+                  d="M 54 87 Q 80 20 174 16"
+                  fill="none"
+                  stroke="var(--jade)"
+                  stroke-width="3"
+                />
+                <circle cx="174" cy="16" r="4" fill="var(--jade)" />
+                <circle cx="120" cy="33" r="4" fill="var(--jade)" />
+                <circle cx="54" cy="87" r="4" fill="var(--seal)" />
+                <text x="0" y="60" font-size="11" fill="var(--ink-40)">
+                  報酬
+                </text>
+                <text x="95" y="115" font-size="11" fill="var(--ink-40)">
+                  風險
+                </text>
+              </svg>
+            </div>
+            <div class="explain">
+              <ul>
+                <li>
+                  由 H. Markowitz 提出：以報酬為 Y 軸、風險為 X
+                  軸，找出特定風險下報酬最高（或特定報酬下風險最低）的投資組合，連成一條線
+                </li>
+                <li>
+                  每當投資組合加入新證券，整條線就會往左上方移動——效率前緣線因為已經是分散風險後的最佳結果，所以<strong
+                    >僅存在系統風險</strong
+                  >
+                </li>
+                <li>
+                  投資人會選這條線上的某個點來組織投資組合，但每個人選的點不同，又稱為投資人之效用無異曲線與效率前緣線相切之處
+                </li>
+              </ul>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（4 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q9</p>
+                <p class="qtext">
+                  所謂效率投資組合（Efficient Portfolio）是指：甲.在固定風險水準下，期望報酬率最高之投資組合
+                  乙.在固定期望報酬率水準下，風險最高之投資組合
+                  丙.在固定風險水準下，期望報酬率最低之投資組合
+                  丁.在固定期望報酬率水準下，風險最低之投資組合
+                </p>
+                <div class="opts">
+                  <div class="opt">A．甲與乙</div>
+                  <div class="opt right">B．甲與丁</div>
+                  <div class="opt">C．乙與丙</div>
+                  <div class="opt">D．丙與丁</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >效率投資組合定義為「同風險下報酬最高」或「同報酬下風險最低」的投資組合，即甲與丁。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q13</p>
+                <p class="qtext">
+                  有四種投資組合的報酬與風險如下，甲組合：(8%,
+                  7%)、乙組合：(9%,7%)、丙組合：(10%,
+                  8%)、丁組合：(11%,
+                  8%)。其中括弧內第一項為期望報酬率，第二項為標準差。哪些資產組合可確定不是落在效率前緣上？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．僅甲組合</div>
+                  <div class="opt">B．甲與乙組合</div>
+                  <div class="opt right">C．甲與丙組合</div>
+                  <div class="opt">D．甲、乙、丙組合</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>乙報酬率＞甲，但兩者標準差相同，代表甲確定不在效率前緣上；丁報酬率＞丙，但兩者標準差相同，代表丙確定不在效率前緣上，故答案為甲與丙。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q15</p>
+                <p class="qtext">
+                  欲規避效率投資組合之風險，可採取下列何種行動？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．運用股票認購權證交易</div>
+                  <div class="opt right">B．運用股價指數期貨交易</div>
+                  <div class="opt">C．運用可轉換公司債交易</div>
+                  <div class="opt">D．增加該投資組合內證券個數，以消除風險</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >效率投資組合僅存在系統風險，可靠衍生性商品如期貨、選擇權等規避；增加證券個數只能消除非系統風險，對已是效率投組的系統風險無效。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q16</p>
+                <p class="qtext">
+                  關於投資人最適投資組合之敘述，何者「正確」？甲.不同投資人必須依個別的可行投資集合形成效率集合，結合自己的風險偏好，來選擇最適投資組合；乙.不同的投資人面對相同的效率前緣不一定會選擇相同的最適投資組合
+                </p>
+                <div class="opts">
+                  <div class="opt">A．僅甲</div>
+                  <div class="opt">B．僅乙</div>
+                  <div class="opt right">C．甲、乙皆是</div>
+                  <div class="opt">D．甲、乙皆非</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>每位投資人依自身風險偏好，在效率前緣上選擇效用無異曲線的相切點，因此不同投資人即使面對相同效率前緣，最適投資組合也不一定相同，甲、乙皆正確。
+                </p>
+              </div>
+            </details>
+          </section>
+
+          <section class="unit">
+            <div class="unit-head"><h2>資本市場線（CML）</h2></div>
+            <div class="formula">
+              <div class="formula-line">
+                CML：股票 X 期望報酬率 ＝ Rf ＋ σ(X) ×
+                <span class="frac"
+                  ><span class="num">E(Rm) － Rf</span
+                  ><span class="den">σ(Rm)</span></span
+                >
+              </div>
+            </div>
+            <div class="explain">
+              <ul>
+                <li>
+                  延續效率前緣線，若可以借貸且可持有無風險資產，則可畫出一條直線，與效率前緣線相切於一點（稱
+                  F 點），此線稱為 CML
+                </li>
+                <li>
+                  CML
+                  代表效率前緣線上的投資組合，可因借貸或持有無風險資產的方式提高報酬或降低風險
+                </li>
+                <li>
+                  CML 與效率前緣線相切點（F
+                  點）稱為<strong>市場投資組合</strong>，此點投組報酬率等於市場報酬率，<strong
+                    >β 係數 ＝ 1</strong
+                  >
+                </li>
+              </ul>
+              <div class="callout-line">
+                CML 是用「總風險（標準差）」衡量 <br />
+                SML 是用「系統風險（β）」衡量 <br />
+                <span class="arrow">➜ 考點注意</span>
+              </div>
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th></th>
+                    <th>風險指標</th>
+                    <th>適用對象</th>
+                  </tr>
+                  <tr>
+                    <td>CML</td>
+                    <td>總風險（σ）</td>
+                    <td>無風險資產與市場投組形成的<strong>有效投組</strong></td>
+                  </tr>
+                  <tr>
+                    <td>SML</td>
+                    <td>系統風險（β）</td>
+                    <td>所有個別證券與投資組合</td>
+                  </tr>
+                  <tr>
+                    <td>CAL</td>
+                    <td>總風險（σ）</td>
+                    <td>無風險資產與<strong>任一</strong>風險投組的組合</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（5 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q10</p>
+                <p class="qtext">
+                  下列有關市場投資組合（Market Portfolio）理論之描述，何者不正確？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．包含市場上所有證券</div>
+                  <div class="opt right">B．每個證券之投資比重相等</div>
+                  <div class="opt">C．為效率投資組合</div>
+                  <div class="opt">D．具有風險</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>市場投資組合是依市值比重（而非相等比重）持有市場上所有證券的投資組合，B
+                  敘述不正確。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q11</p>
+                <p class="qtext">
+                  在市場投資組合右上方之投資組合，其市場投資組合權重可能為多少？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．0.7 及 0.3</div>
+                  <div class="opt">B．0.8 及 0.2</div>
+                  <div class="opt">C．-0.2 及 1.2</div>
+                  <div class="opt right">D．1.2 及 -0.2</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>CML 右上方代表市場投資組合權重
+                  &gt;100%、無風險資產 &lt;0（借錢加碼投資市場）。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q18</p>
+                <p class="qtext">
+                  資本市場線上，在市場投資組合之左下方的投資組合，其投資於市場投資組合之權重為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．等於 100%</div>
+                  <div class="opt">B．大於 100%</div>
+                  <div class="opt right">C．在 0 與 100% 之間</div>
+                  <div class="opt">D．小於 0</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>市場投資組合左下方代表同時持有無風險資產與市場投資組合，市場投資組合權重介於
+                  0～100% 之間。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q21</p>
+                <p class="qtext">
+                  有關資本市場線（CML）與證券市場線（SML）之敘述何者「正確」？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．二者均是效率前緣</div>
+                  <div class="opt">B．二者均不是效率前緣</div>
+                  <div class="opt right">C．CML 是效率前緣，SML 不一定是</div>
+                  <div class="opt">D．SML 是效率前緣，CML 不一定是</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>CML 上的點都是效率投資組合；SML
+                  適用於所有個別證券與投資組合，落在 SML
+                  上不代表就是效率投資組合。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q25</p>
+                <p class="qtext">
+                  若持有兩檔上市股票，其中甲股票之市場價值為 800
+                  萬元，報酬標準差為 30%，β 值為 0.8；乙股票之市場價值為 200
+                  萬元，報酬標準差為 40%，β 值為 1.3，兩者股票相關係數為
+                  0.6，則當市場投資組合期望報酬率
+                  E(Rm)=11%、市場投資組合報酬標準差
+                  σ(Rm)=20%、無風險利率(Rf)=1%，且假設市場投資組合位於資本市場線（CML），試問：若要股票
+                  X 落在資本市場線（CML），則股票 X 之期望報酬率應為多少？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．9%</div>
+                  <div class="opt">B．11%</div>
+                  <div class="opt">C．14%</div>
+                  <div class="opt right">D．16%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>股票
+                  X＝甲、乙股票所組成的投資組合，甲投資比重 0.8、標準差
+                  0.3；乙投資比重 0.2、標準差 0.4<br />σ(X)² ＝ 0.8²×0.3² ＋
+                  0.2²×0.4² ＋ 2×0.8×0.2×0.6×0.3×0.4 ＝ 0.08704，σ(X) ＝
+                  29.5%<br />CML 公式：股票 X 期望報酬率 ＝ Rf ＋ σ(X)×<span
+                    class="frac"
+                    ><span class="num">E(Rm)－Rf</span
+                    ><span class="den">σ(Rm)</span></span
+                  >
+                  ＝ 1% ＋ 29.5%×<span class="frac"
+                    ><span class="num">11%－1%</span
+                    ><span class="den">20%</span></span
+                  >
+                  ＝ 16%。
+                </p>
+              </div>
+            </details>
+          </section>
+
+          <section class="unit">
+            <div class="unit-head"><h2>證券市場線（SML）</h2></div>
+            <div class="formula">
+              <div class="formula-line">
+                預期報酬率 ＝ 無風險利率 Rf ＋ β 係數 ×（市場報酬率 Rm －
+                無風險利率 Rf）
+              </div>
+            </div>
+            <div class="explain">
+              <ul>
+                <li>
+                  以預期報酬率為 Y 軸、β 係數為 X 軸，CAPM 公式在此圖上畫出的線
+                </li>
+                <li>
+                  斜率變陡峭：代表 Rm 變大或 Rf
+                  變小（投資人轉保守，要求較高風險溢酬）；斜率變平緩：代表投資人轉樂觀，要求較低風險溢酬
+                </li>
+                <li>
+                  SML 平行上移（截距上升）：代表 Rf
+                  變大，反映通貨膨脹；平行下移：代表 Rf 變小，反映通貨緊縮
+                </li>
+              </ul>
+              <div class="callout-line">
+                證券報酬率 落在 SML <strong>上方</strong> ＝ 實際報酬率高於預期
+                ＝ 股價被低估，應【買進】 <br />
+                證券報酬率 落在 SML <strong>下方</strong> ＝
+                股價被高估，應【賣出】
+                <br />
+                <span class="arrow">➜ 考點注意</span>
+              </div>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（6 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q12</p>
+                <p class="qtext">若某個別證券的報酬位於 SML 之上方，表示：</p>
+                <div class="opts">
+                  <div class="opt">A．個別證券未能提供預期報酬率</div>
+                  <div class="opt right">B．價格被低估</div>
+                  <div class="opt">C．對該證券的需求將會減少</div>
+                  <div class="opt">D．價格被高估</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>報酬位於 SML
+                  上方代表比預期報酬率高，所以價格應被低估。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q14</p>
+                <p class="qtext">何者「不是」基本 CAPM 模型之假設或結果？</p>
+                <div class="opts">
+                  <div class="opt right">A．投資人皆同意所有股票之標準差相同</div>
+                  <div class="opt">B．證券市場線有正的斜率</div>
+                  <div class="opt">C．存在無風險利率</div>
+                  <div class="opt">D．所有投資人對相同之投資組合有相同之期望報酬</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>CAPM
+                  假設投資人對股票報酬的「期望」與「標準差」看法一致，並非「所有股票之標準差相同」，A
+                  非其假設或結果。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q17</p>
+                <p class="qtext">
+                  在 CAPM 模式中，若其他條件不變而市場預期報酬率減少，則整條證券市場線的斜率會：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．愈陡峭</div>
+                  <div class="opt right">B．愈平緩</div>
+                  <div class="opt">C．不變</div>
+                  <div class="opt">D．無從得知</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>市場預期報酬率（Rm）減少，風險溢酬（Rm－Rf）縮小，SML
+                  斜率變平緩。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q19</p>
+                <p class="qtext">
+                  描述期望報酬率與 β 值之間關係的線，稱為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．資本市場線（Capital Market Line）</div>
+                  <div class="opt">B．效率集合（Efficient Set）</div>
+                  <div class="opt right">
+                    C．證券市場線（Security Market Line）
+                  </div>
+                  <div class="opt">D．等平均線（Iso-Mean Line）</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>以預期報酬率為 Y 軸、β 係數為 X
+                  軸所畫出的線稱為證券市場線（SML）。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q20</p>
+                <p class="qtext">
+                  在其他條件不變下，根據 CAPM，如果市場所有投資人預期通貨膨脹將會升高，則：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．市場風險溢酬將會增加</div>
+                  <div class="opt">B．證券市場線之斜率將會變大</div>
+                  <div class="opt">C．所有證券之貝它係數將會提高</div>
+                  <div class="opt right">D．所有證券之期望報酬率將會提高</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>預期通膨升高會使無風險利率（Rf）上升，SML
+                  平行上移（截距上升），在 β
+                  與風險溢酬不變下，所有證券之期望報酬率均會提高。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q22</p>
+                <p class="qtext">
+                  有關資本市場線（CML）與證券市場線（SML）之風險衡量指標的敘述，何者「正確」？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．CML 是用系統風險，SML 是用非系統風險</div>
+                  <div class="opt">B．CML 是用總風險，SML 是用非系統風險</div>
+                  <div class="opt">C．CML 是用非系統風險，SML 是用總風險</div>
+                  <div class="opt right">
+                    D．CML 是用總風險，SML 是用系統風險
+                  </div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>CML 用總風險（標準差）衡量，SML
+                  用系統風險（β）衡量。
+                </p>
+              </div>
+            </details>
+          </section>
+
+          <section class="unit">
+            <div class="unit-head"><h2>資本配置線（CAL）</h2></div>
+            <div class="formula">
+              <div class="formula-line">
+                CAL 斜率 ＝
+                <span class="frac"
+                  ><span class="num">預期報酬率 － 無風險利率</span
+                  ><span class="den">標準差</span></span
+                >
+              </div>
+            </div>
+            <div class="explain">
+              <ul>
+                <li>
+                  以預期報酬率為 Y 軸、標準差為 X
+                  軸，將風險與無風險資產各種組合的結果連成的一條線
+                </li>
+              </ul>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（2 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q23</p>
+                <p class="qtext">
+                  已知一最適風險投資組合（optimal risky portfolio）的預期報酬率為
+                  6.5%、標準差為 23%、無風險利率為
+                  3.5%。請問：最佳可行的資本配置線（CAL）的斜率為多少？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．0.64</div>
+                  <div class="opt">B．0.39</div>
+                  <div class="opt">C．0.08</div>
+                  <div class="opt right">D．0.13</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>資本配置線斜率 ＝
+                  <span class="frac"
+                    ><span class="num">預期報酬率 － 無風險利率</span
+                    ><span class="den">標準差</span></span
+                  >
+                  ＝
+                  <span class="frac"
+                    ><span class="num">6.5% － 3.5%</span
+                    ><span class="den">23%</span></span
+                  >
+                  ＝ 0.13。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q24</p>
+                <p class="qtext">
+                  已知一最適風險投資組合，其期望報酬率為 12%，標準差為
+                  26%，若無風險利率為
+                  5%，請問其最適（feasible）資本市場線的斜率約為？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．0.64</div>
+                  <div class="opt right">B．0.27</div>
+                  <div class="opt">C．0.33</div>
+                  <div class="opt">D．0.36</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  ><span class="frac"
+                    ><span class="num">12%－5%</span
+                    ><span class="den">26%</span></span
+                  >
+                  ＝ 0.27。
+                </p>
+              </div>
+            </details>
+          </section>
+        </main>
+
+        <nav class="chapter-nav">
+          <a class="prev" href="/investment/ch06-risk-capm.html"
+            ><span class="dir">← 上一章</span>風險指標與 CAPM</a
+          >
+          <a class="next" href="/investment/ch08-efficient-market.html"
+            ><span class="dir">下一章 →</span>投資態度、策略與效率市場</a
+          >
+        </nav>
+      </div>
+    </div>
+    <script src="/assets/nav.js"></script>
+  </body>
+</html>

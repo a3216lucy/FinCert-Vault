@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>盈餘計算與評估品質｜財務分析 CH08</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    />
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div id="site-nav"></div>
+      <div class="content">
+        <header class="masthead">
+          <div class="masthead-inner">
+            <span class="eyebrow">證券商高級業務員 · 財務分析 · 第 8 章</span>
+            <h1>盈餘計算與評估品質</h1>
+          </div>
+        </header>
+        <p class="crumb">
+          <a href="/index.html">高業考前重點</a> ／ 財務分析 ／ 第 8 章
+        </p>
+
+        <main>
+          <section class="unit">
+            <div class="unit-head"><h2>每股盈餘（EPS）</h2></div>
+            <div class="formula">
+              <div class="formula-line">
+                基本每股盈餘 ＝
+                <span class="frac"
+                  ><span class="num">淨利 － 特別股股利</span
+                  ><span class="den">加權平均流通在外普通股數</span></span
+                >
+              </div>
+              <div class="formula-line">
+                稀釋每股盈餘之約當股數 ＝ 流通在外普通股數 ＋
+                (認購權證可取得普通股總股數 × 履約價格 / 當期平均市價)
+              </div>
+            </div>
+            <div class="explain">
+              <ul>
+                <li>
+                  每股盈餘是評估公司獲利能力的依據，代表普通股能享有的盈餘，因此計算時必須扣除特別股股利
+                </li>
+                <li>
+                  「加權平均流通在外普通股數」根據普通股存續時間做加權計算，若有發放股票股利或股票分割，應視為<strong>年初</strong>即已增加或減少股數
+                </li>
+                <li>
+                  計算分子時，<strong>不論公司當期是否宣告發放股利</strong>，累積特別股之股利都必須自本期純益中減除
+                </li>
+                <li>複雜資本結構下，應計算基本每股盈餘及稀釋每股盈餘</li>
+                <li>
+                  <strong>稀釋每股盈餘</strong
+                  >：必須考量約當及非約當普通股，也就是潛在普通股，包含可轉換公司債、可轉換特別股、附認股權公司債等，這些股債一旦轉換成普通股，就會造成
+                  EPS 稀釋
+                </li>
+              </ul>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（2 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q6</p>
+                <p class="qtext">
+                  X0 年初有 220,000 股，9 月 1 日增資發行 10,000 股，11 月 1
+                  日股票分割每股分為 1.5 股，X1 年 4 月 1 日發放股票股利 10%，X1
+                  年 10 月 1 日購回庫藏股 4,000 股，X0 年淨利 $800,000，試計算
+                  X0 年損益表之每股盈餘：
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．$2.39</div>
+                  <div class="opt">B．$2.75</div>
+                  <div class="opt">C．$2.85</div>
+                  <div class="opt">D．$2.95</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >若有發放股票股利或股票分割，應視為年初即已增加或減少股數<br />加權平均流通在外普通股數
+                  ＝ 220,000×<span class="frac"
+                    ><span class="num">12</span
+                    ><span class="den">12</span></span
+                  >×1.5 ＋ 10,000×<span class="frac"
+                    ><span class="num">4</span><span class="den">12</span></span
+                  >×1.5 ＝ 335,000<br />EPS ＝
+                  <span class="frac"
+                    ><span class="num">800,000</span
+                    ><span class="den">335,000</span></span
+                  >
+                  ＝ 2.39。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q8</p>
+                <p class="qtext">
+                  大南公司之資料如下：X1 年度純益 $6,000,000，所得稅率
+                  17%，普通股 400,000 股，全年流通在外，每股面額 $10。另有 5%
+                  累積可轉換特別股 600,000 股，每股面額 $100，可轉換成普通股 3
+                  股；可轉換公司債 $6,000,000，票面利率 6%，平價發行，每 $1,000
+                  面額可轉換成普通股 20 股。試問其基本每股盈餘為何？
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．$7.5</div>
+                  <div class="opt">B．$5</div>
+                  <div class="opt">C．$8.775</div>
+                  <div class="opt">D．$6.6</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>特別股股利 ＝ 600,000股×每股面額100×5%
+                  ＝ 3,000,000<br />普通股基本盈餘 ＝
+                  稅後淨利6,000,000－特別股股利3,000,000 ＝ 3,000,000<br />基本每股盈餘
+                  ＝
+                  <span class="frac"
+                    ><span class="num">3,000,000</span
+                    ><span class="den">400,000</span></span
+                  >
+                  ＝
+                  7.5（注意：可轉換公司債與可轉換特別股只影響「稀釋」EPS，不影響基本
+                  EPS）。
+                </p>
+              </div>
+            </details>
+          </section>
+
+          <section class="unit">
+            <div class="unit-head"><h2>盈餘品質</h2></div>
+            <div class="explain">
+              <ul>
+                <li>若公司盈餘來自經營主業部份等經常性活動，盈餘品質越高</li>
+                <li>
+                  影響因素：會計政策之選擇、任意性成本、管理者操控、暫時性盈餘、企業風險等
+                </li>
+              </ul>
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th>盈餘管理</th>
+                    <th>盈餘操縱</th>
+                  </tr>
+                  <tr>
+                    <td>
+                      以合法方式操作盈餘，如透過事件發生或承認、不同期間之分攤分類達到平滑的目的
+                    </td>
+                    <td>
+                      盈餘管理過當，如低列負債、調整收支認列時間、策略性歸類會計科目（如出售長期投資之收入記為營業收入）、操控費用、高估流動資產（高估應收帳款或存貨）
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="callout-line">
+                資產負債表外負債愈多，則其盈餘品質愈低
+                <span class="arrow">➜ 考點注意</span>
+              </div>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（1 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q18</p>
+                <p class="qtext">下列對於盈餘品質評估之描述，何者正確？</p>
+                <div class="opts">
+                  <div class="opt right">
+                    A．品質高的盈餘應該具備忠實表達與完整性、穩定性及成長性的盈餘
+                  </div>
+                  <div class="opt">
+                    B．複雜資本結構下，應計算二種每股盈餘（基本每股盈餘及稀釋每股盈餘）
+                  </div>
+                  <div class="opt">
+                    C．單一盈餘數字足以分析公司現在的價值及其未來成長性
+                  </div>
+                  <div class="opt">
+                    D．基本每股盈餘及稀釋每股盈餘差別在其他具稀釋性潛在普通股之影響
+                  </div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>本題陷阱在於 B、D
+                  敘述本身也正確，但題目問「何者正確」時應選最核心描述盈餘品質特性的
+                  A（其餘選項屬於 EPS 觀念，非盈餘品質評估本身）。
+                </p>
+              </div>
+            </details>
+          </section>
+
+          <section class="unit">
+            <div class="unit-head"><h2>盈餘預測與財務預測</h2></div>
+            <div class="explain">
+              <ul>
+                <li>
+                  盈餘預測：企業對未來營運做的最適估計，包含銷貨收入、銷貨成本等，但<strong>可不包含利息費用</strong>的預測
+                  <ul>
+                    <li>
+                      跟營業相關的部分對預測未來盈餘最有幫助，如營業部門稅前淨利（營業利益）
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  財務預測分為簡式財務預測、完整式財務預測（完整式包含重要會計政策之彙總說明），應標明預測字樣及預測編製完成日期，且可加入敏感性分析
+                </li>
+                <li>
+                  <ul>
+                    <li><strong>財務預測更新</strong>：代表預測假設有變動而修正</li>
+                    <li><strong>財務預測更正</strong>：代表預測有錯誤而更正</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（1 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q22</p>
+                <p class="qtext">
+                  一般而言，下列哪一項目和企業現金流量的預測最為密切？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．預測之進貨金額</div>
+                  <div class="opt right">B．預測之銷貨金額</div>
+                  <div class="opt">C．預估資金成本</div>
+                  <div class="opt">D．預測之營業費用金額</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >預測銷貨金額才能進一步估算其他需要的進貨、支出。
+                </p>
+              </div>
+            </details>
+          </section>
+        </main>
+
+        <nav class="chapter-nav">
+          <a class="prev" href="/finance/ch07-leverage.html"
+            ><span class="dir">← 上一章</span>損益兩平與槓桿比率</a
+          >
+          <a class="next" href="/finance/ch09-cash-flow.html"
+            ><span class="dir">下一章 →</span>現金流量表</a
+          >
+        </nav>
+      </div>
+    </div>
+    <script src="/assets/nav.js"></script>
+  </body>
+</html>

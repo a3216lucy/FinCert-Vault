@@ -1,0 +1,2253 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>風險指標與 CAPM｜投資學 CH06</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    />
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div id="site-nav"></div>
+      <div class="content">
+        <header class="masthead">
+          <div class="masthead-inner">
+            <span class="eyebrow">證券商高級業務員 · 投資學 · 第 6 章</span>
+            <h1>風險指標與 CAPM</h1>
+          </div>
+        </header>
+        <p class="crumb">
+          <a href="/index.html">高業考前重點</a> ／ 投資學 ／ 第 6 章
+        </p>
+
+        <main>
+          <section class="unit">
+            <div class="unit-head"><h2>風險種類</h2></div>
+            <div class="explain">
+              <div class="callout-line">
+                金融工具風險高低：衍生性商品 ＞ 普通股 ＞ 特別股 ＞ 公司債 ＞
+                政府債券 <span class="arrow">➜ 考點注意</span>
+              </div>
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th></th>
+                    <th>非系統風險</th>
+                    <th>系統風險</th>
+                  </tr>
+                  <tr>
+                    <td>特性</td>
+                    <td>可靠分散投資避免（雞蛋不要放同一籃）</td>
+                    <td>不可靠分散投資避免（覆巢之下無完卵）</td>
+                  </tr>
+                  <tr>
+                    <td>種類</td>
+                    <td>信用風險、事業（營運）風險</td>
+                    <td>
+                      利率風險、再投資風險、購買力（通膨）風險、流動性風險、匯率風險
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <ul>
+                <li>
+                  <strong>再投資風險</strong>：
+                  <ul>
+                    <li>領到的利息無法用相同報酬率再投資的風險</li>
+                    <li>
+                      零息債券到期才一次拿到錢，<strong>沒有</strong>再投資風險
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>套利</strong>：原始淨投資金額與風險均為
+                  0，但期望報酬率為正的交易策略 —— 利用市場無效率賺取
+                  無風險超額利潤
+                </li>
+              </ul>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（18 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q1</p>
+                <p class="qtext">
+                  下列有關風險分散之敘述，何者正確？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．一個完全分散的投資組合，由於風險均已分散，其報酬率應等於無風險利率</div>
+                  <div class="opt right">B．完全分散風險的投資組合，並未能將所有風險消除</div>
+                  <div class="opt">C．完全分散風險的投資組合，其報酬率應較無風險利率為低</div>
+                  <div class="opt">D．系統風險和非系統風險皆可經由投資組合完全分散</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>完全分散只能消除非系統風險，系統風險無法消除，故投資組合仍存在風險，B 正確。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q2</p>
+                <p class="qtext">下列金融工具的風險高低順序為何？</p>
+                <div class="opts">
+                  <div class="opt">
+                    A．政府債券＜特別股＜普通股＜公司債＜衍生性商品
+                  </div>
+                  <div class="opt right">
+                    B．政府債券＜公司債＜普通股＜特別股＜衍生性商品
+                  </div>
+                  <div class="opt">
+                    C．政府債券＜公司債＜特別股＜普通股＜衍生性商品
+                  </div>
+                  <div class="opt">
+                    D．公司債＜政府債券＜特別股＜普通股＜衍生性商品
+                  </div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>風險高低：政府債券 ＜ 公司債 ＜ 特別股
+                  ＜ 普通股 ＜ 衍生性商品。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q3</p>
+                <p class="qtext">
+                  小花與小美同為風險趨避者，但在程度上小花較小美更為保守。下列敘述何者「正確」？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．對同一種風險性證券，小花所要求的報酬率較低</div>
+                  <div class="opt right">B．對同一種風險性證券，小花所要求的報酬率較高</div>
+                  <div class="opt">C．對同一種風險性證券，小花所能容忍的風險程度較高</div>
+                  <div class="opt">D．選項(A)(B)(C)皆有可能</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>越保守（風險趨避程度越高）者，承擔同樣風險所要求的報酬率越高，能容忍的風險程度也越低。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q4</p>
+                <p class="qtext">
+                  針對個人投資人而言，風險容忍程度愈高的人，在資產配置上，股票比重應較債券為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．沒有影響</div>
+                  <div class="opt">B．低</div>
+                  <div class="opt right">C．高</div>
+                  <div class="opt">D．兩者比重相同</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>風險容忍程度愈高，愈能承受股票的高波動，股票比重應較高。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q5</p>
+                <p class="qtext">
+                  投資總風險中，只影響特定資產價值部分之風險為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．系統風險</div>
+                  <div class="opt right">B．非系統風險</div>
+                  <div class="opt">C．技術風險</div>
+                  <div class="opt">D．非技術風險</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>只影響特定（個別）資產之風險稱為非系統風險，可透過分散投資降低或消除；系統風險則影響全體市場，無法透過分散消除。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q6</p>
+                <p class="qtext">
+                  下列何種事件的發生是屬於「非系統風險」？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．中央銀行調降重貼現率</div>
+                  <div class="opt">B．政府宣佈調降經濟成長率預測值</div>
+                  <div class="opt right">C．美國政府對臺灣某項產品課徵反傾銷稅</div>
+                  <div class="opt">D．通貨膨脹率驟升</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>反傾銷稅只影響特定產業/公司，屬於非系統風險；其餘選項皆影響整體市場，屬系統風險。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q7</p>
+                <p class="qtext">
+                  下列何種事件的發生，是屬於「非系統風險」？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．政府宣布調整存款準備率，上一季經濟成長率為 6.1%</div>
+                  <div class="opt">B．中國台海演習</div>
+                  <div class="opt">C．通貨膨脹率維持穩定</div>
+                  <div class="opt right">D．公司員工罷工</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>公司員工罷工只影響該公司，屬於非系統風險；其餘選項皆為總體經濟或全面性事件，屬系統風險。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q8</p>
+                <p class="qtext">
+                  投資公司債必須承擔的非系統性風險為何？
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．倒帳風險</div>
+                  <div class="opt">B．通貨膨脹風險</div>
+                  <div class="opt">C．利率風險</div>
+                  <div class="opt">D．選項(A)與(C)都是</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>倒帳風險（信用風險）屬於非系統風險；通膨風險、利率風險皆屬系統風險。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q9</p>
+                <p class="qtext">何者「不是」持有某公司債券的系統風險？</p>
+                <div class="opts">
+                  <div class="opt">A．央行調高存款準備率</div>
+                  <div class="opt">B．央行調升利率</div>
+                  <div class="opt right">C．發行公司的財務風險</div>
+                  <div class="opt">D．能源危機導致通貨膨脹</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>央行貨幣政策、能源危機造成的通膨皆屬影響全市場的系統風險；發行公司自身的財務風險屬於非系統風險（個別公司風險）。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q10</p>
+                <p class="qtext">
+                  企業無法支付舉債利息或償還本金之風險稱為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．購買力風險</div>
+                  <div class="opt">B．企業風險</div>
+                  <div class="opt">C．市場風險</div>
+                  <div class="opt right">D．財務風險</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>無法支付利息或本金屬於財務風險（違約風險的一種）。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q11</p>
+                <p class="qtext">
+                  企業因舉債過多而無法支應還本付息之固定支出，因此所發生經營困難之風險，稱為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．商業風險</div>
+                  <div class="opt right">B．財務槓桿風險</div>
+                  <div class="opt">C．營業槓桿風險</div>
+                  <div class="opt">D．選項 ABC 皆是</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>因舉債（財務槓桿）過重導致無法支付固定利息與本金而產生的經營困難風險，稱為財務槓桿風險；營業槓桿風險則源自固定生產成本過高。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q12</p>
+                <p class="qtext">
+                  禹英計劃投資期間為一年，對禹英來說，連續投資 90 天國庫券會面臨到下列何種風險？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．信用風險</div>
+                  <div class="opt">B．匯率風險</div>
+                  <div class="opt">C．違約風險</div>
+                  <div class="opt right">D．再投資利率風險</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>每 90 天後再次買入新國庫券的利率條件可能會變，屬於再投資風險。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q13</p>
+                <p class="qtext">
+                  以下風險來源中，哪一項與通貨膨脹最直接相關？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．利率風險</div>
+                  <div class="opt">B．流動性風險</div>
+                  <div class="opt right">C．購買力風險</div>
+                  <div class="opt">D．違約風險</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>購買力風險（通膨風險）指報酬率小於通膨率、實質購買力下降的風險，與通貨膨脹直接相關。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q14</p>
+                <p class="qtext">
+                  當買入證券後，未能公平且迅速賣出該證券，此風險為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．違約風險</div>
+                  <div class="opt right">B．流動性風險</div>
+                  <div class="opt">C．購買力風險</div>
+                  <div class="opt">D．利率風險</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>無法以公平價格迅速賣出，屬於流動性風險。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q15</p>
+                <p class="qtext">
+                  若債券的次級市場不發達、交易量很小，則投資者在急需用錢時可能無法順利出售時的風險為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．再投資風險</div>
+                  <div class="opt right">B．流動性風險</div>
+                  <div class="opt">C．信用風險</div>
+                  <div class="opt">D．利率風險</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>次級市場不發達、交易量小導致無法順利出售，屬於流動性風險。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q16</p>
+                <p class="qtext">
+                  一種交易策略，其原始淨投資金額與風險均為 0，但其期望報酬率則為正，此種交易稱為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．投機交易</div>
+                  <div class="opt">B．避險交易</div>
+                  <div class="opt right">C．套利交易</div>
+                  <div class="opt">D．選項(A)(B)(C)皆有可能</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>淨投資與風險皆為 0、期望報酬為正，即為套利交易的定義。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q17</p>
+                <p class="qtext">
+                  利用市場之非效率，買賣各證券而可得到無風險超額報酬之交易行為稱為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．投資</div>
+                  <div class="opt right">B．套利</div>
+                  <div class="opt">C．投機</div>
+                  <div class="opt">D．避險</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>利用市場無效率賺取無風險超額報酬，即為套利。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q18</p>
+                <p class="qtext">
+                  所謂套利（Arbitrage）交易係指：
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．利用市場無效率，賺取無風險超額利潤</div>
+                  <div class="opt">B．預期市場價格變動，從中賺取差價</div>
+                  <div class="opt">C．以低價買進證券，待高價時賣出，賺取差價</div>
+                  <div class="opt">D．選項(A)(B)(C)皆屬套利交易</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>套利是利用市場無效率賺取無風險超額利潤；(B)(C)屬於投機交易，並非套利。
+                </p>
+              </div>
+</details>
+          </section>
+
+          <section class="unit">
+            <div class="unit-head"><h2>變異係數與共變數</h2></div>
+            <div class="formula">
+              <div class="formula-line">
+                變異係數 ＝
+                <span class="frac"
+                  ><span class="num">標準差</span
+                  ><span class="den">期望報酬率</span></span
+                >
+              </div>
+              <div class="formula-line">
+                共變數 ＝ 相關係數 × A 證券標準差 × B 證券標準差
+              </div>
+            </div>
+            <div class="explain">
+              <ul>
+                <li>
+                  <strong>標準差</strong>：衡量總風險，無風險資產標準差為 0
+                </li>
+                <li>
+                  <strong>變異係數</strong>：每 1%
+                  期望報酬率所需承擔的風險，數值越高表示【波動程度越大】
+                </li>
+                <li>
+                  <strong>共變數</strong>：兩證券向同一方向偏離各自報酬率的程度
+                </li>
+              </ul>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（13 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q19</p>
+                <p class="qtext">
+                  下列何者是用來衡量投資風險的方法？甲.風險值(VaR)；乙.β
+                  係數；丙.變異數；丁.半變異數
+                </p>
+                <div class="opts">
+                  <div class="opt">A．僅甲、乙</div>
+                  <div class="opt">B．僅甲、乙、丙</div>
+                  <div class="opt">C．僅丙、丁</div>
+                  <div class="opt right">D．甲、乙、丙、丁皆是</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>風險值、β
+                  係數、變異數、半變異數皆可用以衡量投資風險。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q20</p>
+                <p class="qtext">何者「不是」用來衡量投資風險的方法？</p>
+                <div class="opts">
+                  <div class="opt">A．全距（Range）</div>
+                  <div class="opt">B．β 係數</div>
+                  <div class="opt">C．變異數</div>
+                  <div class="opt right">D．算術平均數</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >算術平均數衡量報酬率的中心趨勢，並非風險（離散程度）指標；全距、β
+                  係數、變異數皆可衡量風險。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q21</p>
+                <p class="qtext">
+                  某一證券之報酬率標準差愈大，則其總風險：
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．愈大</div>
+                  <div class="opt">B．愈小</div>
+                  <div class="opt">C．不變</div>
+                  <div class="opt">D．不一定</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>標準差衡量總風險，標準差愈大，總風險愈大。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q22</p>
+                <p class="qtext">
+                  當實際報酬率與預期報酬率離散程度小時，即表示：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．該項投資的報酬很大</div>
+                  <div class="opt">B．該項投資的報酬很小</div>
+                  <div class="opt">C．該項投資的風險很大</div>
+                  <div class="opt right">D．該項投資的風險很小</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>離散程度小 → 波動小 → 風險小。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q23</p>
+                <p class="qtext">
+                  有一投資組合由甲、乙兩股票組成，請問在什麼情況之下，投資組合報酬率之標準差為甲、乙兩股票個別標準差之加權平均？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．兩股票報酬率相關係數＝0</div>
+                  <div class="opt right">B．兩股票報酬率相關係數＝1</div>
+                  <div class="opt">C．兩股票報酬率相關係數＝-1</div>
+                  <div class="opt">D．任何情況下，投資組合標準差均為個別標準差之加權平均</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>當相關係數為 1（完全正相關）時，投資組合標準差恰為個別標準差的加權平均，無分散效果。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q24</p>
+                <p class="qtext">
+                  變異數及貝它係數都可用來衡量風險，兩者不同之處在於：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．貝它係數衡量系統及非系統風險</div>
+                  <div class="opt right">
+                    B．貝它係數只衡量系統風險，但變異數衡量總風險
+                  </div>
+                  <div class="opt">C．貝它係數只衡量非系統風險</div>
+                  <div class="opt">
+                    D．貝它係數衡量系統及非系統風險，但變異數只衡量系統風險
+                  </div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>β
+                  係數只反映系統風險；變異數（標準差平方）反映總風險（系統＋非系統）。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q25</p>
+                <p class="qtext">
+                  某一投資組合由甲、乙兩種股票組成，甲股票預期報酬率為
+                  7.5%，報酬率標準差為 10%，占投資組合比重為
+                  0.6；乙股票預期報酬率為 9.2%，報酬率標準差率為
+                  20%，占投資組合比重為
+                  0.4；若兩者之相關係數為-1，請問該投資組合報酬率標準差為何？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．3%</div>
+                  <div class="opt">B．4%</div>
+                  <div class="opt">C．8%</div>
+                  <div class="opt right">D．2%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>相關係數為
+                  -1 時，投資組合標準差可簡化為兩資產加權標準差之差的絕對值：|10%×0.6
+                  － 20%×0.4| ＝ |6% － 8%| ＝ 2%。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q26</p>
+                <p class="qtext">
+                  若甲股票的報酬率標準差為 0.3，乙股票的報酬率標準差為
+                  0.2，甲和乙股票的報酬率相關係數為
+                  0.5，則甲和乙股票的報酬率共變數為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．0.04</div>
+                  <div class="opt right">B．0.03</div>
+                  <div class="opt">C．0.02</div>
+                  <div class="opt">D．0.01</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >共變數＝相關係數×甲標準差×乙標準差＝0.5×0.3×0.2＝0.03。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q27</p>
+                <p class="qtext">
+                  小明將其所有財富的 40%
+                  投資於風險性資產，該風險性資產的預期報酬率為
+                  15%，變異數為 0.04；再將剩餘之 60%
+                  投資於國庫券（無風險），且報酬率為
+                  6%。則試問其以上之投資組合的預期報酬率及標準差（風險）分別為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．0.114；0.12</div>
+                  <div class="opt">B．0.096；0.10</div>
+                  <div class="opt">C．0.08；0.12</div>
+                  <div class="opt right">D．0.096；0.08</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>風險性資產變異數 0.04 ＝ 標準差²
+                  → 標準差 ＝ 0.2<br />
+                  預期報酬率 ＝ 15%×40% ＋ 6%×60% ＝ 9.6%<br />
+                  投資組合標準差 ＝ 風險性資產標準差 0.2×40% ＋
+                  無風險資產標準差 0×60% ＝ 8%。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q28</p>
+                <p class="qtext">
+                  若甲股票的報酬率標準差為 0.3，乙股票的報酬率標準差為 0.2，甲和乙股票的報酬率相關係數為 0.5，則甲和乙股票的報酬率共變數為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．0.04</div>
+                  <div class="opt right">B．0.03</div>
+                  <div class="opt">C．0.02</div>
+                  <div class="opt">D．0.01</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>共變異數 ＝ 相關係數 × 甲股票標準差 × 乙股票標準差 ＝ 0.5 × 0.3 × 0.2 ＝ 0.03。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q29</p>
+                <p class="qtext">
+                  若甲股票報酬率與乙股票報酬率之共變數為 0.5，則乙股票報酬率與甲股票報酬率之共變數為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．資料不足，無法斷定</div>
+                  <div class="opt">B．-0.5</div>
+                  <div class="opt">C．大於 0.5</div>
+                  <div class="opt right">D．0.5</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>共變異數具對稱性，Cov(甲,乙)＝Cov(乙,甲)＝0.5。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q93</p>
+                <p class="qtext">
+                  若甲證券之平均報酬為 18%，標準差為 0.20，而乙證券之平均報酬為 4%，標準差為 0.10，若二證券為完全負相關，其共變異數為何？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．0.05</div>
+                  <div class="opt">B．0.3</div>
+                  <div class="opt right">C．-0.02</div>
+                  <div class="opt">D．-0.04</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>共變異數 ＝ 相關係數 × 甲標準差 × 乙標準差 ＝ -1×0.2×0.1 ＝ -0.02。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q94</p>
+                <p class="qtext">
+                  若甲股票的標準差為 0.25，甲和乙股票的共變異數是 0.005，甲和乙股票的相關係數為 0.5，則乙股票的標準差為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．0.125</div>
+                  <div class="opt right">B．0.04</div>
+                  <div class="opt">C．0.15</div>
+                  <div class="opt">D．0.02</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>共變異數 ＝ 相關係數 × 甲標準差 × 乙標準差 ＝ 0.5×0.25×乙標準差 ＝ 0.005，解得乙標準差 ＝ 0.04。
+                </p>
+              </div>
+</details>
+          </section>
+
+          <section class="unit">
+            <div class="unit-head">
+              <h2>β 係數</h2>
+            </div>
+            <div class="formula">
+              <div class="formula-line">
+                β 係數 ＝ 相關係數 ×
+                <span class="frac"
+                  ><span class="num">效率資產報酬標準差</span
+                  ><span class="den">市場投資組合報酬標準差</span></span
+                >
+                ＝
+                <span class="frac"
+                  ><span class="num">證券與市場投組報酬的共變異數</span
+                  ><span class="den">市場投組報酬的變異數</span></span
+                >
+              </div>
+              <div class="formula-line">
+                投資組合 β ＝ Σ（各資產權重 × 各資產 β）
+              </div>
+            </div>
+            <div class="diagram-card">
+              <svg viewBox="0 0 220 110">
+                <line x1="20" y1="90" x2="205" y2="90" stroke="var(--ink-20)" />
+                <line x1="20" y1="12" x2="20" y2="90" stroke="var(--ink-20)" />
+                <line
+                  x1="20"
+                  y1="90"
+                  x2="185"
+                  y2="18"
+                  stroke="var(--jade)"
+                  stroke-width="2.5"
+                />
+                <line
+                  x1="20"
+                  y1="90"
+                  x2="185"
+                  y2="48"
+                  stroke="var(--gold)"
+                  stroke-width="2.5"
+                  stroke-dasharray="4 3"
+                />
+                <line
+                  x1="20"
+                  y1="90"
+                  x2="185"
+                  y2="75"
+                  stroke="var(--seal)"
+                  stroke-width="2.5"
+                />
+                <text
+                  x="181"
+                  y="14"
+                  font-size="11"
+                  fill="var(--jade)"
+                  class="mono"
+                  text-anchor="end"
+                >
+                  β&gt;1
+                </text>
+                <text
+                  x="181"
+                  y="43"
+                  font-size="11"
+                  fill="var(--gold)"
+                  class="mono"
+                  text-anchor="end"
+                >
+                  β=1
+                </text>
+                <text
+                  x="190"
+                  y="84"
+                  font-size="11"
+                  fill="var(--seal)"
+                  class="mono"
+                  text-anchor="start"
+                >
+                  0&lt;β&lt;1
+                </text>
+                <text
+                  x="15"
+                  y="45"
+                  font-size="11"
+                  fill="var(--ink-40)"
+                  text-anchor="end"
+                >
+                  報酬
+                </text>
+                <text x="90" y="105" font-size="11" fill="var(--ink-40)">
+                  市場報酬
+                </text>
+              </svg>
+            </div>
+            <div class="explain">
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th>β 值</th>
+                    <th>意義</th>
+                    <th>情況</th>
+                  </tr>
+                  <tr>
+                    <td>β &gt; 1</td>
+                    <td>預期報酬率會 大於 市場報酬率</td>
+                    <td>市場漲 1%，此投資會漲 1% 以上</td>
+                  </tr>
+                  <tr>
+                    <td>β ＝ 1</td>
+                    <td>預期報酬率會 等於 市場報酬率</td>
+                    <td>即為市場投資組合</td>
+                  </tr>
+                  <tr>
+                    <td>0 &lt; β &lt; 1</td>
+                    <td>預期報酬率會 小於 市場報酬率</td>
+                    <td>抗跌又抗漲（牛皮股）</td>
+                  </tr>
+                  <tr>
+                    <td>β ＝ 0</td>
+                    <td>預期報酬率會 等於 無風險利率</td>
+                    <td>如國庫券</td>
+                  </tr>
+                  <tr>
+                    <td>β &lt; 0</td>
+                    <td>預期報酬率會 小於 無風險利率</td>
+                    <td>市場漲則此投資會跌</td>
+                  </tr>
+                </table>
+              </div>
+              <ul>
+                <li>
+                  β
+                  係數衡量個別證券報酬率相對於<strong>市場投資組合</strong>報酬率的變動程度，代表<strong
+                    >系統風險</strong
+                  >
+                </li>
+                <li>
+                  兩種以上證券投資組合 β 係數計算，採加權平均法：Σ(各資產權重 ×
+                  各資產 β 係數)
+                </li>
+                <li>
+                  <strong>市場投資組合</strong
+                  >：包括市場上所有資產或證券的投資組合，可避免非系統風險，通常以大盤股價指數衡量其價格；每個證券的投資權數，以其市值占市場所有證券總市值的比例為權數
+                </li>
+                <li>
+                  <strong>效率投資組合</strong>：必為已充分分散風險之投資組合
+                </li>
+              </ul>
+              <div class="callout-line">
+                算投資組合 β 時只要<strong>權重與各資產 β</strong>
+                <br />相關係數是計算投資組合標準差時才需要。 <br />
+                無風險資產
+                β＝0、標準差＝0，與其他資產的相關係數<strong>無定義</strong>。
+                <br />
+                <span class="arrow">➜ 常見干擾條件</span>
+              </div>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（35 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q30</p>
+                <p class="qtext">
+                  一般而言，我們會以何者來衡量個別證券報酬率相對於市場投資組合報酬率的變動程度？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．變異數</div>
+                  <div class="opt">B．標準差</div>
+                  <div class="opt">C．變異係數</div>
+                  <div class="opt right">D．貝它值</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>貝它值（β）衡量個別證券報酬率相對於市場投資組合報酬率的變動程度。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q31</p>
+                <p class="qtext">
+                  一般來說，我們會用統計上的迴歸方法來估計：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．無風險利率</div>
+                  <div class="opt">B．股票報酬率之共變數</div>
+                  <div class="opt right">C．股票之 β 值(Beta)</div>
+                  <div class="opt">D．股票報酬率之變異數</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>β 值通常以個股報酬率對市場報酬率進行迴歸估計得出。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q32</p>
+                <p class="qtext">
+                  在 CAPM 模式中，系統風險是以下列何者衡量？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．報酬率之標準差</div>
+                  <div class="opt">B．報酬率之變異數</div>
+                  <div class="opt right">C．貝它（Beta）係數</div>
+                  <div class="opt">D．選項(A)(B)(C)皆非</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>CAPM 中系統風險以 β 係數衡量。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q33</p>
+                <p class="qtext">
+                  任何一證券的貝它（Beta）係數，其可能的範圍為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．必須大於 0</div>
+                  <div class="opt">B．必須介於 -1 與 +1 之間</div>
+                  <div class="opt">C．必須介於 0 與 1 之間</div>
+                  <div class="opt right">D．無任何限制</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>β
+                  係數理論上沒有正負或大小的限制，可以是負值，也可以大於 1
+                  或小於 -1。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q34</p>
+                <p class="qtext">
+                  假設兩家公司除了財務槓桿程度不同外，餘皆相同，則財務槓桿程度較大的公司，其貝它 (Beta) 值：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．與財務槓桿程度低的公司一樣</div>
+                  <div class="opt">B．較小</div>
+                  <div class="opt right">C．較大</div>
+                  <div class="opt">D．為負</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>財務槓桿程度愈高，股票對市場波動愈敏感，β 值愈大。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q35</p>
+                <p class="qtext">
+                  一公司的營收如果循環性強且其營業槓桿程度亦高，則其貝它（Beta）值將：
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．愈大</div>
+                  <div class="opt">B．愈小</div>
+                  <div class="opt">C．為 0</div>
+                  <div class="opt">D．小於 0</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>營收循環性強、營業槓桿程度高，代表公司對景氣波動敏感度高，β 值愈大。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q36</p>
+                <p class="qtext">
+                  哪種類股在股市多頭行情時，漲幅較大？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．績優大型股</div>
+                  <div class="opt">B．低貝它大型股</div>
+                  <div class="opt">C．低貝它小型股</div>
+                  <div class="opt right">D．高貝它小型股</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>高貝它股票對市場波動敏感度高，多頭時漲幅較大，小型股波動性又較大型股高，故高貝它小型股漲幅最大。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q37</p>
+                <p class="qtext">
+                  一般而言，下列何種產業的貝它（Beta）值可能較低？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．建築業</div>
+                  <div class="opt">B．電子業</div>
+                  <div class="opt right">C．公用事業</div>
+                  <div class="opt">D．鋼鐵業</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>公用事業（如水電）需求穩定，受景氣影響小，β 值通常較低。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q38</p>
+                <p class="qtext">
+                  一般說來，債券型基金之貝它（Beta）係數：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．小於 0</div>
+                  <div class="opt right">B．小於 1</div>
+                  <div class="opt">C．大於 1</div>
+                  <div class="opt">D．無法判斷</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>債券型基金波動性通常小於市場（股票）投資組合，β 值小於 1。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q39</p>
+                <p class="qtext">
+                  市場投資組合的風險為何？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．僅有非系統風險</div>
+                  <div class="opt right">B．貝它係數為 1</div>
+                  <div class="opt">C．其標準差為 0</div>
+                  <div class="opt">D．沒有風險</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>市場投資組合本身的 β 係數定義為 1。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q40</p>
+                <p class="qtext">
+                  由 CAPM，若某投資標的物之貝它係數等於 1，則其預期報酬率較市場投資組合之預期報酬率為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．大</div>
+                  <div class="opt">B．小</div>
+                  <div class="opt right">C．相等</div>
+                  <div class="opt">D．不一定</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>β＝1 時，預期報酬率等於市場投資組合之預期報酬率。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q41</p>
+                <p class="qtext">
+                  請問零 β(zero-beta) 證券的期望報酬是：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．市場報酬率</div>
+                  <div class="opt">B．零報酬率</div>
+                  <div class="opt">C．負的報酬率</div>
+                  <div class="opt right">D．無風險利率</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>由 CAPM 公式，β＝0 時，預期報酬率＝無風險利率。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q42</p>
+                <p class="qtext">
+                  下列對無風險證券之描述何者「正確」？甲、其報酬率低於市場報酬率；乙、其貝它係數約等於
+                  1；丙、其報酬率標準差等於
+                  0；丁、其報酬率與任何其他證券報酬率之相關係數等於 1
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．僅甲、乙、丙</div>
+                  <div class="opt">B．僅乙、丙、丁</div>
+                  <div class="opt">C．僅甲、丙</div>
+                  <div class="opt">D．僅乙、丁</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>無風險證券 β＝0（非
+                  1，故乙錯）、標準差＝0（丙對）、報酬率通常低於市場報酬率（甲對）；因其報酬率沒有變異，與任何證券的相關係數在數學上無意義，並非等於
+                  1（丁錯）。正確答案應為僅甲、丙，此處依原書標記答案 C 為準。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q43</p>
+                <p class="qtext">
+                  若投資者預期證券市場未來將上漲，則其應買進貝它係數為何之股票？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．小於 1</div>
+                  <div class="opt right">B．大於 1</div>
+                  <div class="opt">C．0</div>
+                  <div class="opt">D．-1</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>預期市場上漲時，應買進高 β（大於 1）股票，漲幅會大於市場。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q44</p>
+                <p class="qtext">
+                  一般而言，在多頭行情，高貝它股票股價表現：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．與大盤相近</div>
+                  <div class="opt">B．不如低貝它股票</div>
+                  <div class="opt">C．不如大盤</div>
+                  <div class="opt right">D．優於低貝它股票</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>高貝它股票對市場波動敏感度高，多頭行情表現優於低貝它股票。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q45</p>
+                <p class="qtext">
+                  基金經理人若具有擇時能力，則其管理之基金貝它（Beta）係數將隨市場上漲而：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．降低</div>
+                  <div class="opt">B．不變</div>
+                  <div class="opt right">C．增加</div>
+                  <div class="opt">D．無關</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>具擇時能力的經理人會在市場上漲前提高持股 β 值，以放大漲幅。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q46</p>
+                <p class="qtext">
+                  假設某一股票之報酬率在市場報酬率為正時，其皆為負，且市場報酬率為負時，它皆為正，則此股票的貝它（Beta）值：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．大於 0</div>
+                  <div class="opt right">B．小於 0</div>
+                  <div class="opt">C．等於 0</div>
+                  <div class="opt">D．資料不足，無法判斷</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>股票報酬率與市場報酬率永遠反向變動，代表兩者為完全負相關，β
+                  值為負。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q47</p>
+                <p class="qtext">
+                  具有選時能力的股票型共同基金經理人，在股市下跌期間，其持有投資組合的貝它係數應：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．大於 1</div>
+                  <div class="opt">B．等於 1</div>
+                  <div class="opt">C．等於 0</div>
+                  <div class="opt right">D．小於 1</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >具擇時能力的經理人會在空頭市場預先調降投資組合的 β
+                  值（採防禦策略），以降低市場下跌的衝擊。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q48</p>
+                <p class="qtext">
+                  某股票的期望報酬率較無風險利率為低，根據 CAPM，下列敘述何者「正確」？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．該股票為經營不善公司的股票</div>
+                  <div class="opt">B．該股票的價格太高</div>
+                  <div class="opt right">C．該股票的貝它（Beta）係數為負</div>
+                  <div class="opt">D．該股票之風險趨近於 0</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>期望報酬率低於無風險利率，代表 β 為負值（市場風險溢酬為正的情況下）。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q49</p>
+                <p class="qtext">
+                  貝它（Beta）係數為負的證券最能：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．提高投資組合報酬率</div>
+                  <div class="opt right">B．降低投資組合風險</div>
+                  <div class="opt">C．提高夏普（Sharpe）績效指標</div>
+                  <div class="opt">D．提高投資組合風險</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>負 β 證券與市場反向變動，加入投資組合最能降低整體風險。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q50</p>
+                <p class="qtext">
+                  甲公司股票貝它係數為 1.2，若現有 500
+                  萬元，想投資在國庫券及甲公司股票，且希望投資組合之貝它係數為
+                  0.84，應投資多少元在甲公司股票上？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．500 萬元</div>
+                  <div class="opt">B．420 萬元</div>
+                  <div class="opt right">C．350 萬元</div>
+                  <div class="opt">D．300 萬元</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>投資組合 β ＝ 甲公司投資比重×1.2 ＋
+                  國庫券投資比重×0（無風險）＝0.84 → 甲公司投資比重＝<span
+                    class="frac"
+                    ><span class="num">0.84</span
+                    ><span class="den">1.2</span></span
+                  >＝0.7 → 應投資 500萬×0.7＝350 萬。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q51</p>
+                <p class="qtext">
+                  下列對市場投資組合之描述，何者「正確」？甲.其貝它係數等於 1；乙.其期望報酬率較任何個別證券低；丙.其報酬率標準差較任何個別證券低；丁.其包含了市場上所有的證券
+                </p>
+                <div class="opts">
+                  <div class="opt">A．僅甲、乙、丁</div>
+                  <div class="opt">B．僅甲、丙、丁</div>
+                  <div class="opt right">C．僅甲、丁</div>
+                  <div class="opt">D．僅丙、丁</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>市場投資組合 β＝1、包含市場上所有證券，甲、丁正確；乙、丙未必成立。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q52</p>
+                <p class="qtext">
+                  在市場投資組合中，每個證券之投資權數為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．以每個證券的市場所有證券股價總和比例為權數</div>
+                  <div class="opt">B．以每個證券的股數占市場所有證券總股數比例為權數</div>
+                  <div class="opt right">C．以每個證券的市值占市場所有證券總市值比例為權數</div>
+                  <div class="opt">D．每個證券權數相同</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>市場投資組合權數以個別證券市值占市場所有證券總市值的比例決定。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q53</p>
+                <p class="qtext">
+                  某投資組合報酬率與市場報酬率呈高度相關，下列敘述何者正確？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．該投資組合之貝它（Beta）係數也必定高</div>
+                  <div class="opt right">B．該投資組合之非系統風險很小</div>
+                  <div class="opt">C．該投資組合之報酬率標準差必定很小</div>
+                  <div class="opt">D．該投資組合之期望報酬率也必定高</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>與市場高度相關代表分散程度高、非系統風險很小；β 值高低與相關係數高低無必然關係。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q54</p>
+                <p class="qtext">
+                  下列哪種資產配置的年報酬率波動性最低？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．80% 股票；20% 債券</div>
+                  <div class="opt">B．60% 股票；40% 債券</div>
+                  <div class="opt right">C．30% 股票；70% 銀行存款</div>
+                  <div class="opt">D．50% 股票；50% 債券</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>銀行存款幾乎無風險，股票比重最低（30%）且搭配銀行存款，整體波動性最低。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q55</p>
+                <p class="qtext">
+                  下列何者為「效率投資組合」之特性？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．必為風險最小之投資組合</div>
+                  <div class="opt">B．必為報酬率最高之投資組合</div>
+                  <div class="opt right">C．必為已充分分散風險之投資組合</div>
+                  <div class="opt">D．必為貝它（Beta）值等於 1 之投資組合</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>效率投資組合必為已充分分散風險（僅存在系統風險）的投資組合。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q63</p>
+                <p class="qtext">
+                  當投資者判斷市場處於空頭行情時，以下哪項策略「不」適合？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．增加固定收益證券之比重</div>
+                  <div class="opt">B．增加現金比重</div>
+                  <div class="opt right">C．提高投資組合之貝它係數</div>
+                  <div class="opt">D．出售持有之股票</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >判斷空頭（市場下跌）時應「降低」β
+                  係數以減少下跌損失，提高 β 係數反而會放大虧損，故不適合。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q65</p>
+                <p class="qtext">
+                  根據資本資產定價模式，資產期望報酬率有差異的原因是在於下列何者不同？
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．β 值（Beta）</div>
+                  <div class="opt">B．市場風險溢酬</div>
+                  <div class="opt">C．無風險利率</div>
+                  <div class="opt">D．標準差</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>CAPM
+                  公式中，同一時點市場所有投資人面對的無風險利率與市場風險溢酬相同，唯一造成個別資產期望報酬率不同的變數是各自的 β
+                  值。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q66</p>
+                <p class="qtext">
+                  依資本市場理論，關於投資組合期望報酬率與風險，下列敘述何者正確？
+                </p>
+                <div class="opts">
+                  <div class="opt">
+                    A．透過分散風險使投資組合風險降低，期望報酬率也必定降低
+                  </div>
+                  <div class="opt right">
+                    B．透過避險使投資組合系統風險降低，期望報酬率也必定降低
+                  </div>
+                  <div class="opt">
+                    C．透過選股使投資組合非系統風險降低，期望報酬率也必定降低
+                  </div>
+                  <div class="opt">D．選項 ABC 皆正確</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>CAPM 下期望報酬率僅與系統風險（β）有關；分散投資只能消除非系統風險，不影響期望報酬率（C
+                  錯）；唯有降低系統風險（如避險）才會使 β
+                  值降低、期望報酬率也隨之降低。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q73</p>
+                <p class="qtext">
+                  X 資產與 Y 資產之 β
+                  值與相關係數如下：βX＝1.6，βY＝0.8，ρXY＝0.2。若將 20%
+                  資金投資在 X 資產、80% 資金投資在 Y 資產所形成的投資組合之 β
+                  值為多少？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．0.704</div>
+                  <div class="opt right">B．0.96</div>
+                  <div class="opt">C．1.184</div>
+                  <div class="opt">D．1.44</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>兩種資產組合 β＝X 權重×X 的 β ＋ Y
+                  權重×Y 的 β ＝ 0.2×1.6 ＋ 0.8×0.8 ＝ 0.96<br />相關係數 ρXY
+                  是計算「投資組合標準差」時才需要的資訊，計算投資組合 β
+                  值不需要用到，屬於陷阱條件。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q74</p>
+                <p class="qtext">
+                  假設一投資組合中有兩種資產，第一種資產占 70%，其貝它（Beta）為
+                  1.2，另外一種資產的貝它為 1.5，請問投資組合的貝它是多少？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．0.9</div>
+                  <div class="opt right">B．1.29</div>
+                  <div class="opt">C．1.38</div>
+                  <div class="opt">D．1.44</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>投資組合 β ＝ 1.2×70% ＋ 1.5×30% ＝
+                  1.29。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q76</p>
+                <p class="qtext">
+                  X 股票的 β 值（Beta）為 1.6，Y 股票的 β 值（Beta）為
+                  0.8，下列敘述何者正確？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．X 股票的總風險必為 Y 股票的 2 倍</div>
+                  <div class="opt">B．X 股票與 Y 股票的相關係數可能為負</div>
+                  <div class="opt">C．X 股票的個別風險必比 Y 股票高</div>
+                  <div class="opt right">D．X 股票的期望報酬率必比 Y 股票高</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>β
+                  只反映系統風險，不能推論總風險（A 錯，未知標準差）或個別（非系統）風險（C
+                  錯）大小；X、Y 皆隨同一市場變動，相關係數不會為負（B
+                  錯）；但 β 越高，依 CAPM 公式期望報酬率必定越高（D 對）。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q77</p>
+                <p class="qtext">
+                  甲證券的報酬率標準差等於 35%，乙證券的報酬率標準差等於
+                  25%，則下列敘述何者正確？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．甲的貝它係數必較乙為大</div>
+                  <div class="opt">B．甲的期望報酬率必較乙為高</div>
+                  <div class="opt right">C．甲的總風險必較乙為大</div>
+                  <div class="opt">D．甲的非系統風險必較乙為大</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >標準差衡量總風險，故甲總風險必大於乙（C
+                  對）；但標準差無法拆解出系統與非系統風險各自大小，故無法推論 β
+                  值、期望報酬率或非系統風險的高低。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q81</p>
+                <p class="qtext">
+                  假設甲公司目前股價為 500 元，預期一年後可漲至 600
+                  元，無風險利率為 2%，該股票 β 值為
+                  1.5，則市場投資組合之預期報酬率為多少？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．11%</div>
+                  <div class="opt">B．12%</div>
+                  <div class="opt">C．13%</div>
+                  <div class="opt right">D．14%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>甲公司預期報酬率 ＝ (600－500)/500 ＝
+                  20%<br />20% ＝ 無風險利率 2% ＋ 1.5×(市場報酬率－2%) →
+                  市場報酬率 ＝ 14%。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q89</p>
+                <p class="qtext">
+                  若市場投資組合期望報酬與報酬標準差分別為 12% 與
+                  20%，無風險利率為 2%。投資組合 P
+                  為一效率投資組合，其報酬標準差為
+                  30%，則投資組合 P 之期望報酬為：
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．17.0%</div>
+                  <div class="opt">B．18.0%</div>
+                  <div class="opt">C．20.0%</div>
+                  <div class="opt">D．24.5%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >效率投資組合與市場投資組合完全正相關（相關係數＝1），故 β
+                  ＝ 效率組合標準差／市場標準差 ＝ 30%/20% ＝
+                  1.5<br />期望報酬率 ＝ 無風險利率 2% ＋
+                  1.5×(市場報酬率 12%－無風險利率 2%) ＝ 17%。
+                </p>
+              </div>
+</details>
+          </section>
+
+          <section class="unit">
+            <div class="unit-head"><h2>CAPM 資本資產定價模式</h2></div>
+            <div class="formula">
+              <div class="formula-line">
+                預期報酬率 ＝ 無風險利率 ＋ β 係數 ×（市場報酬率 － 無風險利率）
+              </div>
+            </div>
+            <div class="explain">
+              <ul>
+                <li>目的：將投資效用極大化，求出證券事前、期望報酬率</li>
+                <li>
+                  （市場報酬率 － 無風險利率）＝
+                  市場投資組合的<strong>風險溢酬</strong>；美國國庫券利率 ＝
+                  無風險利率
+                </li>
+              </ul>
+              <p class="sub-label">假設前提：</p>
+              <ul>
+                <li>
+                  非系統風險已因多角化投資而分散，僅存在系統風險 ——
+                  證券的期望報酬率只決定於 β 係數的大小
+                </li>
+                <li>市場為完美市場，無其他成本</li>
+                <li>投資人是理性的</li>
+                <li>世上存在無風險借貸工具</li>
+              </ul>
+              <div class="callout-line">
+                <strong>CAPM 判斷價格： </strong><br />
+                先用 CAPM 算 應有報酬率
+                <ul>
+                  <li>
+                    市場提供的預期報酬率<strong>高於</strong>應有報酬率，代表價格偏低（低估）
+                  </li>
+                  <li>
+                    市場提供的預期報酬率<strong>低於</strong>應有報酬率，代表價格偏高（高估）
+                  </li>
+                </ul>
+                <span class="arrow">➜ 報酬率高＝價格低</span>
+              </div>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（30 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q56</p>
+                <p class="qtext">
+                  哪一項「不是」資本市場理論的基本假設？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．沒有政府課稅</div>
+                  <div class="opt">B．沒有交易成本</div>
+                  <div class="opt">C．沒有資訊成本</div>
+                  <div class="opt right">D．投資人可透過個別交易來影響市場</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>資本市場理論假設市場為完全市場，個別投資人無法透過交易影響市場價格，D 不是其假設。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q57</p>
+                <p class="qtext">
+                  根據 CAPM，任何資產之期望報酬率等於：
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．無風險報酬率加上該資產之風險溢酬</div>
+                  <div class="opt">B．無風險報酬率加上市場平均之風險溢酬</div>
+                  <div class="opt">C．市場平均報酬率加上該資產之風險溢酬</div>
+                  <div class="opt">D．市場平均報酬率加上市場平均之風險溢酬</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>CAPM：期望報酬率＝無風險利率＋該資產之風險溢酬（β×市場風險溢酬）。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q58</p>
+                <p class="qtext">
+                  投資風險性資產的報酬率與無風險利率的差額，稱之為？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．投資利得</div>
+                  <div class="opt">B．投資報酬</div>
+                  <div class="opt right">C．風險溢酬</div>
+                  <div class="opt">D．風險係數</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>報酬率與無風險利率的差額即為風險溢酬（Risk Premium）。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q59</p>
+                <p class="qtext">
+                  在 CAPM 模式中，若證券貝它（Beta）係數增加，則：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．風險減少，預期報酬減少</div>
+                  <div class="opt right">B．風險增加，預期報酬增加</div>
+                  <div class="opt">C．風險不變，預期報酬增加</div>
+                  <div class="opt">D．風險增加，預期報酬不變</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>β 係數增加代表系統風險增加，依 CAPM 公式預期報酬率也隨之增加。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q60</p>
+                <p class="qtext">
+                  依 CAPM，若投資標的物之預期報酬率大於市場投資組合之預期報酬率，則此投資標的物之貝它(Beta)係數為：
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．大於 1</div>
+                  <div class="opt">B．等於 1</div>
+                  <div class="opt">C．等於 0</div>
+                  <div class="opt">D．小於 1</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>預期報酬率大於市場投資組合，代表 β 大於 1。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q61</p>
+                <p class="qtext">
+                  根據資本資產定價模式(CAPM)，樂樂公司股票的預期報酬率低於無風險利率，則下列敘述何者正確？
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．樂樂公司股票的 β(貝他係數)值低於零</div>
+                  <div class="opt">B．樂樂公司的股票風險幾近於無限大</div>
+                  <div class="opt">C．樂樂公司股票價格嚴重被低估</div>
+                  <div class="opt">D．樂樂公司股票價格嚴重被高估</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>預期報酬率低於無風險利率，代表 β 值為負。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q62</p>
+                <p class="qtext">
+                  X 股票的貝它係數是 Y 股票的 2 倍，則下列敘述何者「正確」？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．X 的期望報酬率為 Y 的 2 倍</div>
+                  <div class="opt">B．X 的風險為 Y 的 2 倍</div>
+                  <div class="opt right">C．X 受市場變動影響程度為 Y 的 2 倍</div>
+                  <div class="opt">D．選項(A)(B)(C)皆正確</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>β 值衡量對市場變動的敏感程度，X 的 β 為 Y 的 2 倍，代表 X 受市場變動影響程度為 Y 的 2 倍；期望報酬率並非單純倍數關係。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q64</p>
+                <p class="qtext">
+                  當投資者判斷市場處於空頭行情時，不應採取下列何者策略？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．增加固定收益證券之比重</div>
+                  <div class="opt right">B．提高投資組合之貝它係數</div>
+                  <div class="opt">C．增加現金比重</div>
+                  <div class="opt">D．降低風險性資產比重</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>空頭行情應降低 β 係數以減少跌幅，提高 β 係數是不適合的策略。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q67</p>
+                <p class="qtext">
+                  一證券期望報酬率之高低與下列何者較無關係？
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．可以分散的風險</div>
+                  <div class="opt">B．無風險利率</div>
+                  <div class="opt">C．影響證券風險高低因素之風險溢酬（Risk Premium）</div>
+                  <div class="opt">D．證券報酬率之風險</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>可分散的（非系統）風險不影響期望報酬率，因為投資人可透過分散消除；CAPM 只補償系統風險。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q68</p>
+                <p class="qtext">
+                  已知某公司股票的 β 為 1.2，市場預期報酬率是
+                  8%，銀行一年期定存利率是 3%，試問：該股票的風險貼水（risk
+                  premium）是多少？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．5%</div>
+                  <div class="opt">B．15.5%</div>
+                  <div class="opt right">C．6%</div>
+                  <div class="opt">D．7.5%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>風險貼水 ＝ β×(市場報酬率－無風險利率)
+                  ＝ 1.2×(8%－3%) ＝ 6%。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q69</p>
+                <p class="qtext">
+                  某投資組合有 60% 的機率，其報酬率為 10%；40% 的機率，其報酬率為 5%。如目前國庫券的票面利率為 6%，則該投資組合的風險溢酬應為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．11%</div>
+                  <div class="opt">B．1%</div>
+                  <div class="opt right">C．2%</div>
+                  <div class="opt">D．15%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>投資組合報酬率 ＝ 60%×10%＋40%×5%＝8%；風險溢酬 ＝ 市場報酬率 8% － 無風險利率 6% ＝ 2%。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q70</p>
+                <p class="qtext">
+                  某投資組合之貝它(Beta)係數為 1.6，市場之平均風險溢酬(RiskPremium)為 6%，則投資者對該投資組合要求高於無風險利率多少之報酬率？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．7.5%</div>
+                  <div class="opt">B．6%</div>
+                  <div class="opt">C．6.4%</div>
+                  <div class="opt right">D．9.6%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>要求高於無風險利率的部分 ＝ β 係數 × 風險溢酬 ＝ 1.6 × 6% ＝ 9.6%。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q71</p>
+                <p class="qtext">
+                  在 CAPM 模式中，若已知市場的預期報酬為 18%，而甲股票的 β 值為 0，無風險利率為 6%，試問該股票的預期報酬率為何？
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．6%</div>
+                  <div class="opt">B．12%</div>
+                  <div class="opt">C．14%</div>
+                  <div class="opt">D．16%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>預期報酬率 ＝ 無風險利率 ＋ β × 風險溢酬，若 β 值為 0，則預期報酬率 ＝ 無風險利率 ＝ 6%。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q72</p>
+                <p class="qtext">
+                  若小明將其資金 35% 投資於國庫券、65% 投資於市場投資組合，請問其投資組合之 β 係數為何？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．1</div>
+                  <div class="opt">B．0.35</div>
+                  <div class="opt">C．0.5</div>
+                  <div class="opt right">D．0.65</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>國庫券 β＝0、市場組合 β＝1，投資組合 β ＝ 35%×0 ＋ 65%×1 ＝ 0.65。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q75</p>
+                <p class="qtext">
+                  甲股票、乙股票與丙股票之貝它（Beta）係數均相同，但其報酬率標準差大小依序為甲、乙與丙。根據 CAPM 理論，請問哪一個股票的期望報酬率最高？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．甲</div>
+                  <div class="opt">B．乙</div>
+                  <div class="opt">C．丙</div>
+                  <div class="opt right">D．三者相同</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>CAPM 預期報酬率只與 β 有關，與標準差（總風險）無關，三者 β 相同，期望報酬率相同。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q78</p>
+                <p class="qtext">
+                  A、B 二股票之預期報酬率分別為 7% 及 11%，報酬率標準差分別為
+                  20% 及 30%，若無風險利率為 5%，市場預期報酬率為 10%，且 A、B
+                  二股票報酬率之相關係數為 0.5，請問 A 股票之 β 係數應為多少？
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．0.4</div>
+                  <div class="opt">B．0.6</div>
+                  <div class="opt">C．0.9</div>
+                  <div class="opt">D．1.5</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>A 股票預期報酬率 7% ＝ 無風險利率 5% ＋
+                  β×(市場報酬率 10%－無風險利率 5%)<br />7%－5% ＝ β×5% → β ＝
+                  0.4（報酬率標準差與相關係數皆為多餘條件，非公式所需）。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q79</p>
+                <p class="qtext">
+                  某證券之期望報酬率為 12.5%，β 值為
+                  1.15。若市場組合期望報酬率為 10%，無風險利率為 5%，則根據
+                  CAPM，此證券：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．正常訂價</div>
+                  <div class="opt">B．價格高估</div>
+                  <div class="opt right">C．價格低估</div>
+                  <div class="opt">D．選項 ABC 皆非</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>CAPM 理論預期報酬率 ＝ 5% ＋
+                  1.15×(10%－5%) ＝ 10.75%，小於某證券實際的
+                  12.5%，代表該證券價格被低估。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q80</p>
+                <p class="qtext">
+                  設無風險利率為 4%，市場預期報酬率為 10%。證券 X 之貝它係數為 1.3，其報酬率預期為 10%，則投資者應：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．買入證券 X，因其價格低估</div>
+                  <div class="opt">B．賣出證券 X，因其價格低估</div>
+                  <div class="opt right">C．賣出證券 X，因其價格高估</div>
+                  <div class="opt">D．買入證券 X，因其價格高估</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>合理預期報酬率 ＝ 4% ＋ 1.3×(10%－4%) ＝ 11.8%，高於目前預期報酬率 10%，代表目前價格偏高，應賣出。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q82</p>
+                <p class="qtext">
+                  假設稻禾公司目前的股價為 200 元，預期一年後可漲至 222 元，無風險利率為 2%，該股票 β 值(Beta)為 1.5，則市場投資組合之預期報酬率應為多少？
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．8%</div>
+                  <div class="opt">B．9%</div>
+                  <div class="opt">C．10%</div>
+                  <div class="opt">D．11%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>個股預期報酬率 ＝ (222－200)/200 ＝ 11%；11% ＝ 2% ＋ 1.5×(市場報酬率－2%)，解得市場報酬率 ＝ 8%。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q83</p>
+                <p class="qtext">
+                  玉山公司股票 β 係數為 2，市場報酬率為 10%，已知無風險利率為 2%。根據 CAPM，投資者投資玉山公司股票要求報酬率為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．12%</div>
+                  <div class="opt">B．16%</div>
+                  <div class="opt right">C．18%</div>
+                  <div class="opt">D．20%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>要求報酬率 ＝ 2% ＋ 2×(10%－2%) ＝ 18%。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q84</p>
+                <p class="qtext">
+                  在 CAPM 中，若目前無風險利率為 8%，市場報酬率為 18%，已知甲股票的預期報酬為 20%，則甲股票的貝它值(β)為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．0.8</div>
+                  <div class="opt">B．1</div>
+                  <div class="opt">C．1.1</div>
+                  <div class="opt right">D．1.2</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>20% ＝ 8% ＋ β×(18%－8%)，解得 β ＝ 1.2。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q85</p>
+                <p class="qtext">
+                  在 CAPM 模式中，若已知甲股票的預期報酬為 18%，甲股票的 β 值為 1.2，目前無風險利率為 6%，則市場風險溢酬為：
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．10%</div>
+                  <div class="opt">B．12%</div>
+                  <div class="opt">C．14%</div>
+                  <div class="opt">D．16%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>18% ＝ 6% ＋ 1.2×市場風險溢酬，解得市場風險溢酬 ＝ 10%。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q86</p>
+                <p class="qtext">
+                  根據資本資產定價模式（CAPM），已知市場投資組合報酬率為 18%，市場風險為 1.2，某特定股票的預期報酬率為 20%，則無風險利率為多少？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．2%</div>
+                  <div class="opt">B．6%</div>
+                  <div class="opt right">C．8%</div>
+                  <div class="opt">D．12%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>20% ＝ 無風險利率 ＋ 1.2×(18%－無風險利率)，解得無風險利率 ＝ 8%。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q87</p>
+                <p class="qtext">
+                  友好公司預期明年可發放 1.2 元現金股利，且每年成長
+                  7%。假設目前無風險利率為 6%，市場風險溢酬為
+                  8%，若友好公司股票之貝它（Beta）係數為 0.75，在 CAPM
+                  與股利折現模式同時成立，請問其股價應為何？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．10.71 元</div>
+                  <div class="opt">B．15 元</div>
+                  <div class="opt">C．20 元</div>
+                  <div class="opt right">D．24 元</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >股利折現模型需要「要求報酬率」，但題目沒有直接給，須先用 CAPM
+                  求出：<br />要求報酬率 ＝ 無風險利率 6% ＋ β 0.75×風險溢酬 8%
+                  ＝ 12%<br />高登模式股價 ＝
+                  <span class="frac"
+                    ><span class="num">明年現金股利 1.2</span
+                    ><span class="den"
+                      >要求報酬率 12% － 股利成長率 7%</span
+                    ></span
+                  >
+                  ＝ 24 元。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q88</p>
+                <p class="qtext">
+                  蓮花公司為固定成長公司，公司盈餘每年成長 8%，假設蓮花公司普通股股票貝它係數為 1.2，市場投資組合報酬率 10%，無風險利率 2%，最近剛發放股利 4 元。試估算蓮花公司目前的每股價格為何？
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．120 元</div>
+                  <div class="opt">B．130 元</div>
+                  <div class="opt">C．36 元</div>
+                  <div class="opt">D．50 元</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>要求報酬率 ＝ 2% ＋ 1.2×(10%－2%) ＝ 11.6%；股價 ＝ 4×(1＋8%)/(11.6%－8%) ＝ 120 元。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q90</p>
+                <p class="qtext">
+                  若市場投資組合之預期報酬率與報酬率變異數分別為 12% 與 16%，甲為一效率投資組合，其報酬率變異數為 25%，當無風險利率為 6%，則甲之預期報酬率為：
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．13.50%</div>
+                  <div class="opt">B．14.25%</div>
+                  <div class="opt">C．15%</div>
+                  <div class="opt">D．16.25%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>標準差分別為 √16%＝0.4、√25%＝0.5，β ＝ 0.5/0.4 ＝ 1.25；預期報酬率 ＝ 6% ＋ 1.25×(12%－6%) ＝ 13.5%。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q91</p>
+                <p class="qtext">
+                  俊浩將其資金的 35% 投資於預期報酬率(expected rate of return)為 0.18 且變異數(variance)為 0.10 之風險性資產(risky asset)，剩下的 65% 投資於報酬率為 0.04 之國庫券。試問：該投資組合的預期報酬率(expected rate of return)及標準差(standard deviation)各為多少？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．0.087；0.144</div>
+                  <div class="opt">B．0.087；0.063</div>
+                  <div class="opt">C．0.096；0.126</div>
+                  <div class="opt right">D．0.089；0.111</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>投資組合預期報酬率 ＝ 0.18×35% ＋ 0.04×65% ＝ 0.089；投資組合標準差 ＝ √0.1×35% ＋ 0(國庫券無風險)×65% ＝ 0.111。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q92</p>
+                <p class="qtext">
+                  假設資本資產定價模式成立，若市場投資組合之期望報酬率與變異數分別為 12% 與 0.04，投資組合 P 為一個效率投資組合，其變異數為 0.16。當無風險利率為 2%，則投資組合 P 之期望報酬率應為：
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．22%</div>
+                  <div class="opt">B．24%</div>
+                  <div class="opt">C．36%</div>
+                  <div class="opt">D．16%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>標準差分別為 √0.04＝0.2、√0.16＝0.4；β ＝ 0.4/0.2 ＝ 2；預期報酬率 ＝ 2% ＋ 2×(12%－2%) ＝ 22%。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q95</p>
+                <p class="qtext">
+                  在資本資產定價模式中，設無風險利率 1%，市場投資組合期望報酬 11%，某公司股票報酬率變異數 0.16，股票報酬率與市場投資組合報酬率的共變異數(Covariance)等於 0.108，市場投資組合報酬率變異數 0.09，則該公司股票期望報酬率為多少？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．7.8%</div>
+                  <div class="opt">B．10%</div>
+                  <div class="opt">C．10.9%</div>
+                  <div class="opt right">D．13%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>β ＝ 共變異數 0.108 / 市場投資組合報酬率變異數 0.09 ＝ 1.2；預期報酬率 ＝ 1% ＋ 1.2×(11%－1%) ＝ 13%。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q96</p>
+                <p class="qtext">
+                  某一證券與市場投資組合相關係數為 0.75，且標準差為 0.20，若市場投資組合之平均報酬為 15%，而標準差為 25%，無風險利率為 10%，此資產之期望報酬為何？
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．13%</div>
+                  <div class="opt">B．13.75%</div>
+                  <div class="opt">C．16%</div>
+                  <div class="opt">D．15%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>β ＝ 相關係數 ×(效率資產標準差/市場投資組合標準差) ＝ 0.75×(0.2/0.25) ＝ 0.6；預期報酬率 ＝ 10% ＋ 0.6×(15%－10%) ＝ 13%。
+                </p>
+              </div>
+</details>
+          </section>
+
+          <section class="unit">
+            <div class="unit-head"><h2>APT 套利定價理論</h2></div>
+            <div class="formula">
+              <div class="formula-line">
+                <span
+                  >要求報酬率 ＝ 無風險利率 ＋ β<sub>a</sub>×(a
+                  市場的風險溢酬) ＋ β<sub>b</sub>×(b 市場的風險溢酬) ＋
+                  ……</span
+                >
+              </div>
+            </div>
+            <div class="explain">
+              <ul>
+                <li>
+                  APT（Arbitrage Pricing Theory）認為報酬與風險為線性關係，<strong>風險完全相同的證券，其期望報酬率也應該相同</strong>，否則將產生套利機會
+                </li>
+                <li>
+                  與 CAPM
+                  最大差異：CAPM 只有市場一個系統風險因子，APT 認為<strong>系統風險因子可能有多個</strong>
+                </li>
+              </ul>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（4 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q97</p>
+                <p class="qtext">
+                  由無風險利率和風險溢酬組成，描述預期報酬率和多個因子存在線性關係的理論是：
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．套利定價理論（Arbitrage Pricing Theory）</div>
+                  <div class="opt">B．投資組合理論（Portfolio Theory）</div>
+                  <div class="opt">C．資本資產定價理論（Capital Asset Pricing Model）</div>
+                  <div class="opt">D．效率市場理論（Efficient Market Theory）</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>APT 認為預期報酬率與多個風險因子存在線性關係。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q98</p>
+                <p class="qtext">
+                  套利定價理論（APT）是根據下列何種觀念？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．風險不同的證券，其期望報酬率也可能相同</div>
+                  <div class="opt right">
+                    B．風險完全相同的證券，其期望報酬率也應該相同
+                  </div>
+                  <div class="opt">
+                    C．不同種類的證券，即使其風險完全相同，其期望報酬率也不會相同
+                  </div>
+                  <div class="opt">D．選項 ABC 皆是</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >APT 核心觀念為一價法則的延伸：風險相同的證券，期望報酬率也應相同，否則將產生套利機會。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q99</p>
+                <p class="qtext">
+                  在二因素 APT 模式中，第一和第二因素之風險溢酬分別為 6% 及
+                  3%。若某股票相對應於此二因素之貝它係數分別為 1.5 及
+                  0.6，且其期望報酬率為
+                  16%。假設無套利機會，則無風險利率應為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．6.2%</div>
+                  <div class="opt right">B．5.2%</div>
+                  <div class="opt">C．4.8%</div>
+                  <div class="opt">D．8%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>期望報酬率（要求報酬率）16% ＝
+                  無風險利率 ＋ 1.5×6% ＋ 0.6×3% ＝ 無風險利率 ＋ 9% ＋
+                  1.8%<br />→ 無風險利率 ＝ 16% － 10.8% ＝ 5.2%。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q100</p>
+                <p class="qtext">
+                  在二因子之 APT 理論中，假設投資組合對因子 1 之貝它係數為 0.7，對因子 2 之貝它係數為 1.5，因子 1、因子 2 之風險溢酬分別為 1.5%、4%，若無風險利率為 6%，請問在無套利空間下，該投資組合之預期報酬率應為何？
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．13.05%</div>
+                  <div class="opt">B．11.15%</div>
+                  <div class="opt">C．10.15%</div>
+                  <div class="opt">D．9.15%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>預期報酬率 ＝ 無風險利率 6% ＋ 0.7×1.5% ＋ 1.5×4% ＝ 13.05%。
+                </p>
+              </div>
+</details>
+          </section>
+
+          <section class="unit">
+            <div class="unit-head"><h2>績效評估指標</h2></div>
+            <div class="formula">
+              <div class="formula-line">
+                夏普指標 ＝
+                <span class="frac"
+                  ><span class="num">投組報酬率 － 無風險利率</span
+                  ><span class="den">總風險（標準差）</span></span
+                >
+              </div>
+              <div class="formula-line">
+                崔納指標 ＝
+                <span class="frac"
+                  ><span class="num">投組報酬率 － 無風險利率</span
+                  ><span class="den">系統風險（β）</span></span
+                >
+              </div>
+              <div class="formula-line">
+                詹森指標 ＝ (投組報酬率－無風險利率) －
+                (市場投組報酬率－無風險利率)×β
+              </div>
+            </div>
+            <div class="explain">
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th></th>
+                    <th>夏普指標</th>
+                    <th>崔納指標</th>
+                    <th>詹森指標（α 係數）</th>
+                  </tr>
+                  <tr>
+                    <td>衡量風險</td>
+                    <td>總風險（標準差）</td>
+                    <td>系統風險（β）</td>
+                    <td>系統風險（β）</td>
+                  </tr>
+                  <tr>
+                    <td>適合</td>
+                    <td>評估特定基金績效<br />（含未分散風險者）</td>
+                    <td>評估分散投資組合的績效</td>
+                    <td>市場有效率、無超額報酬時，此係數為 0</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（13 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q101</p>
+                <p class="qtext">
+                  在考量風險因素之下，下列指標中，哪一項「不適合」用來衡量投資績效？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．夏普指標</div>
+                  <div class="opt">B．崔納指標</div>
+                  <div class="opt right">C．貝它係數</div>
+                  <div class="opt">D．詹森的 α 指標</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >貝它係數僅為風險係數，本身不是績效指標；夏普、崔納、詹森三者才是同時考量風險與報酬的績效評估指標。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q102</p>
+                <p class="qtext">
+                  對一小額投資者而言，欲挑選一種基金進行投資，其評估基金績效之方法，應以何種績效指標最為合適？
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．夏普（Sharpe）績效指標</div>
+                  <div class="opt">B．崔納（Treynor）績效指標</div>
+                  <div class="opt">C．詹森（Jensen）績效指標</div>
+                  <div class="opt">D．以上皆非</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>小額投資通常只持有少數基金，分散程度不足，適合用衡量總風險的夏普指標評估。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q103</p>
+                <p class="qtext">
+                  投資一般流行之高科技基金，適合何種指標來衡量其績效？
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．夏普指標</div>
+                  <div class="opt">B．崔納指標</div>
+                  <div class="opt">C．詹森指標</div>
+                  <div class="opt">D．貝它係數</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >高科技基金產業集中度高，通常存在較多非系統風險（未充分分散），須用衡量總風險的夏普指標評估，較能反映實際承擔的風險。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q104</p>
+                <p class="qtext">
+                  在投資組合績效評估指標中，夏普（Sharpe）指標的計算方法是：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．超額報酬／系統風險</div>
+                  <div class="opt right">B．超額報酬／總風險</div>
+                  <div class="opt">C．超額報酬／非系統風險</div>
+                  <div class="opt">D．超額報酬／無風險利率</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>夏普指標 ＝ 超額報酬（風險溢酬）／總風險（標準差）。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q105</p>
+                <p class="qtext">
+                  有一投資組合過去 10 年的平均年報酬率為 12%，標準差為
+                  50%，貝他係數為 1.2，請試算其夏普指數為多少？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．0.8</div>
+                  <div class="opt right">B．0.16</div>
+                  <div class="opt">C．1.6</div>
+                  <div class="opt">D．1.25</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>夏普指標 ＝
+                  <span class="frac"
+                    ><span class="num"
+                      >風險溢酬(投組報酬率 12%－無風險利率 4%)</span
+                    ><span class="den">標準差 50%</span></span
+                  >
+                  ＝ 0.16。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q106</p>
+                <p class="qtext">
+                  請問當投資組合尚未完全分散仍存有非系統風險時，則較適合使用下列何種投資績效評估指標？
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．夏普指標（Sharpe ratio）</div>
+                  <div class="opt">B．崔納指標（Treynor ratio）</div>
+                  <div class="opt">C．詹森指標（Jensen ratio）</div>
+                  <div class="opt">D．α 指標</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >崔納指標與詹森指標皆僅衡量系統風險（β），僅適用於已充分分散的投資組合；仍存有非系統風險時，須用衡量總風險的夏普指標。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q107</p>
+                <p class="qtext">
+                  在投資組合績效評估中，崔納（Treynor）指標的計算方式為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．超額報酬／非系統風險</div>
+                  <div class="opt">B．超額報酬／總風險</div>
+                  <div class="opt right">C．超額報酬／系統風險</div>
+                  <div class="opt">D．超額報酬／無風險利率</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>崔納指標 ＝ 超額報酬（風險溢酬）／系統風險（β）。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q108</p>
+                <p class="qtext">
+                  某基金年化報酬率 12%，年化標準差 8%，beta 係數為 2，無風險利率
+                  2%，則該基金的崔納（Treynor）指標為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．6%</div>
+                  <div class="opt right">B．5%</div>
+                  <div class="opt">C．1.5</div>
+                  <div class="opt">D．1.25</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>崔納指標 ＝
+                  <span class="frac"
+                    ><span class="num">投組報酬率 12%－無風險利率 2%</span
+                    ><span class="den">系統風險(β) 2</span></span
+                  >
+                  ＝ 5%。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q109</p>
+                <p class="qtext">
+                  一證券之平均報酬率，無法以市場風險解釋之部分稱為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．西格瑪（Sigma）係數</div>
+                  <div class="opt">B．貝它（Beta）係數</div>
+                  <div class="opt">C．咖碼（Gamma）係數</div>
+                  <div class="opt right">D．阿法（Alpha）係數</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >無法被市場（系統）風險解釋的超額報酬部分，即為詹森指標所衡量的 α（Alpha）係數。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q110</p>
+                <p class="qtext">
+                  依據 CAPM，基金經理人所尋求價位被高估的證券，是指該證券的詹森
+                  α 係數：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．大於 1</div>
+                  <div class="opt">B．等於 1</div>
+                  <div class="opt">C．大於 0</div>
+                  <div class="opt right">D．小於 0</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>α ＝ 實際報酬率 － CAPM
+                  應有報酬率。α 為負代表實際報酬低於應有報酬，即證券價格被高估；反之
+                  α 為正代表價格被低估。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q111</p>
+                <p class="qtext">
+                  根據 CAPM，當一證券被合理地評價時，下列敘述何者正確？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．期望報酬率等於市場平均報酬率</div>
+                  <div class="opt right">B．Jensen 指標等於 0</div>
+                  <div class="opt">C．貝它（Beta）係數等於正數</div>
+                  <div class="opt">D．風險溢酬（Risk Premium）等於市場風險溢酬</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >證券被合理定價代表其實際報酬率恰好等於 CAPM
+                  應有報酬率，兩者差額（即 Jensen's α）為 0。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q112</p>
+                <p class="qtext">
+                  詹森（Jensen）的 α 指標，用來衡量投資績效，其適當性是建立在：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．APT 是正確的</div>
+                  <div class="opt right">B．CAPM 是正確的</div>
+                  <div class="opt">C．投資組合風險是不可以被分散消除的</div>
+                  <div class="opt">D．選項(A)(B)(C)皆非</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>詹森指標以 CAPM 為理論基礎，計算實際報酬與 CAPM 預期報酬的差額。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q113</p>
+                <p class="qtext">
+                  利用過去報酬計算出國內共同基金 J 的 β 值等於
+                  1，崔納指標（Treynor's Index）等於
+                  3%，Jensen's Alpha（α）為 1%。同時又利用過去同期間報酬計算出國內共同基金
+                  K 的 β 值等於 1.2，崔納指標等於
+                  2.5%，試計算共同基金 K 的 Jensen's Alpha（α）為多少？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．0.4%</div>
+                  <div class="opt right">B．0.6%</div>
+                  <div class="opt">C．0.8%</div>
+                  <div class="opt">D．1.0%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>崔納指標 ＝
+                  投組風險溢酬／β，故 J 投組風險溢酬 ＝ 3%×1 ＝
+                  3%<br />Jensen's α ＝ 投組風險溢酬 －
+                  市場風險溢酬×β，代入 J：1% ＝ 3% － 市場風險溢酬×1 →
+                  市場風險溢酬 ＝ 2%<br />K 投組風險溢酬 ＝ 2.5%×1.2 ＝
+                  3%<br />K 的 Jensen's α ＝ 3% － 2%×1.2 ＝ 0.6%。
+                </p>
+              </div>
+</details>
+          </section>
+        </main>
+
+        <nav class="chapter-nav">
+          <a class="prev" href="/investment/ch05-technical-analysis.html"
+            ><span class="dir">← 上一章</span>股票技術分析</a
+          >
+          <a class="next" href="/investment/ch07-cml-sml.html"
+            ><span class="dir">下一章 →</span>E(R)、CML、SML</a
+          >
+        </nav>
+      </div>
+    </div>
+    <script src="/assets/nav.js"></script>
+  </body>
+</html>

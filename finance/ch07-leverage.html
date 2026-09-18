@@ -1,0 +1,751 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>損益兩平與槓桿比率｜財務分析 CH07</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    />
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div id="site-nav"></div>
+      <div class="content">
+        <header class="masthead">
+          <div class="masthead-inner">
+            <span class="eyebrow">證券商高級業務員 · 財務分析 · 第 7 章</span>
+            <h1>損益兩平與槓桿比率</h1>
+          </div>
+        </header>
+        <p class="crumb">
+          <a href="/index.html">高業考前重點</a> ／ 財務分析 ／ 第 7 章
+        </p>
+
+        <main>
+          <section class="unit">
+            <div class="unit-head"><h2>損益兩平點</h2></div>
+            <div class="diagram-card">
+              <svg viewBox="0 0 300 170" role="img" aria-label="損益兩平圖，收入線與總成本線交會處為損益兩平點">
+                <line x1="38" y1="136" x2="276" y2="136" stroke="var(--ink-20)" />
+                <line x1="38" y1="136" x2="38" y2="20" stroke="var(--ink-20)" />
+                <line x1="38" y1="104" x2="270" y2="104" stroke="var(--gold)" stroke-dasharray="4 3" />
+                <line x1="38" y1="136" x2="264" y2="32" stroke="var(--jade)" stroke-width="2.5" />
+                <line x1="38" y1="104" x2="264" y2="52" stroke="var(--seal)" stroke-width="2.5" />
+                <circle cx="184" cy="69" r="4" fill="var(--gold)" />
+                <line x1="184" y1="69" x2="184" y2="136" stroke="var(--gold)" stroke-dasharray="3 3" />
+                <text x="258" y="22" font-size="10" fill="var(--jade)" class="mono" text-anchor="end">銷貨收入</text>
+                <text x="258" y="64" font-size="10" fill="var(--seal)" class="mono" text-anchor="end">總成本</text>
+                <text x="42" y="99" font-size="9" fill="var(--gold)" class="mono">固定成本</text>
+                <text x="184" y="61" font-size="9" fill="var(--gold)" class="mono" text-anchor="middle">損益兩平點</text>
+                <text x="184" y="153" font-size="9" fill="var(--ink-40)" class="mono" text-anchor="middle">損益兩平銷售量</text>
+                <text x="274" y="153" font-size="9" fill="var(--ink-40)" class="mono" text-anchor="end">銷售量</text>
+                <text x="16" y="25" font-size="9" fill="var(--ink-40)" class="mono">金額</text>
+              </svg>
+            </div>
+            <div class="formula">
+              <div class="formula-line">
+                （銷售單價 － 單位變動成本）× 銷售數量 － 固定成本 ＝ 公司獲利
+              </div>
+              <div class="formula-line">
+                產品單位價格 × 銷售量 ＝ 總變動成本 ＋ 固定成本 ＝
+                單位變動成本 × 銷售量 ＋ 固定成本
+              </div>
+              <div class="formula-line">
+                損益兩平銷售量 ＝
+                <span class="frac"
+                  ><span class="num">固定成本</span
+                  ><span class="den">單位售價 － 單位變動成本</span></span
+                >
+              </div>
+              <div class="formula-line">
+                生產總成本 ＝ 銷貨成本 ＋ 營業費用 ＝ 固定成本 ＋ 總變動成本
+              </div>
+            </div>
+            <div class="explain">
+              <ul>
+                <li>
+                  <strong>固定成本</strong
+                  >：不隨銷售量增加而提高，如銷貨成本中的廠房租金、營業費用中的研發費用
+                </li>
+                <li>
+                  <strong>變動成本</strong
+                  >：會隨銷售量增加而提高，如原料成本、產品運費、繳納商品的貨物稅
+                </li>
+                <li>
+                  損益兩平點的假設：<strong
+                    >產品售價不變、每單位產品變動成本不變、產品組合比率不變</strong
+                  >
+                </li>
+                <li>
+                  希望降低損益兩平點，必須提高銷貨收入或降低變動成本，固定成本基本上不能動
+                </li>
+              </ul>
+              <div class="callout-line">
+                邊際貢獻 ＝ 銷貨收入－總變動成本<br />
+                邊際貢獻率 ＝
+                <span class="frac"
+                  ><span class="num">邊際貢獻</span
+                  ><span class="den">銷貨收入</span></span
+                ><br />
+                變動成本下降，邊際貢獻就會上升<br />
+                損益兩平時：邊際貢獻 ＝ 固定成本<br />
+                <span class="arrow">➜ 考點注意</span>
+              </div>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（15 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q1</p>
+                <p class="qtext">
+                  下列各項成本中，哪一項應歸類為變動成本？
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．繳納商品的貨物稅</div>
+                  <div class="opt">B．應客戶之要求先墊付的聯邦快遞運費</div>
+                  <div class="opt">C．工廠警衛所領的值班費</div>
+                  <div class="opt">D．廠房設備的折舊費用</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>貨物稅隨銷售／生產數量而變動，屬變動成本；其餘選項皆與銷售量無關，屬固定成本。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q2</p>
+                <p class="qtext">
+                  採用損益兩平（Breakeven）分析時，所隱含的假設之一是在攸關區間內：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．總成本保持不變</div>
+                  <div class="opt right">B．單位變動成本不變</div>
+                  <div class="opt">C．單位固定成本不變</div>
+                  <div class="opt">D．變動成本和生產單位數間並非直線的關係</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>損益兩平分析假設產品售價、單位變動成本、產品組合比率都不變。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q3</p>
+                <p class="qtext">
+                  一個產品多樣化的廠商要計算營業額的損益兩平點，必須作那些假設？甲.產品售價不變；乙.每單位產品變動成本不變；丙.產品組合比率不變
+                </p>
+                <div class="opts">
+                  <div class="opt">A．僅甲及乙</div>
+                  <div class="opt">B．僅甲及丙</div>
+                  <div class="opt">C．僅乙及丙</div>
+                  <div class="opt right">D．甲、乙、丙</div>
+                </div>
+                <p class="why"><strong>解析：</strong>三項假設皆須成立。</p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q4</p>
+                <p class="qtext">
+                  下列哪一個項目會影響到損益兩平點？甲、總固定成本；乙、每單位售價；丙、每單位變動成本
+                </p>
+                <div class="opts">
+                  <div class="opt">A．僅甲及乙</div>
+                  <div class="opt">B．僅甲及丙</div>
+                  <div class="opt right">C．甲、乙、丙</div>
+                  <div class="opt">D．僅乙及丙</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>總固定成本、每單位售價、每單位變動成本都會影響損益兩平點。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q5</p>
+                <p class="qtext">
+                  其他情況不變時，下列哪一種情況會提高損益兩平點？
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．固定成本上升</div>
+                  <div class="opt">B．變動成本佔銷貨的比率下降</div>
+                  <div class="opt">C．邊際貢獻率上升</div>
+                  <div class="opt">D．售價上升</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>固定成本上升會直接提高損益兩平點；變動成本佔比下降、邊際貢獻率上升、售價上升都會使損益兩平點下降。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q6</p>
+                <p class="qtext">
+                  因為新臺幣大幅貶值，奇奇皮鞋進口的高級女鞋每雙成本增加
+                  200 元，故皮鞋被迫每雙售價也提高 200
+                  元，在該鞋店的固定成本不變的情況下，請問此舉會造成該店的：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．邊際貢獻金額增加</div>
+                  <div class="opt">B．邊際貢獻金額減少</div>
+                  <div class="opt">C．邊際貢獻比率不變</div>
+                  <div class="opt right">D．損益兩平的皮鞋銷售件數不變</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>售價與變動成本同時增加
+                  200 元，邊際貢獻金額（售價－變動成本）不變，固定成本也不變，故損益兩平銷售件數不變。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q7</p>
+                <p class="qtext">
+                  要求出損益兩平的銷售金額，我們需要知道總固定成本與：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．每單位變動成本</div>
+                  <div class="opt">B．每單位售價</div>
+                  <div class="opt right">C．每單位變動成本占售價比率</div>
+                  <div class="opt">D．每單位售價減去平均每單位固定成本</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>損益兩平銷售金額＝固定成本÷邊際貢獻率＝固定成本÷(1－單位變動成本占售價比率)，需要知道單位變動成本占售價比率。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q8</p>
+                <p class="qtext">
+                  許多公司利用帳面的數字來計算損益兩平點，但根據帳面數字計算之損益兩平點常較依淨現值計算之兩平點為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．高</div>
+                  <div class="opt right">B．低</div>
+                  <div class="opt">C．相等</div>
+                  <div class="opt">D．無法判斷，尚需計畫殘值的資訊</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>帳面數字常較用淨現值（現金流量計算）計算出的高，因此依帳面數字算出的損益兩平點較低（較易達成）。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q9</p>
+                <p class="qtext">
+                  雪見公司所生產的礦泉水每瓶售價 $20，其中變動成本占
+                  80%，已知目前每年產量為 50,000
+                  瓶，該公司剛好損益兩平，請問其固定成本為？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．$80,000</div>
+                  <div class="opt right">B．$200,000</div>
+                  <div class="opt">C．$240,000</div>
+                  <div class="opt">D．$160,000</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>每瓶固定成本 ＝ 20×20% ＝ 4 元<br />總固定成本
+                  ＝ 50,000×4 ＝ 200,000。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q10</p>
+                <p class="qtext">
+                  設甲產品之單位售價由 $1 調為
+                  $1.3，固定成本由 $400,000 增至
+                  $700,000，變動成本仍為 $0.6，則損益兩平數量會有何影響？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．增加</div>
+                  <div class="opt">B．下降</div>
+                  <div class="opt right">C．不變</div>
+                  <div class="opt">D．不一定</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>原損益兩平數 ＝ 固定成本
+                  400,000÷(單位售價 1－變動成本 0.6) ＝ 1,000,000<br />新損益兩平數
+                  ＝ 固定成本 700,000÷(單位售價 1.3－變動成本 0.6) ＝
+                  1,000,000<br />兩者相同，故不變。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q11</p>
+                <p class="qtext">
+                  龍龍洗面乳每盒售價 $60，該公司沒有生產其他產品，去年度總固定成本為
+                  $360,000，單位變動成本為售價的
+                  40%，請問該公司的損益兩平點為何？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．900,000 盒</div>
+                  <div class="opt">B．1,500,000 盒</div>
+                  <div class="opt">C．7,500 盒</div>
+                  <div class="opt right">D．10,000 盒</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>單位變動成本＝60×40%＝24
+                  元<br />邊際貢獻＝60－24＝36 元<br />損益兩平銷售量＝360,000÷36＝10,000
+                  盒。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q12</p>
+                <p class="qtext">
+                  假設其他一切不變，下列財務比率何者通常愈高愈佳？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．負債比率</div>
+                  <div class="opt">B．固定成本比率</div>
+                  <div class="opt right">C．邊際貢獻率</div>
+                  <div class="opt">D．應收帳款週轉天數</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>邊際貢獻率愈高，代表每單位銷貨可貢獻的固定成本回收與利潤愈多，通常愈高愈佳；其餘選項則非愈高愈好。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q13</p>
+                <p class="qtext">
+                  在產品售價不變的情況下，若生產某商品的總固定成本與單位變動成本都下降，對其邊際貢獻率與損益兩平銷貨收入有何影響？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．邊際貢獻率下降，損益兩平點上升</div>
+                  <div class="opt right">B．邊際貢獻率上升，損益兩平點下降</div>
+                  <div class="opt">C．邊際貢獻率下降，損益兩平點下降</div>
+                  <div class="opt">D．邊際貢獻率不變，損益兩平點上升</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>售價不變、單位變動成本下降，邊際貢獻率上升；固定成本與單位變動成本都下降，損益兩平銷貨收入下降。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q14</p>
+                <p class="qtext">
+                  某企業今年度的銷貨收入為 300 萬元，變動成本為 180
+                  萬元，固定成本為 90 萬元，預估明年度固定成本為 120
+                  萬元，邊際貢獻率不變，但企業希望明年度的淨利能達 50
+                  萬元，請問其目標銷貨收入成長率應為多少？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．16.7%</div>
+                  <div class="opt right">B．41.7%</div>
+                  <div class="opt">C．0%</div>
+                  <div class="opt">D．33.3%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>邊際貢獻率 ＝
+                  <span class="frac"
+                    ><span class="num">300－180</span
+                    ><span class="den">300</span></span
+                  >
+                  ＝ 0.4<br />明年銷貨收入 ＝
+                  明年固定成本120＋淨利50＋變動成本(設為X) ＝ 170＋X<br />邊際貢獻率0.4
+                  ＝
+                  <span class="frac"
+                    ><span class="num">170+X－X</span
+                    ><span class="den">170+X</span></span
+                  >
+                  → 解得明年銷貨收入425萬<br />成長率 ＝
+                  <span class="frac"
+                    ><span class="num">425－300</span
+                    ><span class="den">300</span></span
+                  >
+                  ＝ 41.7%。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q15</p>
+                <p class="qtext">安全邊際係指：</p>
+                <div class="opts">
+                  <div class="opt">A．銷貨收入－變動成本</div>
+                  <div class="opt">B．銷貨收入－固定成本</div>
+                  <div class="opt right">C．銷貨收入－損益兩平銷貨收入</div>
+                  <div class="opt">D．銷貨收入－銷貨成本</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>安全邊際 ＝ 銷貨收入 －
+                  損益兩平銷貨收入，指企業銷貨收入超過損益兩平點的安全空間，衡量企業能承受營收下降的程度。
+                </p>
+              </div>
+            </details>
+          </section>
+
+          <section class="unit">
+            <div class="unit-head"><h2>營業槓桿度（DOL）</h2></div>
+            <div class="formula">
+              <div class="formula-line">
+                營業槓桿度 ＝
+                <span class="frac"
+                  ><span class="num">邊際貢獻</span
+                  ><span class="den">營業利益</span></span
+                >
+                ＝
+                <span class="frac"
+                  ><span class="num">邊際貢獻</span
+                  ><span class="den">邊際貢獻 － 固定成本</span></span
+                >
+                ＝
+                <span class="frac"
+                  ><span class="num"
+                    >EBIT（息前稅前淨利）變動百分比</span
+                  ><span class="den">銷售量變動百分比</span></span
+                >
+              </div>
+            </div>
+            <div class="explain">
+              <ul>
+                <li>
+                  公司使用固定成本的程度：企業固定成本越高，營業槓桿度越高
+                </li>
+              </ul>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（9 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q16</p>
+                <p class="qtext">一企業對於固定生產成本投入之程度稱為：</p>
+                <div class="opts">
+                  <div class="opt">A．固定產能利用率</div>
+                  <div class="opt">B．財務槓桿</div>
+                  <div class="opt">C．邊際產能利用率</div>
+                  <div class="opt right">D．營業槓桿</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>營業槓桿衡量企業使用固定生產成本的程度。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q17</p>
+                <p class="qtext">
+                  公司的營運槓桿越大，表示何種資產所占的比重越大？
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．固定資產</div>
+                  <div class="opt">B．流動資產</div>
+                  <div class="opt">C．長期負債</div>
+                  <div class="opt">D．短期負債</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>營運槓桿越大代表固定成本占比越高，通常伴隨固定資產（如廠房設備）比重較大。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q18</p>
+                <p class="qtext">
+                  有兩家製造相同產品的公司，營業槓桿程度高的公司較槓桿度低的公司：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．其每股盈餘較不受營業額的影響</div>
+                  <div class="opt">B．其營業利益較不受營業額的影響</div>
+                  <div class="opt right">C．其成本線的截距較高</div>
+                  <div class="opt">D．其成本線的斜率較高</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>在總成本線圖表上，截距代表固定成本、斜率代表變動成本。營業槓桿程度高代表固定成本較高，因此截距較高。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q19</p>
+                <p class="qtext">
+                  久久公司 X1 年度的營業收入為 $2,000,000，營業利益為
+                  $400,000，變動營業成本及費用 $600,000，則 X1
+                  年度其營業槓桿度為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．1.8</div>
+                  <div class="opt">B．2</div>
+                  <div class="opt">C．2.5</div>
+                  <div class="opt right">D．3.5</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>邊際貢獻 ＝ 銷貨收入－總變動成本 ＝
+                  2,000,000－600,000 ＝ 1,400,000<br />營業槓桿度 ＝
+                  <span class="frac"
+                    ><span class="num">1,400,000</span
+                    ><span class="den">400,000</span></span
+                  >
+                  ＝ 3.5。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q20</p>
+                <p class="qtext">
+                  銅鑼公司在 X1 年銷售了 18,000
+                  個產品，每個產品售價為 95 元，每單位之變動成本為 55
+                  元，固定成本為 220,000
+                  元，請問銅鑼公司之營運槓桿程度約為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．2.7</div>
+                  <div class="opt">B．4</div>
+                  <div class="opt">C．3.2</div>
+                  <div class="opt right">D．1.44</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>邊際貢獻 ＝ 銷貨收入－總變動成本 ＝
+                  18,000×95－18,000×55 ＝ 18,000×(95-55) ＝
+                  720,000<br />營運槓桿程度 ＝
+                  邊際貢獻÷營業利益 ＝ 邊際貢獻÷(邊際貢獻－固定成本) ＝
+                  720,000÷(720,000－220,000) ＝ 1.44。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q21</p>
+                <p class="qtext">
+                  已知豐富公司邊際貢獻率為
+                  60%，銷貨收入 $100,000，其營運槓桿度為
+                  2.0，試問該公司當年度固定成本及費用為何？
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．$30,000</div>
+                  <div class="opt">B．$20,000</div>
+                  <div class="opt">C．$22,500</div>
+                  <div class="opt">D．選項(A)(B)(C)皆非</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>邊際貢獻率 60% ＝
+                  邊際貢獻÷銷貨收入 100,000 → 邊際貢獻 ＝
+                  60,000<br />營運槓桿度 2 ＝
+                  邊際貢獻 60,000÷(邊際貢獻 60,000－固定成本) → 固定成本 ＝
+                  30,000。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q22</p>
+                <p class="qtext">
+                  若公司僅生產並銷售單一產品，其營運槓桿程度為
+                  2.0，銷售量變動 6%，則：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．EBIT 變動 15%</div>
+                  <div class="opt right">B．EBIT 變動 12%</div>
+                  <div class="opt">C．每股盈餘變動 3%</div>
+                  <div class="opt">D．淨利變動 12%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>營運槓桿程度 2 ＝
+                  EBIT 變動百分比÷銷售量變動百分比 6% → EBIT
+                  變動百分比 ＝ 12%。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q23</p>
+                <p class="qtext">
+                  牛津公司只生產並銷售一種產品，當銷貨量增加
+                  30%，則營業利益增加 90%，X1 年銷貨
+                  $500,000，稅後淨利 $124,500，無利息費用亦無其他營業外的收入與費用，稅率
+                  17%，則其變動成本及費用為何？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．$350,000</div>
+                  <div class="opt right">B．$50,000</div>
+                  <div class="opt">C．$150,000</div>
+                  <div class="opt">D．選項(A)(B)(C)皆非</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>X1 年營業利益：
+                  124,500÷(1-17%) ＝ 150,000<br />營業槓桿度 ＝
+                  EBIT（息前稅前淨利）變動百分比÷銷售量變動百分比 ＝
+                  90%÷30% ＝ 3<br />營業槓桿度 3 ＝
+                  邊際貢獻÷營業利益 → 邊際貢獻 ＝
+                  450,000<br />邊際貢獻 450,000 ＝
+                  銷貨收入－總變動成本 → 總變動成本 ＝ 50,000。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q24</p>
+                <p class="qtext">
+                  已知損益兩平點時之銷貨為
+                  $600,000，邊際貢獻為 $300,000，則銷貨收入
+                  $900,000 時之營業槓桿度為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．8</div>
+                  <div class="opt">B．6</div>
+                  <div class="opt right">C．3</div>
+                  <div class="opt">D．2</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>損益兩平 → 邊際貢獻＝固定成本，固定成本＝30
+                  萬<br />邊際貢獻率 ＝ 邊際貢獻÷銷貨收入 ＝
+                  30萬÷60萬 ＝ 0.5<br />當銷貨收入 90
+                  萬時，邊際貢獻 ＝ 90萬×0.5 ＝
+                  45萬<br />營業利益 ＝ 邊際貢獻－固定成本 ＝
+                  45萬－30萬 ＝ 15萬<br />營業槓桿 ＝
+                  邊際貢獻÷營業利益 ＝ 45萬÷15萬 ＝ 3。
+                </p>
+              </div>
+            </details>
+          </section>
+
+          <section class="unit">
+            <div class="unit-head">
+              <h2>財務槓桿度（DFL）與綜合槓桿度（DCL）</h2>
+            </div>
+            <div class="formula">
+              <div class="formula-line">
+                財務槓桿度 ＝
+                <span class="frac"
+                  ><span class="num">EBIT</span
+                  ><span class="den">EBIT － 利息費用</span></span
+                >
+                ＝
+                <span class="frac"
+                  ><span class="num">EPS 變動百分比</span
+                  ><span class="den">EBIT 變動百分比</span></span
+                >
+              </div>
+              <div class="formula-line">
+                綜合槓桿度 ＝ 營業槓桿度 × 財務槓桿度 ＝
+                <span class="frac"
+                  ><span class="num">EPS 變動百分比</span
+                  ><span class="den">銷貨收入變動百分比</span></span
+                >
+                ＝
+                <span class="frac"
+                  ><span class="num">邊際貢獻</span
+                  ><span class="den">營業利益 － 利息費用</span></span
+                >
+              </div>
+            </div>
+            <div class="explain">
+              <ul>
+                <li>
+                  財務槓桿度：公司因舉債而必須支付利息的程度，評估利息支出對每股稅後盈餘（EPS）的影響程度，又稱「財務槓桿係數」
+                </li>
+                <li>
+                  綜合槓桿度：評估所有營業成本與財務成本費用，對 EPS
+                  的影響程度
+                </li>
+                <li>
+                  易混淆的三個指標：
+                  <ul>
+                    <li>
+                      財務槓桿度＝<span class="frac"
+                        ><span class="num">EBIT</span
+                        ><span class="den">EBIT－利息費用</span></span
+                      >
+                    </li>
+                    <li>
+                      財務槓桿比率（權益乘數）＝<span class="frac"
+                        ><span class="num">資產總額</span
+                        ><span class="den">權益總額</span></span
+                      >
+                    </li>
+                    <li>
+                      財務槓桿指數＝<span class="frac"
+                        ><span class="num">普通股權益報酬率</span
+                        ><span class="den">總資產報酬率</span></span
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（6 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q25</p>
+                <p class="qtext">
+                  若南勢公司的財務槓桿程度為 1.9，EBIT 變動 10%，則：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．銷售量變動 10%</div>
+                  <div class="opt right">B．每股盈餘變動 19%</div>
+                  <div class="opt">C．淨利變動 18%</div>
+                  <div class="opt">D．營業毛利變動 10%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>財務槓桿度1.9 ＝ EPS變動百分比 /
+                  EBIT變動百分比10% → EPS變動百分比 ＝ 19%。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q26</p>
+                <p class="qtext">
+                  金寶公司 X1 年度營業利益變動 18%，其營業槓桿度
+                  1.6，財務槓桿度 2.8，則其每股盈餘變動多少？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．25%</div>
+                  <div class="opt">B．45%</div>
+                  <div class="opt right">C．50.40%</div>
+                  <div class="opt">D．無法判斷</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>財務槓桿度 2.8 ＝
+                  EPS 變動百分比÷EBIT 變動百分比 18% → EPS 變動百分比 ＝
+                  2.8×18% ＝ 50.4%。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q27</p>
+                <p class="qtext">
+                  測度一家公司的財務風險常採用財務槓桿係數，請問此一槓桿係數主要受哪一變數影響？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．固定生產成本</div>
+                  <div class="opt">B．銷售訂價及景氣持平</div>
+                  <div class="opt right">C．利息費用</div>
+                  <div class="opt">D．資產購置金額</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>財務槓桿度＝<span class="frac"
+                    ><span class="num">EBIT</span
+                    ><span class="den">EBIT－利息費用</span></span
+                  >，主要受利息費用影響。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q28</p>
+                <p class="qtext">
+                  當企業的財務槓桿程度增加，其公司債價值通常會有何變化？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．增加</div>
+                  <div class="opt right">B．減少</div>
+                  <div class="opt">C．不變</div>
+                  <div class="opt">D．不一定</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>通常公司舉債較多風險較高，所以公司債價值會下降。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q29</p>
+                <p class="qtext">
+                  某一投資組合部位的信用槓桿倍數為
+                  2 倍，若此一投資組合的現金部位可創造
+                  4% 的獲利，則其槓桿組合的投資收益為何？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．10%</div>
+                  <div class="opt right">B．8%</div>
+                  <div class="opt">C．6%</div>
+                  <div class="opt">D．1.75%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>槓桿倍數 2
+                  倍代表報酬率放大 2 倍：4%×2 ＝ 8%。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q30</p>
+                <p class="qtext">
+                  在臺灣高速鐵路的諸多營運特色中，不包括下列何者？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．專案融資</div>
+                  <div class="opt">B．固定成本高</div>
+                  <div class="opt right">C．營業槓桿程度低</div>
+                  <div class="opt">D．採 BOT 制度</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>高鐵屬於資本密集產業，固定成本高，因此營業槓桿程度也高，並非低，故
+                  C 不包括在其特色中。
+                </p>
+              </div>
+            </details>
+          </section>
+        </main>
+
+        <nav class="chapter-nav">
+          <a class="prev" href="/finance/ch06-income-statement.html"
+            ><span class="dir">← 上一章</span>綜合損益表</a
+          >
+          <a class="next" href="/finance/ch08-eps-quality.html"
+            ><span class="dir">下一章 →</span>盈餘計算與評估品質</a
+          >
+        </nav>
+      </div>
+    </div>
+    <script src="/assets/nav.js"></script>
+  </body>
+</html>

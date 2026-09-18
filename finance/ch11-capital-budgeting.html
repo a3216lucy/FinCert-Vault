@@ -1,0 +1,952 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>投資融資決策與租賃｜財務分析 CH11</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    />
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div id="site-nav"></div>
+      <div class="content">
+        <header class="masthead">
+          <div class="masthead-inner">
+            <span class="eyebrow">證券商高級業務員 · 財務分析 · 第 11 章</span>
+            <h1>投資融資決策與租賃</h1>
+          </div>
+        </header>
+        <p class="crumb">
+          <a href="/index.html">高業考前重點</a> ／ 財務分析 ／ 第 11 章
+        </p>
+
+        <main>
+          <section class="unit">
+            <div class="unit-head"><h2>資本預算方法比較</h2></div>
+            <div class="explain">
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th>方法</th>
+                    <th>判斷準則</th>
+                    <th>特點</th>
+                  </tr>
+                  <tr>
+                    <td><strong>NPV 淨現值法</strong></td>
+                    <td>NPV ＞ 0 才採行</td>
+                    <td>評估投資計畫最好的方法<br />唯一符合價值相加法則</td>
+                  </tr>
+                  <tr>
+                    <td><strong>IRR 內部報酬率法</strong></td>
+                    <td>IRR ＞ 資金成本率才採行</td>
+                    <td>令 NPV＝0 的折現率<br />缺點是可能有多個答案</td>
+                  </tr>
+                  <tr>
+                    <td>回收期限法（Payback）</td>
+                    <td>越短越好</td>
+                    <td>
+                      又稱還本法，未來現金流入剛好等於回收本金的年限，不考慮資金成本，只看現金流入<br />缺點：忽略回收期後的現金流量、未考慮風險、未考慮貨幣時間價值
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>利潤指數法（PI）</td>
+                    <td>PI ＞ 1</td>
+                    <td>
+                      PI＝現金流量現值/期初投資成本，即期初每投資 1
+                      元可獲得報酬的現值，PI&lt;1 就不具投資價值<br />是比值，無法直接說明貢獻金額
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>平均會計報酬率法（ARR）</td>
+                    <td>與標準比較</td>
+                    <td>
+                      會計報酬率＝<span class="frac"
+                        ><span class="num">每年產生稅後盈餘</span
+                        ><span class="den">(投資成本+殘值) ÷ 2</span></span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>等值年金法</td>
+                    <td>—</td>
+                    <td>
+                      適合評估不同年限的投資計畫<br />年金：指在未來一段期間中一系列等額之給付
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>實質選擇權法</td>
+                    <td>—</td>
+                    <td>
+                      重視決策彈性的價值問題，將管理彈性納為評估投資決策的考慮因素（傳統
+                      NPV 法未考慮此彈性）
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <ul>
+                <li>
+                  <strong>投資決策</strong
+                  >：又稱為資本預算決策，代表公司該如何運用資金的決策方法
+                  <ul>
+                    <li>
+                      主要問題：互相排斥投資計畫選擇、不同年限投資計畫選定、資本額度或預算之分配等
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  評估投資計畫時，應採<strong>長期資產經濟年限</strong>為宜
+                </li>
+                <li>
+                  最應關切<strong>現金流量</strong>與公司預期<strong>邊際稅率</strong>
+                  <ul>
+                    <li>考慮機會成本，但不考慮沉沒成本</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>資金成本率</strong>（資金成本率 ＝ 投資人要求報酬率
+                  ＝ 必要報酬率 ＝ 折現率）
+                  <ul>
+                    <li>
+                      資金成本率折現通常是以與該投資風險相似的證券期望報酬率做折現
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  NPV 只要大於 0（正淨現值）該計劃就可以採行，若小於 0
+                  則該加以拒絕
+                  <ul>
+                    <li>需考量現金流量、風險、利率</li>
+                    <li>
+                      唯一符合價值相加法則：公司總價值等於個別投資計畫的價值總和（貢獻金額明確）
+                    </li>
+                    <li>敏感度分析：分析 NPV 如何受到關鍵變數影響的方法</li>
+                    <li>情境分析：考慮數個假設變動對 NPV 的影響</li>
+                  </ul>
+                </li>
+                <li>
+                  IRR 使 NPV 剛好等於 0 時所得出的折現率（已考量所有現金流量）
+                  <ul>
+                    <li>
+                      投資計畫的 IRR 若「<strong>等於</strong
+                      >」其資金成本率 → 該計畫淨現值等於 0
+                    </li>
+                    <li>
+                      投資計畫的 IRR 若「<strong>大於</strong
+                      >」其資金成本率 →
+                      該計畫淨現值不一定等於、大於或小於 0
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（35 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q1</p>
+                <p class="qtext">下列何者不是資本預算的主要問題？</p>
+                <div class="opts">
+                  <div class="opt">A．互相排斥投資計畫選擇</div>
+                  <div class="opt right">B．品質交換問題</div>
+                  <div class="opt">C．不同年限投資計畫選定</div>
+                  <div class="opt">D．資本額度或預算之分配</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >資本預算主要問題包含互相排斥投資計畫選擇、不同年限投資計畫選定、資本額度或預算之分配，品質交換問題不是。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q2</p>
+                <p class="qtext">評估投資計畫時，其年限應採下列何者為宜？</p>
+                <div class="opts">
+                  <div class="opt right">A．長期資產經濟年限</div>
+                  <div class="opt">B．長期資產實體年限</div>
+                  <div class="opt">C．長期資產法定年限</div>
+                  <div class="opt">D．長期資產實體耐用年限</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>評估投資計畫年限應採長期資產經濟年限。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q3</p>
+                <p class="qtext">評估投資專案時最應關切：</p>
+                <div class="opts">
+                  <div class="opt right">A．現金流量</div>
+                  <div class="opt">B．稅前會計淨利</div>
+                  <div class="opt">C．稅後會計淨利</div>
+                  <div class="opt">D．折舊與重置成本</div>
+                </div>
+                <p class="why"><strong>解析：</strong>評估投資專案最應關切現金流量。</p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q4</p>
+                <p class="qtext">在作資本預算決策時，攸關的稅率應為：</p>
+                <div class="opts">
+                  <div class="opt right">A．公司預期的邊際稅率</div>
+                  <div class="opt">B．以前年度之稅率</div>
+                  <div class="opt">C．稅法中最高的稅率</div>
+                  <div class="opt">D．公司預期的平均稅率</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>資本預算決策應採公司預期的邊際稅率。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q5</p>
+                <p class="qtext">
+                  在制定資本預算決策時，會計盈餘往往不是重點所在，其原因為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．會計盈餘與現金流量不一定相同</div>
+                  <div class="opt">B．會計盈餘未能完全考慮貨幣的時間價值</div>
+                  <div class="opt">C．會計盈餘會受到成本分攤方式之影響</div>
+                  <div class="opt right">D．選項(A)(B)(C)皆是</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>以上三項皆是會計盈餘不受重視的原因。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q6</p>
+                <p class="qtext">投資計畫評估現金流量應採何基礎？</p>
+                <div class="opts">
+                  <div class="opt">A．稅前</div>
+                  <div class="opt right">B．稅後</div>
+                  <div class="opt">C．機會成本</div>
+                  <div class="opt">D．稅盾效果</div>
+                </div>
+                <p class="why"><strong>解析：</strong>投資計畫評估現金流量應採稅後基礎。</p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q7</p>
+                <p class="qtext">
+                  現金預算在估計過程中，其現金流量估計，最重要應考量何項財務變動作為估計標準？
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．銷售額</div>
+                  <div class="opt">B．呆帳比率</div>
+                  <div class="opt">C．應收帳款及其週轉率</div>
+                  <div class="opt">D．應付帳款及其週轉率</div>
+                </div>
+                <p class="why"><strong>解析：</strong>現金流量估計最重要應考量銷售額的變動。</p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q8</p>
+                <p class="qtext">評估投資計畫最好的方法為何？</p>
+                <div class="opts">
+                  <div class="opt">A．還本法</div>
+                  <div class="opt">B．IRR 法</div>
+                  <div class="opt right">C．NPV 法</div>
+                  <div class="opt">D．利潤指數法</div>
+                </div>
+                <p class="why"><strong>解析：</strong>NPV 法是評估投資計畫最好的方法。</p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q9</p>
+                <p class="qtext">
+                  當投資計畫的現金流入現值大於現金支出的現值時，此一投資計畫具有下列何種性質？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．還本年限超過經濟年限</div>
+                  <div class="opt">B．內部報酬率低於資金成本</div>
+                  <div class="opt">C．負的淨現值</div>
+                  <div class="opt right">D．正的淨現值</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>現金流入現值大於現金支出現值，代表淨現值為正。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q10</p>
+                <p class="qtext">根據淨現值法則，何種情形下應該投資？</p>
+                <div class="opts">
+                  <div class="opt">A．淨現值除以投資成本大於資金成本率</div>
+                  <div class="opt">B．淨現值大於投資之成本</div>
+                  <div class="opt right">C．淨現值大於 0</div>
+                  <div class="opt">D．淨現值的風險為 0</div>
+                </div>
+                <p class="why"><strong>解析：</strong>淨現值大於 0 才應該投資。</p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q11</p>
+                <p class="qtext">
+                  下列哪一項作法的淨現值不大於 0？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．採用產品差異化的策略以滿足不同客戶之需求</div>
+                  <div class="opt right">B．產品屬完全競爭市場</div>
+                  <div class="opt">C．阻止別人進入市場</div>
+                  <div class="opt">D．採取成本領導的策略</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>完全競爭市場下無超額利潤，淨現值不大於 0。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q12</p>
+                <p class="qtext">
+                  計算淨現值(NPV)時應考慮哪些資訊？甲.現金流量；乙.風險；丙.利率
+                </p>
+                <div class="opts">
+                  <div class="opt">A．僅甲、乙</div>
+                  <div class="opt">B．僅甲、丙</div>
+                  <div class="opt">C．僅乙、丙</div>
+                  <div class="opt right">D．甲、乙、丙</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>計算 NPV 需同時考慮現金流量、風險與利率。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q13</p>
+                <p class="qtext">
+                  計算現金流量現值為能考慮各期的風險應從何項調整估計著手？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．現金流量</div>
+                  <div class="opt">B．折現率</div>
+                  <div class="opt">C．風險貼水(Risk Premium)</div>
+                  <div class="opt right">D．選項 ABC 皆是</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>考量現值與風險，所以與 ABC 皆有關。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q14</p>
+                <p class="qtext">
+                  下列何者與必要的報酬率（Required Rate of Return）非同義？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．投資人要求之報酬率</div>
+                  <div class="opt">B．資金成本率</div>
+                  <div class="opt right">C．總資產報酬率</div>
+                  <div class="opt">D．折現率</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>總資產報酬率是實際獲利指標，非必要報酬率的同義詞。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q15</p>
+                <p class="qtext">一投資方案的資金成本是：</p>
+                <div class="opts">
+                  <div class="opt">A．一個經過充分分散風險投資組合的期望報酬率</div>
+                  <div class="opt">B．投資方案貸款的利率</div>
+                  <div class="opt right">
+                    C．投資人要求與該投資方案風險類似證券之期望報酬率
+                  </div>
+                  <div class="opt">D．銀行基本放款利率</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>資金成本是投資人要求與該投資方案風險類似證券之期望報酬率。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q16</p>
+                <p class="qtext">何者影響資金成本考量？</p>
+                <div class="opts">
+                  <div class="opt">A．公司之營業額</div>
+                  <div class="opt right">B．公司之現金流量穩定性</div>
+                  <div class="opt">C．公司之登記資本額</div>
+                  <div class="opt">D．公司之股東人數</div>
+                </div>
+                <p class="why"><strong>解析：</strong>公司現金流量穩定性影響資金成本考量。</p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q17</p>
+                <p class="qtext">
+                  有關淨現值法的優點，下列敘述何者正確？甲、對現金流量折現時未考慮到貨幣的時間價值；乙、未考慮到投資計畫的全部現金流量；丙、不符合價值可加原則；丁、考慮了投資風險：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．僅乙、丙</div>
+                  <div class="opt">B．僅甲、丁</div>
+                  <div class="opt">C．僅甲、丙、丁</div>
+                  <div class="opt right">D．僅丁</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>淨現值法有考慮貨幣時間價值、投資計畫全部現金流量、符合價值可加原則，甲乙丙敘述皆錯誤，僅丁正確。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q18</p>
+                <p class="qtext">下列敘述何者為正確？</p>
+                <div class="opts">
+                  <div class="opt right">
+                    A．對淨現值法而言，分析並確定各期的現金流量是很重要的
+                  </div>
+                  <div class="opt">B．淨現值法著重於淨利而非現金流量</div>
+                  <div class="opt">
+                    C．內部報酬率法在分析時並未考慮貨幣的時間價值
+                  </div>
+                  <div class="opt">
+                    D．內部報酬率法和淨現值法一樣著重於淨利而非現金流量
+                  </div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>NPV 法著重現金流量而非淨利，IRR
+                  法有考慮貨幣時間價值，A 敘述正確。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q19</p>
+                <p class="qtext">就 NPV 法與 IRR 法的比較，下列何者為非？</p>
+                <div class="opts">
+                  <div class="opt">A．兩者皆考量到現金流量時間價值</div>
+                  <div class="opt">B．兩者可能產生不同的決策結果</div>
+                  <div class="opt right">C．兩者皆符合價值相加法則</div>
+                  <div class="opt">
+                    D．IRR 法的解可能為多個而 NPV 法只有一個解
+                  </div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>僅 NPV 法符合價值相加法則，IRR
+                  法不符合，C 敘述錯誤。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q20</p>
+                <p class="qtext">
+                  分析淨現值如何受到一些關鍵變數影響的方法稱為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．營運分析</div>
+                  <div class="opt right">B．敏感度分析</div>
+                  <div class="opt">C．成本效益分析</div>
+                  <div class="opt">D．損益兩平點分析</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>分析 NPV 受關鍵變數影響的方法稱為敏感度分析。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q21</p>
+                <p class="qtext">
+                  下列哪一種評估準則在正確地使用下將導致與淨現值法有相同的結果？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．回收期限法</div>
+                  <div class="opt right">B．內部報酬率法</div>
+                  <div class="opt">C．平均會計報酬率法</div>
+                  <div class="opt">D．折現回收期限法</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>內部報酬率法正確使用下與淨現值法結果一致。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q22</p>
+                <p class="qtext">使得淨現值為 0 之折現率稱為：</p>
+                <div class="opts">
+                  <div class="opt">A．資金成本率</div>
+                  <div class="opt">B．會計報酬率</div>
+                  <div class="opt">C．必要報酬率</div>
+                  <div class="opt right">D．內部報酬率</div>
+                </div>
+                <p class="why"><strong>解析：</strong>使 NPV 為 0 的折現率即為內部報酬率。</p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q23</p>
+                <p class="qtext">下列何者不是內部報酬率法的缺點？</p>
+                <div class="opts">
+                  <div class="opt">A．內部報酬率可能不只一個</div>
+                  <div class="opt">B．內部報酬率不一定愈大愈好</div>
+                  <div class="opt">
+                    C．在互斥的計畫中作選擇時，有可能選到較差的方案
+                  </div>
+                  <div class="opt right">D．內部報酬率法未考慮所有的現金流量</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>內部報酬率法有考慮所有現金流量，D 不是其缺點。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q24</p>
+                <p class="qtext">
+                  一個投資計畫的內部報酬率（IRR）若等於其資金成本率，則該計畫的淨現值：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．大於 0</div>
+                  <div class="opt">B．小於 0</div>
+                  <div class="opt right">C．等於 0</div>
+                  <div class="opt">D．不一定等於、大於或小於 0</div>
+                </div>
+                <p class="why"><strong>解析：</strong>IRR 等於資金成本率時，NPV 等於 0。</p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q25</p>
+                <p class="qtext">
+                  若一計畫的內部報酬率大於其資金成本率，則表示該計畫之淨現值：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．大於 0</div>
+                  <div class="opt">B．小於 0</div>
+                  <div class="opt">C．等於 0</div>
+                  <div class="opt right">D．不一定大於或小於 0</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>IRR 大於資金成本率時，NPV 不一定大於或小於 0。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q26</p>
+                <p class="qtext">
+                  在應用內部報酬率法（IRR）時，若面臨的是典型的現金流量型態之投資計畫，則接受投資的條件是當內部報酬率：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．大於 0 時</div>
+                  <div class="opt">B．等於 0 時</div>
+                  <div class="opt">C．小於資金成本率時</div>
+                  <div class="opt right">D．大於資金成本率時</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>典型現金流量型態下，IRR 大於資金成本率才接受投資。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q27</p>
+                <p class="qtext">
+                  以下哪種評價方法在評價時會將評價標的決策彈性納入考量？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．傳統淨現值法</div>
+                  <div class="opt">B．成本加成法</div>
+                  <div class="opt right">C．實質選擇權法</div>
+                  <div class="opt">D．回收期間法</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>實質選擇權法重視決策彈性的價值問題，其將管理彈性納為評估投資決策的考慮因素。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q28</p>
+                <p class="qtext">
+                  某投資計畫每年產生稅後盈餘 2,000 萬元，其投資成本為 1
+                  億元，年限為 10 年，無殘值，其會計報酬率為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．100%</div>
+                  <div class="opt">B．50%</div>
+                  <div class="opt right">C．40%</div>
+                  <div class="opt">D．20%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>會計報酬率 ＝
+                  <span class="frac"
+                    ><span class="num">每年產生稅後盈餘</span
+                    ><span class="den">(投資成本+殘值) ÷ 2</span></span
+                  >
+                  ＝
+                  <span class="frac"
+                    ><span class="num">2,000萬</span
+                    ><span class="den">(10,000萬+0) ÷ 2</span></span
+                  >
+                  ＝ 40%。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q29</p>
+                <p class="qtext">
+                  BOT（建造、營運、移轉）的公共建設投資開發型態，影響其投資計畫效益評估之因素有哪些？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．投資開發年限</div>
+                  <div class="opt">B．殘值價值估計</div>
+                  <div class="opt">C．營運開發期的成本效益估計</div>
+                  <div class="opt right">D．選項 ABC 皆對</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>投資開發年限、殘值估計、營運開發期成本效益估計皆會影響 BOT 投資計畫效益評估。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q30</p>
+                <p class="qtext">
+                  有關生產機器設備的重置支出問題，其決策目標為何？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．生產的未來成本極小化</div>
+                  <div class="opt">B．生產的內部成本極小化</div>
+                  <div class="opt">C．生產的收益極小化</div>
+                  <div class="opt right">D．生產成本的現值極小化</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>重置支出決策目標為生產成本的現值極小化。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q31</p>
+                <p class="qtext">回收期限法（Payback Period Rule）：</p>
+                <div class="opts">
+                  <div class="opt">A．未考慮期初的投資</div>
+                  <div class="opt">B．考慮了一投資計畫所有的現金流量</div>
+                  <div class="opt">C．考慮了貨幣的時間價值</div>
+                  <div class="opt right">D．在直接應用時不需要考慮資金成本</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>回收期限法只看現金流入年限，不考慮資金成本。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q32</p>
+                <p class="qtext">
+                  投資計畫採還本法評估其可行性，下列何者為其缺點？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．未考慮投資規模及還本後的現金流量</div>
+                  <div class="opt">B．未考慮風險</div>
+                  <div class="opt">C．未考慮貨幣時間價值</div>
+                  <div class="opt right">D．選項 ABC 皆是</div>
+                </div>
+                <p class="why"><strong>解析：</strong>以上皆是還本法的缺點。</p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q33</p>
+                <p class="qtext">
+                  針對不同年限投資計畫的評估選擇，下列何種方法較適合？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．會計報酬率法</div>
+                  <div class="opt">B．內部報酬率法</div>
+                  <div class="opt right">C．等值年金法</div>
+                  <div class="opt">D．獲利率指數法</div>
+                </div>
+                <p class="why"><strong>解析：</strong>等值年金法適合評估不同年限的投資計畫。</p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q34</p>
+                <p class="qtext">年金(Annuity)是指：</p>
+                <div class="opts">
+                  <div class="opt">A．在未來一段期間中一系列等額給付之現值</div>
+                  <div class="opt">B．在未來一段期間之期末定額之給付</div>
+                  <div class="opt right">C．在未來一段期間中一系列等額之給付</div>
+                  <div class="opt">D．在未來一段期間中一系列金額遞增之給付</div>
+                </div>
+                <p class="why"><strong>解析：</strong>年金指未來一段期間中一系列等額之給付。</p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q35</p>
+                <p class="qtext">利潤指數（Profitability Index）是：</p>
+                <div class="opts">
+                  <div class="opt">A．內部報酬率與資金成本率之比率</div>
+                  <div class="opt">B．總收入與總成本之比率</div>
+                  <div class="opt">C．內部報酬率與市場報酬率之比率</div>
+                  <div class="opt right">D．現金流量現值對期初投資成本之比率</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>利潤指數是現金流量現值對期初投資成本之比率。
+                </p>
+              </div>
+            </details>
+          </section>
+
+          <section class="unit">
+            <div class="unit-head"><h2>融資決策</h2></div>
+            <div class="formula">
+              <div class="formula-line">
+                資金成本 ＝
+                <span class="frac"
+                  ><span class="num"
+                    >負債×舉債利率×(1－所得稅率) ＋ 權益×權益資金成本率</span
+                  ><span class="den">負債 ＋ 權益</span></span
+                >
+              </div>
+              <div class="formula-line">
+                實質債務資金成本 ＝ 借款名目利率 × (1 － 稅率)
+              </div>
+            </div>
+            <div class="explain">
+              <ul>
+                <li>
+                  <strong>稅盾</strong>：因舉債所產生的節稅效果 ＝ 負債金額 ×
+                  稅率
+                </li>
+                <li>
+                  估計資金成本方法：<strong>資本資產定價模式</strong>、<strong
+                    >套利定價模式</strong
+                  >、（預期下一期的股利／目前股價）＋股利成長率
+                </li>
+                <li>
+                  計算時只能計算需要支付利息的融資借款（非負債總額），應付帳款、應付票據不應計算
+                </li>
+                <li>
+                  權益資金成本 &gt;
+                  債務資金成本，因為股東承擔公司破產風險，會要求較高的報酬率
+                </li>
+                <li>提高負債比率：會提高稅盾，也會提高財務困難成本</li>
+              </ul>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（4 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q36</p>
+                <p class="qtext">
+                  若中洲電信公司權益資金成本是 20%，舉債利率是 10%，所得稅率是
+                  17%，已知公司負債權益比率是
+                  6:4，並知道公司將全部向銀行貸款來擴建新機房，試問中洲電信公司之資金成本是（假設不考慮兩稅合一）：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．8.36%</div>
+                  <div class="opt">B．10.65%</div>
+                  <div class="opt right">C．12.98%</div>
+                  <div class="opt">D．15%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>資金成本 ＝
+                  <span class="frac"
+                    ><span class="num">0.6×10%×(1－17%) ＋ 0.4×20%</span
+                    ><span class="den">0.6+0.4</span></span
+                  >
+                  ＝ (4.98%+8%) ＝ 12.98%。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q37</p>
+                <p class="qtext">
+                  若同開科技公司擴建廠房之資金成本
+                  13.66%，已知權益資金成本是 15%，所得稅率是
+                  17%，已知公司負債權益比率是
+                  1:4，且該公司新廠房的資金來源為銀行貸款，試問該公司舉債利率為何？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．15%</div>
+                  <div class="opt right">B．10%</div>
+                  <div class="opt">C．9.60%</div>
+                  <div class="opt">D．8%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>資金成本 ＝
+                  <span class="frac"
+                    ><span class="num">1×舉債利率×(1－17%) ＋ 4×15%</span
+                    ><span class="den">1+4</span></span
+                  ><br />13.66% ＝ (舉債利率×0.83 ＋ 0.6) ÷ 5<br />舉債利率 ＝
+                  (0.1366×5－0.6)÷0.83 ＝ 10%。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q38</p>
+                <p class="qtext">估計資金成本的方法包括：</p>
+                <div class="opts">
+                  <div class="opt">
+                    A．以【(預期下一期的股利／目前股價)+股利成長率】之估計值估計
+                  </div>
+                  <div class="opt">B．利用資本資產定價模式估計</div>
+                  <div class="opt">C．利用套利定價模式估計</div>
+                  <div class="opt right">D．選項(A)(B)(C)皆可</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>以上三種方法皆可用來估計資金成本。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q39</p>
+                <p class="qtext">
+                  關於公司提高負債比率之必然影響，下列敘述何者正確(假設其他因素不變)？甲.提高稅盾(Tax
+                  Shield)；乙.提高財務困難成本(Financial Distress
+                  Cost)；丙.提高加權平均資金成本(Weighted Average Cost of
+                  Capital)：
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．僅甲、乙</div>
+                  <div class="opt">B．僅甲、丙</div>
+                  <div class="opt">C．僅乙、丙</div>
+                  <div class="opt">D．甲、乙、丙</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>稅盾 ＝ 負債金額 ×
+                  稅率，負債比率增加必然提高稅盾及財務困難成本；但加權平均資金成本是否上升要看舉債成本與權益成本的相對變化，不一定必然提高，故僅甲、乙正確。
+                </p>
+              </div>
+            </details>
+          </section>
+
+          <section class="unit">
+            <div class="unit-head"><h2>租賃</h2></div>
+            <div class="explain">
+              <ul>
+                <li>
+                  所有租賃都必須針對承租取得的資產認列「<strong
+                    >使用權資產</strong
+                  >」（代表使用標的資產之權利），並相對認列「<strong
+                    >租賃負債</strong
+                  >」（代表租金給付之義務）
+                </li>
+                <li>
+                  <strong>融資租賃（財務租賃）</strong>：可以讓邊際稅率較低的公司出售其折舊稅盾
+                  <ul>
+                    <li>
+                      有些租約實際上為分期付款買賣（如租約期滿無條件移轉或承租人享有優先承購權），會把租賃資產列為不動產、廠房及設備（資本化）
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  融資租賃可分為：<strong>銷售租賃</strong>（出租人可賺取毛利與利息收入）、<strong>融資租賃</strong>（出租人未因此產生損益，通常出租人稅率大於承租人時出現，因為稅率高的公司提列折舊時會產生更多的稅盾，並能回饋到租金上）
+                </li>
+                <li>
+                  <strong>營業租賃（服務性租賃）</strong
+                  >：租賃過程產生的額外履約成本由承租人負擔
+                </li>
+              </ul>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（5 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q40</p>
+                <p class="qtext">由承租人角度來看，下列何者不是租賃相關之成本？</p>
+                <div class="opts">
+                  <div class="opt right">A．租賃資產之買價</div>
+                  <div class="opt">B．稅後之租賃給付</div>
+                  <div class="opt">C．放棄之折舊稅值</div>
+                  <div class="opt">D．取代其他負債之使用</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >租賃資產之買價是出租人的成本，不是承租人的租賃相關成本。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q41</p>
+                <p class="qtext">
+                  在「銷售型」融資租賃中，出租人所賺取的收益不包括下列何者？甲、銷售利潤；乙、租金收入；丙、利息收入
+                </p>
+                <div class="opts">
+                  <div class="opt">A．僅甲</div>
+                  <div class="opt right">B．僅乙</div>
+                  <div class="opt">C．僅丙</div>
+                  <div class="opt">D．僅乙和丙</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >銷售型融資租賃出租人賺取銷售利潤與利息收入，不包含單獨的租金收入。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q42</p>
+                <p class="qtext">
+                  在下列何種情況下，租賃對出租人及承租人的好處較大（假設其他一切不變）？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．折舊所造成之稅盾發生於租約的晚期</div>
+                  <div class="opt right">B．出租人的稅率大於承租人的稅率</div>
+                  <div class="opt">C．利率較低時</div>
+                  <div class="opt">D．租期長但租金之給付在早期較多</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >出租人稅率高，折舊產生的稅盾價值較大，能回饋到租金上讓雙方受益。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q43</p>
+                <p class="qtext">
+                  假設稅率為 17%，折舊費用為
+                  $50,000，則當公司有獲利時，其折舊費用稅後的效果為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．淨現金流入 $6,800</div>
+                  <div class="opt">B．淨現金流出 $6,800</div>
+                  <div class="opt">C．淨現金流出 $8,500</div>
+                  <div class="opt right">D．淨現金流入 $8,500</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>折舊費用 × 稅率 ＝
+                  公司因折舊而省下的稅務支出（產生淨現金流入）＝ 50,000×17% ＝
+                  $8,500。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q44</p>
+                <p class="qtext">
+                  假設負債的利率為 15%，稅率為
+                  17%，則在計算融資租賃價值時應用的折現率為多少？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．2.4%</div>
+                  <div class="opt">B．9.6%</div>
+                  <div class="opt right">C．12.45%</div>
+                  <div class="opt">D．20%</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>稅後負債成本 ＝ 稅前負債利率 ×
+                  (1－稅率) ＝ 15%×(1－17%) ＝ 12.45%。
+                </p>
+              </div>
+            </details>
+          </section>
+
+          <section class="unit">
+            <div class="unit-head"><h2>其他考點</h2></div>
+            <div class="formula">
+              <div class="formula-line">
+                經濟附加價值 ＝ 稅後經營利潤 － 債務和股本成本
+              </div>
+            </div>
+            <div class="explain">
+              <ul>
+                <li>
+                  <strong>經濟租（Economic Rent）</strong
+                  >：指所有因為獨佔權力而獲得的收入
+                </li>
+                <li>
+                  <strong>經濟附加價值（EVA）</strong
+                  >：衡量公司稅後經營利潤扣除資金成本後的真實獲利
+                </li>
+              </ul>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（2 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q45</p>
+                <p class="qtext">經濟租（Economic Rent）發生的原因為：</p>
+                <div class="opts">
+                  <div class="opt">A．先進入市場</div>
+                  <div class="opt">B．擁有別人沒有的生產技術</div>
+                  <div class="opt">C．擁有別人無法擁有的資產</div>
+                  <div class="opt right">D．選項 ABC 皆是</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>經濟租是指所有因為獨佔權力而獲得的收入，以上皆是其發生原因。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q46</p>
+                <p class="qtext">
+                  假設一公司完全以權益融資，其權益資金成本率
+                  25%，再假設公司於期初有 1,000
+                  股流通在外，而公司每股之經濟帳面金額為
+                  $100，該期公司產生的稅後淨營業利潤為
+                  $50,000，請問該公司之經濟附加價值為多少？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．-$10,000</div>
+                  <div class="opt">B．$15,000</div>
+                  <div class="opt right">C．$25,000</div>
+                  <div class="opt">D．$5,000</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>經濟附加價值 ＝ 稅後經營利潤 －
+                  債務和股本成本<br />50,000－(1,000×100×25%) ＝ 25,000。
+                </p>
+              </div>
+            </details>
+          </section>
+        </main>
+
+        <nav class="chapter-nav">
+          <a class="prev" href="/finance/ch10-statement-analysis.html"
+            ><span class="dir">← 上一章</span>財報編制與分析方法</a
+          >
+          <a class="next" href="/finance/ch12-ratios.html"
+            ><span class="dir">下一章 →</span>財務比率分析</a
+          >
+        </nav>
+      </div>
+    </div>
+    <script src="/assets/nav.js"></script>
+  </body>
+</html>

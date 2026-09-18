@@ -1,0 +1,1001 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>現金流量表｜財務分析 CH09</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    />
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div id="site-nav"></div>
+      <div class="content">
+        <header class="masthead">
+          <div class="masthead-inner">
+            <span class="eyebrow">證券商高級業務員 · 財務分析 · 第 9 章</span>
+            <h1>現金流量表</h1>
+          </div>
+        </header>
+        <p class="crumb">
+          <a href="/index.html">高業考前重點</a> ／ 財務分析 ／ 第 9 章
+        </p>
+
+        <main>
+          <section class="unit">
+            <div class="unit-head"><h2>三大現金流量</h2></div>
+            <div class="diagram-card">
+              <svg
+                viewBox="0 0 360 156"
+                role="img"
+                aria-label="現金流量依營業、投資與籌資活動分類"
+              >
+                <rect
+                  x="10"
+                  y="20"
+                  width="104"
+                  height="106"
+                  rx="5"
+                  fill="var(--jade-soft)"
+                  stroke="var(--jade)"
+                />
+                <rect
+                  x="128"
+                  y="20"
+                  width="104"
+                  height="106"
+                  rx="5"
+                  fill="var(--gold-soft)"
+                  stroke="var(--gold)"
+                />
+                <rect
+                  x="246"
+                  y="20"
+                  width="104"
+                  height="106"
+                  rx="5"
+                  fill="var(--seal-soft)"
+                  stroke="var(--seal)"
+                />
+                <text
+                  x="62"
+                  y="45"
+                  font-size="13"
+                  fill="var(--jade)"
+                  class="mono"
+                  text-anchor="middle"
+                >
+                  營業活動
+                </text>
+                <text
+                  x="62"
+                  y="70"
+                  font-size="9"
+                  fill="var(--ink-70)"
+                  text-anchor="middle"
+                >
+                  本業收付款
+                </text>
+                <text
+                  x="62"
+                  y="89"
+                  font-size="9"
+                  fill="var(--ink-70)"
+                  text-anchor="middle"
+                >
+                  最能看繼續經營
+                </text>
+                <text
+                  x="62"
+                  y="108"
+                  font-size="9"
+                  fill="var(--jade)"
+                  text-anchor="middle"
+                >
+                  利息／股利可選
+                </text>
+                <text
+                  x="180"
+                  y="45"
+                  font-size="13"
+                  fill="var(--gold)"
+                  class="mono"
+                  text-anchor="middle"
+                >
+                  投資活動
+                </text>
+                <text
+                  x="180"
+                  y="70"
+                  font-size="9"
+                  fill="var(--ink-70)"
+                  text-anchor="middle"
+                >
+                  買賣長期資產
+                </text>
+                <text
+                  x="180"
+                  y="89"
+                  font-size="9"
+                  fill="var(--ink-70)"
+                  text-anchor="middle"
+                >
+                  投資、借款收回
+                </text>
+                <text
+                  x="180"
+                  y="108"
+                  font-size="9"
+                  fill="var(--gold)"
+                  text-anchor="middle"
+                >
+                  初期常為流出
+                </text>
+                <text
+                  x="298"
+                  y="45"
+                  font-size="13"
+                  fill="var(--seal)"
+                  class="mono"
+                  text-anchor="middle"
+                >
+                  籌資活動
+                </text>
+                <text
+                  x="298"
+                  y="70"
+                  font-size="9"
+                  fill="var(--ink-70)"
+                  text-anchor="middle"
+                >
+                  借款與還款
+                </text>
+                <text
+                  x="298"
+                  y="89"
+                  font-size="9"
+                  fill="var(--ink-70)"
+                  text-anchor="middle"
+                >
+                  增資、股利、庫藏股
+                </text>
+                <text
+                  x="298"
+                  y="108"
+                  font-size="9"
+                  fill="var(--seal)"
+                  text-anchor="middle"
+                >
+                  利息／股利可選
+                </text>
+              </svg>
+            </div>
+            <div class="explain">
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th>類別</th>
+                    <th>現金流入</th>
+                    <th>現金流出</th>
+                  </tr>
+                  <tr>
+                    <td>營業現金流</td>
+                    <td>收到利息及股利（也可歸在投資現金流）</td>
+                    <td>支付利息（也可歸在籌資現金流）</td>
+                  </tr>
+                  <tr>
+                    <td>投資現金流</td>
+                    <td>
+                      處分不動產、廠房及設備／出售無形資產／處分投資<br />（如出售子公司股票）／收回借出的款項
+                    </td>
+                    <td>
+                      購入不動產、廠房及設備／新增投資／併購或貸款給其他公司
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>籌資現金流</td>
+                    <td>現金增資／舉債／出售庫藏股</td>
+                    <td>
+                      支付現金股利（也可歸在營業現金流）／還債／買回庫藏股
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="callout-line">
+                IFRS 彈性規定：
+                <ul>
+                  <li><strong>支付利息</strong>可歸在營業或籌資現金流</li>
+                  <li><strong>收取利息和股利</strong>可歸在營業或投資現金流</li>
+                  <li><strong>支付現金股利</strong>可歸在籌資或營業現金流</li>
+                </ul>
+                <span class="arrow">➜ 考點注意</span>
+              </div>
+              <ul>
+                <li>
+                  現金流量表說明企業在一特定期間的營業、投資、籌資活動現金流量變化
+                  <ul>
+                    <li>
+                      功能：可用以評估公司<strong>盈餘品質</strong>與<strong>財務彈性</strong>、<strong>對外部資金的依賴程度</strong>等
+                    </li>
+                    <li>
+                      也可協助財報使用者評估應計基礎和現金基礎淨利間差異產生的理由
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  營業現金流最能衡量企業繼續經營能力，通常產品成熟期時的營業現金流會最多
+                </li>
+                <li>
+                  投資現金流：通常產品上市初期要大量投資，導致投資現金流量多為負值
+                  <ul>
+                    <li>處分廠房時現金流增加、購買廠房時現金流減少</li>
+                    <li>若有處分利益：現金流入 ＝ 資產售價 － 增加的所得稅</li>
+                    <li>若有處分損失：現金流入 ＝ 資產售價 ＋ 減少的所得稅</li>
+                  </ul>
+                </li>
+                <li>
+                  籌資現金流
+                  <ul>
+                    <li>借款、現金增資時現金流增加</li>
+                    <li>還款、支付現金股利時現金流減少</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（23 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q1</p>
+                <p class="qtext">下列何者並非現金流量表之功能？</p>
+                <div class="opts">
+                  <div class="opt">A．評估公司盈餘的品質</div>
+                  <div class="opt">B．評估對外部資金的依賴程度</div>
+                  <div class="opt">C．評估公司的財務彈性</div>
+                  <div class="opt right">D．評估資產的管理效能</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >現金流量表的功能是評估盈餘品質、財務彈性、對外部資金的依賴程度，不包含評估資產管理效能。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q2</p>
+                <p class="qtext">現金流量表將協助財務報表使用者：</p>
+                <div class="opts">
+                  <div class="opt">A．預測未來銷貨收入</div>
+                  <div class="opt right">
+                    B．評估應計基礎和現金基礎淨利間差異產生的理由
+                  </div>
+                  <div class="opt">C．決定公司股票之市價</div>
+                  <div class="opt">D．評估公司保全現金與約當現金之能力</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >現金流量表可協助財報使用者評估應計基礎與現金基礎淨利間差異產生的理由。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q3</p>
+                <p class="qtext">
+                  現金流量表上最能衡量企業繼續經營能力的資訊為何？
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．來自營業活動之現金流量</div>
+                  <div class="opt">B．來自投資活動之現金流量</div>
+                  <div class="opt">C．來自籌資活動之現金流量</div>
+                  <div class="opt">D．不影響現金之投資或籌資活動</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >營業現金流最能反映企業本業持續經營創造現金的能力。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q4</p>
+                <p class="qtext">由來自營業活動現金流量為負值，可知：</p>
+                <div class="opts">
+                  <div class="opt">A．當期公司現金餘額減少</div>
+                  <div class="opt">B．營業活動現金流量小於淨利</div>
+                  <div class="opt right">
+                    C．營業活動使用之現金數較所得到之現金數多
+                  </div>
+                  <div class="opt">D．公司應收帳款餘額快速增加</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >營業活動現金流量為負值，代表該期間營業活動使用的現金比收到的現金多。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q5</p>
+                <p class="qtext">下列有關現金流量表之敘述何者錯誤？</p>
+                <div class="opts">
+                  <div class="opt">A．庫藏股的買回與再發行屬籌資活動</div>
+                  <div class="opt">B．購買設備流出現金為投資活動</div>
+                  <div class="opt">
+                    C．應收帳款與預付費用之變動會影響營業活動之現金流量
+                  </div>
+                  <div class="opt right">
+                    D．購買交易目的之股票屬投資活動
+                  </div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >因交易目的而買入證券屬於營業活動，不是投資活動，D 敘述錯誤。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q6</p>
+                <p class="qtext">
+                  丹佛公司（非建築業）本年度淨利頗佳，惟營業活動之現金流量卻為負值，其可能原因為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．應付帳款增加</div>
+                  <div class="opt right">
+                    B．有一大部分淨利係來自處分不動產、廠房及設備
+                  </div>
+                  <div class="opt">C．存貨減少</div>
+                  <div class="opt">D．選項 ABC 皆是</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >處分不動產、廠房及設備之利益屬於投資活動，會使淨利增加但不影響營業現金流，造成淨利佳但營業現金流為負的落差。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q7</p>
+                <p class="qtext">
+                  承租人的租金付現數於現金流量表上可如何分類：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．營業活動、投資活動</div>
+                  <div class="opt right">B．營業活動、籌資活動</div>
+                  <div class="opt">C．投資活動、籌資活動</div>
+                  <div class="opt">D．只有營業活動</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>租賃設備屬於營業活動，融資租賃屬於籌資活動。<br
+                  />（若為出租人融資租賃，則租金收現數可分類為營業活動、投資活動。）
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q8</p>
+                <p class="qtext">
+                  編製母公司之現金流量表時，為合併取得子公司股權所支付之現金為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．營業活動</div>
+                  <div class="opt right">B．投資活動</div>
+                  <div class="opt">C．籌資活動</div>
+                  <div class="opt">D．不影響現金流量之投資或籌資活動</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>取得子公司股權屬於投資活動的現金流出。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q9</p>
+                <p class="qtext">
+                  企業收回借出的款項，應列為現金流量表上的哪一個項目？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．籌資活動之現金流入</div>
+                  <div class="opt right">B．投資活動之現金流入</div>
+                  <div class="opt">C．籌資活動之現金流出</div>
+                  <div class="opt">D．投資活動之現金流出</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>收回借出的款項屬於投資活動的現金流入。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q10</p>
+                <p class="qtext">下列何者非屬投資活動之現金流量？</p>
+                <div class="opts">
+                  <div class="opt">A．出售設備</div>
+                  <div class="opt right">B．舉借債務</div>
+                  <div class="opt">C．貸款予其他企業</div>
+                  <div class="opt">D．購入按攤銷後成本衡量債券投資</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>舉借債務屬於籌資活動，不是投資活動。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q11</p>
+                <p class="qtext">下列何者不影響每期淨現金流量？</p>
+                <div class="opts">
+                  <div class="opt">A．折舊方法的改變</div>
+                  <div class="opt right">B．折現率變動</div>
+                  <div class="opt">C．期末資產處分損失</div>
+                  <div class="opt">D．收入變動</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >A 影響營業現金流調整、C 影響投資現金流、D
+                  影響營業現金流，折現率變動不影響實際現金流量金額。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q12</p>
+                <p class="qtext">
+                  哥倫比亞公司以 $5,000,000
+                  發行公司債，由鳳凰城公司購入，上述交易在各公司現金流量表中應列為：
+                </p>
+                <div class="opts">
+                  <div class="opt">
+                    A．哥倫比亞公司：投資活動；鳳凰城公司：投資活動
+                  </div>
+                  <div class="opt">
+                    B．哥倫比亞公司：投資活動；鳳凰城公司：籌資活動
+                  </div>
+                  <div class="opt right">
+                    C．哥倫比亞公司：籌資活動；鳳凰城公司：投資活動
+                  </div>
+                  <div class="opt">
+                    D．哥倫比亞公司：籌資活動；鳳凰城公司：籌資活動
+                  </div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>哥倫比亞發債籌資，鳳凰城買債投資。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q13</p>
+                <p class="qtext">
+                  甲公司 X3 年出售土地獲得現金 $360,000，出售設備獲得現金
+                  $400,000，發行普通股獲得現金
+                  $280,000，購買設備支付現金 $210,000，支付現金股利
+                  $240,000，請問該公司 X3 年度投資活動現金流量為多少？
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．$550,000</div>
+                  <div class="opt">B．$590,000</div>
+                  <div class="opt">C．$830,000</div>
+                  <div class="opt">D．$310,000</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>投資活動現金流量 ＝ 出售土地
+                  360,000＋出售設備 400,000－購買設備 210,000 ＝ 550,000。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q14</p>
+                <p class="qtext">
+                  處分土地乙筆，成本 $3,500、處分利益
+                  $500，則應於投資活動項下列入現金流入：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．$3,000</div>
+                  <div class="opt">B．$1,000</div>
+                  <div class="opt right">C．$4,000</div>
+                  <div class="opt">D．$0</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>成本 3,500，利益
+                  500，代表總共收到 4,000。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q15</p>
+                <p class="qtext">
+                  竹圍公司 X1 年度的會計事項如下：支付所得稅
+                  $300,000、發放現金股利 $560,000、購買設備支付現金
+                  $892,500、發行普通股獲得現金 $1,000,000、出售土地獲得現金
+                  $1,312,500、出售設備獲得現金
+                  $995,000。請問：該公司 X1 年度投資活動現金流量為多少？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．$855,000</div>
+                  <div class="opt">B．$1,315,000</div>
+                  <div class="opt right">C．$1,415,000</div>
+                  <div class="opt">D．$1,885,000</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>購買設備支付現金(－892,500)＋出售土地獲得現金(1,312,500)＋出售設備獲得現金(995,000)
+                  ＝ 1,415,000。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q16</p>
+                <p class="qtext">
+                  現金流量表分析資金流入與流出，並按投資、營業、籌資等三項活動歸類，若依我國企業實務慣用分類方式編製現金流量表，則現金股利之分配應屬何種活動？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．營業活動</div>
+                  <div class="opt">B．投資活動</div>
+                  <div class="opt right">C．籌資活動</div>
+                  <div class="opt">D．選項(A)(B)(C)皆是</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >我國企業實務慣用分類方式，將現金股利之分配歸類為籌資活動。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q17</p>
+                <p class="qtext">下列何者並非現金流量表上的籌資活動？</p>
+                <div class="opts">
+                  <div class="opt">A．企業發行公司債借款</div>
+                  <div class="opt">B．現金增資</div>
+                  <div class="opt">C．購買庫藏股票</div>
+                  <div class="opt right">D．收到現金股利</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >收到現金股利屬於營業或投資活動（IFRS 彈性規定），不是籌資活動。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q18</p>
+                <p class="qtext">下列何者為來自籌資活動的現金流量？</p>
+                <div class="opts">
+                  <div class="opt">A．購買不動產、廠房及設備</div>
+                  <div class="opt">B．應計費用增加</div>
+                  <div class="opt right">C．借入長期負債</div>
+                  <div class="opt">D．選項 ABC 皆非</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>借入長期負債屬於籌資活動的現金流入。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q19</p>
+                <p class="qtext">償還短期借款，應列為何種活動之現金流出？</p>
+                <div class="opts">
+                  <div class="opt">A．投資活動</div>
+                  <div class="opt">B．營業活動</div>
+                  <div class="opt right">C．籌資活動</div>
+                  <div class="opt">D．其他活動</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>償還借款屬於籌資活動的現金流出。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q20</p>
+                <p class="qtext">
+                  波特蘭公司從公開市場中買入該公司已發行之股票，這一交易在現金流量表中應列為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．營業活動</div>
+                  <div class="opt">B．投資活動</div>
+                  <div class="opt right">C．籌資活動</div>
+                  <div class="opt">D．減資活動</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >買入自家已發行股票即買回庫藏股，屬於籌資活動。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q21</p>
+                <p class="qtext">
+                  編製現金流量表時，下列何選項在現金流量表中屬於籌資活動？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．發放股票股利</div>
+                  <div class="opt">B．收到現金股利</div>
+                  <div class="opt">C．出售不動產、廠房及設備</div>
+                  <div class="opt right">D．買回庫藏股票</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>買回庫藏股票屬於籌資活動。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q22</p>
+                <p class="qtext">
+                  依 IAS7「現金流量表」之彈性規定，利息費用付現得列於現金流量表中之何項活動？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．營業活動或投資活動</div>
+                  <div class="opt">B．投資活動或籌資活動</div>
+                  <div class="opt right">C．營業活動或籌資活動</div>
+                  <div class="opt">D．不影響現金流量之投資及籌資活動</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >IAS7 彈性規定，支付利息可歸在營業活動或籌資活動。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q23</p>
+                <p class="qtext">
+                  下列何種情況最可能出現在一個新成立且急速擴充的企業之現金流量表？
+                </p>
+                <div class="opts">
+                  <div class="opt">
+                    A．投資活動現金流量淨額大於 0；籌資活動現金流量淨額小於 0
+                  </div>
+                  <div class="opt right">
+                    B．投資活動現金流量淨額小於 0；籌資活動現金流量淨額大於 0
+                  </div>
+                  <div class="opt">
+                    C．投資活動現金流量淨額小於 0；籌資活動現金流量淨額小於 0
+                  </div>
+                  <div class="opt">
+                    D．投資活動現金流量淨額大於 0；籌資活動現金流量淨額大於 0
+                  </div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >急速擴充代表應借錢投資以快速成長，所以籌資現金流應
+                  &gt;0，投資現金流應 &lt;0。
+                </p>
+              </div>
+            </details>
+          </section>
+
+          <section class="unit">
+            <div class="unit-head"><h2>直接法 vs 間接法</h2></div>
+            <div class="explain">
+              <ul>
+                <li>
+                  <strong>直接法</strong
+                  >：將損益表中與營業有關項目由權責發生基礎（應計基礎）改為現金制金額（現金基礎）<br />因為有現金收支才記，所以<strong>不會</strong>顯示折舊費用、資產低於帳面金額出售產生的處分損失
+                </li>
+                <li>
+                  <strong>間接法</strong
+                  >：利用「本期損益」金額調整當期未實際收付現金項目及非屬營業活動項目，並依資產負債表加計與營業活動有關項目增減引起的現金流入或流出之金額（目前公司財報主要以「間接法」編製）
+                </li>
+              </ul>
+              <p class="sub-label">「間接法」營業現金流計算三大步驟：</p>
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th>步驟</th>
+                    <th>從稅前淨利加回</th>
+                    <th>從稅前淨利減去</th>
+                  </tr>
+                  <tr>
+                    <td>① 濾掉未涉及現金的損益項目</td>
+                    <td>壞帳、折舊、折耗、攤銷</td>
+                    <td>權益法投資收益</td>
+                  </tr>
+                  <tr>
+                    <td>② 濾掉損益中的業外損益</td>
+                    <td>處分資產損失</td>
+                    <td>處分資產收益</td>
+                  </tr>
+                  <tr>
+                    <td>③ 濾掉資產負債表科目變動的現金交易</td>
+                    <td>
+                      應收帳款減少、存貨減少、預付費用減少、應付帳款增加、應付公司債折價攤銷
+                    </td>
+                    <td>
+                      應收帳款增加、存貨增加、預付費用增加、應付帳款減少、應付公司債溢價攤銷
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（11 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q27</p>
+                <p class="qtext">
+                  當不動產、廠房及設備以低於帳面金額之金額出售，對現金流量表的影響為：
+                </p>
+                <div class="opts">
+                  <div class="opt">
+                    A．在間接法之下，處分損失應列為營業活動現金流量的減項調整
+                  </div>
+                  <div class="opt right">
+                    B．在直接法之下，處分損失不需列入現金流量表
+                  </div>
+                  <div class="opt">
+                    C．處分不動產、廠房及設備損失應列為投資活動現金流量的減項
+                  </div>
+                  <div class="opt">
+                    D．處分不動產、廠房及設備損失應於投資活動現金流量中加回
+                  </div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >間接法將處分的收入列投資活動現金流加回，直接法不需列入（因無實際現金損失）。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q28</p>
+                <p class="qtext">下列敘述何者為真？</p>
+                <div class="opts">
+                  <div class="opt">A．每股現金流量其值通常較每股盈餘為低</div>
+                  <div class="opt">B．短期借款之增減屬於投資活動之現金流量</div>
+                  <div class="opt">C．資金流量分析為一種靜態分析</div>
+                  <div class="opt right">
+                    D．不論採用直接法或間接法表達營業活動之現金流量，投資活動及籌資活動之現金流量皆為相同
+                  </div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >直接法與間接法差異僅在營業活動現金流量的表達方式，投資與籌資活動現金流量不受影響。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q29</p>
+                <p class="qtext">
+                  採用直接法編製的現金流量表，無法用來直接評估下列哪一項目？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．未來淨現金流入之能力</div>
+                  <div class="opt">B．償還負債與支付股利能力</div>
+                  <div class="opt right">
+                    C．本期損益與營業活動所產生現金流量之差異原因
+                  </div>
+                  <div class="opt">
+                    D．本期現金與非現金之投資及籌資活動對財務狀況的影響
+                  </div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >直接法不會呈現本期損益與營業現金流之間的調整過程，這點只有間接法才能直接看出。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q30</p>
+                <p class="qtext">
+                  在間接法編製的現金流量表中，應單獨揭露哪些項目之現金流出？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．利息支付金額</div>
+                  <div class="opt">B．所得稅支付金額</div>
+                  <div class="opt right">C．選項(A)、(B)都需揭露</div>
+                  <div class="opt">
+                    D．在間接法之下，現金流量表不應出現任何現金支付的項目
+                  </div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >間接法下仍須單獨揭露利息支付與所得稅支付金額。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q31</p>
+                <p class="qtext">
+                  以間接法編製現金流量表中的「來自營業活動的現金流量」時，下列何項敘述正確？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．應加入存貨增加之金額</div>
+                  <div class="opt">B．應減除預付費用減少之金額</div>
+                  <div class="opt right">C．應減除清償公司債之利益</div>
+                  <div class="opt">D．應加入再發行庫藏股之金額</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >清償公司債之利益屬於業外損益，需從稅前淨利中減除；存貨增加應減除、預付費用減少應加回，再發行庫藏股屬籌資活動不列入營業現金流。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q32</p>
+                <p class="qtext">營業活動現金流量的增加不包括：</p>
+                <div class="opts">
+                  <div class="opt">A．應付帳款的增加</div>
+                  <div class="opt">B．應付所得稅的增加</div>
+                  <div class="opt right">C．應收帳款的增加</div>
+                  <div class="opt">D．淨利的增加</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >應收帳款增加代表現金尚未收到，是營業活動現金流量的減項，不是增加。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q33</p>
+                <p class="qtext">
+                  採用間接法編製現金流量表時，下列何項在現金流量表中應自稅前淨利減除，以求得來自營業活動的現金流量？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．折舊費用</div>
+                  <div class="opt">B．稅後利息費用</div>
+                  <div class="opt right">C．應付公司債溢價攤銷</div>
+                  <div class="opt">D．應付公司債折價攤銷</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >應付公司債溢價攤銷會使利息費用（淨利）減少的金額低於實付利息，故須從稅前淨利中減除，折價攤銷則相反要加回。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q34</p>
+                <p class="qtext">
+                  以間接法編製現金流量表，請問下列何種狀況是現金流量的加項？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．存貨增加</div>
+                  <div class="opt">B．應付帳款減少</div>
+                  <div class="opt">C．發放現金股利</div>
+                  <div class="opt right">D．應收帳款減少</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >應收帳款減少代表已收回現金，是營業活動現金流量的加項。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q35</p>
+                <p class="qtext">
+                  品妍公司於 110 年度曾出售一批不動產、廠房及設備，其原始成本為
+                  $500,000，出售時的累計折舊為 $250,000，而售得之價款為
+                  $350,000。上述事項在間接法現金流量表中應如何列示？
+                </p>
+                <div class="opts">
+                  <div class="opt right">
+                    A．從稅前淨利中減除 $100,000，並從投資活動增加 $350,000
+                    現金流量
+                  </div>
+                  <div class="opt">
+                    B．從稅前淨利中減除 $100,000，並從籌資活動減少 $350,000
+                    現金流量
+                  </div>
+                  <div class="opt">
+                    C．從稅前淨利中加回 $250,000，並從投資活動增加 $350,000
+                    現金流量
+                  </div>
+                  <div class="opt">
+                    D．從稅前淨利中加回 $250,000，並從籌資活動減少 $350,000
+                    現金流量
+                  </div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>帳面金額 ＝ 500,000－250,000 ＝
+                  250,000；處分利益 ＝ 350,000－250,000 ＝
+                  100,000（使稅前淨利增加），故需從稅前淨利中減除
+                  100,000，並在投資活動中列入實際收到的 350,000。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q36</p>
+                <p class="qtext">
+                  鐘碩公司 X1 年度淨利為 $30,000、外幣兌換損失
+                  $6,000、應付公司債溢價攤銷 $1,000、折舊費用
+                  $2,000、應收帳款增加數 $10,000、其他應付款減少數
+                  $4,000，則鐘碩公司 X1 年度來自營業活動之淨現金流入為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．$11,000</div>
+                  <div class="opt right">B．$23,000</div>
+                  <div class="opt">C．$31,000</div>
+                  <div class="opt">D．$15,000</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>以淨利 30,000
+                  為起點：外幣兌換損失是損益項目非現金流，不調整方向錯誤的話重算：<br />30,000＋6,000(兌換損失加回)－1,000(溢價攤銷減)＋2,000(折舊加回)－10,000(應收增加減)－4,000(應付減少減)
+                  ＝ 23,000。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q37</p>
+                <p class="qtext">
+                  羅理公司本年度稅後淨利為
+                  $20,000，本年度損益表中列有折舊費用 $5,000、出售不動產、廠房及設備損失
+                  $4,000 及所得稅費用
+                  $4,500 等，試計算該公司本年度由營業活動所產生之現金為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．$31,000</div>
+                  <div class="opt right">B．$29,000</div>
+                  <div class="opt">C．$25,000</div>
+                  <div class="opt">D．$24,000</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>以稅後淨利 20,000
+                  為起點，折舊 5,000 屬未實際支出費用需加回，出售不動產、廠房及設備損失
+                  4,000 不屬營業活動需加回：<br />20,000＋5,000＋4,000 ＝
+                  29,000。
+                </p>
+              </div>
+            </details>
+          </section>
+
+          <section class="unit">
+            <div class="unit-head"><h2>補充與揭露</h2></div>
+            <div class="explain">
+              <ul>
+                <li>
+                  不影響現金流，但必須在附表中補充的資訊：<strong>可轉換特別股</strong>、<strong>可轉換公司債</strong>轉換成普通股
+                </li>
+                <li>其他：例如發行股票交換土地、外界捐贈的資產等</li>
+                <li>不需揭露：發放<strong>股票股利</strong>（盈餘轉增資）</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="unit">
+            <div class="unit-head"><h2>自由現金流量</h2></div>
+            <div class="formula">
+              <div class="formula-line">
+                自由現金流量 ＝ 收入 － 費用 － 投資
+              </div>
+            </div>
+            <div class="explain">
+              <ul>
+                <li>
+                  可用以評估公司股價：將未來所有可能產生的自由現金流折為現值，除以在外流通股數
+                  <ul>
+                    <li>折現率通常使用<strong>加權平均資金成本率</strong></li>
+                  </ul>
+                </li>
+                <li>
+                  以此折現計算出的總價值減去負債的價值，即為股東權益的價值
+                </li>
+              </ul>
+            </div>
+            <details class="practice">
+              <summary class="practice-label">考古題（3 題）</summary>
+              <div class="q-item">
+                <p class="qno">Q24</p>
+                <p class="qtext">自由現金流量的定義為：</p>
+                <div class="opts">
+                  <div class="opt">A．收入＋費用＋投資</div>
+                  <div class="opt">B．收入＋費用－投資</div>
+                  <div class="opt right">C．收入－費用－投資</div>
+                  <div class="opt">D．收入－費用＋投資</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>自由現金流量 ＝ 收入 － 費用 － 投資。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q25</p>
+                <p class="qtext">
+                  進行企業股權評價時，對公司自由現金流量(Free Cash Flow to
+                  Firm) 使用的折現率通常為：
+                </p>
+                <div class="opts">
+                  <div class="opt right">
+                    A．加權平均資金成本率，以其折現計算出的總價值減去負債的價值即為股東權益的價值
+                  </div>
+                  <div class="opt">
+                    B．加權平均資金成本率，以其折現計算出的數字即為股東權益之價值
+                  </div>
+                  <div class="opt">
+                    C．權益資金成本率，以其折現計算出的數字即為股東權益之價值
+                  </div>
+                  <div class="opt">
+                    D．權益資金成本率，以其折現計算出的總價值減去負債的價值即為股東權益的價值
+                  </div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >FCFF 使用加權平均資金成本率折現，折現後的總價值再減去負債價值，即為股東權益的價值。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q26</p>
+                <p class="qtext">
+                  市價現金流量比可用以估計股票的價格，此現金流量一般「不」包括下列何項定義？
+                </p>
+                <div class="opts">
+                  <div class="opt right">
+                    A．資產負債表上的現金及銀行存款總額
+                  </div>
+                  <div class="opt">B．淨利加上折舊</div>
+                  <div class="opt">C．來自營運活動的現金流量</div>
+                  <div class="opt">D．自由現金流量</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >資產負債表上的現金是帳面數字而非實質現金流量，不屬於此類定義。
+                </p>
+              </div>
+            </details>
+          </section>
+        </main>
+
+        <nav class="chapter-nav">
+          <a class="prev" href="/finance/ch08-eps-quality.html"
+            ><span class="dir">← 上一章</span>盈餘計算與評估品質</a
+          >
+          <a class="next" href="/finance/ch10-statement-analysis.html"
+            ><span class="dir">下一章 →</span>財報編制與分析方法</a
+          >
+        </nav>
+      </div>
+    </div>
+    <script src="/assets/nav.js"></script>
+  </body>
+</html>

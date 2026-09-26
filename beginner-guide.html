@@ -40,6 +40,71 @@
             </div>
           </section>
 
+          <section class="unit">
+            <div class="unit-head"><h2>全局關係圖：這些觀念怎麼連在一起</h2></div>
+            <div class="diagram-card">
+              <svg viewBox="0 0 460 250">
+                <defs>
+                  <marker
+                    id="mArrow"
+                    markerWidth="6"
+                    markerHeight="6"
+                    refX="5"
+                    refY="3"
+                    orient="auto"
+                  >
+                    <path d="M0,0 L6,3 L0,6 Z" fill="var(--ink-40)" />
+                  </marker>
+                </defs>
+
+                <text x="10" y="12" font-size="10" fill="var(--jade)">投資學</text>
+                <rect x="10" y="18" width="100" height="32" rx="5" fill="var(--jade-soft)" stroke="var(--jade)" stroke-width="1.5" />
+                <text x="60" y="38" font-size="11" fill="var(--jade)" text-anchor="middle">投資工具</text>
+                <line x1="110" y1="34" x2="120" y2="34" stroke="var(--ink-40)" stroke-width="1.5" marker-end="url(#mArrow)" />
+                <rect x="122" y="18" width="100" height="32" rx="5" fill="var(--jade-soft)" stroke="var(--jade)" stroke-width="1.5" />
+                <text x="172" y="38" font-size="11" fill="var(--jade)" text-anchor="middle">評價方法</text>
+                <line x1="222" y1="34" x2="232" y2="34" stroke="var(--ink-40)" stroke-width="1.5" marker-end="url(#mArrow)" />
+                <rect x="234" y="18" width="100" height="32" rx="5" fill="var(--jade-soft)" stroke="var(--jade)" stroke-width="1.5" />
+                <text x="284" y="38" font-size="11" fill="var(--jade)" text-anchor="middle">風險與分散</text>
+                <line x1="334" y1="34" x2="344" y2="34" stroke="var(--ink-40)" stroke-width="1.5" marker-end="url(#mArrow)" />
+                <rect x="346" y="18" width="104" height="32" rx="5" fill="var(--jade-soft)" stroke="var(--jade)" stroke-width="1.5" />
+                <text x="398" y="38" font-size="11" fill="var(--jade)" text-anchor="middle">市場與交易</text>
+
+                <text x="10" y="92" font-size="10" fill="var(--gold)">財務分析</text>
+                <rect x="10" y="98" width="100" height="32" rx="5" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="1.5" />
+                <text x="60" y="118" font-size="11" fill="var(--gold)" text-anchor="middle">會計恆等式</text>
+                <line x1="110" y1="114" x2="120" y2="114" stroke="var(--ink-40)" stroke-width="1.5" marker-end="url(#mArrow)" />
+                <rect x="122" y="98" width="100" height="32" rx="5" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="1.5" />
+                <text x="172" y="118" font-size="11" fill="var(--gold)" text-anchor="middle">借貸記帳</text>
+                <line x1="222" y1="114" x2="232" y2="114" stroke="var(--ink-40)" stroke-width="1.5" marker-end="url(#mArrow)" />
+                <rect x="234" y="98" width="100" height="32" rx="5" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="1.5" />
+                <text x="284" y="118" font-size="11" fill="var(--gold)" text-anchor="middle">三大報表</text>
+                <line x1="334" y1="114" x2="344" y2="114" stroke="var(--ink-40)" stroke-width="1.5" marker-end="url(#mArrow)" />
+                <rect x="346" y="98" width="104" height="32" rx="5" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="1.5" />
+                <text x="398" y="118" font-size="11" fill="var(--gold)" text-anchor="middle">槓桿效果</text>
+
+                <text x="10" y="172" font-size="10" fill="var(--seal)">證券法規</text>
+                <rect x="10" y="178" width="136" height="32" rx="5" fill="var(--seal-soft)" stroke="var(--seal)" stroke-width="1.5" />
+                <text x="78" y="198" font-size="11" fill="var(--seal)" text-anchor="middle">發行與承銷</text>
+                <line x1="146" y1="194" x2="156" y2="194" stroke="var(--ink-40)" stroke-width="1.5" marker-end="url(#mArrow)" />
+                <rect x="158" y="178" width="136" height="32" rx="5" fill="var(--seal-soft)" stroke="var(--seal)" stroke-width="1.5" />
+                <text x="226" y="198" font-size="11" fill="var(--seal)" text-anchor="middle">上市櫃分級</text>
+                <line x1="294" y1="194" x2="304" y2="194" stroke="var(--ink-40)" stroke-width="1.5" marker-end="url(#mArrow)" />
+                <rect x="306" y="178" width="144" height="32" rx="5" fill="var(--seal-soft)" stroke="var(--seal)" stroke-width="1.5" />
+                <text x="378" y="198" font-size="11" fill="var(--seal)" text-anchor="middle">公開發行規範</text>
+
+                <text x="10" y="234" font-size="9.5" fill="var(--ink-40)">
+                  交會點在第 10 點：證券商同時橫跨市場交易與法規監理
+                </text>
+              </svg>
+            </div>
+            <div class="explain">
+              <p class="sub-label">
+                下面每個小節都是這張圖裡某一格的細節展開，讀到後面忘記自己在哪，回頭看這張圖就能定位
+              </p>
+            </div>
+          </section>
+
           <h2 class="group-title">投資學基礎</h2>
 
           <section class="unit">
@@ -47,41 +112,194 @@
               <h2>1. 股票 vs 債券：當股東 vs 借錢給別人</h2>
             </div>
             <div class="explain">
-              <ul>
-                <li>
-                  <span class="term">買股票</span>
-
-                  <ul>
-                    <li>
-                      拿錢換公司的「一小部分所有權」，你變成股東，公司賺錢你可能分到股利，公司賠錢或倒閉，你的錢可能歸零。
-                    </li>
-                    <li>不保證拿得回本金</li>
-                  </ul>
-                </li>
-                <li>
-                  <span class="term">買債券</span>
-                  <ul>
-                    <li>
-                      把錢借給政府或公司，換一張「借據」，對方承諾定期付你利息，到期還你本金
-                    </li>
-                    <li>本質是<span class="term">債權</span>，不是所有權</li>
-                  </ul>
-                </li>
-                <li>
-                  所以<span class="term">債券</span>通常比<span class="term"
-                    >股票</span
-                  >穩，但報酬上限也比較低；股票有機會賺更多，但風險也高很多
-                </li>
-              </ul>
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th></th>
+                    <th>股票</th>
+                    <th>債券</th>
+                  </tr>
+                  <tr>
+                    <td>身份</td>
+                    <td>股東（公司的一小部分所有權）</td>
+                    <td><span class="term">債權</span>人（借錢給政府或公司）</td>
+                  </tr>
+                  <tr>
+                    <td>保證</td>
+                    <td>沒有，公司賠錢或倒閉可能歸零</td>
+                    <td>對方承諾定期付息、到期還本金</td>
+                  </tr>
+                  <tr>
+                    <td>報酬</td>
+                    <td>上限高，但波動也大</td>
+                    <td>相對穩定，但上限較低</td>
+                  </tr>
+                </table>
+              </div>
             </div>
           </section>
 
           <section class="unit">
-            <div class="unit-head"><h2>2. 報酬率、殖利率是什麼</h2></div>
+            <div class="unit-head">
+              <h2>2. 債券不是只有一種：怎麼分類</h2>
+            </div>
+            <div class="explain">
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th>分類依據</th>
+                    <th>種類</th>
+                    <th>白話說明</th>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">依發行形式</td>
+                    <td><span class="term">實體債券</span></td>
+                    <td>印成實體紙本票券，現在已經很少見</td>
+                  </tr>
+                  <tr>
+                    <td><span class="term">無實體債券</span></td>
+                    <td>
+                      不印紙本，用集中保管帳簿劃撥交付，是<strong
+                        >目前主流</strong
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td rowspan="3">依發行機構</td>
+                    <td><span class="term">公債</span>（政府債券）</td>
+                    <td>中央或地方政府發行</td>
+                  </tr>
+                  <tr>
+                    <td><span class="term">公司債</span></td>
+                    <td>一般企業發行</td>
+                  </tr>
+                  <tr>
+                    <td><span class="term">金融債券</span></td>
+                    <td>銀行等金融機構為了籌措長期資金發行</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">依債權性質</td>
+                    <td><span class="term">普通債券</span></td>
+                    <td>清償順位一般，優先於股東</td>
+                  </tr>
+                  <tr>
+                    <td><span class="term">次順位債券</span></td>
+                    <td>
+                      清償順位落後於普通債券（但仍優先於股東），<strong>利率通常較高</strong>（多擔的風險要用更高利率補償）
+                    </td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">依票息有無</td>
+                    <td><span class="term">付息債券</span></td>
+                    <td>按期（每年或每半年）領利息</td>
+                  </tr>
+                  <tr>
+                    <td><span class="term">零息債券</span></td>
+                    <td>不領息，折價發行，到期一次拿回本利</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="callout-line">
+                <ul>
+                  <li>
+                    這四種是「不同角度」的分類，同一張債券可以同時符合好幾個標籤，例如「無實體
+                    ＋ 公司債 ＋ 普通債券 ＋ 付息債券」可以是同一張債券
+                  </li>
+                  <li>
+                    「永續債券」（沒有到期日）是依「到期期限」分類的概念，跟「有沒有票息」是兩件事，不要混在一起
+                  </li>
+                </ul>
+                <span class="arrow">➜ 考點注意</span>
+              </div>
+            </div>
+          </section>
+          <section class="unit">
+            <div class="unit-head">
+              <h2>3. 基金的種類：開放型、封閉型、ETF、避險基金…</h2>
+            </div>
+            <div class="explain">
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th>基金類型</th>
+                    <th>規模</th>
+                    <th>交易方式</th>
+                    <th>價格</th>
+                  </tr>
+                  <tr>
+                    <td><span class="term">開放型基金</span></td>
+                    <td>會變動</td>
+                    <td>不在集中市場，跟基金公司申購贖回</td>
+                    <td>淨值</td>
+                  </tr>
+                  <tr>
+                    <td><span class="term">封閉型基金</span></td>
+                    <td>固定（可申請轉型成開放型）</td>
+                    <td>在集中市場交易</td>
+                    <td>市價（通常折價）</td>
+                  </tr>
+                  <tr>
+                    <td><span class="term">ETF</span></td>
+                    <td>會變動</td>
+                    <td>在集中市場交易，管理費通常最低（被動追蹤指數）</td>
+                    <td>市價</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="callout-line">
+                口訣：
+                <ul>
+                  <li><strong>「開放型」用淨值、不上市場</strong></li>
+                  <li>
+                    <strong
+                      >「封閉型」跟「ETF」都用市價、都在集中市場交易</strong
+                    >
+                  </li>
+                </ul>
+                <span class="arrow">➜ 考點注意</span>
+              </div>
+              <p class="sub-label">另外幾種常聽到、容易搞混的基金：</p>
+              <ul>
+                <li>
+                  <span class="term">避險基金</span>（又稱<span class="term"
+                    >對沖基金</span
+                  >，Hedge Fund）
+                  <ul>
+                    <li>
+                      跟名字給人的印象相反，<strong>不是穩健保守的基金</strong>：通常為<strong>私募</strong>（一般人買不到）、可操作槓桿與放空、投資門檻高、流動性低，追求的是「不管大盤漲跌都要賺錢」的<strong>絕對報酬</strong>，風險其實偏高
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="term">組合型基金</span>
+                  <ul>
+                    <li>「買基金的基金」，一次投資一籃子基金</li>
+                    <li>可以分散單一基金操作不佳的風險</li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="term">REITs</span>（不動產投資信託基金）
+                  <ul>
+                    <li>把不動產包裝成基金讓投資人認購，屬於封閉型基金</li>
+                  </ul>
+                </li>
+              </ul>
+              <p class="sub-label">
+                完整比較表見
+                <a href="/investment/ch01-investment-tools.html"
+                  >投資學 CH01｜各類投資工具</a
+                >
+              </p>
+            </div>
+          </section>
+
+
+          <section class="unit">
+            <div class="unit-head"><h2>4. 報酬率、殖利率是什麼</h2></div>
             <div class="explain">
               <ul>
                 <li>
-                  <strong>報酬率</strong>
+                  <span class="term">報酬率</span>
                   <ul>
                     <li>定義：你的錢變多或變少的比例。</li>
                     <li>
@@ -90,14 +308,17 @@
                   </ul>
                 </li>
                 <li>
-                  <strong>殖利率</strong>
+                  <span class="term">殖利率</span>
                   <ul>
                     <li>
                       專門用在債券，指你用目前的市場價格買進這張債券，換算下來每年大概能拿到的報酬率。
                     </li>
                     <li>
                       <strong
-                        >殖利率會隨市場價格變動，跟債券票面上寫的「票面利率」是兩回事</strong
+                        >殖利率會隨市場價格變動，跟債券票面上寫的「<span
+                          class="term"
+                          >票面利率</span
+                        >」是兩回事</strong
                       >
                     </li>
                   </ul>
@@ -110,7 +331,10 @@
                   >
                   <ul>
                     <li>
-                      市場利率（殖利率）上升，現有債券的吸引力下降，價格就會跌；反之亦然
+                      市場利率（殖利率）上升，現有債券的吸引力下降，價格就會跌
+                    </li>
+                    <li>
+                      市場利率（殖利率）下降，現有債券的吸引力上升，價格就會漲
                     </li>
                   </ul>
                 </li>
@@ -120,7 +344,61 @@
 
           <section class="unit">
             <div class="unit-head">
-              <h2>3. 貨幣的時間價值：為什麼現在的 100 元比明年的 100 元值錢</h2>
+              <h2>5. 貨幣的時間價值：為什麼現在的 100 元比明年的 100 元值錢</h2>
+            </div>
+            <div class="diagram-card">
+              <svg viewBox="0 0 340 120">
+                <defs>
+                  <marker
+                    id="mArrowJade"
+                    markerWidth="6"
+                    markerHeight="6"
+                    refX="5"
+                    refY="3"
+                    orient="auto"
+                  >
+                    <path d="M0,0 L6,3 L0,6 Z" fill="var(--jade)" />
+                  </marker>
+                  <marker
+                    id="mArrowSeal"
+                    markerWidth="6"
+                    markerHeight="6"
+                    refX="5"
+                    refY="3"
+                    orient="auto"
+                  >
+                    <path d="M0,0 L6,3 L0,6 Z" fill="var(--seal)" />
+                  </marker>
+                </defs>
+                <rect
+                  x="15"
+                  y="45"
+                  width="95"
+                  height="40"
+                  rx="5"
+                  fill="var(--paper)"
+                  stroke="var(--ink-20)"
+                  stroke-width="1.5"
+                />
+                <text x="62" y="63" font-size="12" fill="var(--ink)" text-anchor="middle">現在</text>
+                <text x="62" y="78" font-size="11" fill="var(--ink-40)" text-anchor="middle" class="mono">100 元</text>
+                <rect
+                  x="230"
+                  y="45"
+                  width="95"
+                  height="40"
+                  rx="5"
+                  fill="var(--paper)"
+                  stroke="var(--ink-20)"
+                  stroke-width="1.5"
+                />
+                <text x="277" y="63" font-size="12" fill="var(--ink)" text-anchor="middle">一年後</text>
+                <text x="277" y="78" font-size="11" fill="var(--ink-40)" text-anchor="middle" class="mono">100 元＋利息</text>
+                <line x1="112" y1="56" x2="228" y2="56" stroke="var(--jade)" stroke-width="1.5" marker-end="url(#mArrowJade)" />
+                <text x="170" y="42" font-size="10.5" fill="var(--jade)" text-anchor="middle">投資生息（複利）</text>
+                <line x1="228" y1="76" x2="112" y2="76" stroke="var(--seal)" stroke-width="1.5" marker-end="url(#mArrowSeal)" />
+                <text x="170" y="102" font-size="10.5" fill="var(--seal)" text-anchor="middle">折現</text>
+              </svg>
             </div>
             <div class="explain">
               <ul>
@@ -137,12 +415,12 @@
                   </ul>
                 </li>
                 <li>
-                  <strong>折現（discount）</strong>
+                  <span class="term">折現（discount）</span>
                   <ul>
                     <li>把「未來會拿到的錢」換算回「現在值多少」的動作</li>
                     <li>
-                      折現用的利率，代表你要求的報酬率，通常叫<strong
-                        >折現率／要求報酬率</strong
+                      折現用的利率，代表你要求的報酬率，通常叫<span class="term"
+                        >折現率／要求報酬率</span
                       >
                     </li>
                   </ul>
@@ -162,12 +440,12 @@
 
           <section class="unit">
             <div class="unit-head">
-              <h2>4. 風險分兩種：系統風險 vs 非系統風險</h2>
+              <h2>6. 風險分兩種：系統風險 vs 非系統風險</h2>
             </div>
             <div class="explain">
               <ul>
                 <li>
-                  <strong>非系統風險</strong>（個別風險）
+                  <span class="term">非系統風險</span>（個別風險）
                   <ul>
                     <li>
                       只影響單一公司或產業的風險，例如某公司財務出包、某產業突然被課重稅
@@ -180,7 +458,7 @@
                   </ul>
                 </li>
                 <li>
-                  <strong>系統風險</strong>（市場風險）
+                  <span class="term">系統風險</span>（市場風險）
                   <ul>
                     <li>影響整個市場的風險，例如升息、通膨、經濟衰退</li>
                     <li>
@@ -207,7 +485,7 @@
 
           <section class="unit">
             <div class="unit-head">
-              <h2>5. 為什麼要分散投資（投資組合的概念）</h2>
+              <h2>7. 為什麼要分散投資（投資組合的概念）</h2>
             </div>
             <div class="explain">
               <ul>
@@ -222,9 +500,8 @@
                 <li>
                   <strong>分散效果好不好，關鍵在相關性</strong>
                   <ul>
-                    <li>
-                      如果兩檔股票總是同漲同跌（正相關），分散效果差；如果一漲一跌（負相關或低相關），分散效果好
-                    </li>
+                    <li>兩檔股票總是同漲同跌（正相關），分散效果差</li>
+                    <li>兩檔股票一漲一跌（負相關或低相關），分散效果好</li>
                   </ul>
                 </li>
                 <li>
@@ -237,12 +514,12 @@
 
           <section class="unit">
             <div class="unit-head">
-              <h2>6. β 係數：這檔股票對大盤有多敏感</h2>
+              <h2>8. β 係數：這檔股票對大盤有多敏感</h2>
             </div>
             <div class="explain">
               <ul>
                 <li>
-                  <strong>β（beta）係數</strong>
+                  <span class="term">β（beta）係數</span>
                   <ul>
                     <li>
                       衡量一檔股票（或投組）相對於整體市場的波動程度，<strong>只反映系統風險</strong>，跟公司好壞、非系統風險無關
@@ -264,9 +541,8 @@
                 <li>
                   β ＜ 1
                   <ul>
-                    <li>
-                      比大盤更遲鈍，波動較小；β 也可以是負的（跟大盤反向）
-                    </li>
+                    <li>比大盤更遲鈍，波動較小</li>
+                    <li>β 也可以是負的（跟大盤反向）</li>
                   </ul>
                 </li>
               </ul>
@@ -274,32 +550,371 @@
           </section>
 
           <section class="unit">
-            <div class="unit-head"><h2>7. 初級市場 vs 次級市場</h2></div>
+            <div class="unit-head">
+              <h2>9. 市場全圖：貨幣市場、資本市場、初級市場、次級市場</h2>
+            </div>
             <div class="explain">
               <ul>
                 <li>
-                  <strong>初級市場（發行市場）</strong>
-                  <ul>
-                    <li>
-                      公司第一次把股票／債券賣給投資人、拿到錢的市場，這個過程叫「發行」
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <strong>次級市場（交易市場）</strong>
-                  <ul>
-                    <li>
-                      證券發行之後，投資人之間互相買賣轉手的市場（例如我們平常在證交所買賣股票）
-                    </li>
-                    <li>
-                      <strong>錢是在投資人之間流動，不會再進到公司口袋</strong>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  次級市場的存在讓證券有「流動性」（想賣隨時賣得掉），投資人才敢在初級市場買
+                  這幾個名詞常被混在一起講，其實是<strong>兩個不同角度</strong>在分類市場，分開看就不會亂
                 </li>
               </ul>
+              <p class="sub-label">角度一：依「資金融通期限」分</p>
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th>名稱</th>
+                    <th>期限</th>
+                    <th>功能</th>
+                  </tr>
+                  <tr>
+                    <td><span class="term">貨幣市場</span>（短期票券市場）</td>
+                    <td>1 年以內（短期）</td>
+                    <td>幫企業、銀行、政府調節短期資金流動性</td>
+                  </tr>
+                  <tr>
+                    <td><span class="term">資本市場</span></td>
+                    <td>1 年以上或無到期日</td>
+                    <td>幫企業或政府籌措長期資金</td>
+                  </tr>
+                </table>
+              </div>
+              <p class="sub-label">角度二：依「交易階段」分</p>
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th>名稱</th>
+                    <th>白話定義</th>
+                  </tr>
+                  <tr>
+                    <td><span class="term">初級市場</span>（發行市場）</td>
+                    <td>
+                      公司第一次把證券賣給投資人、拿到錢的市場，這個過程叫「發行」
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="term">次級市場</span>（交易市場）</td>
+                    <td>
+                      證券發行之後，投資人之間互相買賣轉手的市場，<strong
+                        >錢是在投資人之間流動，不會再進到公司口袋</strong
+                      ><br />
+                      它的存在讓證券有「流動性」（想賣隨時賣得掉），投資人才敢在初級市場買
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <p class="sub-label">
+                這兩個角度可以「交叉存在」，不是二選一，用同一張公司債舉例：
+              </p>
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th></th>
+                    <th>初級市場（發行）</th>
+                    <th>次級市場（轉手）</th>
+                  </tr>
+                  <tr>
+                    <td>資本市場（長期）</td>
+                    <td>公司第一次把這張公司債賣給投資人</td>
+                    <td>投資人之後把這張公司債轉賣給別人</td>
+                  </tr>
+                  <tr>
+                    <td>貨幣市場（短期）</td>
+                    <td>企業第一次發行短期商業本票</td>
+                    <td>這張商業本票到期前被轉讓給別人</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="callout-line">
+                同一張證券，會同時落在「期限」跟「交易階段」兩個格子裡，不是只能選一邊
+                <span class="arrow">➜ 考點注意</span>
+              </div>
+              <p class="sub-label">
+                另外還有依「地域範圍」分的 國內市場 vs
+                國際市場，這是另一個獨立的角度，跟上面兩個角度沒有直接關係
+              </p>
+            </div>
+          </section>
+
+          <section class="unit">
+            <div class="unit-head">
+              <h2>10. 集中市場、店頭市場、證券商、櫃買中心：誰是誰</h2>
+            </div>
+            <div class="diagram-card">
+              <svg viewBox="0 0 280 190">
+                <rect
+                  x="100"
+                  y="10"
+                  width="80"
+                  height="32"
+                  rx="5"
+                  fill="var(--paper)"
+                  stroke="var(--ink-20)"
+                  stroke-width="1.5"
+                />
+                <text
+                  x="140"
+                  y="31"
+                  font-size="12"
+                  fill="var(--ink)"
+                  text-anchor="middle"
+                >
+                  投資人
+                </text>
+                <line
+                  x1="140"
+                  y1="42"
+                  x2="140"
+                  y2="70"
+                  stroke="var(--ink-40)"
+                  stroke-width="1.5"
+                />
+                <rect
+                  x="85"
+                  y="70"
+                  width="110"
+                  height="44"
+                  rx="5"
+                  fill="var(--gold-soft)"
+                  stroke="var(--gold)"
+                  stroke-width="1.5"
+                />
+                <text
+                  x="140"
+                  y="90"
+                  font-size="12"
+                  fill="var(--gold)"
+                  text-anchor="middle"
+                >
+                  一般證券商
+                </text>
+                <text
+                  x="140"
+                  y="106"
+                  font-size="9"
+                  fill="var(--ink-40)"
+                  text-anchor="middle"
+                >
+                  經紀／自營／承銷
+                </text>
+                <line
+                  x1="115"
+                  y1="114"
+                  x2="70"
+                  y2="146"
+                  stroke="var(--ink-40)"
+                  stroke-width="1.5"
+                />
+                <line
+                  x1="165"
+                  y1="114"
+                  x2="210"
+                  y2="146"
+                  stroke="var(--ink-40)"
+                  stroke-width="1.5"
+                />
+                <rect
+                  x="15"
+                  y="146"
+                  width="110"
+                  height="36"
+                  rx="5"
+                  fill="var(--jade-soft)"
+                  stroke="var(--jade)"
+                  stroke-width="1.5"
+                />
+                <text
+                  x="70"
+                  y="164"
+                  font-size="12"
+                  fill="var(--jade)"
+                  text-anchor="middle"
+                >
+                  集中市場
+                </text>
+                <text
+                  x="70"
+                  y="178"
+                  font-size="9"
+                  fill="var(--ink-40)"
+                  text-anchor="middle"
+                >
+                  （證交所）
+                </text>
+                <rect
+                  x="155"
+                  y="146"
+                  width="110"
+                  height="36"
+                  rx="5"
+                  fill="var(--seal-soft)"
+                  stroke="var(--seal)"
+                  stroke-width="1.5"
+                />
+                <text
+                  x="210"
+                  y="164"
+                  font-size="12"
+                  fill="var(--seal)"
+                  text-anchor="middle"
+                >
+                  店頭市場
+                </text>
+                <text
+                  x="210"
+                  y="178"
+                  font-size="9"
+                  fill="var(--ink-40)"
+                  text-anchor="middle"
+                >
+                  （櫃買中心）
+                </text>
+              </svg>
+            </div>
+            <div class="explain">
+              <div class="callout-line">
+                <strong
+                  ><span class="term">一般證券商</span
+                  >不是市場，是中介機構</strong
+                >，幫你把買賣單送到集中市場或店頭市場去撮合
+                <span class="arrow">➜ 考點注意</span>
+              </div>
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th>名稱</th>
+                    <th>它是什麼</th>
+                    <th>例子</th>
+                  </tr>
+                  <tr>
+                    <td><span class="term">一般證券商</span></td>
+                    <td>幫你買賣股票的仲介</td>
+                    <td>元大、富邦、國泰證券</td>
+                  </tr>
+                  <tr>
+                    <td><span class="term">集中市場</span>（證交所）</td>
+                    <td>審查最嚴格、規模最大的官方交易平台</td>
+                    <td>台積電、鴻海等大型權值股</td>
+                  </tr>
+                  <tr>
+                    <td><span class="term">店頭市場</span>（櫃買中心）</td>
+                    <td>門檻較寬鬆，扶植中小型、創新產業的交易平台</td>
+                    <td>上櫃成長股、興櫃、公債、債券型基金</td>
+                  </tr>
+                </table>
+              </div>
+              <p class="sub-label">
+                「一般證券商」其實可以再拆成三種業務角色：
+              </p>
+              <ul>
+                <li>
+                  <span class="term">經紀商</span>
+                  <ul>
+                    <li>幫客戶下單買賣證券，賺手續費，不用自己的錢買賣</li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="term">自營商</span>
+                  <ul>
+                    <li>用證券商自己的資金買賣證券，賺價差，風險自負</li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="term">承銷商</span>
+                  <ul>
+                    <li>協助公司把新發行的證券賣給投資人</li>
+                  </ul>
+                </li>
+                <li>
+                  同一家證券商通常會同時申請多種業務資格，一次做好幾種角色
+                </li>
+              </ul>
+              <div class="callout-line">
+                比喻：
+                <ul>
+                  <li>集中市場像「國家級百貨公司」（大品牌、規定嚴格）</li>
+                  <li>店頭市場像「特色文創市集」（中小型、潛力店家）</li>
+                </ul>
+                <span class="arrow">➜ 考點注意</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="unit">
+            <div class="unit-head">
+              <h2>11. 買權／賣權＋買入／賣出：選擇權的組合邏輯</h2>
+            </div>
+            <div class="explain">
+              <ul>
+                <li>
+                  選擇權常看到「買入買權」「賣出買權」「買入賣權」「賣出賣權」四種組合，關鍵是拆開看兩個部分
+                </li>
+                <li>
+                  <strong>後半段「買權／賣權」</strong
+                  >：代表商品本身的性質（看漲用買權、看跌用賣權）
+                </li>
+                <li>
+                  <strong>前半段「買入／賣出」</strong
+                  >：代表你在這筆交易扮演的角色
+                  <ul>
+                    <li>
+                      你是<strong>付錢的人</strong>，還是<strong
+                        >收錢的莊家</strong
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="callout-line">
+                比喻成買車險：
+                <ul>
+                  <li>
+                    <span class="term">買入</span
+                    >＝你付保費當客戶，花錢換一個權利，風險有限（最多賠掉保費）
+                  </li>
+                  <li>
+                    <span class="term">賣出</span
+                    >＝你收保費當保險公司，收權利金但要扛履約義務
+                  </li>
+                </ul>
+                <span class="arrow">➜ 考點注意</span>
+              </div>
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th>組合</th>
+                    <th>白話意思</th>
+                    <th>心態</th>
+                  </tr>
+                  <tr>
+                    <td>買入＋買權</td>
+                    <td>花錢買「未來用便宜價買進」的權利</td>
+                    <td>看漲，買個彩券試手氣</td>
+                  </tr>
+                  <tr>
+                    <td>賣出＋買權</td>
+                    <td>收錢賣出「對方可以用便宜價跟你買」的承諾</td>
+                    <td>當莊家，賭股票不會大漲</td>
+                  </tr>
+                  <tr>
+                    <td>買入＋賣權</td>
+                    <td>花錢買「未來用高價賣出」的權利（買保險）</td>
+                    <td>看跌，買個安心</td>
+                  </tr>
+                  <tr>
+                    <td>賣出＋賣權</td>
+                    <td>收錢賣出「對方可以把股票賣給你」的承諾</td>
+                    <td>當莊家，順便盤算低接股票</td>
+                  </tr>
+                </table>
+              </div>
+              <p class="sub-label">
+                完整內容見
+                <a href="/investment/ch09-derivatives.html"
+                  >投資學 CH09｜衍生性金融商品與選擇權</a
+                >，方向口訣也整理在
+                <a href="/memory-tips.html">記憶技巧與口訣</a>
+              </p>
             </div>
           </section>
 
@@ -307,38 +922,31 @@
 
           <section class="unit">
             <div class="unit-head">
-              <h2>8. 會計恆等式：資產＝負債＋權益</h2>
+              <h2>12. 會計恆等式：資產＝負債＋權益</h2>
+            </div>
+            <div class="diagram-card">
+              <div class="bs-grid">
+                <div class="bs-cell bs-assets">
+                  <p class="bs-head">資產</p>
+                  <p><strong>代表</strong>：公司把資金用去哪了</p>
+                  <p><strong>例如</strong>：買廠房、買設備、剩下多少現金…</p>
+                </div>
+                <div class="bs-cell bs-liab">
+                  <p class="bs-head">負債</p>
+                  <p><strong>代表</strong>：資金來源（借的）</p>
+                  <p><strong>例如</strong>：跟銀行借錢</p>
+                </div>
+                <div class="bs-cell bs-equity">
+                  <p class="bs-head">股東權益</p>
+                  <p><strong>代表</strong>：資金來源（自己出的）</p>
+                  <p><strong>例如</strong>：股東自己出多少錢</p>
+                </div>
+                <div class="bs-cell bs-total">資產總計</div>
+                <div class="bs-cell bs-total ltotal">負債與股東權益總計</div>
+              </div>
             </div>
             <div class="explain">
               <ul>
-                <li>
-                  <strong>資產</strong>
-                  <ul>
-                    <li>
-                      公司擁有、能帶來未來經濟效益的東西（現金、存貨、廠房、應收帳款…）
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <strong>負債</strong>
-                  <ul>
-                    <li>
-                      公司欠別人的錢（跟銀行借款、欠供應商貨款…），<strong
-                        >是「別人的錢」</strong
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <strong>權益</strong>
-                  <ul>
-                    <li>
-                      股東出的錢加上公司自己賺來、還沒發出去的錢，<strong
-                        >是「股東的錢」</strong
-                      >
-                    </li>
-                  </ul>
-                </li>
                 <li>
                   這條等式恆成立
                   <ul>
@@ -353,7 +961,7 @@
 
           <section class="unit">
             <div class="unit-head">
-              <h2>9. 借方／貸方：不是「借錢」跟「貸款」的意思</h2>
+              <h2>13. 借方／貸方：不是「借錢」跟「貸款」的意思</h2>
             </div>
             <div class="explain">
               <ul>
@@ -363,13 +971,6 @@
                     <li>
                       「借方」「貸方」只是記帳的左右邊位置，跟中文字面上的「借」「貸」意思無關
                     </li>
-                  </ul>
-                </li>
-                <li>
-                  <strong>口訣</strong>
-                  <ul>
-                    <li>資產、費用增加記借方</li>
-                    <li>負債、權益、收入增加記貸方（減少則相反）</li>
                   </ul>
                 </li>
                 <li>
@@ -387,42 +988,133 @@
                   </ul>
                 </li>
               </ul>
+              <p class="sub-label">
+                遇到科目不知道算借還是貸？看這張五大類終極歸類表：
+              </p>
+            </div>
+            <div class="diagram-card">
+              <div class="acct-cols">
+                <div class="acct-col acct-dr">
+                  <p class="acct-col-head">借方</p>
+                  <div class="acct-item">
+                    <strong><span class="term">資產</span></strong>
+                    <span>現金、應收帳款、存貨、不動產廠房設備、無形資產</span>
+                  </div>
+                  <div class="acct-item">
+                    <strong><span class="term">費用／成本</span></strong>
+                    <span>銷貨成本、推銷費用、管理費用、利息費用</span>
+                  </div>
+                </div>
+                <div class="acct-col acct-cr">
+                  <p class="acct-col-head">貸方</p>
+                  <div class="acct-item">
+                    <strong><span class="term">負債</span></strong>
+                    <span>應付帳款、應付票據、短期借款、應付公司債</span>
+                  </div>
+                  <div class="acct-item">
+                    <strong><span class="term">權益</span></strong>
+                    <span>股本、資本公積、保留盈餘</span>
+                  </div>
+                  <div class="acct-item">
+                    <strong><span class="term">收益</span></strong>
+                    <span>銷貨收入、利息收入、股利收入</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="explain">
+              <div class="callout-line">
+                口訣：
+                <ul>
+                  <li><strong>資產、費用＝資金的「去處」，記借方</strong></li>
+                  <li>
+                    <strong>負債、權益、收益＝資金的「來源」，記貸方</strong>
+                  </li>
+                </ul>
+                <span class="arrow">➜ 考點注意</span>
+              </div>
+              <p class="sub-label">遇到沒看過的科目，用這 3 個問題快速判斷：</p>
+              <ul>
+                <li>
+                  這是不是欠別人的，以後要給錢或給服務？→ 是的話是<span
+                    class="term"
+                    >負債</span
+                  >（貸方）
+                </li>
+                <li>
+                  這是不是公司掌控、未來能帶來好處或變現的東西？→ 是的話是<span
+                    class="term"
+                    >資產</span
+                  >（借方）
+                </li>
+                <li>
+                  這是不是經營過程中的花費或收入？→ 花掉的是<span class="term"
+                    >費用</span
+                  >（借方），賺到的是<span class="term">收益</span
+                  >（貸方），兩者最後都會影響權益裡的保留盈餘
+                </li>
+              </ul>
             </div>
           </section>
 
           <section class="unit">
             <div class="unit-head">
-              <h2>10. 三大報表在說什麼：照片、影片、真金白銀</h2>
+              <h2>14. 三大報表在說什麼：照片、影片、真金白銀</h2>
+            </div>
+            <div class="diagram-card">
+              <svg viewBox="0 0 340 190">
+                <defs>
+                  <marker id="mArrowGold" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+                    <path d="M0,0 L6,3 L0,6 Z" fill="var(--gold)" />
+                  </marker>
+                </defs>
+                <rect x="12" y="14" width="145" height="42" rx="5" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="1.5" />
+                <text x="84" y="34" font-size="12" fill="var(--gold)" text-anchor="middle">綜合損益表</text>
+                <text x="84" y="49" font-size="10" fill="var(--ink-40)" text-anchor="middle">（動態・一段期間）</text>
+                <rect x="183" y="14" width="145" height="42" rx="5" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="1.5" />
+                <text x="255" y="34" font-size="12" fill="var(--gold)" text-anchor="middle">現金流量表</text>
+                <text x="255" y="49" font-size="10" fill="var(--ink-40)" text-anchor="middle">（動態・一段期間）</text>
+                <rect x="80" y="132" width="180" height="46" rx="5" fill="var(--jade-soft)" stroke="var(--jade)" stroke-width="1.5" />
+                <text x="170" y="153" font-size="12" fill="var(--jade)" text-anchor="middle">資產負債表</text>
+                <text x="170" y="169" font-size="10" fill="var(--ink-40)" text-anchor="middle">（靜態・某一時間點）</text>
+                <line x1="90" y1="58" x2="150" y2="130" stroke="var(--gold)" stroke-width="1.5" marker-end="url(#mArrowGold)" />
+                <text x="60" y="95" font-size="9.5" fill="var(--gold)" text-anchor="middle">淨利→</text>
+                <text x="60" y="107" font-size="9.5" fill="var(--gold)" text-anchor="middle">保留盈餘</text>
+                <line x1="250" y1="58" x2="195" y2="130" stroke="var(--gold)" stroke-width="1.5" marker-end="url(#mArrowGold)" />
+                <text x="278" y="95" font-size="9.5" fill="var(--gold)" text-anchor="middle">期末現金</text>
+                <text x="278" y="107" font-size="9.5" fill="var(--gold)" text-anchor="middle">＝現金科目</text>
+              </svg>
             </div>
             <div class="explain">
               <ul>
                 <li>
-                  <strong>資產負債表</strong>
+                  <span class="term">資產負債表</span>：<strong>靜態報表</strong>
                   <ul>
                     <li>
                       某一個時間點（例如 12/31
                       當天）公司有多少資產、負債、權益，像是幫公司財務狀況拍一張<strong
                         >照片</strong
-                      >
+                      >，科目餘額會累積到下一期
                     </li>
                   </ul>
                 </li>
                 <li>
-                  <strong>綜合損益表</strong>
+                  <span class="term">綜合損益表</span>：<strong>動態報表</strong>
                   <ul>
                     <li>
                       一段期間內（例如整個年度）公司賺了多少、花了多少，像是這段期間的<strong
                         >影片</strong
-                      >
+                      >，期末會結清歸零，結果併入資產負債表的保留盈餘
                     </li>
                   </ul>
                 </li>
                 <li>
-                  <strong>現金流量表</strong>
+                  <span class="term">現金流量表</span>：<strong>動態報表</strong>
                   <ul>
                     <li>
                       一段期間內公司實際收進來、付出去多少現金，只看<strong>真金白銀</strong>的進出，不管有沒有認列在損益表上
                     </li>
+                    <li>算出來的期末現金，必須跟資產負債表上的現金科目金額一致</li>
                   </ul>
                 </li>
                 <li>
@@ -438,11 +1130,11 @@
           </section>
 
           <section class="unit">
-            <div class="unit-head"><h2>11. 應計基礎 vs 現金基礎</h2></div>
+            <div class="unit-head"><h2>15. 應計基礎 vs 現金基礎</h2></div>
             <div class="explain">
               <ul>
                 <li>
-                  <strong>應計基礎</strong>（現行會計準則採用）
+                  <span class="term">應計基礎</span>（現行會計準則採用）
                   <ul>
                     <li>
                       <strong>事情發生就記帳</strong>，不管錢有沒有實際收付
@@ -451,7 +1143,7 @@
                   </ul>
                 </li>
                 <li>
-                  <strong>現金基礎</strong>
+                  <span class="term">現金基礎</span>
                   <ul>
                     <li><strong>錢真的收付了才記帳</strong></li>
                     <li>日常生活記帳本大多是這種邏輯，但公司財報不能這樣做</li>
@@ -471,7 +1163,7 @@
 
           <section class="unit">
             <div class="unit-head">
-              <h2>12. 什麼是槓桿：借錢投資，賺賠都放大</h2>
+              <h2>16. 什麼是槓桿：借錢投資，賺賠都放大</h2>
             </div>
             <div class="explain">
               <ul>
@@ -484,7 +1176,7 @@
                   </ul>
                 </li>
                 <li>
-                  <strong>財務槓桿</strong>
+                  <span class="term">財務槓桿</span>
                   <ul>
                     <li>
                       公司靠舉債經營，賺的時候股東報酬被放大，賠的時候虧損也被放大（因為不管賺賠，利息都要照付）
@@ -492,7 +1184,7 @@
                   </ul>
                 </li>
                 <li>
-                  <strong>營業槓桿</strong>
+                  <span class="term">營業槓桿</span>
                   <ul>
                     <li>
                       公司固定成本（廠房、設備）佔比越高，營收一變動，獲利波動幅度就越大
@@ -510,18 +1202,18 @@
 
           <section class="unit">
             <div class="unit-head">
-              <h2>13. 發行、承銷、上市／上櫃／興櫃是什麼</h2>
+              <h2>17. 發行、承銷、上市／上櫃／興櫃是什麼</h2>
             </div>
             <div class="explain">
               <ul>
                 <li>
-                  <strong>發行</strong>
+                  <span class="term">發行</span>
                   <ul>
                     <li>公司製作並交付證券給投資人的行為</li>
                   </ul>
                 </li>
                 <li>
-                  <strong>承銷</strong>
+                  <span class="term">承銷</span>
                   <ul>
                     <li>
                       公司自己通常沒有能力直接把股票賣給廣大投資人，於是委託證券商（承銷商）協助銷售、定價
@@ -529,7 +1221,7 @@
                   </ul>
                 </li>
                 <li>
-                  <strong>上市／上櫃／興櫃</strong>
+                  <span class="term">上市／上櫃／興櫃</span>
                   <ul>
                     <li>
                       都是「公開發行公司的股票可以在哪個平台公開交易」的資格分級
@@ -544,42 +1236,13 @@
           </section>
 
           <section class="unit">
-            <div class="unit-head"><h2>14. 證券商的三種角色</h2></div>
-            <div class="explain">
-              <ul>
-                <li>
-                  <strong>經紀商</strong>
-                  <ul>
-                    <li>幫客戶下單買賣證券，賺手續費，不用自己的錢買賣</li>
-                  </ul>
-                </li>
-                <li>
-                  <strong>自營商</strong>
-                  <ul>
-                    <li>用證券商自己的資金買賣證券，賺價差，風險自負</li>
-                  </ul>
-                </li>
-                <li>
-                  <strong>承銷商</strong>
-                  <ul>
-                    <li>協助公司把新發行的證券賣給投資人</li>
-                  </ul>
-                </li>
-                <li>
-                  同一家證券商通常會同時申請多種業務資格，一次做好幾種角色
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          <section class="unit">
             <div class="unit-head">
-              <h2>15. 公開發行公司 vs 非公開發行公司</h2>
+              <h2>18. 公開發行公司 vs 非公開發行公司</h2>
             </div>
             <div class="explain">
               <ul>
                 <li>
-                  <strong>公開發行公司</strong>
+                  <span class="term">公開發行公司</span>
                   <ul>
                     <li>
                       股票可以賣給不特定大眾（不管有沒有真的在證交所掛牌交易）
@@ -590,7 +1253,7 @@
                   </ul>
                 </li>
                 <li>
-                  <strong>非公開發行公司</strong>
+                  <span class="term">非公開發行公司</span>
                   <ul>
                     <li>
                       股票只能在小範圍內轉讓（例如親友、特定人），監理相對寬鬆
@@ -598,7 +1261,7 @@
                   </ul>
                 </li>
                 <li>
-                  法規題目常考「公開發行公司」門檻／天數都比「非公開發行公司」嚴格、天數更長，這是貫穿整個法規科目的重要方向
+                  法規題目常考「公開發行公司」門檻／天數都比「非公開發行公司」嚴格、天數更長，這是貫穿整個法規科目的重要方向感
                 </li>
               </ul>
             </div>
@@ -606,7 +1269,7 @@
 
           <section class="unit">
             <div class="unit-head">
-              <h2>16. 看到計算題不要慌：先抓「已知」跟「要求」</h2>
+              <h2>19. 看到計算題不要慌：先抓「已知」跟「要求」</h2>
             </div>
             <div class="explain">
               <ul>
@@ -614,8 +1277,11 @@
                   先圈出題目給了哪些數字（本金、利率、期間、股利…），再看題目問的是什麼（股價？報酬率？存續期間？）
                 </li>
                 <li>
-                  大多數計算題其實就是「套公式代入數字」，關鍵是先認出這題屬於哪一種公式（例如看到「股利」「成長率」「折現」就想到高登模式；看到「β」「無風險利率」就想到
-                  CAPM）
+                  大多數計算題其實就是「套公式代入數字」，關鍵是先認出這題屬於哪一種公式
+                  <ul>
+                    <li>看到「股利」「成長率」「折現」就想到高登模式</li>
+                    <li>看到「β」「無風險利率」就想到 CAPM</li>
+                  </ul>
                 </li>
                 <li>
                   各章節的「解析」都會把計算過程逐步拆開寫，多看幾次同類型的題目，抓到公式套用的節奏後速度會明顯變快

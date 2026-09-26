@@ -65,6 +65,16 @@
                     <th>公式</th>
                   </tr>
                   <tr>
+                    <td>1</td>
+                    <td>貼現利率</td>
+                    <td class="fml"><span class="frac"><span class="num">面額 － 報價</span><span class="den">面額</span></span> × <span class="frac"><span class="num">365</span><span class="den">天期</span></span></td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>實質利率（有效利率）</td>
+                    <td class="fml"><span class="frac"><span class="num">利息</span><span class="den">本金</span></span> × <span class="frac"><span class="num">360</span><span class="den">天期</span></span></td>
+                  </tr>
+                  <tr>
                     <td>2</td>
                     <td>可轉債轉換價值</td>
                     <td class="fml">轉換比率 × 股票市價</td>
@@ -73,6 +83,16 @@
                     <td>2</td>
                     <td>可轉債轉換價格</td>
                     <td class="fml"><span class="frac"><span class="num">面額</span><span class="den">轉換比率</span></span></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>票面利率</td>
+                    <td class="fml"><span class="frac"><span class="num">名目利息</span><span class="den">債券面額</span></span></td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>當期收益率</td>
+                    <td class="fml"><span class="frac"><span class="num">名目利息</span><span class="den">債券市價</span></span></td>
                   </tr>
                   <tr>
                     <td>3</td>
@@ -112,11 +132,36 @@
                     <td class="fml"><span class="frac"><span class="num">每股市價</span><span class="den">每股淨值</span></span></td>
                   </tr>
                   <tr>
+                    <td>4</td>
+                    <td>除權參考價</td>
+                    <td class="fml"><span class="frac"><span class="num">除權前股價</span><span class="den">1 ＋ 配股率</span></span></td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>除息參考價</td>
+                    <td class="fml">除息前股價 － 每股現金股利</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>配股票股利報酬率</td>
+                    <td class="fml"><span class="frac"><span class="num">除權後股價×(1＋配股率) － 買入股價</span><span class="den">買入股價</span></span></td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>配現金股利報酬率</td>
+                    <td class="fml"><span class="frac"><span class="num">(除息後股價＋股息) － 買入股價</span><span class="den">買入股價</span></span></td>
+                  </tr>
+                  <tr>
                     <td>6</td>
                     <td>CAPM</td>
                     <td class="fml">
                       無風險利率 ＋ β × (市場報酬率 － 無風險利率)
                     </td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>共變異數</td>
+                    <td class="fml">相關係數 × A 證券標準差 × B 證券標準差</td>
                   </tr>
                   <tr>
                     <td>6</td>
@@ -135,6 +180,31 @@
                       <span class="frac"><span class="num">投資組合報酬率 － 無風險利率</span><span class="den">系統風險</span></span>
                     </td>
                   </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>權利金（選擇權價值）</td>
+                    <td class="fml">內含價值 ＋ 時間價值</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>內含價值（買權）</td>
+                    <td class="fml">標的物價值 － 履約價值</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>槓桿比率（權證）</td>
+                    <td class="fml"><span class="frac"><span class="num">標的證券價格</span><span class="den">權證價格</span></span></td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>漲跌停價（權證）</td>
+                    <td class="fml">標的證券漲跌停價格 × 執行比例</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>保本型商品報酬率</td>
+                    <td class="fml">保本率 ＋ 參與率 × 連結標的報酬</td>
+                  </tr>
                 </table>
               </div>
             </div>
@@ -149,6 +219,21 @@
                     <th>章節</th>
                     <th>名稱</th>
                     <th>公式</th>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>每股帳面金額（淨值）</td>
+                    <td class="fml"><span class="frac"><span class="num">股東權益總額</span><span class="den">在外流通股數</span></span></td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>股利收益率</td>
+                    <td class="fml"><span class="frac"><span class="num">股利</span><span class="den">目前股價</span></span></td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>營業利益率</td>
+                    <td class="fml"><span class="frac"><span class="num">營業利益</span><span class="den">銷貨淨額</span></span></td>
                   </tr>
                   <tr>
                     <td>7</td>
@@ -183,7 +268,7 @@
                   <tr>
                     <td>8</td>
                     <td>財務槓桿度</td>
-                    <td class="fml"><span class="frac"><span class="num">EPS 變動百分比</span><span class="den">EBIT 變動百分比</span></span></td>
+                    <td class="fml"><span class="frac"><span class="num">EBIT</span><span class="den">EBIT － 利息費用</span></span>　（＝<span class="frac"><span class="num">EPS 變動百分比</span><span class="den">EBIT 變動百分比</span></span>）</td>
                   </tr>
                   <tr>
                     <td>8</td>
@@ -191,47 +276,77 @@
                     <td class="fml">營業槓桿度 × 財務槓桿度</td>
                   </tr>
                   <tr>
-                    <td>13</td>
+                    <td>11</td>
+                    <td>稅盾</td>
+                    <td class="fml">負債金額 × 稅率</td>
+                  </tr>
+                  <tr>
+                    <td>11</td>
+                    <td>資金成本（WACC）</td>
+                    <td class="fml">負債 × 舉債利率 × (1－稅率) ＋ 權益 × 權益資金成本率</td>
+                  </tr>
+                  <tr>
+                    <td>11</td>
+                    <td>實質債務資金成本</td>
+                    <td class="fml">借款名目利率 × (1－稅率)</td>
+                  </tr>
+                  <tr>
+                    <td>12</td>
                     <td>流動比率</td>
                     <td class="fml"><span class="frac"><span class="num">流動資產</span><span class="den">流動負債</span></span></td>
                   </tr>
                   <tr>
-                    <td>13</td>
+                    <td>12</td>
                     <td>速動比率</td>
                     <td class="fml"><span class="frac"><span class="num">速動資產</span><span class="den">流動負債</span></span></td>
                   </tr>
                   <tr>
-                    <td>13</td>
+                    <td>12</td>
                     <td>營運資金</td>
                     <td class="fml">流動資產 － 流動負債</td>
                   </tr>
                   <tr>
-                    <td>13</td>
+                    <td>12</td>
                     <td>利息保障倍數</td>
                     <td class="fml"><span class="frac"><span class="num">息前稅前淨利</span><span class="den">利息</span></span></td>
                   </tr>
                   <tr>
-                    <td>13</td>
+                    <td>12</td>
+                    <td>固定支出保障倍數</td>
+                    <td class="fml"><span class="frac"><span class="num">EBIT ＋ 固定支出</span><span class="den">固定支出</span></span></td>
+                  </tr>
+                  <tr>
+                    <td>12</td>
                     <td>總資產週轉率</td>
                     <td class="fml"><span class="frac"><span class="num">銷貨收入淨額</span><span class="den">平均資產總額</span></span></td>
                   </tr>
                   <tr>
-                    <td>13</td>
+                    <td>12</td>
                     <td>存貨週轉率</td>
                     <td class="fml"><span class="frac"><span class="num">銷貨成本</span><span class="den">平均存貨</span></span></td>
                   </tr>
                   <tr>
-                    <td>13</td>
+                    <td>12</td>
+                    <td>存貨週轉期間</td>
+                    <td class="fml"><span class="frac"><span class="num">365</span><span class="den">存貨週轉率</span></span></td>
+                  </tr>
+                  <tr>
+                    <td>12</td>
                     <td>應收帳款週轉率</td>
                     <td class="fml"><span class="frac"><span class="num">銷貨收入</span><span class="den">平均應收帳款</span></span></td>
                   </tr>
                   <tr>
-                    <td>13</td>
+                    <td>12</td>
                     <td>應收帳款週轉期間</td>
                     <td class="fml"><span class="frac"><span class="num">365</span><span class="den">應收帳款週轉率</span></span></td>
                   </tr>
                   <tr>
-                    <td>13</td>
+                    <td>12</td>
+                    <td>營業週期</td>
+                    <td class="fml">存貨週轉期間 ＋ 應收帳款週轉期間</td>
+                  </tr>
+                  <tr>
+                    <td>12</td>
                     <td>總資產報酬率</td>
                     <td class="fml">
                       <span class="frac"><span class="num">淨利 ＋ 利息×(1－稅率)</span><span class="den">平均總資產</span></span>　（或：淨利率 ×
@@ -239,24 +354,44 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>13</td>
+                    <td>12</td>
+                    <td>長期資本報酬率</td>
+                    <td class="fml"><span class="frac"><span class="num">EBIT</span><span class="den">長期負債 ＋ 權益</span></span></td>
+                  </tr>
+                  <tr>
+                    <td>12</td>
                     <td>權益報酬率（杜邦比率）</td>
                     <td class="fml">淨利率 × 總資產週轉率 × 財務槓桿比率</td>
                   </tr>
                   <tr>
-                    <td>13</td>
+                    <td>12</td>
                     <td>負債比率</td>
                     <td class="fml"><span class="frac"><span class="num">負債總額</span><span class="den">資產總額</span></span></td>
                   </tr>
                   <tr>
-                    <td>13</td>
+                    <td>12</td>
                     <td>權益比率</td>
                     <td class="fml"><span class="frac"><span class="num">權益總額</span><span class="den">資產總額</span></span></td>
                   </tr>
                   <tr>
-                    <td>13</td>
-                    <td>財務槓桿比率</td>
+                    <td>12</td>
+                    <td>負債權益比率</td>
+                    <td class="fml"><span class="frac"><span class="num">負債總額</span><span class="den">權益總額</span></span></td>
+                  </tr>
+                  <tr>
+                    <td>12</td>
+                    <td>財務槓桿比率（權益乘數）</td>
                     <td class="fml"><span class="frac"><span class="num">資產總額</span><span class="den">股東權益總額</span></span></td>
+                  </tr>
+                  <tr>
+                    <td>12</td>
+                    <td>財務槓桿指數</td>
+                    <td class="fml"><span class="frac"><span class="num">權益報酬率（ROE）</span><span class="den">總資產報酬率（ROA）</span></span></td>
+                  </tr>
+                  <tr>
+                    <td>12</td>
+                    <td>現金再投資比率</td>
+                    <td class="fml"><span class="frac"><span class="num">營業活動淨現金流量 － 現金股利</span><span class="den">不動產廠房設備毛額 ＋ 長期投資 ＋ 其他資產 ＋ 營運資金</span></span></td>
                   </tr>
                 </table>
               </div>

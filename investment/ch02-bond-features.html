@@ -28,10 +28,16 @@
           <section class="unit">
             <div class="unit-head"><h2>政府債券與公司債基本特性</h2></div>
             <div class="explain">
+              <p class="sub-label">依發行者分：</p>
               <ul>
                 <li>
                   <strong>政府債券（公債）</strong>：
                   <ul>
+                    <li>
+                      依發行機關分為<strong>中央政府</strong>發行之公債，及<strong
+                        >地方政府</strong
+                      >為建設所需發行之建設公債
+                    </li>
                     <li>
                       一般而言沒有違約風險，所以不提供擔保，屬<strong
                         >信用債券</strong
@@ -41,21 +47,35 @@
                   </ul>
                 </li>
                 <li>
+                  <strong>公司債</strong>：一般企業發行，有違約風險，可分為擔保債券與信用債券
+                </li>
+                <li><strong>金融債券</strong>：金融機構發行</li>
+              </ul>
+              <p class="sub-label">依有無擔保分：</p>
+              <ul>
+                <li>
+                  <strong>擔保債券</strong>：以特定資產（如不動產、廠房、設備）或證券作為擔保品，違約時債權人可優先處分擔保品求償，風險與利率較低
+                </li>
+                <li>
                   <strong>信用債券</strong>：
                   <ul>
-                    <li>指無資產擔保品的債券</li>
+                    <li>指無資產擔保品的債券，全憑發行者的信用作為償債保證</li>
+                    <li>公債因政府信用最好，不需擔保，所以也屬信用債券</li>
+                    <li>公司發行的信用債券，風險與利率較擔保債券高</li>
                     <li>
-                      部分公司發行風險較高的<strong>次級信用債券</strong>，通常可轉換為普通股，但清償順序在高級債券之後
+                      部分公司發行風險較高的<strong>次級信用債券</strong>，通常可轉換為普通股，但清償順序在高級債券之後，利率也較高
                     </li>
                   </ul>
                 </li>
+              </ul>
+              <ul>
                 <li>
                   公司發行債券若欲<strong>分期償還</strong>，可採：發行時訂定分期償還條款、定期自市場中買回部分公司債、設置償債基金
                 </li>
               </ul>
             </div>
             <details class="practice">
-              <summary class="practice-label">考古題（6 題）</summary>
+              <summary class="practice-label">考古題（7 題）</summary>
               <div class="q-item">
                 <p class="qno">Q1</p>
                 <p class="qtext">有關政府債券的敘述，何者「正確」？</p>
@@ -142,6 +162,22 @@
                   >分期償還債款（非一次到期清償），可訂定分期償還條款、定期買回公司債、設置償債基金。
                 </p>
               </div>
+              <div class="q-item">
+                <p class="qno">Q59</p>
+                <p class="qtext">
+                  何者「不是」公司發行債券之適當時機？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．預期物價水準大幅上升</div>
+                  <div class="opt">B．公司管理者不想降低持股比率</div>
+                  <div class="opt">C．公司股價處於低水準時</div>
+                  <div class="opt right">D．負債比率很高時</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >負債比率已高時再發債會加重利息負擔與財務風險。預期物價大幅上升時以固定利率借款較划算，發債不會稀釋股權，股價低時發行新股不划算，因此 A、B、C 都是適當時機。
+                </p>
+              </div>
             </details>
           </section>
 
@@ -160,7 +196,7 @@
             <div class="callout-line">
               <strong>CB 計算四步：</strong>
               <ol>
-                <li>面額（國內通常 100,000）÷ 轉換價格＝轉換比率</li>
+                <li>轉換比率 ＝ <span class="frac"><span class="num">面額（國內通常 100,000）</span><span class="den">轉換價格</span></span></li>
                 <li>轉換比率 × 股票市價＝轉換價值</li>
                 <li>比較轉換價值與 CB 市價</li>
                 <li>
@@ -945,14 +981,25 @@
                   </ul>
                 </li>
                 <li>
-                  <strong>公債保證金交易</strong>：投資人透過財務槓桿操作，將自市場買入之公債交付價款同時承作公債附買回交易，取得資金完成前手價款交割
+                  <strong>公債保證金交易</strong>：投資人透過財務槓桿操作，只出一部分保證金，借錢買進更多公債
                   <ul>
                     <li>
-                      做多由<strong>附買回(RP)＋買斷(OB)</strong>構成，做空由<strong>附賣回(RS)＋賣斷(OS)</strong>構成
+                      做多（看漲）由<strong>買斷(OB)＋附賣回(RS)</strong>構成
+                      <ul>
+                        <li>買斷(OB)：在現貨市場買進公債，建立做多部位</li>
+                        <li>附賣回(RS)：把買到的公債交給券商取得資金，約定日後再買回，等於拿公債質押融資</li>
+                      </ul>
+                    </li>
+                    <li>
+                      做空（看跌）由<strong>賣斷(OS)＋附買回(RP)</strong>構成
                     </li>
                   </ul>
                 </li>
               </ul>
+              <div class="callout-line">
+                口訣：<strong>做多選 OB＋RS，做空選 OS＋RP</strong><br />部分舊版教材把 RP、RS 的立場寫反，考試一律依此標準搭配作答
+                <span class="arrow">➜ 考點注意</span>
+              </div>
             </div>
             <details class="practice">
               <summary class="practice-label">考古題（8 題）</summary>
@@ -1062,9 +1109,7 @@
                   <div class="opt">D．賣斷(OS)與附買回(RP)</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong
-                  >原書標示做多之公債保證金交易由買斷(OB)與附買回(RP)交易構成；此題選項標記依原書公告答案
-                  A 為準。
+                  <strong>解析：</strong>做多公債保證金交易＝買斷(OB)買進公債＋附賣回(RS)把公債交給券商融資。<br />做空則為賣斷(OS)＋附買回(RP)。
                 </p>
               </div>
               <div class="q-item">
@@ -1119,7 +1164,7 @@
                     <td rowspan="2">twAAAf ~ twCCCf</td>
                   </tr>
                   <tr>
-                    <td>投機等級（垃圾債券）</td>
+                    <td>投機等級（垃圾債券、高收益債券）</td>
                     <td>Ba ~ C</td>
                     <td>BB ~ D</td>
                     <td>BB ~ D</td>

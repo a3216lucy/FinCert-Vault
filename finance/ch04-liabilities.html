@@ -31,11 +31,11 @@
               <ul>
                 <li>
                   <strong>流動負債</strong
-                  >：預期在一年或一個正常營業週期內償還的債務，以較長者為準——短期借款、應付帳款、應付費用（非因購買貨物或服務而發生的付款義務，如員工休假福利）、合約負債、一年內到期之長期負債、負債準備
+                  >：預期在一年或一個正常營業週期內償還的債務，以較長者為準，如短期借款、應付帳款、應付費用（非因購買貨物或服務而發生的付款義務，如員工休假福利）、合約負債（預收款項）、一年內到期之長期負債、負債準備
                 </li>
                 <li>
                   <strong>非流動負債</strong
-                  >：一年後才到期的負債——長期借款、應付公司債
+                  >：一年後才到期的負債，如長期借款、應付公司債
                 </li>
               </ul>
             </div>
@@ -292,6 +292,79 @@
                   </tr>
                 </table>
               </div>
+              <p class="sub-label">公司債會計分錄：</p>
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th></th>
+                    <th>溢價</th>
+                    <th>折價</th>
+                  </tr>
+                  <tr>
+                    <td>發行時</td>
+                    <td>
+                      <div class="je">
+                        <div class="je-side dr">
+                          <p class="je-head">借</p>
+                          <p>現金</p>
+                        </div>
+                        <div class="je-side cr">
+                          <p class="je-head">貸</p>
+                          <p>應付公司債</p>
+                          <p>公司債溢價</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="je">
+                        <div class="je-side dr">
+                          <p class="je-head">借</p>
+                          <p>現金</p>
+                          <p>公司債折價</p>
+                        </div>
+                        <div class="je-side cr">
+                          <p class="je-head">貸</p>
+                          <p>應付公司債</p>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>每期付息</td>
+                    <td>
+                      <div class="je">
+                        <div class="je-side dr">
+                          <p class="je-head">借</p>
+                          <p>利息費用</p>
+                          <p>公司債溢價</p>
+                        </div>
+                        <div class="je-side cr">
+                          <p class="je-head">貸</p>
+                          <p>現金</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="je">
+                        <div class="je-side dr">
+                          <p class="je-head">借</p>
+                          <p>利息費用</p>
+                        </div>
+                        <div class="je-side cr">
+                          <p class="je-head">貸</p>
+                          <p>現金</p>
+                          <p>公司債折價</p>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>記憶方式</td>
+                    <td>溢價發行時記<strong>貸方</strong>，付息時從<strong>借方</strong>沖掉<br />利息費用 ＜ 現金利息</td>
+                    <td>折價發行時記<strong>借方</strong>，付息時從<strong>貸方</strong>沖掉<br />利息費用 ＞ 現金利息</td>
+                  </tr>
+                </table>
+              </div>
             </div>
             <details class="practice">
               <summary class="practice-label">考古題（11 題）</summary>
@@ -307,7 +380,7 @@
                   <div class="opt">D．四項</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>丙、丁正確——債券利息可減少課稅所得，且發行債券不影響現有股東持股比例；甲對發行公司而言舉債反而提高財務風險，乙債券可在市場上交易，皆錯誤，故僅兩項正確。
+                  <strong>解析：</strong>丙、丁正確，債券利息可減少課稅所得，且發行債券不影響現有股東持股比例；甲對發行公司而言舉債反而提高財務風險，乙債券可在市場上交易，皆錯誤，故僅兩項正確。
                 </p>
               </div>
               <div class="q-item">
@@ -492,7 +565,7 @@
                 </li>
                 <li>
                   <strong>或有負債</strong
-                  >：可能會發生的負債，例如訴訟賠償——過去事件所產生之現時義務，但因該義務之金額無法可靠地衡量的原因而未予認列
+                  >：可能會發生的負債，例如訴訟賠償，指過去事件所產生之現時義務，但因該義務之金額無法可靠地衡量的原因而未予認列
                 </li>
               </ul>
             </div>

@@ -31,15 +31,21 @@
               <ul>
                 <li>
                   <strong>風險偏好者</strong
-                  >：主動追求風險，預期收益相同時選風險大者；要求邊際報酬率遞減
+                  >：主動追求風險，預期收益相同時選<strong>風險大</strong>者
+                  <ul>
+                    <li>要求邊際報酬率遞減</li>
+                  </ul>
                 </li>
                 <li>
                   <strong>風險中立者</strong
-                  >：無論風險水準為何，每增加一單位風險所要求的報酬皆不變——投資唯一標準是報酬率，不管風險大小
+                  >：無論風險水準為何，每增加一單位風險所要求的報酬<strong>皆不變</strong>
+                  <ul>
+                    <li>投資唯一標準是<strong>報酬率</strong>，不管風險大小</li>
+                  </ul>
                 </li>
                 <li>
                   <strong>風險規避者</strong
-                  >：僅接受期望報酬率高於無風險利率的風險性投資標的
+                  >：僅接受期望報酬率<strong>高於無風險利率</strong>的風險性投資標的
                 </li>
               </ul>
             </div>
@@ -87,49 +93,262 @@
             <div class="unit-head"><h2>效率市場假說</h2></div>
             <div class="explain">
               <p>
-                假設前提：沒有交易稅務成本，投資人能免費得到市場資訊，投資人為價格接受者。
+                效率市場的定義：市場能<strong>迅速且正確</strong>反映所有攸關資訊，所以投資人無法利用任何資訊賺取超額報酬，只能賺到正常報酬。市場越沒效率，投資人越有機會「占到便宜」。
               </p>
+              <p class="sub-label">
+                效率等級像爬樓梯：越往上，股價反映的資訊越多，能用的方法越少
+              </p>
+              <div class="diagram-card">
+                <svg viewBox="0 0 340 200">
+                  <rect
+                    x="12"
+                    y="140"
+                    width="76"
+                    height="35"
+                    fill="var(--paper-raised)"
+                    stroke="var(--line)"
+                  />
+                  <rect
+                    x="92"
+                    y="105"
+                    width="76"
+                    height="70"
+                    fill="var(--paper-raised)"
+                    stroke="var(--line)"
+                  />
+                  <rect
+                    x="172"
+                    y="70"
+                    width="76"
+                    height="105"
+                    fill="var(--paper-raised)"
+                    stroke="var(--line)"
+                  />
+                  <rect
+                    x="252"
+                    y="35"
+                    width="76"
+                    height="140"
+                    fill="var(--paper-raised)"
+                    stroke="var(--line)"
+                  />
+                  <text
+                    x="50"
+                    y="162"
+                    font-size="12"
+                    fill="var(--ink)"
+                    text-anchor="middle"
+                  >
+                    無效率
+                  </text>
+                  <text
+                    x="130"
+                    y="127"
+                    font-size="12"
+                    fill="var(--ink)"
+                    text-anchor="middle"
+                  >
+                    弱式
+                  </text>
+                  <text
+                    x="130"
+                    y="143"
+                    font-size="9.5"
+                    fill="var(--ink-40)"
+                    text-anchor="middle"
+                  >
+                    反映歷史資訊
+                  </text>
+                  <text
+                    x="210"
+                    y="92"
+                    font-size="12"
+                    fill="var(--ink)"
+                    text-anchor="middle"
+                  >
+                    半強式
+                  </text>
+                  <text
+                    x="210"
+                    y="108"
+                    font-size="9.5"
+                    fill="var(--ink-40)"
+                    text-anchor="middle"
+                  >
+                    ＋已公開資訊
+                  </text>
+                  <text
+                    x="290"
+                    y="57"
+                    font-size="12"
+                    fill="var(--ink)"
+                    text-anchor="middle"
+                  >
+                    強式
+                  </text>
+                  <text
+                    x="290"
+                    y="73"
+                    font-size="9.5"
+                    fill="var(--ink-40)"
+                    text-anchor="middle"
+                  >
+                    ＋未公開資訊
+                  </text>
+                  <text
+                    x="130"
+                    y="97"
+                    font-size="10"
+                    fill="var(--seal)"
+                    text-anchor="middle"
+                  >
+                    ✗ 技術分析
+                  </text>
+                  <text
+                    x="210"
+                    y="62"
+                    font-size="10"
+                    fill="var(--seal)"
+                    text-anchor="middle"
+                  >
+                    ✗ 基本分析
+                  </text>
+                  <text
+                    x="290"
+                    y="27"
+                    font-size="10"
+                    fill="var(--seal)"
+                    text-anchor="middle"
+                  >
+                    ✗ 內線消息
+                  </text>
+                  <text
+                    x="170"
+                    y="194"
+                    font-size="10"
+                    fill="var(--ink-40)"
+                    text-anchor="middle"
+                  >
+                    效率越高 →（高等級一定具備低等級的特性：往下相容）
+                  </text>
+                </svg>
+                <p class="cap">
+                  每上一階，就多一種方法賺不到超額報酬；紅字就是用來檢驗該等級的方法
+                </p>
+              </div>
               <div class="tbl-wrap">
                 <table>
                   <tr>
-                    <th>市場類型</th>
-                    <th>描述</th>
-                    <th>檢驗方式</th>
+                    <th></th>
+                    <th>無效率</th>
+                    <th>弱式</th>
+                    <th>半強式</th>
+                    <th>強式</th>
                   </tr>
                   <tr>
-                    <td>強式市場</td>
-                    <td>
-                      做什麼（就算內線消息）都無法獲得超額報酬，只有正常報酬；最符合一般投資人利益
-                    </td>
-                    <td>內線消息</td>
-                  </tr>
-                  <tr>
-                    <td>半強式市場</td>
-                    <td>
-                      股價反應所有歷史資訊、已公開資訊與未來預測；可靠內線消息獲得超額報酬
-                    </td>
-                    <td>基本分析、事件研究</td>
-                  </tr>
-                  <tr>
-                    <td>弱式市場</td>
-                    <td>股價反映所有歷史資訊；可靠基本分析獲得超額報酬</td>
-                    <td>技術分析</td>
-                  </tr>
-                  <tr>
-                    <td>無效率市場</td>
-                    <td>可靠技術分析獲得超額報酬</td>
+                    <td><strong>股價已反映</strong></td>
                     <td>—</td>
+                    <td>所有<strong>歷史</strong>資訊（過去價量）</td>
+                    <td>歷史 ＋ 所有<strong>已公開</strong>資訊與未來預測</td>
+                    <td>已公開 ＋ <strong>未公開</strong>資訊</td>
+                  </tr>
+                  <tr>
+                    <td><strong>失效的方法（＝檢驗方式）</strong></td>
+                    <td>—</td>
+                    <td>技術分析</td>
+                    <td>技術分析、基本分析（事件研究）</td>
+                    <td>全部，連內線消息都沒用</td>
+                  </tr>
+                  <tr>
+                    <td><strong>還能靠什麼賺超額報酬</strong></td>
+                    <td>技術分析就能賺</td>
+                    <td>基本分析（財報分析）</td>
+                    <td>內線消息</td>
+                    <td>沒有，只有正常報酬</td>
                   </tr>
                 </table>
               </div>
+              <div class="callout-line">
+                <strong>判斷三原則</strong><br />
+                ① 往下相容：符合半強式就一定符合弱式（<strong>反過來不成立</strong>）<br />
+                ② 某方法賺得到超額報酬 →
+                市場「不符合」該等級。例：濾嘴法則是技術分析，有效代表連弱式都不符合<br />
+                ③
+                <strong>強式</strong>最符合一般投資人（散戶）利益：沒有資訊不對等，不會被大戶、內線坑
+                <span class="arrow"
+                  >➜ 題目先找「哪種資訊／方法」，再對樓梯</span
+                >
+              </div>
               <ul>
                 <li>
-                  弱式效率市場常見檢定方法：隨機性檢定、<strong>濾嘴法則</strong>（股價漲跌超過一定幅度即買進賣出）、<strong>小型公司效應</strong>（小公司報酬率大於大公司的現象）
+                  弱式效率市場常見檢定方法：<br />
+                  隨機性檢定、<br />
+                  <strong>濾嘴法則</strong
+                  >（股價漲跌超過一定幅度即買進賣出，不追求最低點買、最高點賣；波動小時可能交易太頻繁，交易成本過高）、<br />
+                  <strong>小型公司效應</strong>（小公司報酬率大於大公司的現象）
+                </li>
+              </ul>
+              <p class="sub-label">情境判斷：</p>
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th>題目情境</th>
+                    <th>答案</th>
+                    <th>關鍵</th>
+                  </tr>
+                  <tr>
+                    <td>獲利<strong>超過預期</strong>，股價大漲</td>
+                    <td><strong>半強式</strong></td>
+                    <td>半強式只會被「預期外」的新消息推動</td>
+                  </tr>
+                  <tr>
+                    <td><strong>沒有特殊事件</strong>，一日內大崩盤</td>
+                    <td><strong>不符合半強式</strong></td>
+                    <td>沒新消息卻大跌＝價格沒反映資訊</td>
+                  </tr>
+                  <tr>
+                    <td>專做<strong>除權</strong>前後買賣，獲利平平</td>
+                    <td><strong>符合半強式</strong></td>
+                    <td>除權是公開資訊，早已反映</td>
+                  </tr>
+                  <tr>
+                    <td><strong>內部人</strong>靠內線也賺不到超額報酬</td>
+                    <td><strong>強式</strong></td>
+                    <td>
+                      內部人＝董事、總經理、重要股東；<br /><strong
+                        >基金經理人不是</strong
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>未來成長價值<strong>已反映</strong>在股價</td>
+                    <td>負、零、正成長公司<strong>都</strong>無超額報酬</td>
+                    <td>該反映的都反映了，只剩正常報酬</td>
+                  </tr>
+                </table>
+              </div>
+              <p class="sub-label">效率市場的假設與阻礙：</p>
+              <ul>
+                <li>
+                  假設前提：沒有交易稅務成本，投資人能免費得到市場資訊，投資人為「價格接受者」
+                </li>
+                <li>
+                  效率市場成立的理由：<br />
+                  ① 投資人是理性的，能合理評價證券；<br />
+                  ②
+                  即使有些投資人不理性，但交易是隨機的，對價格的影響會互相抵銷；<br />
+                  ③
+                  即使部分投資人有相同的不理性行為，市場仍可藉由<strong>套利</strong>使價格回到理性價格（但不一定是
+                  CAPM 的價格）
+                </li>
+                <li>
+                  <strong>交易成本與稅會阻礙市場效率</strong
+                  >；<strong>漲跌幅限制可能延緩股價反應資訊的速度</strong>，也會降低效率
                 </li>
               </ul>
             </div>
             <details class="practice">
-              <summary class="practice-label">考古題（5 題）</summary>
+              <summary class="practice-label">考古題（22 題）</summary>
               <div class="q-item">
                 <p class="qno">Q3</p>
                 <p class="qtext">
@@ -150,10 +369,14 @@
                 <p class="qno">Q4</p>
                 <p class="qtext">若一市場為半強式效率市場，則：</p>
                 <div class="opts">
-                  <div class="opt">A．此一市場必可以讓技術分析專家賺取超額利潤</div>
+                  <div class="opt">
+                    A．此一市場必可以讓技術分析專家賺取超額利潤
+                  </div>
                   <div class="opt">B．股價未來之走勢可以預測</div>
                   <div class="opt">C．投資小型股的獲利通常比大型股為佳</div>
-                  <div class="opt right">D．此市場僅能使內部人可能賺取超額利潤</div>
+                  <div class="opt right">
+                    D．此市場僅能使內部人可能賺取超額利潤
+                  </div>
                 </div>
                 <p class="why">
                   <strong>解析：</strong
@@ -189,8 +412,8 @@
                 </div>
                 <p class="why">
                   <strong>解析：</strong
-                  >弱式市場已反映所有歷史價量資訊，故靠歷史價量（K
-                  線、SI、KD 等技術分析工具）無法賺取超額報酬；財報分析屬基本分析，仍可能賺取超額報酬。
+                  >弱式市場已反映所有歷史價量資訊，故靠歷史價量（K 線、SI、KD
+                  等技術分析工具）無法賺取超額報酬；財報分析屬基本分析，仍可能賺取超額報酬。
                 </p>
               </div>
               <div class="q-item">
@@ -207,6 +430,291 @@
                   >濾嘴法則、隨機性檢定、小型公司效應皆屬弱式效率市場常見檢定方法；宣布發放股票股利屬公司公開訊息事件，用於檢定「半強式」效率市場。
                 </p>
               </div>
+              <div class="q-item">
+                <p class="qno">Q25</p>
+                <p class="qtext">交易成本與稅：</p>
+                <div class="opts">
+                  <div class="opt">A．會促進市場效率</div>
+                  <div class="opt right">B．會阻礙市場效率</div>
+                  <div class="opt">C．與市場效率無關</div>
+                  <div class="opt">D．是每一個股票市場都必須具有的</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >效率市場假設沒有交易成本與稅；有成本會讓資訊無法即時、充分反映在價格上，阻礙市場效率。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q26</p>
+                <p class="qtext">何者為效率市場的定義？</p>
+                <div class="opts">
+                  <div class="opt">
+                    A．政府不以人為的手段干預市場，讓市場自由發展
+                  </div>
+                  <div class="opt">B．市場無交易成本、稅負以及其他障礙</div>
+                  <div class="opt right">
+                    C．市場能夠迅速正確反應所有攸關資訊，所有投資者將無法利用任何資訊賺取超額的報酬
+                  </div>
+                  <div class="opt">D．市場交易的作業流程完全電腦化</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >效率市場的定義是價格能迅速且正確反映所有攸關資訊，投資人無法靠任何資訊賺超額報酬。B
+                  是效率市場的假設前提，不是定義。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q27</p>
+                <p class="qtext">下列何者非為效率市場假說成立所需要的假設？</p>
+                <div class="opts">
+                  <div class="opt">
+                    A．投資者是理性的，因此能合理的評價證券價格
+                  </div>
+                  <div class="opt">
+                    B．即使有些投資者非理性，但他們的交易是隨機的，所以對價格的影響會相互抵銷
+                  </div>
+                  <div class="opt">
+                    C．若部分投資者有相同的不理性行為，市場仍可藉由套利機制使價格回復理性價格
+                  </div>
+                  <div class="opt right">
+                    D．由於套利力量的存在，資產的價格會回復到資本資產定價理論（CAPM）的定價關係
+                  </div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>A、B、C 都是效率市場成立的理由。D
+                  錯在套利只會讓價格回到理性價格，不一定是 CAPM
+                  的定價，也可能是其他定價理論。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q28</p>
+                <p class="qtext">就市場效率性而言，設置漲跌幅之限制：</p>
+                <div class="opts">
+                  <div class="opt right">
+                    A．可能會延緩股價在反應資訊上之速度
+                  </div>
+                  <div class="opt">B．對於股價反應資訊並無任何影響</div>
+                  <div class="opt">C．是一個具有效率的市場必有的措施</div>
+                  <div class="opt">D．是半強式效率市場之特質</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >有漲跌幅限制時，重大消息無法一天內完全反映，股價要分好幾天才走到位，延緩了反應資訊的速度。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q29</p>
+                <p class="qtext">
+                  在半強式效率市場中，股價會因為何種因素而超漲？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．已公開的財務報告</div>
+                  <div class="opt">B．技術指標上揚</div>
+                  <div class="opt right">C．公司內部人的拉抬</div>
+                  <div class="opt">D．股票股利的宣告</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >半強式已反映所有公開資訊（財報、技術面、股利宣告），只有未公開的內線消息或內部人行為才能造成超額報酬。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q30</p>
+                <p class="qtext">
+                  弱式效率市場表示「不能」以哪一項資料獲得超額報酬？
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．技術分析</div>
+                  <div class="opt">B．財務報表分析</div>
+                  <div class="opt">C．盈餘宣告</div>
+                  <div class="opt">D．內線消息</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >弱式效率市場已反映所有歷史價量資訊，技術分析無效；財報分析（基本分析）、內線消息仍可能賺到超額報酬。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q31</p>
+                <p class="qtext">
+                  下列何種資訊反映在證券價格的變動上是強式效率的資本市場所獨有的？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．所有技術面分析的資訊</div>
+                  <div class="opt">B．過去與現在所有公告之財務資訊</div>
+                  <div class="opt right">C．未對外公開的內部資訊</div>
+                  <div class="opt">D．選項(A)(B)(C)皆是</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >技術面資訊弱式就已反映，公告的財務資訊半強式就已反映；只有未公開的內部資訊是強式才有反映。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q32</p>
+                <p class="qtext">
+                  最能符合一般投資人利益之資本市場是具有何種效率之條件？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．半強式效率</div>
+                  <div class="opt">B．半弱式效率</div>
+                  <div class="opt right">C．強式效率</div>
+                  <div class="opt">D．弱式效率</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >強式市場連內線消息都已反映，沒有資訊不對等，散戶不會被大戶或內部人佔便宜，最符合一般投資人利益。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q33</p>
+                <p class="qtext">
+                  一般而言，若公司未來成長機會的價值已被反映到當期股價上，則購買何種股票的投資人將無法賺到超額報酬？甲.負成長公司；乙.零成長公司；丙.正成長公司
+                </p>
+                <div class="opts">
+                  <div class="opt">A．僅甲</div>
+                  <div class="opt">B．僅甲、乙</div>
+                  <div class="opt">C．僅丙</div>
+                  <div class="opt right">D．甲、乙、丙</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >未來的資訊都已反映在股價上，不論哪種公司都只能賺正常報酬。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q34</p>
+                <p class="qtext">
+                  若無特殊事件發生，但是股市一日之內大崩盤，此一現象可能：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．符合強式效率市場</div>
+                  <div class="opt">B．僅符合半強式效率市場</div>
+                  <div class="opt right">C．不符合半強式效率市場</div>
+                  <div class="opt">D．不符合弱式效率但符合半強式效率</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >半強式反映所有已公開資訊，沒有新事件卻大崩盤，代表價格沒有正確反映資訊，不符合半強式。D
+                  也違反「往下相容」。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q35</p>
+                <p class="qtext">
+                  公司內部人員無法藉由內線消息而獲取超額報酬時，表示此時市場屬於：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．半弱式效率市場</div>
+                  <div class="opt">B．弱式效率市場</div>
+                  <div class="opt">C．半強式效率市場</div>
+                  <div class="opt right">D．強式效率市場</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >連內線消息都賺不到超額報酬，代表未公開資訊也已反映在股價上，是強式效率市場。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q36</p>
+                <p class="qtext">
+                  何者並非強式效率市場檢定中，公司內部人員檢定之對象？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．董事</div>
+                  <div class="opt">B．總經理</div>
+                  <div class="opt">C．重要股東</div>
+                  <div class="opt right">D．基金經理人</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >公司內部人指董事、總經理、重要股東等能接觸未公開資訊的人；基金經理人不是公司內部人。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q37</p>
+                <p class="qtext">
+                  上市公司公告其上一季之獲利超過市場上的預期，其股價因此一正面消息之揭露而大漲，此一現象乃為下列何種市場效率形式之表彰？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．強式</div>
+                  <div class="opt right">B．半強式</div>
+                  <div class="opt">C．弱式</div>
+                  <div class="opt">D．半弱式</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >強式下不論有沒有預期，市場早就反映了；半強式則會因「預期外」的新公開資訊而波動，所以是半強式。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q38</p>
+                <p class="qtext">
+                  某操盤人專門在除權前後買賣股票，幾年來的獲利表現平平，則其市場應屬：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．不符合弱式效率</div>
+                  <div class="opt right">B．符合半強式效率</div>
+                  <div class="opt">C．符合強式效率</div>
+                  <div class="opt">D．無效率</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >除權是公開資訊，利用公開資訊賺不到超額報酬，代表市場符合半強式效率；無法判斷內線消息是否有效，所以不能說是強式。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q39</p>
+                <p class="qtext">
+                  若資本市場之證券價格已充分反應了所有已經公開之資訊，則此市場屬於何種效率市場的假設？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．強式</div>
+                  <div class="opt right">B．半強式</div>
+                  <div class="opt">C．弱式</div>
+                  <div class="opt">D．半弱式</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >反映所有已公開資訊的是半強式；連未公開資訊都反映才是強式。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q40</p>
+                <p class="qtext">若一資本市場已符合半強式效率市場，則：</p>
+                <div class="opts">
+                  <div class="opt">A．亦符合強式效率市場</div>
+                  <div class="opt right">B．亦符合弱式效率市場</div>
+                  <div class="opt">C．不符合弱式效率市場之條件</div>
+                  <div class="opt">D．此一市場最符合一般投資人之利益</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >效率市場「往下相容」：等級較高的市場一定具備等級較低市場的特性，符合半強式就一定符合弱式。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q41</p>
+                <p class="qtext">
+                  有關使用濾嘴法則進行投資決策，下列何者有誤？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．不追求在最低點買進、最高點賣出</div>
+                  <div class="opt">
+                    B．在股價上漲後回跌一定比率時賣出，以及在股價下跌後反彈一定比率時買進
+                  </div>
+                  <div class="opt right">
+                    C．若濾嘴法則有效，則表示市場符合半強式效率假說
+                  </div>
+                  <div class="opt">
+                    D．在市場波動及漲跌幅小時，可能因交易過於頻繁而導致交易成本過高
+                  </div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >濾嘴法則是技術分析，若有效代表連弱式效率市場都不符合，更不可能符合半強式。
+                </p>
+              </div>
             </details>
           </section>
 
@@ -215,12 +723,10 @@
             <div class="explain">
               <ul>
                 <li>
-                  多頭市場或風險承受度高：選擇高 β
-                  係數標的、降低現金或固定收益部位
+                  多頭市場或風險承受度高：選擇<strong>高 β</strong> 係數標的、降低現金或固定收益部位
                 </li>
                 <li>
-                  空頭市場或風險承受度低：選擇低 β
-                  係數標的、提高現金或固定收益部位
+                  空頭市場或風險承受度低：選擇<strong>低 β</strong> 係數標的、提高現金或固定收益部位
                 </li>
               </ul>
               <div class="tbl-wrap">
@@ -234,7 +740,7 @@
                       認為效率市場假說<strong>不</strong>成立<br />包含選時決策（著重技術分析）、選股決策（著重基本分析）、資產配置策略
                     </td>
                     <td>
-                      認為效率市場假說成立<br />目標不在擊敗市場，而是分散風險、獲取正常（非超額）報酬<br />透過指數型基金建立市場投組，可減少交易成本與追蹤誤差
+                      認為效率市場假說<strong>成立</strong><br />目標不在擊敗市場，而是分散風險、獲取正常（非超額）報酬<br />透過指數型基金建立市場投組，可減少交易成本與追蹤誤差
                     </td>
                   </tr>
                 </table>
@@ -247,11 +753,14 @@
               </div>
               <ul>
                 <li>
-                  <strong>由上而下（Top-Down）</strong>：先根據投資人目標與限制決定投資策略 →
-                  再設定資產配置 → 最後才選擇個別投資標的
-                </li>
-                <li>
-                  <strong>由下而上（Bottom-Up）</strong>：不理會總體經濟與類股輪動，直接尋找個股價值被低估的潛力股
+                  <strong>由上而下 vs 由下而上</strong
+                  >：兩者的分析順序與適合情況，見第 4 章「股票基本分析」對照表
+                  <ul>
+                    <li>
+                      用在建構投資組合時，由上而下的步驟：先根據投資人目標與限制決定投資策略
+                      → 再設定資產配置 → 最後才選擇個別投資標的
+                    </li>
+                  </ul>
                 </li>
                 <li>
                   <strong>Smart Beta 策略</strong
@@ -274,7 +783,8 @@
                   <div class="opt">D．丙→乙→甲</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>由上而下（Top-Down）策略順序為：先依投資人目標與限制決定投資策略（乙）→
+                  <strong>解析：</strong
+                  >由上而下（Top-Down）策略順序為：先依投資人目標與限制決定投資策略（乙）→
                   再設定資產配置（丙）→ 最後才選擇個別投資標的（甲）。
                 </p>
               </div>
@@ -290,7 +800,8 @@
                   <div class="opt">D．分散風險</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>由下而上（Bottom-Up）策略著重個股基本面分析，直接尋找價值被低估的個股，不從總體經濟或類股輪動（大盤研判、類股波段操作屬由上而下）出發。
+                  <strong>解析：</strong
+                  >由下而上（Bottom-Up）策略著重個股基本面分析，直接尋找價值被低估的個股，不從總體經濟或類股輪動（大盤研判、類股波段操作屬由上而下）出發。
                 </p>
               </div>
               <div class="q-item">
@@ -313,7 +824,9 @@
                 <p class="qno">Q11</p>
                 <p class="qtext">有關經理人選股能力的敘述，何者正確？</p>
                 <div class="opts">
-                  <div class="opt">A．根據所研究的總體經濟，判斷股市進場時機</div>
+                  <div class="opt">
+                    A．根據所研究的總體經濟，判斷股市進場時機
+                  </div>
                   <div class="opt right">
                     B．根據所研究的個別股票資訊，找出股價被低估的股票並加碼投資
                   </div>
@@ -325,8 +838,8 @@
                   </div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong
-                  >選股能力（Stock Selection）指根據個股基本面資訊找出價值被低估者加碼投資；(A)(C)屬於擇時能力，(D)被動式管理不追求擊敗大盤。
+                  <strong>解析：</strong>選股能力（Stock
+                  Selection）指根據個股基本面資訊找出價值被低估者加碼投資；(A)(C)屬於擇時能力，(D)被動式管理不追求擊敗大盤。
                 </p>
               </div>
               <div class="q-item">
@@ -336,10 +849,13 @@
                   <div class="opt">A．強調隨機選股，認為市場具效率性</div>
                   <div class="opt">B．強調分散風險，選取效率投資組合</div>
                   <div class="opt">C．強調效率市場，不需分析個股價格</div>
-                  <div class="opt right">D．強調擇時能力，對股價走勢進行預測</div>
+                  <div class="opt right">
+                    D．強調擇時能力，對股價走勢進行預測
+                  </div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>主動式管理認為市場無效率，強調擇時、選股能力，透過對股價走勢的預測追求超額報酬。
+                  <strong>解析：</strong
+                  >主動式管理認為市場無效率，強調擇時、選股能力，透過對股價走勢的預測追求超額報酬。
                 </p>
               </div>
               <div class="q-item">
@@ -352,7 +868,8 @@
                   <div class="opt right">D．與整體市場近似之投資組合</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>消極（被動）式投資策略認為市場有效率，透過建構與整體市場近似的投資組合，追求市場平均報酬；選時、換股、選股都屬於主動式策略。
+                  <strong>解析：</strong
+                  >消極（被動）式投資策略認為市場有效率，透過建構與整體市場近似的投資組合，追求市場平均報酬；選時、換股、選股都屬於主動式策略。
                 </p>
               </div>
               <div class="q-item">
@@ -377,7 +894,9 @@
                   所謂 Smart Beta 策略之描述，下列何者為「非」？
                 </p>
                 <div class="opts">
-                  <div class="opt right">A．透過人工智慧方式來建構的投資方式</div>
+                  <div class="opt right">
+                    A．透過人工智慧方式來建構的投資方式
+                  </div>
                   <div class="opt">B．捕獲風險溢酬或因子來獲取更高報酬</div>
                   <div class="opt">C．有時採取非市值加權方式建構投資組合</div>
                   <div class="opt">
@@ -399,7 +918,8 @@
                   <div class="opt">D．選項(A)(B)(C)皆非</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>定期定額投資法透過分批進場平均成本，可規避一次進場的擇時風險。
+                  <strong>解析：</strong
+                  >定期定額投資法透過分批進場平均成本，可規避一次進場的擇時風險。
                 </p>
               </div>
               <div class="q-item">
@@ -450,12 +970,16 @@
                 </li>
                 <li>
                   <strong>戰略性資產配置</strong
-                  >：長期策略，認為市場有效率，不需費時選股
+                  >：長期策略，認為市場<strong>有效率</strong>，不需費時選股
                 </li>
               </ul>
+              <div class="callout-line">
+                制定資產配置決策時要考量：投資目標、風險態度、時間長度、流動性
+                <span class="arrow">➜ 四個都要考量</span>
+              </div>
             </div>
             <details class="practice">
-              <summary class="practice-label">考古題（4 題）</summary>
+              <summary class="practice-label">考古題（5 題）</summary>
               <div class="q-item">
                 <p class="qno">Q19</p>
                 <p class="qtext">哪項「不」屬於選時決策？</p>
@@ -520,7 +1044,24 @@
                 </div>
                 <p class="why">
                   <strong>解析：</strong
-                  >資產配置決策考慮風險承受能力、流動性需求與投資目標；進場時機（丙）屬戰術性配置的選時決策，股價高低（丁）屬個股選股層次。本題與上題（Q21）對「是否考慮進場時機」的認定有互相矛盾之處，屬原書題庫的既有爭議題，建議直接依官方公告答案 D 記憶。
+                  >資產配置決策考慮風險承受能力、流動性需求與投資目標；進場時機（丙）屬戰術性配置的選時決策，股價高低（丁）屬個股選股層次。本題與上題（Q21）對「是否考慮進場時機」的認定有互相矛盾之處，屬原書題庫的既有爭議題，建議直接依官方公告答案
+                  D 記憶。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q42</p>
+                <p class="qtext">
+                  在制定資產配置決策時，主要考量那些因素？甲.投資目標；乙.風險態度；丙.時間長度；丁.流動性
+                </p>
+                <div class="opts">
+                  <div class="opt">A．僅甲、乙</div>
+                  <div class="opt">B．僅甲、丙</div>
+                  <div class="opt">C．僅甲、乙、丙</div>
+                  <div class="opt right">D．甲、乙、丙、丁均需考量</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >資產配置要依投資人的目標、風險承受度、投資期間與資金流動性需求來決定，四者都要考量。
                 </p>
               </div>
             </details>
@@ -554,7 +1095,7 @@
               </div>
             </div>
             <details class="practice">
-              <summary class="practice-label">考古題（2 題）</summary>
+              <summary class="practice-label">考古題（5 題）</summary>
               <div class="q-item">
                 <p class="qno">Q23</p>
                 <p class="qtext">使用反向策略可以獲得超額報酬，假設原因為：</p>
@@ -592,6 +1133,53 @@
                   <strong>解析：</strong
                   >過度自信是指投資人傾向高估自己的能力，導致過度交易，而非單純高估過去績效不願處理，B
                   敘述不精確。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q43</p>
+                <p class="qtext">
+                  位於動量生命週期（Momentum Life
+                  Cycle）晚期指標時，應採取的投資策略為：
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．反向策略</div>
+                  <div class="opt">B．動能策略</div>
+                  <div class="opt">C．出清持股</div>
+                  <div class="opt">D．持股續抱</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >動量生命週期早期採動能策略，晚期採反向策略。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q44</p>
+                <p class="qtext">買跌賣漲指的是下列何種投資策略？</p>
+                <div class="opts">
+                  <div class="opt right">A．反向投資策略</div>
+                  <div class="opt">B．動能投資策略</div>
+                  <div class="opt">C．預期投資策略</div>
+                  <div class="opt">D．效率投資策略</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >反向投資策略認為市場反應過度，所以跌多了買、漲多了賣，也就是買跌賣漲。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q45</p>
+                <p class="qtext">
+                  動能投資策略其假設投資人可以因為市場反應不足而獲得超額報酬，其策略類似於：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．買低賣高</div>
+                  <div class="opt right">B．追漲殺跌</div>
+                  <div class="opt">C．被動式管理</div>
+                  <div class="opt">D．買低賣低</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >動能策略認為市場反應不足，趨勢還會延續，所以順勢追漲殺跌。
                 </p>
               </div>
             </details>

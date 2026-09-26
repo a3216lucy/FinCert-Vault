@@ -49,7 +49,7 @@
                     <td>－1</td>
                     <td>完全負相關</td>
                     <td>
-                      兩證券組成的投資組合標準差為 0，分散效果最佳，是無風險組合
+                      兩證券組成的投資組合標準差為 <strong>0</strong>，分散效果<strong>最佳</strong>，是無風險組合
                     </td>
                   </tr>
                   <tr>
@@ -62,29 +62,40 @@
                     <td>完全正相關</td>
                     <td>
                       兩證券價格走勢一樣，持有相關係數為 1
-                      的證券沒有分散風險的效果
+                      的證券<strong>沒有</strong>分散風險的效果
                     </td>
                   </tr>
                 </table>
               </div>
               <ul>
                 <li>
-                  僅有<strong>非系統風險</strong>可靠分散降低，可利用持有多種證券、或加入相關係數較低（或負相關）的證券
+                  僅有<strong>非系統風險</strong>可靠分散降低，可利用持有多種證券、或加入相關係數<strong>較低（或負相關）</strong>的證券
                 </li>
                 <li>
-                  相關係數僅介於 1~－1 之間，只要相關係數不為
-                  1，都有分散效果，但投資組合必須找低度相關的證券，分散效果才大
+                  相關係數僅介於 1~－1 之間，只要相關係數<strong>不為 1</strong>，都有分散效果，但投資組合必須找低度相關的證券，分散效果才大
                 </li>
               </ul>
               <p class="sub-label">若投資組合證券數增加越多：</p>
               <ul>
-                <li>非系統風險：將遞減趨近於 0</li>
+                <li>非系統風險：將遞減<strong>趨近於 0</strong></li>
                 <li>系統風險：趨近於個別證券系統風險的加權平均</li>
-                <li>總風險：將趨近於系統風險，報酬率主要受市場因素影響</li>
+                <li>總風險：將趨近於<strong>系統風險</strong>，報酬率主要受市場因素影響</li>
+                <li>
+                  充分分散到只剩系統風險時，走勢就跟大盤一樣，與市場投資組合報酬率的<strong
+                    >相關係數 ＝ 1</strong
+                  >
+                </li>
               </ul>
+              <div class="callout-line">
+                共變異數 ＝ 相關係數 × σ<sub>A</sub> ×
+                σ<sub>B</sub>，所以看相關係數和看共變異數是同一件事：兩檔股票組成的投資組合能分散多少風險，取決於兩者的<strong
+                  >共變異數（相關係數）</strong
+                >
+                <span class="arrow">➜ 選項沒有相關係數時，選共變異數</span>
+              </div>
             </div>
             <details class="practice">
-              <summary class="practice-label">考古題（8 題）</summary>
+              <summary class="practice-label">考古題（13 題）</summary>
               <div class="q-item">
                 <p class="qno">Q1</p>
                 <p class="qtext">
@@ -114,7 +125,8 @@
                   <div class="opt">D．-0.5</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>相關係數為 -1（完全負相關）時分散效果最佳。
+                  <strong>解析：</strong>相關係數為
+                  -1（完全負相關）時分散效果最佳。
                 </p>
               </div>
               <div class="q-item">
@@ -129,7 +141,8 @@
                   <div class="opt">D．-1</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>相關係數為 1（完全正相關）時，投資組合的風險報酬點為一直線。
+                  <strong>解析：</strong>相關係數為
+                  1（完全正相關）時，投資組合的風險報酬點為一直線。
                 </p>
               </div>
               <div class="q-item">
@@ -145,11 +158,13 @@
                   <div class="opt right">
                     C．不可賣空下，相關係數愈大，分散的效果愈佳
                   </div>
-                  <div class="opt">D．分散的效果視組合內個別資產間的相關係數而定</div>
+                  <div class="opt">
+                    D．分散的效果視組合內個別資產間的相關係數而定
+                  </div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>相關係數愈大，分散效果愈差（相關係數為 1
-                  時完全沒有分散效果），C 敘述不正確。
+                  <strong>解析：</strong>相關係數愈大，分散效果愈差（相關係數為
+                  1 時完全沒有分散效果），C 敘述不正確。
                 </p>
               </div>
               <div class="q-item">
@@ -164,7 +179,8 @@
                   <div class="opt">D．甲、乙均不是</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>投資組合風險同時受個股間相關係數（影響分散效果）與市場系統風險影響。
+                  <strong>解析：</strong
+                  >投資組合風險同時受個股間相關係數（影響分散效果）與市場系統風險影響。
                 </p>
               </div>
               <div class="q-item">
@@ -195,7 +211,8 @@
                   <div class="opt">D．亞洲基金</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>投資範圍涵蓋全球，產業與地區分散程度最高，分散風險效果最大。
+                  <strong>解析：</strong
+                  >投資範圍涵蓋全球，產業與地區分散程度最高，分散風險效果最大。
                 </p>
               </div>
               <div class="q-item">
@@ -215,6 +232,90 @@
                   1，分散風險的效果愈差（降低）。
                 </p>
               </div>
+              <div class="q-item">
+                <p class="qno">Q26</p>
+                <p class="qtext">
+                  二股票構成的投資組合風險可分散的程度取決於組成股票之：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．變異數</div>
+                  <div class="opt">B．標準差</div>
+                  <div class="opt right">C．共變異數</div>
+                  <div class="opt">D．股價下跌機率</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >分散效果看兩股票走勢是否一致，也就是相關係數；共變異數 ＝
+                  相關係數 × 兩股標準差，因此取決於共變異數。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q27</p>
+                <p class="qtext">
+                  投資組合理論關心的是：甲.非系統性風險的消除；乙.投資分散對投資組合風險的降低；丙.在相同風險下，提高預期報酬
+                </p>
+                <div class="opts">
+                  <div class="opt">A．僅甲、乙</div>
+                  <div class="opt">B．僅甲、丙</div>
+                  <div class="opt">C．僅乙、丙</div>
+                  <div class="opt right">D．甲、乙、丙</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >投資組合理論的核心就是透過分散投資降低非系統風險，並在相同風險下追求更高報酬，三者都是。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q28</p>
+                <p class="qtext">
+                  若一投資組合的貝它（beta）係數小於
+                  0，則其與市場投資組合的相關係數為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．1</div>
+                  <div class="opt right">B．小於 0</div>
+                  <div class="opt">C．大於 0</div>
+                  <div class="opt">D．資料不足，無法判斷</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>β ＝ 相關係數 × 組合標準差 ÷
+                  市場標準差，標準差一定為正，所以 β 的正負號與相關係數相同；β
+                  ＜ 0 代表市場漲時組合跌，相關係數也小於 0。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q29</p>
+                <p class="qtext">
+                  以下哪一種證券報酬間之相關性可以最有效風險分散？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．相關性高</div>
+                  <div class="opt right">B．互為負相關</div>
+                  <div class="opt">C．互為正相關</div>
+                  <div class="opt">D．各證券間報酬無關</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >相關係數愈低分散效果愈好，互為負相關（一個漲、一個跌）效果最佳，完全負相關時可建立無風險組合。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q30</p>
+                <p class="qtext">
+                  理論上，充分分散風險之投資組合報酬率，與市場投資組合報酬率相關係數等於：
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．1</div>
+                  <div class="opt">B．0.5</div>
+                  <div class="opt">C．0</div>
+                  <div class="opt">D．－0.5</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >充分分散後只剩系統風險，走勢與大盤完全一致，等於是市場投資組合，相關係數為
+                  1。
+                </p>
+              </div>
             </details>
           </section>
 
@@ -223,54 +324,130 @@
               <h2>效率前緣線（Efficient Frontier）</h2>
             </div>
             <div class="diagram-card">
-              <svg viewBox="0 0 200 120">
-                <line x1="26" y1="14" x2="26" y2="100" stroke="var(--ink-20)" />
+              <svg viewBox="0 0 340 200">
+                <line x1="40" y1="15" x2="40" y2="175" stroke="var(--ink-40)" />
                 <line
-                  x1="26"
-                  y1="100"
-                  x2="186"
-                  y2="100"
-                  stroke="var(--ink-20)"
+                  x1="40"
+                  y1="175"
+                  x2="325"
+                  y2="175"
+                  stroke="var(--ink-40)"
+                />
+                <text
+                  x="34"
+                  y="20"
+                  font-size="11"
+                  fill="var(--ink-40)"
+                  text-anchor="end"
+                >
+                  報酬
+                </text>
+                <text
+                  x="325"
+                  y="192"
+                  font-size="11"
+                  fill="var(--ink-40)"
+                  text-anchor="end"
+                >
+                  風險
+                </text>
+                <path
+                  d="M 150 170 C 115 150 108 120 125 95"
+                  fill="none"
+                  stroke="var(--ink-40)"
+                  stroke-width="2"
+                  stroke-dasharray="4 4"
                 />
                 <path
-                  d="M 54 87 Q 80 20 174 16"
+                  d="M 125 95 C 150 55 220 38 300 32"
                   fill="none"
                   stroke="var(--jade)"
                   stroke-width="3"
                 />
-                <circle cx="174" cy="16" r="4" fill="var(--jade)" />
-                <circle cx="120" cy="33" r="4" fill="var(--jade)" />
-                <circle cx="54" cy="87" r="4" fill="var(--seal)" />
-                <text x="0" y="60" font-size="11" fill="var(--ink-40)">
-                  報酬
+                <circle cx="250" cy="36" r="4" fill="var(--jade)" />
+                <text
+                  x="250"
+                  y="26"
+                  font-size="12"
+                  fill="var(--jade)"
+                  text-anchor="middle"
+                >
+                  A
                 </text>
-                <text x="95" y="115" font-size="11" fill="var(--ink-40)">
-                  風險
+                <circle cx="140" cy="76" r="4" fill="var(--jade)" />
+                <text
+                  x="128"
+                  y="72"
+                  font-size="12"
+                  fill="var(--jade)"
+                  text-anchor="end"
+                >
+                  D
+                </text>
+                <circle cx="255" cy="80" r="4" fill="var(--seal)" />
+                <text x="265" y="84" font-size="12" fill="var(--seal)">B</text>
+                <circle cx="255" cy="120" r="4" fill="var(--seal)" />
+                <text x="265" y="124" font-size="12" fill="var(--seal)">C</text>
+                <text
+                  x="318"
+                  y="50"
+                  font-size="11"
+                  fill="var(--jade)"
+                  text-anchor="end"
+                >
+                  效率前緣
+                </text>
+                <text
+                  x="200"
+                  y="155"
+                  font-size="10"
+                  fill="var(--seal)"
+                  text-anchor="middle"
+                >
+                  右下方：無效率組合
+                </text>
+                <text x="70" y="40" font-size="10" fill="var(--ink-40)">
+                  ↖ 越往左上越好
                 </text>
               </svg>
+              <p class="cap">
+                A、D 在效率前緣上（同風險下報酬最高）；B、C 跟 A 風險差不多但報酬較低，是<strong>無效率組合</strong>
+              </p>
             </div>
             <div class="explain">
               <ul>
                 <li>
                   由 H. Markowitz 提出：以報酬為 Y 軸、風險為 X
-                  軸，找出特定風險下報酬最高（或特定報酬下風險最低）的投資組合，連成一條線
+                  軸，把「相同風險下報酬最高（或相同報酬下風險最低）」的投資組合連成一條線
                 </li>
                 <li>
-                  每當投資組合加入新證券，整條線就會往左上方移動——效率前緣線因為已經是分散風險後的最佳結果，所以<strong
+                  <strong>越往左上方越好</strong
+                  >（風險低、報酬高）：線上的點是效率投資組合，線的<strong
+                    >右下方都是無效率投資組合</strong
+                  >
+                </li>
+                <li>
+                  每當投資組合加入新證券，整條線就會往左上方移動；效率前緣線已經是分散風險後的最佳結果，所以<strong
                     >僅存在系統風險</strong
                   >
                 </li>
                 <li>
-                  投資人會選這條線上的某個點來組織投資組合，但每個人選的點不同，又稱為投資人之效用無異曲線與效率前緣線相切之處
+                  投資人會選這條線上的某個點來組織投資組合，每個人選的點不同，就是投資人之「效用無異曲線」與效率前緣線<strong>相切</strong>之處
                 </li>
               </ul>
+              <div class="callout-line">
+                例：A、B、C 三個組合風險差不多，A 報酬最高 → A
+                在效率前緣上，B、C 在它右下方，是無效率組合
+                <span class="arrow">➜ 右下方＝無效率</span>
+              </div>
             </div>
             <details class="practice">
-              <summary class="practice-label">考古題（4 題）</summary>
+              <summary class="practice-label">考古題（5 題）</summary>
               <div class="q-item">
                 <p class="qno">Q9</p>
                 <p class="qtext">
-                  所謂效率投資組合（Efficient Portfolio）是指：甲.在固定風險水準下，期望報酬率最高之投資組合
+                  所謂效率投資組合（Efficient
+                  Portfolio）是指：甲.在固定風險水準下，期望報酬率最高之投資組合
                   乙.在固定期望報酬率水準下，風險最高之投資組合
                   丙.在固定風險水準下，期望報酬率最低之投資組合
                   丁.在固定期望報酬率水準下，風險最低之投資組合
@@ -290,8 +467,7 @@
                 <p class="qno">Q13</p>
                 <p class="qtext">
                   有四種投資組合的報酬與風險如下，甲組合：(8%,
-                  7%)、乙組合：(9%,7%)、丙組合：(10%,
-                  8%)、丁組合：(11%,
+                  7%)、乙組合：(9%,7%)、丙組合：(10%, 8%)、丁組合：(11%,
                   8%)。其中括弧內第一項為期望報酬率，第二項為標準差。哪些資產組合可確定不是落在效率前緣上？
                 </p>
                 <div class="opts">
@@ -301,7 +477,8 @@
                   <div class="opt">D．甲、乙、丙組合</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>乙報酬率＞甲，但兩者標準差相同，代表甲確定不在效率前緣上；丁報酬率＞丙，但兩者標準差相同，代表丙確定不在效率前緣上，故答案為甲與丙。
+                  <strong>解析：</strong
+                  >乙報酬率＞甲，但兩者標準差相同，代表甲確定不在效率前緣上；丁報酬率＞丙，但兩者標準差相同，代表丙確定不在效率前緣上，故答案為甲與丙。
                 </p>
               </div>
               <div class="q-item">
@@ -332,7 +509,22 @@
                   <div class="opt">D．甲、乙皆非</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>每位投資人依自身風險偏好，在效率前緣上選擇效用無異曲線的相切點，因此不同投資人即使面對相同效率前緣，最適投資組合也不一定相同，甲、乙皆正確。
+                  <strong>解析：</strong
+                  >每位投資人依自身風險偏好，在效率前緣上選擇效用無異曲線的相切點，因此不同投資人即使面對相同效率前緣，最適投資組合也不一定相同，甲、乙皆正確。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q31</p>
+                <p class="qtext">何者屬於無效率之投資組合？</p>
+                <div class="opts">
+                  <div class="opt">A．位於效率前緣左上方</div>
+                  <div class="opt right">B．位於效率前緣右下方</div>
+                  <div class="opt">C．位於效率前緣上</div>
+                  <div class="opt">D．市場投資組合</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >越往左上方代表風險越低、報酬越高；效率前緣右下方的組合，同樣風險下報酬較低，屬於無效率組合。
                 </p>
               </div>
             </details>
@@ -349,59 +541,220 @@
                 >
               </div>
             </div>
+            <div class="diagram-card">
+              <svg viewBox="0 0 340 200">
+                <line x1="40" y1="15" x2="40" y2="175" stroke="var(--ink-40)" />
+                <line
+                  x1="40"
+                  y1="175"
+                  x2="325"
+                  y2="175"
+                  stroke="var(--ink-40)"
+                />
+                <text
+                  x="34"
+                  y="20"
+                  font-size="11"
+                  fill="var(--ink-40)"
+                  text-anchor="end"
+                >
+                  報酬
+                </text>
+                <text
+                  x="325"
+                  y="192"
+                  font-size="11"
+                  fill="var(--ink-40)"
+                  text-anchor="end"
+                >
+                  風險（標準差）
+                </text>
+                <path
+                  d="M 150 170 C 115 150 108 120 125 95"
+                  fill="none"
+                  stroke="var(--ink-40)"
+                  stroke-width="2"
+                  stroke-dasharray="4 4"
+                />
+                <path
+                  d="M 125 95 C 140 88 155 85 170 85 C 220 70 260 52 315 46"
+                  fill="none"
+                  stroke="var(--ink-40)"
+                  stroke-width="2"
+                />
+                <text
+                  x="318"
+                  y="60"
+                  font-size="10"
+                  fill="var(--ink-40)"
+                  text-anchor="end"
+                >
+                  效率前緣
+                </text>
+                <line
+                  x1="40"
+                  y1="135"
+                  x2="170"
+                  y2="85"
+                  stroke="var(--jade)"
+                  stroke-width="3"
+                />
+                <line
+                  x1="170"
+                  y1="85"
+                  x2="315"
+                  y2="29"
+                  stroke="var(--seal)"
+                  stroke-width="3"
+                />
+                <circle cx="40" cy="135" r="4" fill="var(--ink)" />
+                <text x="46" y="152" font-size="10" fill="var(--ink)">
+                  Rf 無風險資產
+                </text>
+                <circle cx="170" cy="85" r="5" fill="var(--gold)" />
+                <text x="178" y="102" font-size="11" fill="var(--gold)">
+                  M 市場投資組合
+                </text>
+                <text
+                  x="318"
+                  y="22"
+                  font-size="12"
+                  fill="var(--seal)"
+                  text-anchor="end"
+                >
+                  CML
+                </text>
+                <line
+                  x1="100"
+                  y1="114"
+                  x2="176"
+                  y2="132"
+                  stroke="var(--jade)"
+                  stroke-width="1"
+                  stroke-dasharray="2 2"
+                />
+                <text x="180" y="132" font-size="10" fill="var(--jade)">
+                  風險規避高：
+                </text>
+                <text x="180" y="145" font-size="10" fill="var(--jade)">
+                  部分換成無風險資產
+                </text>
+                <text
+                  x="210"
+                  y="45"
+                  font-size="10"
+                  fill="var(--seal)"
+                  text-anchor="end"
+                >
+                  風險規避低：
+                </text>
+                <text
+                  x="210"
+                  y="58"
+                  font-size="10"
+                  fill="var(--seal)"
+                  text-anchor="end"
+                >
+                  借錢加碼市場組合
+                </text>
+              </svg>
+              <p class="cap">
+                從 Rf 畫直線與效率前緣相切於 M；CML 上每一點都比效率前緣更有效率
+              </p>
+            </div>
             <div class="explain">
+              <p>效率前緣只能在風險資產之間挑選。</p>
+              <p>
+                如果再放寬兩個條件：①<strong>可以借貸</strong>來投資、②<strong>可以持有無風險資產</strong>（如國庫券），就能從無風險利率畫一條直線，與效率前緣相切，這條線就是
+                CML。
+              </p>
               <ul>
                 <li>
-                  延續效率前緣線，若可以借貸且可持有無風險資產，則可畫出一條直線，與效率前緣線相切於一點（稱
-                  F 點），此線稱為 CML
+                  相切點（F 點，有些講義稱 M
+                  點）稱為<strong>市場投資組合</strong>：資金 100%
+                  投入市場組合，沒有無風險資產、也沒有借貸，是整個市場的縮影 →
+                  報酬率＝市場報酬率、<strong>β ＝ 1</strong
+                  >、與市場報酬的<strong>相關係數 ＝ 1</strong>
                 </li>
                 <li>
                   CML
-                  代表效率前緣線上的投資組合，可因借貸或持有無風險資產的方式提高報酬或降低風險
+                  上的<strong>每一點都是效率投資組合</strong>，比效率前緣上的點更有效率，所以
+                  CML 是「效率投資組合的訂價模式」
                 </li>
                 <li>
-                  CML 與效率前緣線相切點（F
-                  點）稱為<strong>市場投資組合</strong>，此點投組報酬率等於市場報酬率，<strong
-                    >β 係數 ＝ 1</strong
+                  CML 斜率 ＝（市場報酬率 － 無風險利率）÷
+                  市場報酬率標準差，只受這三個因素影響；個別投資組合的標準差只是線上的位置，<strong
+                    >不影響斜率</strong
                   >
                 </li>
               </ul>
-              <div class="callout-line">
-                CML 是用「總風險（標準差）」衡量 <br />
-                SML 是用「系統風險（β）」衡量 <br />
-                <span class="arrow">➜ 考點注意</span>
+              <p class="sub-label">不同投資人在 CML 上怎麼選：</p>
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th>投資人</th>
+                    <th>怎麼做</th>
+                    <th>落在 CML 哪裡</th>
+                  </tr>
+                  <tr>
+                    <td><strong>風險規避程度低</strong></td>
+                    <td>
+                      向他人<strong>借入資金</strong>，連同自有資金全部買市場投資組合
+                    </td>
+                    <td>切點的右上方：風險和報酬都比市場高</td>
+                  </tr>
+                  <tr>
+                    <td><strong>風險規避程度高</strong></td>
+                    <td>
+                      把部分資金換成<strong>無風險資產</strong>，其餘買市場投資組合
+                    </td>
+                    <td>無風險資產與切點之間：風險和報酬都比市場低</td>
+                  </tr>
+                </table>
               </div>
+              <p class="sub-label">CML、SML、CAL 比較：</p>
               <div class="tbl-wrap">
                 <table>
                   <tr>
                     <th></th>
                     <th>風險指標</th>
                     <th>適用對象</th>
+                    <th>線上一定是效率組合？</th>
                   </tr>
                   <tr>
                     <td>CML</td>
-                    <td>總風險（σ）</td>
+                    <td><strong>總風險（標準差）</strong></td>
                     <td>無風險資產與市場投組形成的<strong>有效投組</strong></td>
+                    <td><strong>一定是</strong></td>
                   </tr>
                   <tr>
                     <td>SML</td>
-                    <td>系統風險（β）</td>
+                    <td><strong>系統風險（β）</strong></td>
                     <td>所有個別證券與投資組合</td>
+                    <td><strong>不一定</strong></td>
                   </tr>
                   <tr>
                     <td>CAL</td>
-                    <td>總風險（σ）</td>
+                    <td>總風險（標準差）</td>
                     <td>無風險資產與<strong>任一</strong>風險投組的組合</td>
+                    <td>不一定</td>
                   </tr>
                 </table>
               </div>
+              <div class="callout-line">
+                CML 看<strong>標準差</strong>、SML 看 <strong>β</strong>
+                <span class="arrow"
+                  >➜ 題目問「描述風險的指標分別為」，答「標準差、β 係數」</span
+                >
+              </div>
             </div>
             <details class="practice">
-              <summary class="practice-label">考古題（5 題）</summary>
+              <summary class="practice-label">考古題（10 題）</summary>
               <div class="q-item">
                 <p class="qno">Q10</p>
                 <p class="qtext">
-                  下列有關市場投資組合（Market Portfolio）理論之描述，何者不正確？
+                  下列有關市場投資組合（Market
+                  Portfolio）理論之描述，何者不正確？
                 </p>
                 <div class="opts">
                   <div class="opt">A．包含市場上所有證券</div>
@@ -410,7 +763,8 @@
                   <div class="opt">D．具有風險</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>市場投資組合是依市值比重（而非相等比重）持有市場上所有證券的投資組合，B
+                  <strong>解析：</strong
+                  >市場投資組合是依市值比重（而非相等比重）持有市場上所有證券的投資組合，B
                   敘述不正確。
                 </p>
               </div>
@@ -442,7 +796,8 @@
                   <div class="opt">D．小於 0</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>市場投資組合左下方代表同時持有無風險資產與市場投資組合，市場投資組合權重介於
+                  <strong>解析：</strong
+                  >市場投資組合左下方代表同時持有無風險資產與市場投資組合，市場投資組合權重介於
                   0～100% 之間。
                 </p>
               </div>
@@ -497,6 +852,96 @@
                   ＝ 16%。
                 </p>
               </div>
+              <div class="q-item">
+                <p class="qno">Q32</p>
+                <p class="qtext">
+                  由無風險資產報酬延伸與效率前緣相切的直線稱為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．證券市場線（SML）</div>
+                  <div class="opt right">B．資本市場線（CML）</div>
+                  <div class="opt">C．效用曲線</div>
+                  <div class="opt">D．無異曲線（Indifference Curve）</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >從無風險利率出發、與效率前緣相切的直線是資本市場線，線上的組合都是效率投資組合。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q33</p>
+                <p class="qtext">
+                  下列敘述何者最能解釋資本市場線（Capital Market Line）？
+                </p>
+                <div class="opts">
+                  <div class="opt right">
+                    A．資本市場線是效率投資組合的訂價模式
+                  </div>
+                  <div class="opt">B．資本市場線是資本資金的供給曲線</div>
+                  <div class="opt">C．資本市場線是殖利率曲線</div>
+                  <div class="opt">D．以上皆非</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>CML
+                  上的每一點都是效率投資組合，描述效率組合的預期報酬與總風險的關係，是效率投資組合的訂價模式。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q34</p>
+                <p class="qtext">
+                  何者「不是」影響資本市場線（CML）的斜率的因素？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．市場報酬率</div>
+                  <div class="opt">B．無風險利率</div>
+                  <div class="opt">C．市場報酬率標準差</div>
+                  <div class="opt right">D．投資組合報酬率標準差</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>CML 斜率 ＝（市場報酬率 －
+                  無風險利率）÷
+                  市場報酬率標準差；個別投資組合的標準差只決定它落在線上的位置，不影響斜率。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q35</p>
+                <p class="qtext">
+                  依資本市場線（CML），風險規避程度低的投資人，為使效用極大化，會採取下列何種策略？
+                </p>
+                <div class="opts">
+                  <div class="opt">
+                    A．不進行借貸行為，而將本身自有的資金全部購買市場投資組合
+                  </div>
+                  <div class="opt">
+                    B．會將資金借給他人，再將剩餘的資金全部購買市場投資組合
+                  </div>
+                  <div class="opt right">
+                    C．會向他人借入資金，再將全部的資金全部購買市場投資組合
+                  </div>
+                  <div class="opt">D．僅投資於共同基金</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >風險規避程度低的人願意承擔更多風險，會借錢加碼市場投資組合，落在切點右上方；B
+                  是風險規避程度高者的做法。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q36</p>
+                <p class="qtext">
+                  在資本市場線（CML）與證券市場線（SML）中，描述風險的指標分別為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．變異數、貝它係數</div>
+                  <div class="opt right">B．標準差、貝它係數</div>
+                  <div class="opt">C．貝它係數、變異數</div>
+                  <div class="opt">D．貝它係數、標準差</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>CML 用總風險（標準差）；SML 由 CAPM
+                  推導，只看系統風險（β 係數）。
+                </p>
+              </div>
             </details>
           </section>
 
@@ -508,31 +953,403 @@
                 無風險利率 Rf）
               </div>
             </div>
+            <div class="diagram-card">
+              <svg viewBox="0 0 340 200">
+                <line x1="40" y1="15" x2="40" y2="175" stroke="var(--ink-40)" />
+                <line
+                  x1="40"
+                  y1="175"
+                  x2="325"
+                  y2="175"
+                  stroke="var(--ink-40)"
+                />
+                <text
+                  x="34"
+                  y="20"
+                  font-size="11"
+                  fill="var(--ink-40)"
+                  text-anchor="end"
+                >
+                  預期報酬
+                </text>
+                <text
+                  x="325"
+                  y="192"
+                  font-size="11"
+                  fill="var(--ink-40)"
+                  text-anchor="end"
+                >
+                  β 係數
+                </text>
+                <line
+                  x1="40"
+                  y1="140"
+                  x2="315"
+                  y2="140"
+                  stroke="var(--ink-40)"
+                  stroke-dasharray="2 3"
+                />
+                <line
+                  x1="40"
+                  y1="140"
+                  x2="310"
+                  y2="35"
+                  stroke="var(--ink)"
+                  stroke-width="3"
+                />
+                <text
+                  x="314"
+                  y="30"
+                  font-size="12"
+                  fill="var(--ink)"
+                  text-anchor="end"
+                >
+                  SML
+                </text>
+                <text
+                  x="34"
+                  y="144"
+                  font-size="11"
+                  fill="var(--ink)"
+                  text-anchor="end"
+                >
+                  Rf
+                </text>
+                <line
+                  x1="260"
+                  y1="137"
+                  x2="260"
+                  y2="58"
+                  stroke="var(--gold)"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M 256 64 L 260 56 L 264 64"
+                  fill="none"
+                  stroke="var(--gold)"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M 256 131 L 260 139 L 264 131"
+                  fill="none"
+                  stroke="var(--gold)"
+                  stroke-width="1.5"
+                />
+                <text x="266" y="105" font-size="10" fill="var(--gold)">
+                  β(Rm－Rf)
+                </text>
+                <circle cx="150" cy="97" r="4" fill="var(--ink)" />
+                <line
+                  x1="150"
+                  y1="97"
+                  x2="150"
+                  y2="175"
+                  stroke="var(--ink-40)"
+                  stroke-dasharray="2 3"
+                />
+                <text
+                  x="150"
+                  y="188"
+                  font-size="10"
+                  fill="var(--ink-40)"
+                  text-anchor="middle"
+                >
+                  β＝1
+                </text>
+                <text x="158" y="108" font-size="10" fill="var(--ink)">
+                  市場組合＝Rm
+                </text>
+                <circle cx="110" cy="70" r="4" fill="var(--jade)" />
+                <text x="58" y="56" font-size="10" fill="var(--jade)">
+                  在上方：低估 → 買進
+                </text>
+                <circle cx="200" cy="118" r="4" fill="var(--seal)" />
+                <text
+                  x="200"
+                  y="160"
+                  font-size="10"
+                  fill="var(--seal)"
+                  text-anchor="middle"
+                >
+                  在下方：高估 → 賣出
+                </text>
+                <line
+                  x1="200"
+                  y1="123"
+                  x2="200"
+                  y2="150"
+                  stroke="var(--seal)"
+                  stroke-width="1"
+                  stroke-dasharray="2 2"
+                />
+              </svg>
+              <p class="cap">
+                截距是無風險利率
+                Rf，斜率是市場風險溢酬（Rm－Rf）；均衡時所有證券都落在 SML 上
+              </p>
+            </div>
             <div class="explain">
               <ul>
                 <li>
-                  以預期報酬率為 Y 軸、β 係數為 X 軸，CAPM 公式在此圖上畫出的線
+                  把 CAPM 公式畫成圖：Y 軸是預期報酬率、X 軸是 β 係數，截距是
+                  Rf，<strong>斜率是（Rm － Rf）＝ 市場風險溢酬</strong>
                 </li>
                 <li>
-                  斜率變陡峭：代表 Rm 變大或 Rf
-                  變小（投資人轉保守，要求較高風險溢酬）；斜率變平緩：代表投資人轉樂觀，要求較低風險溢酬
+                  SML 是從 CAPM 來的，跟效率前緣無關，所以線上的點<strong
+                    >不一定是效率投資組合</strong
+                  >
                 </li>
                 <li>
-                  SML 平行上移（截距上升）：代表 Rf
-                  變大，反映通貨膨脹；平行下移：代表 Rf 變小，反映通貨緊縮
+                  市場均衡時，<strong>所有證券都會落在 SML 上</strong
+                  >（但不一定在 CML 上）
                 </li>
               </ul>
+              <p class="sub-label">SML 的四種變動：</p>
+              <div class="diagram-card">
+                <svg viewBox="0 0 340 250">
+                  <line
+                    x1="20"
+                    y1="20"
+                    x2="20"
+                    y2="95"
+                    stroke="var(--ink-40)"
+                  />
+                  <line
+                    x1="20"
+                    y1="95"
+                    x2="155"
+                    y2="95"
+                    stroke="var(--ink-40)"
+                  />
+                  <line
+                    x1="20"
+                    y1="70"
+                    x2="150"
+                    y2="40"
+                    stroke="var(--ink-40)"
+                    stroke-width="2"
+                    stroke-dasharray="4 3"
+                  />
+                  <line
+                    x1="20"
+                    y1="70"
+                    x2="150"
+                    y2="15"
+                    stroke="var(--seal)"
+                    stroke-width="2.5"
+                  />
+                  <text
+                    x="87"
+                    y="12"
+                    font-size="11"
+                    fill="var(--seal)"
+                    text-anchor="middle"
+                  >
+                    斜率變陡
+                  </text>
+                  <text
+                    x="87"
+                    y="110"
+                    font-size="9.5"
+                    fill="var(--ink-40)"
+                    text-anchor="middle"
+                  >
+                    Rm↑ 或 Rf↓：投資人轉保守
+                  </text>
+                  <line
+                    x1="190"
+                    y1="20"
+                    x2="190"
+                    y2="95"
+                    stroke="var(--ink-40)"
+                  />
+                  <line
+                    x1="190"
+                    y1="95"
+                    x2="325"
+                    y2="95"
+                    stroke="var(--ink-40)"
+                  />
+                  <line
+                    x1="190"
+                    y1="70"
+                    x2="320"
+                    y2="40"
+                    stroke="var(--ink-40)"
+                    stroke-width="2"
+                    stroke-dasharray="4 3"
+                  />
+                  <line
+                    x1="190"
+                    y1="70"
+                    x2="320"
+                    y2="58"
+                    stroke="var(--jade)"
+                    stroke-width="2.5"
+                  />
+                  <text
+                    x="257"
+                    y="12"
+                    font-size="11"
+                    fill="var(--jade)"
+                    text-anchor="middle"
+                  >
+                    斜率變緩
+                  </text>
+                  <text
+                    x="257"
+                    y="110"
+                    font-size="9.5"
+                    fill="var(--ink-40)"
+                    text-anchor="middle"
+                  >
+                    Rm↓ 或 Rf↑：預期報酬變小
+                  </text>
+                  <line
+                    x1="20"
+                    y1="145"
+                    x2="20"
+                    y2="220"
+                    stroke="var(--ink-40)"
+                  />
+                  <line
+                    x1="20"
+                    y1="220"
+                    x2="155"
+                    y2="220"
+                    stroke="var(--ink-40)"
+                  />
+                  <line
+                    x1="20"
+                    y1="195"
+                    x2="150"
+                    y2="165"
+                    stroke="var(--ink-40)"
+                    stroke-width="2"
+                    stroke-dasharray="4 3"
+                  />
+                  <line
+                    x1="20"
+                    y1="175"
+                    x2="150"
+                    y2="145"
+                    stroke="var(--seal)"
+                    stroke-width="2.5"
+                  />
+                  <text
+                    x="87"
+                    y="137"
+                    font-size="11"
+                    fill="var(--seal)"
+                    text-anchor="middle"
+                  >
+                    平行上移
+                  </text>
+                  <text
+                    x="87"
+                    y="235"
+                    font-size="9.5"
+                    fill="var(--ink-40)"
+                    text-anchor="middle"
+                  >
+                    Rf↑（截距上升）：通貨膨脹
+                  </text>
+                  <line
+                    x1="190"
+                    y1="145"
+                    x2="190"
+                    y2="220"
+                    stroke="var(--ink-40)"
+                  />
+                  <line
+                    x1="190"
+                    y1="220"
+                    x2="325"
+                    y2="220"
+                    stroke="var(--ink-40)"
+                  />
+                  <line
+                    x1="190"
+                    y1="195"
+                    x2="320"
+                    y2="165"
+                    stroke="var(--ink-40)"
+                    stroke-width="2"
+                    stroke-dasharray="4 3"
+                  />
+                  <line
+                    x1="190"
+                    y1="210"
+                    x2="320"
+                    y2="180"
+                    stroke="var(--jade)"
+                    stroke-width="2.5"
+                  />
+                  <text
+                    x="257"
+                    y="137"
+                    font-size="11"
+                    fill="var(--jade)"
+                    text-anchor="middle"
+                  >
+                    平行下移
+                  </text>
+                  <text
+                    x="257"
+                    y="235"
+                    font-size="9.5"
+                    fill="var(--ink-40)"
+                    text-anchor="middle"
+                  >
+                    Rf↓（截距下降）：通貨緊縮
+                  </text>
+                </svg>
+                <p class="cap">
+                  虛線是原本的 SML，實線是變動後；<br />斜率看風險溢酬，平移看無風險利率
+                </p>
+              </div>
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th>變動</th>
+                    <th>公式裡變了什麼</th>
+                    <th>原因</th>
+                  </tr>
+                  <tr>
+                    <td><strong>斜率變陡</strong></td>
+                    <td>風險溢酬變大：Rm 變大或 Rf 變小</td>
+                    <td>
+                      投資人<strong>轉趨保守</strong>（更怕風險），要求更高報酬
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>斜率變緩</strong></td>
+                    <td>風險溢酬變小：<strong>Rm 變小</strong>或 Rf 變大</td>
+                    <td>市場預期報酬變小、投資人轉樂觀</td>
+                  </tr>
+                  <tr>
+                    <td><strong>平行上移</strong></td>
+                    <td>Rf 變大（截距上升），所有證券預期報酬<strong>提高</strong></td>
+                    <td>通貨膨脹</td>
+                  </tr>
+                  <tr>
+                    <td><strong>平行下移</strong></td>
+                    <td>Rf 變小（截距下降）</td>
+                    <td>通貨緊縮</td>
+                  </tr>
+                </table>
+              </div>
               <div class="callout-line">
-                證券報酬率 落在 SML <strong>上方</strong> ＝ 實際報酬率高於預期
-                ＝ 股價被低估，應【買進】 <br />
-                證券報酬率 落在 SML <strong>下方</strong> ＝
-                股價被高估，應【賣出】
-                <br />
-                <span class="arrow">➜ 考點注意</span>
+                落在 SML <strong>上方</strong>：實際報酬率高於應有報酬 →
+                股價被<strong>低估</strong> →
+                應買進；大家搶買推高價格後，報酬率會降回 SML<br />
+                落在 SML <strong>下方</strong>：股價被<strong>高估</strong> →
+                應賣出；大家賣出壓低價格後，報酬率會回升到 SML
+                <span class="arrow">➜ 上方低估買進、下方高估賣出</span>
               </div>
             </div>
             <details class="practice">
-              <summary class="practice-label">考古題（6 題）</summary>
+              <summary class="practice-label">考古題（10 題）</summary>
               <div class="q-item">
                 <p class="qno">Q12</p>
                 <p class="qtext">若某個別證券的報酬位於 SML 之上方，表示：</p>
@@ -551,10 +1368,14 @@
                 <p class="qno">Q14</p>
                 <p class="qtext">何者「不是」基本 CAPM 模型之假設或結果？</p>
                 <div class="opts">
-                  <div class="opt right">A．投資人皆同意所有股票之標準差相同</div>
+                  <div class="opt right">
+                    A．投資人皆同意所有股票之標準差相同
+                  </div>
                   <div class="opt">B．證券市場線有正的斜率</div>
                   <div class="opt">C．存在無風險利率</div>
-                  <div class="opt">D．所有投資人對相同之投資組合有相同之期望報酬</div>
+                  <div class="opt">
+                    D．所有投資人對相同之投資組合有相同之期望報酬
+                  </div>
                 </div>
                 <p class="why">
                   <strong>解析：</strong>CAPM
@@ -565,7 +1386,8 @@
               <div class="q-item">
                 <p class="qno">Q17</p>
                 <p class="qtext">
-                  在 CAPM 模式中，若其他條件不變而市場預期報酬率減少，則整條證券市場線的斜率會：
+                  在 CAPM
+                  模式中，若其他條件不變而市場預期報酬率減少，則整條證券市場線的斜率會：
                 </p>
                 <div class="opts">
                   <div class="opt">A．愈陡峭</div>
@@ -574,15 +1396,14 @@
                   <div class="opt">D．無從得知</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>市場預期報酬率（Rm）減少，風險溢酬（Rm－Rf）縮小，SML
+                  <strong>解析：</strong
+                  >市場預期報酬率（Rm）減少，風險溢酬（Rm－Rf）縮小，SML
                   斜率變平緩。
                 </p>
               </div>
               <div class="q-item">
                 <p class="qno">Q19</p>
-                <p class="qtext">
-                  描述期望報酬率與 β 值之間關係的線，稱為：
-                </p>
+                <p class="qtext">描述期望報酬率與 β 值之間關係的線，稱為：</p>
                 <div class="opts">
                   <div class="opt">A．資本市場線（Capital Market Line）</div>
                   <div class="opt">B．效率集合（Efficient Set）</div>
@@ -599,7 +1420,8 @@
               <div class="q-item">
                 <p class="qno">Q20</p>
                 <p class="qtext">
-                  在其他條件不變下，根據 CAPM，如果市場所有投資人預期通貨膨脹將會升高，則：
+                  在其他條件不變下，根據
+                  CAPM，如果市場所有投資人預期通貨膨脹將會升高，則：
                 </p>
                 <div class="opts">
                   <div class="opt">A．市場風險溢酬將會增加</div>
@@ -608,7 +1430,8 @@
                   <div class="opt right">D．所有證券之期望報酬率將會提高</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>預期通膨升高會使無風險利率（Rf）上升，SML
+                  <strong>解析：</strong
+                  >預期通膨升高會使無風險利率（Rf）上升，SML
                   平行上移（截距上升），在 β
                   與風險溢酬不變下，所有證券之期望報酬率均會提高。
                 </p>
@@ -629,6 +1452,67 @@
                 <p class="why">
                   <strong>解析：</strong>CML 用總風險（標準差）衡量，SML
                   用系統風險（β）衡量。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q37</p>
+                <p class="qtext">證券市場線（SML）的斜率應為：</p>
+                <div class="opts">
+                  <div class="opt">A．通貨膨脹溢酬</div>
+                  <div class="opt right">B．市場風險溢酬</div>
+                  <div class="opt">C．夏普指標（Sharpe Index）</div>
+                  <div class="opt">D．無風險利率</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>SML 斜率 ＝ 市場報酬率 －
+                  無風險利率，也就是市場風險溢酬；無風險利率是截距。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q38</p>
+                <p class="qtext">
+                  下列哪個因素會使證券市場線（SML）的斜率變緩？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．Ri 變大</div>
+                  <div class="opt">B．Rf 變小</div>
+                  <div class="opt right">C．Rm 變小</div>
+                  <div class="opt">D．β 變小</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>SML 斜率 ＝ Rm －
+                  Rf，要變緩代表風險溢酬變小，所以 Rm 變小或 Rf 變大。Rf
+                  變小反而讓斜率變陡。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q39</p>
+                <p class="qtext">
+                  當投資人的風險態度轉趨保守時，證券市場線將會：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．向上平移</div>
+                  <div class="opt">B．向下平移</div>
+                  <div class="opt right">C．斜率變陡</div>
+                  <div class="opt">D．斜率變緩</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >投資人轉趨保守，承擔同樣風險要求更高報酬，風險溢酬變大，斜率變陡。平移則是無風險利率（通膨、通縮）造成的。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q40</p>
+                <p class="qtext">有關一價格被高估之股票，下列敘述何者正確？</p>
+                <div class="opts">
+                  <div class="opt">A．位於證券市場線（SML）</div>
+                  <div class="opt right">B．位於 SML 下方</div>
+                  <div class="opt">C．位於 SML 上方</div>
+                  <div class="opt">D．報酬等於無風險利率</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>價格被高估，代表目前的報酬率不到依 CAPM
+                  算出的必要報酬率，所以落在 SML 下方，應賣出。
                 </p>
               </div>
             </details>
@@ -658,8 +1542,8 @@
               <div class="q-item">
                 <p class="qno">Q23</p>
                 <p class="qtext">
-                  已知一最適風險投資組合（optimal risky portfolio）的預期報酬率為
-                  6.5%、標準差為 23%、無風險利率為
+                  已知一最適風險投資組合（optimal risky
+                  portfolio）的預期報酬率為 6.5%、標準差為 23%、無風險利率為
                   3.5%。請問：最佳可行的資本配置線（CAL）的斜率為多少？
                 </p>
                 <div class="opts">

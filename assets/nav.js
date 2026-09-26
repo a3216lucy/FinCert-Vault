@@ -153,10 +153,135 @@
       brand.appendChild(collapseBtn);
     }
 
+    var nav = mount.querySelector("nav");
+
+    // ---- 全站搜尋（固定在頁面最上方的 header，跟側邊欄收合與否無關） ----
+    var siteHeader = document.createElement("div");
+    siteHeader.className = "site-header";
+    var searchWrap = document.createElement("div");
+    searchWrap.className = "site-search";
+    searchWrap.innerHTML =
+      '<input type="text" class="site-search-input" placeholder="搜尋全站內容…" autocomplete="off" />' +
+      '<div class="site-search-results" hidden></div>';
+    siteHeader.appendChild(searchWrap);
+    document.body.insertBefore(siteHeader, document.body.firstChild);
+
+    var searchInput = searchWrap.querySelector(".site-search-input");
+    var searchResults = searchWrap.querySelector(".site-search-results");
+    var searchIndex = null;
+    var searchIndexPromise = null;
+
+    function loadSearchIndex() {
+      if (!searchIndexPromise) {
+        searchIndexPromise = fetch("/assets/search-index.json")
+          .then(function (r) {
+            return r.json();
+          })
+          .then(function (data) {
+            searchIndex = data;
+            return data;
+          })
+          .catch(function () {
+            searchIndex = [];
+            return [];
+          });
+      }
+      return searchIndexPromise;
+    }
+
+    function escapeHtml(s) {
+      return s.replace(/[&<>"']/g, function (c) {
+        return (
+          { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[
+            c
+          ] || c
+        );
+      });
+    }
+
+    function renderResults(query) {
+      if (!query) {
+        searchResults.innerHTML = "";
+        searchResults.hidden = true;
+        return;
+      }
+      var q = query.toLowerCase();
+      var scored = [];
+      (searchIndex || []).forEach(function (item) {
+        var h = item.heading.toLowerCase();
+        var s = item.snippet.toLowerCase();
+        var p = item.page.toLowerCase();
+        var score = -1;
+        if (h.indexOf(q) !== -1) score = 2;
+        else if (p.indexOf(q) !== -1) score = 1;
+        else if (s.indexOf(q) !== -1) score = 0;
+        if (score >= 0) scored.push({ item: item, score: score });
+      });
+      scored.sort(function (a, b) {
+        return b.score - a.score;
+      });
+      var top = scored.slice(0, 8);
+      if (!top.length) {
+        searchResults.innerHTML =
+          '<div class="site-search-empty">找不到符合的內容</div>';
+        searchResults.hidden = false;
+        return;
+      }
+      searchResults.innerHTML = top
+        .map(function (r) {
+          var item = r.item;
+          var href =
+            item.url + "#:~:text=" + encodeURIComponent(item.heading);
+          return (
+            '<a class="site-search-item" href="' +
+            href +
+            '">' +
+            '<span class="site-search-heading">' +
+            escapeHtml(item.heading) +
+            "</span>" +
+            '<span class="site-search-page">' +
+            escapeHtml(item.page) +
+            "</span>" +
+            '<span class="site-search-snippet">' +
+            escapeHtml(item.snippet.slice(0, 70)) +
+            "…</span>" +
+            "</a>"
+          );
+        })
+        .join("");
+      searchResults.hidden = false;
+    }
+
+    searchInput.addEventListener("focus", loadSearchIndex);
+    searchInput.addEventListener("input", function () {
+      var query = searchInput.value.trim();
+      if (!query) {
+        renderResults("");
+        return;
+      }
+      loadSearchIndex().then(function () {
+        renderResults(query);
+      });
+    });
+    searchInput.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        searchInput.value = "";
+        renderResults("");
+        searchInput.blur();
+      }
+    });
+    document.addEventListener("click", function (e) {
+      if (!searchWrap.contains(e.target)) {
+        searchResults.hidden = true;
+      }
+    });
+    searchInput.addEventListener("focus", function () {
+      if (searchInput.value.trim()) searchResults.hidden = false;
+    });
+
     var themeToggle = document.createElement("button");
     themeToggle.type = "button";
     themeToggle.className = "theme-toggle";
-    var nav = mount.querySelector("nav");
     if (nav) mount.insertBefore(themeToggle, nav);
 
     function updateThemeToggle() {
@@ -227,7 +352,12 @@
     document.addEventListener("click", function (e) {
       if (!isDesktop()) return;
       if (shell && shell.classList.contains("desktop-collapsed")) return;
-      if (mount.contains(e.target) || toggle.contains(e.target)) return;
+      if (
+        mount.contains(e.target) ||
+        toggle.contains(e.target) ||
+        siteHeader.contains(e.target)
+      )
+        return;
       collapseDesktop(true);
     });
   }

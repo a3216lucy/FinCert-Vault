@@ -35,8 +35,8 @@
               KD、RSI、DMI、WMS%R 都<strong>有鈍化現象</strong>，只有 BIAS 沒有
             </li>
             <li>
-              ADL／PSY／OBV 是<strong>累積</strong>算法，ADR／VR
-              是<strong>當下比值</strong>算法
+              ADL／OBV 是<strong>累積</strong>算法（每天加上前一天的值），ADR／VR／PSY
+              是<strong>當下比值</strong>算法（只看最近 N 天）
             </li>
           </ul>
         </div>
@@ -46,60 +46,6 @@
 
           <section class="unit">
             <div class="unit-head"><h2>均線、道氏理論與波浪理論</h2></div>
-            <div class="diagram-card">
-              <svg viewBox="0 0 300 125">
-                <text x="10" y="10" font-size="9" fill="var(--jade)">
-                  ─ 短期均線
-                </text>
-                <text x="70" y="10" font-size="9" fill="var(--ink-40)">
-                  ─ 長期均線
-                </text>
-                <polyline
-                  points="10,60 130,45"
-                  fill="none"
-                  stroke="var(--ink-40)"
-                  stroke-width="2"
-                />
-                <polyline
-                  points="10,95 50,80 80,55 130,15"
-                  fill="none"
-                  stroke="var(--jade)"
-                  stroke-width="2"
-                />
-                <circle cx="78" cy="53" r="3.5" fill="var(--jade)" />
-                <text
-                  x="70"
-                  y="118"
-                  font-size="11"
-                  fill="var(--jade)"
-                  text-anchor="middle"
-                >
-                  黃金交叉（多頭）
-                </text>
-                <polyline
-                  points="170,45 290,60"
-                  fill="none"
-                  stroke="var(--ink-40)"
-                  stroke-width="2"
-                />
-                <polyline
-                  points="170,15 220,40 260,65 290,95"
-                  fill="none"
-                  stroke="var(--seal)"
-                  stroke-width="2"
-                />
-                <circle cx="235" cy="48" r="3.5" fill="var(--seal)" />
-                <text
-                  x="230"
-                  y="118"
-                  font-size="11"
-                  fill="var(--seal)"
-                  text-anchor="middle"
-                >
-                  死亡交叉（空頭）
-                </text>
-              </svg>
-            </div>
             <div class="explain">
               <p class="sub-label">解題技巧：</p>
               <div class="tbl-wrap">
@@ -126,49 +72,54 @@
                   </tr>
                 </table>
               </div>
+              <p class="sub-label">技術分析的基本假設：</p>
               <ul>
                 <li>
-                  技術分析假設：股價由供需雙方決定、歷史會重演、股價具有主要與次要趨勢，因此可依線圖預測未來走勢
+                  技術分析假設：股價由<strong>供需</strong>雙方決定、<strong>歷史會重演</strong>、股價具有主要與次要<strong>趨勢</strong>，因此可依線圖預測未來走勢
                 </li>
                 <li>
                   若股價報酬率為<strong>隨機漫步</strong>，技術分析就沒有意義
+                  <ul>
+                    <li>
+                      <strong>隨機漫步</strong>：股價的變動是隨機的，今天漲跌跟過去無關，無法用過去的價格預測未來（像擲硬幣，連續出現正面不代表下一次會是反面）
+                    </li>
+                    <li>
+                      為什麼技術分析沒有意義：技術分析靠歷史價格找規律 →
+                      股價若隨機漫步，歷史沒有規律可循 → 技術分析<strong>無效</strong>
+                    </li>
+                    <li>
+                      股價呈隨機漫步，代表市場至少達到<strong>弱式效率</strong>（見第 8
+                      章效率市場）
+                    </li>
+                  </ul>
                 </li>
+              </ul>
+              <p class="sub-label">移動平均線：</p>
+              <ul>
                 <li>
                   <strong>移動平均線</strong
                   >：代表投資人的平均成本，有趨勢、助漲助跌、穩定、<strong>落後</strong>四種特性
                 </li>
                 <li>
+                  <strong>移動平均怎麼算</strong>：N 日移動平均＝最近 N
+                  天收盤價加總 ÷ N，每過一天就「加入今天、剔除最舊的一天」
+                  <ul>
+                    <li>新加入的價格 ＞ 剔除的價格 → 均線<strong>上升</strong></li>
+                    <li>新加入的價格 ＜ 剔除的價格 → 均線<strong>下降</strong></li>
+                    <li>
+                      新加入的價格 ＝ 剔除的價格 → 均線<strong>不變</strong>（例：過去 5 天為
+                      403、401、402、400、399，今天 403，剔除第一天的
+                      403、加入今天的 403，5 日均線不變）
+                    </li>
+                  </ul>
+                </li>
+                <li>
                   <strong>黃金交叉</strong
-                  >：短期均線由下往上穿越長期均線，代表多頭、即將上漲
+                  >：短期均線由下往上穿越長期均線，代表<strong>多頭</strong>、即將上漲
                 </li>
                 <li>
                   <strong>死亡交叉</strong
-                  >：短期均線由上往下穿越長期均線，且兩線皆下滑，代表空頭、即將下跌
-                </li>
-                <li>
-                  <strong>道氏理論</strong
-                  >：利用指數判斷長期趨勢，但無法指出趨勢持續時間、也不能告訴投資人該買什麼股票
-                </li>
-                <li>
-                  股市有三種波動：
-                  <ul>
-                    <li>基本波動（長期）</li>
-                    <li>次級波動（約 3 個月，即一般所稱的盤整）</li>
-                    <li>
-                      日常波動（約 3 週內，由當天消息造成，不作為研判依據）
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <strong>艾略特波浪理論</strong>：
-                  <ul>
-                    <li>
-                      完整多頭走勢有 <strong>5 個上升波</strong>＋<strong
-                        >3 個下降修正波（a、b、c）</strong
-                      >
-                    </li>
-                    <li>強勢回檔比率 0.382、強勢反彈比率 0.618</li>
-                  </ul>
+                  >：短期均線由上往下穿越長期均線，且兩線皆下滑，代表<strong>空頭</strong>、即將下跌
                 </li>
                 <li>
                   <strong>葛蘭碧八大法則</strong
@@ -176,6 +127,125 @@
                   4 種買訊與 4
                   種賣訊，大部分可藉由「股價與均線的位置＋乖離方向」描述判斷是哪種訊號
                 </li>
+              </ul>
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th>國內常用均線</th>
+                    <th>週期</th>
+                    <th>俗稱</th>
+                  </tr>
+                  <tr>
+                    <td>短期</td>
+                    <td>5 日、20 日</td>
+                    <td>週線、月線</td>
+                  </tr>
+                  <tr>
+                    <td>中期</td>
+                    <td><strong>13 週</strong></td>
+                    <td>季線</td>
+                  </tr>
+                  <tr>
+                    <td>長期</td>
+                    <td><strong>52 週</strong></td>
+                    <td>年線（常被視為多空分界）</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="diagram-card">
+                <svg viewBox="0 0 300 125">
+                  <text x="10" y="10" font-size="9" fill="var(--jade)">
+                    ─ 短期均線
+                  </text>
+                  <text x="70" y="10" font-size="9" fill="var(--ink-40)">
+                    ─ 長期均線
+                  </text>
+                  <polyline
+                    points="10,60 130,45"
+                    fill="none"
+                    stroke="var(--ink-40)"
+                    stroke-width="2"
+                  />
+                  <polyline
+                    points="10,95 50,80 80,55 130,15"
+                    fill="none"
+                    stroke="var(--jade)"
+                    stroke-width="2"
+                  />
+                  <circle cx="78" cy="53" r="3.5" fill="var(--jade)" />
+                  <text
+                    x="70"
+                    y="118"
+                    font-size="11"
+                    fill="var(--jade)"
+                    text-anchor="middle"
+                  >
+                    黃金交叉（多頭）
+                  </text>
+                  <polyline
+                    points="170,45 290,60"
+                    fill="none"
+                    stroke="var(--ink-40)"
+                    stroke-width="2"
+                  />
+                  <polyline
+                    points="170,15 220,40 260,65 290,95"
+                    fill="none"
+                    stroke="var(--seal)"
+                    stroke-width="2"
+                  />
+                  <circle cx="235" cy="48" r="3.5" fill="var(--seal)" />
+                  <text
+                    x="230"
+                    y="118"
+                    font-size="11"
+                    fill="var(--seal)"
+                    text-anchor="middle"
+                  >
+                    死亡交叉（空頭）
+                  </text>
+                </svg>
+              </div>
+              <p class="sub-label">道氏理論：</p>
+              <ul>
+                <li>
+                  <strong>道氏理論</strong
+                  >：利用指數判斷長期趨勢，但<strong>無法</strong>指出趨勢持續時間、也不能告訴投資人該買什麼股票
+                </li>
+              </ul>
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th>股市三種波動</th>
+                    <th>期間</th>
+                    <th>說明</th>
+                  </tr>
+                  <tr>
+                    <td>基本波動</td>
+                    <td>長期</td>
+                    <td>主要趨勢</td>
+                  </tr>
+                  <tr>
+                    <td>次級波動</td>
+                    <td>約 3 個月</td>
+                    <td>即一般所稱的盤整</td>
+                  </tr>
+                  <tr>
+                    <td>日常波動</td>
+                    <td>約 3 週內</td>
+                    <td>由當天消息造成，不作為研判依據</td>
+                  </tr>
+                </table>
+              </div>
+              <p class="sub-label">艾略特波浪理論：</p>
+              <ul>
+                <li>
+                  完整多頭走勢有 <strong>5 個上升波</strong>＋<strong
+                    >3 個下降修正波（a、b、c）</strong
+                  >
+                </li>
+                <li>其中<strong>第 3 波</strong>通常漲幅最大</li>
+                <li>強勢回檔比率 <strong>0.382</strong>、強勢反彈比率 <strong>0.618</strong></li>
               </ul>
               <div class="diagram-card">
                 <svg viewBox="0 0 320 125">
@@ -192,9 +262,7 @@
                     stroke-width="2"
                     stroke-dasharray="4,3"
                   />
-                  <text x="40" y="62" font-size="10" fill="var(--jade)">
-                    1
-                  </text>
+                  <text x="40" y="62" font-size="10" fill="var(--jade)">1</text>
                   <text x="60" y="100" font-size="10" fill="var(--jade)">
                     2
                   </text>
@@ -243,7 +311,7 @@
               </div>
             </div>
             <details class="practice">
-              <summary class="practice-label">考古題（31 題）</summary>
+              <summary class="practice-label">考古題（42 題）</summary>
               <div class="q-item">
                 <p class="qno">Q1</p>
                 <p class="qtext">下列何者「不是」技術分析假設？</p>
@@ -289,26 +357,30 @@
                 <p class="qtext">對技術分析的敘述，何者「不正確」？</p>
                 <div class="opts">
                   <div class="opt">A．價格的變化會有趨勢產生</div>
-                  <div class="opt">B．技術分析的重心在於預測股票價格的變化趨勢</div>
+                  <div class="opt">
+                    B．技術分析的重心在於預測股票價格的變化趨勢
+                  </div>
                   <div class="opt">C．未來的價格水準並非研究重心</div>
                   <div class="opt right">D．股價變化的趨勢無時間性</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>技術分析認為股價趨勢有時間性（主要與次要趨勢），D 敘述不正確。
+                  <strong>解析：</strong
+                  >技術分析認為股價趨勢有時間性（主要與次要趨勢），D
+                  敘述不正確。
                 </p>
               </div>
               <div class="q-item">
                 <p class="qno">Q4</p>
                 <p class="qtext">有關移動平均線之敘述，何者「不正確」？</p>
                 <div class="opts">
-                  <div class="opt right">
-                    A．分析成交價及成交量判斷買賣時機
-                  </div>
+                  <div class="opt right">A．分析成交價及成交量判斷買賣時機</div>
                   <div class="opt">B．是利用統計學上移動平均的原理</div>
                   <div class="opt">
                     C．可利用移動平均線之間的轉折點及交叉現象，研判大盤指數走勢
                   </div>
-                  <div class="opt">D．移動平均線代表不同期間投資人之持股平均成本</div>
+                  <div class="opt">
+                    D．移動平均線代表不同期間投資人之持股平均成本
+                  </div>
                 </div>
                 <p class="why">
                   <strong>解析：</strong
@@ -317,7 +389,9 @@
               </div>
               <div class="q-item">
                 <p class="qno">Q5</p>
-                <p class="qtext">下列有關移動平均線（MA）的敘述，何者不正確？</p>
+                <p class="qtext">
+                  下列有關移動平均線（MA）的敘述，何者不正確？
+                </p>
                 <div class="opts">
                   <div class="opt">A．年線代表多空頭分界點</div>
                   <div class="opt">
@@ -326,16 +400,21 @@
                   <div class="opt right">
                     C．短期平均線由下往上突破長期平均線，為賣出時機
                   </div>
-                  <div class="opt">D．N 日移動平均線為 N 日收盤價加總之和除以 N</div>
+                  <div class="opt">
+                    D．N 日移動平均線為 N 日收盤價加總之和除以 N
+                  </div>
                 </div>
                 <p class="why">
                   <strong>解析：</strong
-                  >短期均線由下往上突破長期均線為黃金交叉，是<strong>買進</strong>訊號，C 敘述不正確。
+                  >短期均線由下往上突破長期均線為黃金交叉，是<strong>買進</strong>訊號，C
+                  敘述不正確。
                 </p>
               </div>
               <div class="q-item">
                 <p class="qno">Q6</p>
-                <p class="qtext">根據移動平均線的葛蘭碧八大法則，下列何者是賣訊？</p>
+                <p class="qtext">
+                  根據移動平均線的葛蘭碧八大法則，下列何者是賣訊？
+                </p>
                 <div class="opts">
                   <div class="opt">
                     A．股價趨勢低於移動平均線卻突然暴跌，離移動平均線很遠，極有可能再趨向移動平均線
@@ -351,8 +430,9 @@
                   </div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong
-                  >八大法則有 4 種買訊與 4 種賣訊，大部分可藉由描述判斷是哪種訊號；C 描述股價在均線下方反彈無力再度下跌，屬賣訊。
+                  <strong>解析：</strong>八大法則有 4 種買訊與 4
+                  種賣訊，大部分可藉由描述判斷是哪種訊號；C
+                  描述股價在均線下方反彈無力再度下跌，屬賣訊。
                 </p>
               </div>
               <div class="q-item">
@@ -373,12 +453,15 @@
                   </div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>股價過度偏離均線後有向均線靠攏的傾向，A 描述漲多後可能拉回，屬賣訊。
+                  <strong>解析：</strong>股價過度偏離均線後有向均線靠攏的傾向，A
+                  描述漲多後可能拉回，屬賣訊。
                 </p>
               </div>
               <div class="q-item">
                 <p class="qno">Q8</p>
-                <p class="qtext">投資者預期某公司股票「黃金交叉」出現時，可採以下何項策略？</p>
+                <p class="qtext">
+                  投資者預期某公司股票「黃金交叉」出現時，可採以下何項策略？
+                </p>
                 <div class="opts">
                   <div class="opt right">A．買進股票</div>
                   <div class="opt">B．借券賣空</div>
@@ -386,7 +469,8 @@
                   <div class="opt">D．賣出持有股票</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>黃金交叉代表多頭訊號、即將上漲，應買進股票。
+                  <strong>解析：</strong
+                  >黃金交叉代表多頭訊號、即將上漲，應買進股票。
                 </p>
               </div>
               <div class="q-item">
@@ -424,7 +508,9 @@
               </div>
               <div class="q-item">
                 <p class="qno">Q11</p>
-                <p class="qtext">道氏理論中，告訴投資人主要的市場趨勢方向，是以下列何者來表達？</p>
+                <p class="qtext">
+                  道氏理論中，告訴投資人主要的市場趨勢方向，是以下列何者來表達？
+                </p>
                 <div class="opts">
                   <div class="opt">A．成交量</div>
                   <div class="opt">B．價格</div>
@@ -432,7 +518,8 @@
                   <div class="opt right">D．指數</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>道氏理論利用指數（大盤指數）做長期趨勢判斷。
+                  <strong>解析：</strong
+                  >道氏理論利用指數（大盤指數）做長期趨勢判斷。
                 </p>
               </div>
               <div class="q-item">
@@ -451,8 +538,8 @@
                   </div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong
-                  >技術指標鈍化是 KD、RSI 等指標的問題，不是道氏理論本身的缺點，A 不是道氏理論的缺點。
+                  <strong>解析：</strong>技術指標鈍化是 KD、RSI
+                  等指標的問題，不是道氏理論本身的缺點，A 不是道氏理論的缺點。
                 </p>
               </div>
               <div class="q-item">
@@ -467,7 +554,8 @@
                   <div class="opt right">D．應購買何種股票</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>道氏理論只能判斷市場趨勢方向，不能告訴投資人該買什麼股票。
+                  <strong>解析：</strong
+                  >道氏理論只能判斷市場趨勢方向，不能告訴投資人該買什麼股票。
                 </p>
               </div>
               <div class="q-item">
@@ -499,7 +587,8 @@
                   <div class="opt">D．低點跌破前次低點</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>次級波動為長約三個月之中短期波動，屬於基本波動的修正波。
+                  <strong>解析：</strong
+                  >次級波動為長約三個月之中短期波動，屬於基本波動的修正波。
                 </p>
               </div>
               <div class="q-item">
@@ -510,16 +599,21 @@
                 <div class="opts">
                   <div class="opt">A．5 個向上的漲升波與 2 個向下的修正波</div>
                   <div class="opt">B．5 個向上的漲升波與 4 個向下的修正波</div>
-                  <div class="opt right">C．5 個向上的漲升波與 3 個向下的修正波</div>
+                  <div class="opt right">
+                    C．5 個向上的漲升波與 3 個向下的修正波
+                  </div>
                   <div class="opt">D．3 個向上的漲升波與 5 個向下的修正波</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>完整多頭走勢有 5 個上升波（1-5）＋ 3 個下降修正波（a、b、c）。
+                  <strong>解析：</strong>完整多頭走勢有 5 個上升波（1-5）＋ 3
+                  個下降修正波（a、b、c）。
                 </p>
               </div>
               <div class="q-item">
                 <p class="qno">Q17</p>
-                <p class="qtext">何者「不是」艾略特（Elliott）波浪理論的專有基本原理？</p>
+                <p class="qtext">
+                  何者「不是」艾略特（Elliott）波浪理論的專有基本原理？
+                </p>
                 <div class="opts">
                   <div class="opt">A．波浪的結構型態</div>
                   <div class="opt">B．完成一個波浪的時間</div>
@@ -533,7 +627,9 @@
               </div>
               <div class="q-item">
                 <p class="qno">Q18</p>
-                <p class="qtext">股價由 90 元下跌至 60 元，其強勢反彈滿足點的位置約為：</p>
+                <p class="qtext">
+                  股價由 90 元下跌至 60 元，其強勢反彈滿足點的位置約為：
+                </p>
                 <div class="opts">
                   <div class="opt">A．60 元附近</div>
                   <div class="opt">B．70 元附近</div>
@@ -577,13 +673,16 @@
                 <p class="qno">Q21</p>
                 <p class="qtext">出現上升三角形型態所代表的股價走勢為何？</p>
                 <div class="opts">
-                  <div class="opt right">A．是股價上升過程中出現盤整的繼續型態</div>
+                  <div class="opt right">
+                    A．是股價上升過程中出現盤整的繼續型態
+                  </div>
                   <div class="opt">B．是股價上升過程中準備反轉向下的型態</div>
                   <div class="opt">C．是股價上升過程中出現股價暴漲型態</div>
                   <div class="opt">D．是股價出現橫向盤整的型態</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>上升楔型（上升三角形）是股價上升過程中出現盤整的繼續型態。
+                  <strong>解析：</strong
+                  >上升三角形是股價上升過程中出現盤整的繼續型態，通常向上突破。注意上升三角形與上升楔形不同，上升楔形整理完成後通常下跌。
                 </p>
               </div>
               <div class="q-item">
@@ -596,7 +695,8 @@
                   <div class="opt">D．不一定</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>上升三角形屬於上升過程中的繼續型態，整理完成後通常延續原趨勢續漲。
+                  <strong>解析：</strong
+                  >上升三角形屬於上升過程中的繼續型態，整理完成後通常延續原趨勢續漲。
                 </p>
               </div>
               <div class="q-item">
@@ -625,7 +725,8 @@
                   <div class="opt">D．價穩量縮</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>W 底（雙重底）代表即將上漲，為買進訊號。
+                  <strong>解析：</strong>W
+                  底（雙重底）代表即將上漲，為買進訊號。
                 </p>
               </div>
               <div class="q-item">
@@ -673,8 +774,8 @@
                   <div class="opt right">D．60 元</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>頭部到頸線差距為
-                  20，所以頸線(80)再往下 20 即為低點滿足區，80－20＝60。
+                  <strong>解析：</strong>頭部到頸線差距為 20，所以頸線(80)再往下
+                  20 即為低點滿足區，80－20＝60。
                 </p>
               </div>
               <div class="q-item">
@@ -688,7 +789,8 @@
                 </div>
                 <p class="why">
                   <strong>解析：</strong
-                  >開盤價低於收盤價（收盤價較高）為陽線（白色實體），C 敘述不正確。
+                  >開盤價低於收盤價（收盤價較高）為陽線（白色實體），C
+                  敘述不正確。
                 </p>
               </div>
               <div class="q-item">
@@ -737,6 +839,173 @@
                   >長上影線代表價格上不去，可能不是好買點。
                 </p>
               </div>
+              <div class="q-item">
+                <p class="qno">Q82</p>
+                <p class="qtext">
+                  若過去 5 天 H 公司股票的收盤價分別為
+                  403、401、402、400、399，若今天其收盤價為 403，請問其 5
+                  天移動平均價格的變化會如何？
+                </p>
+                <div class="opts">
+                  <div class="opt">A．上升</div>
+                  <div class="opt right">B．不變</div>
+                  <div class="opt">C．下降</div>
+                  <div class="opt">D．無法計算</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>今天是第六天，要剔除第一天的
+                  403，剛好今天新加入的也是 403，所以移動平均價格不變。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q83</p>
+                <p class="qtext">
+                  當股價向下跌破箱形（Rectangle）整理的區間時，成交量配合放大，則股價通常會：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．繼續上漲</div>
+                  <div class="opt">B．回檔整理重回箱形</div>
+                  <div class="opt right">C．繼續下跌</div>
+                  <div class="opt">D．方向不定</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >向下跌破箱形且成交量放大，代表賣壓確認，股價通常繼續下跌。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q84</p>
+                <p class="qtext">
+                  在漲升格局中待下降楔形整理完畢後，股價將會：
+                </p>
+                <div class="opts">
+                  <div class="opt right">A．上漲</div>
+                  <div class="opt">B．下跌</div>
+                  <div class="opt">C．繼續整理</div>
+                  <div class="opt">D．不一定</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >楔形整理完成後往傾斜的反方向走，下降楔形整理完畢後通常上漲。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q85</p>
+                <p class="qtext">國內股市通常以何者為中期平均線？</p>
+                <div class="opts">
+                  <div class="opt">A．24 日平均線</div>
+                  <div class="opt right">B．13 週平均線</div>
+                  <div class="opt">C．52 週平均線</div>
+                  <div class="opt">D．24 月平均線</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>國內股市中期均線為 13
+                  週（約一季），長期均線為 52 週（一年）。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q86</p>
+                <p class="qtext">國內股市通常以何者為長期平均線？</p>
+                <div class="opts">
+                  <div class="opt">A．72 日平均線</div>
+                  <div class="opt">B．13 週平均線</div>
+                  <div class="opt right">C．52 週平均線</div>
+                  <div class="opt">D．12 日平均線</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>長期均線為 52 週（一年，年線）。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q87</p>
+                <p class="qtext">
+                  下降楔形（Falling Wedge）通常被視為連續型態（Continuation
+                  Pattern），但有時也可能成為：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．頭部反轉型態</div>
+                  <div class="opt right">B．底部反轉型態</div>
+                  <div class="opt">C．繼續整理型態</div>
+                  <div class="opt">D．間斷整理型態</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >下降楔形整理完成後往上走，所以有時會成為底部反轉型態。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q88</p>
+                <p class="qtext">
+                  當連續型態（Continuation Pattern）的上升楔形（Rising
+                  Wedge）整理完成後，股價通常會：
+                </p>
+                <div class="opts">
+                  <div class="opt">A．上漲</div>
+                  <div class="opt right">B．下跌</div>
+                  <div class="opt">C．橫向整理</div>
+                  <div class="opt">D．方向不定</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >上升楔形整理完成後，股價通常會跌破支撐往下跌。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q89</p>
+                <p class="qtext">
+                  哪些型態屬於反轉型態？A.雙重底；B.頭肩頂；C.菱形；D.箱型；E.楔型
+                </p>
+                <div class="opts">
+                  <div class="opt">A．A、B、C、D</div>
+                  <div class="opt right">B．僅 A、B、C</div>
+                  <div class="opt">C．僅 A、B、E</div>
+                  <div class="opt">D．僅 B、D、E</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >雙重底、頭肩頂、菱形屬於反轉型態，箱型與楔型屬於連續型態。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q90</p>
+                <p class="qtext">何者「不」屬於連續型態？</p>
+                <div class="opts">
+                  <div class="opt">A．三角形</div>
+                  <div class="opt">B．箱型</div>
+                  <div class="opt">C．旗型</div>
+                  <div class="opt right">D．碟型</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong
+                  >碟型（圓形底）屬於反轉型態，三角形、箱型、旗型都是連續型態。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q95</p>
+                <p class="qtext">就技術分析而言，壓力水準（Resistance Level）的位置通常表示：</p>
+                <div class="opts">
+                  <div class="opt">A．買氣大於賣壓</div>
+                  <div class="opt right">B．賣壓大於買氣</div>
+                  <div class="opt">C．買賣雙方勢均力敵</div>
+                  <div class="opt">D．不可能被突破</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>壓力是股價漲到某價位附近時，賣壓大於買氣，所以漲不上去，像天花板。D 錯在「不可能」：壓力只是不容易突破，賣壓被消化完後仍然可能突破。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q96</p>
+                <p class="qtext">就技術分析而言，支撐水準（Support Level）的位置通常表示：</p>
+                <div class="opts">
+                  <div class="opt right">A．買氣大於賣壓</div>
+                  <div class="opt">B．賣壓大於買氣</div>
+                  <div class="opt">C．買賣雙方勢均力敵</div>
+                  <div class="opt">D．股價將反轉下跌</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>支撐是股價跌到某價位附近時，買氣大於賣壓，所以跌不下去，像地板。D 說反了：支撐代表跌勢可能止住，而不是反轉下跌。
+                </p>
+              </div>
             </details>
           </section>
 
@@ -745,21 +1014,288 @@
             <div class="explain">
               <p class="sub-label">缺口型態（線圖上沒有成交的區間）：</p>
               <ul>
-                <li><strong>突破缺口</strong>：表示型態已經完成，以跳空方式表示趨勢方向</li>
-                <li><strong>逃逸缺口</strong>：通常出現在行情的中間位置</li>
-                <li><strong>竭盡缺口</strong>：出現在行情末端</li>
-                <li><strong>普通缺口</strong>：整理型態中常發生</li>
+                <li>
+                  <strong>缺口怎麼形成</strong
+                  >：股價「跳空」開出，和前一天的價格區間沒有重疊
+                  <ul>
+                    <li>向上跳空：今天最低價 ＞ 昨天最高價（買方急著追價）</li>
+                    <li>向下跳空：今天最高價 ＜ 昨天最低價（賣方急著出場）</li>
+                    <li>
+                      <strong>回補</strong
+                      >：之後股價回到缺口區間成交，把空白填滿
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  看懂缺口的關鍵：一段行情依序是「盤整 → 突破 → 加速 →
+                  力竭」，四種缺口剛好對應這四個階段
+                </li>
               </ul>
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th>缺口</th>
+                    <th>出現位置</th>
+                    <th>代表意義</th>
+                    <th>成交量</th>
+                    <th>回補</th>
+                  </tr>
+                  <tr>
+                    <td><strong>普通缺口</strong></td>
+                    <td>盤整、整理型態中</td>
+                    <td>沒有特別意義</td>
+                    <td>小</td>
+                    <td>很快回補</td>
+                  </tr>
+                  <tr>
+                    <td><strong>突破缺口</strong></td>
+                    <td>型態完成、突破整理區時（行情<strong>發動</strong>）</td>
+                    <td>新趨勢開始，以跳空方式表示方向</td>
+                    <td>大</td>
+                    <td>通常不會馬上回補</td>
+                  </tr>
+                  <tr>
+                    <td><strong>逃逸缺口</strong></td>
+                    <td>行情<strong>中間位置</strong></td>
+                    <td>
+                      趨勢加速，又稱「測量缺口」，<br />可估計後面約還有一樣的幅度
+                    </td>
+                    <td>大</td>
+                    <td>通常不會馬上回補</td>
+                  </tr>
+                  <tr>
+                    <td><strong>竭盡缺口</strong></td>
+                    <td>行情<strong>尾聲</strong></td>
+                    <td>最後衝刺、力道用盡</td>
+                    <td>很大</td>
+                    <td>很快回補，回補代表趨勢<strong>可能反轉</strong></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="diagram-card">
+                <svg viewBox="-50 0 320 150">
+                  <rect
+                    x="36"
+                    y="100"
+                    width="21"
+                    height="4"
+                    fill="var(--ink-20)"
+                  />
+                  <rect
+                    x="72"
+                    y="92"
+                    width="21"
+                    height="6"
+                    fill="var(--ink-20)"
+                  />
+                  <rect
+                    x="108"
+                    y="62"
+                    width="21"
+                    height="4"
+                    fill="var(--ink-20)"
+                  />
+                  <rect
+                    x="144"
+                    y="32"
+                    width="21"
+                    height="6"
+                    fill="var(--ink-20)"
+                  />
+                  <line
+                    x1="15"
+                    y1="105"
+                    x2="15"
+                    y2="120"
+                    stroke="var(--ink)"
+                    stroke-width="5"
+                  />
+                  <line
+                    x1="27"
+                    y1="108"
+                    x2="27"
+                    y2="122"
+                    stroke="var(--ink)"
+                    stroke-width="5"
+                  />
+                  <line
+                    x1="39"
+                    y1="104"
+                    x2="39"
+                    y2="118"
+                    stroke="var(--ink)"
+                    stroke-width="5"
+                  />
+                  <line
+                    x1="51"
+                    y1="92"
+                    x2="51"
+                    y2="100"
+                    stroke="var(--ink)"
+                    stroke-width="5"
+                  />
+                  <line
+                    x1="63"
+                    y1="100"
+                    x2="63"
+                    y2="114"
+                    stroke="var(--ink)"
+                    stroke-width="5"
+                  />
+                  <line
+                    x1="75"
+                    y1="98"
+                    x2="75"
+                    y2="112"
+                    stroke="var(--jade)"
+                    stroke-width="5"
+                  />
+                  <line
+                    x1="87"
+                    y1="80"
+                    x2="87"
+                    y2="92"
+                    stroke="var(--jade)"
+                    stroke-width="5"
+                  />
+                  <line
+                    x1="99"
+                    y1="72"
+                    x2="99"
+                    y2="86"
+                    stroke="var(--jade)"
+                    stroke-width="5"
+                  />
+                  <line
+                    x1="111"
+                    y1="66"
+                    x2="111"
+                    y2="80"
+                    stroke="var(--jade)"
+                    stroke-width="5"
+                  />
+                  <line
+                    x1="123"
+                    y1="50"
+                    x2="123"
+                    y2="62"
+                    stroke="var(--jade)"
+                    stroke-width="5"
+                  />
+                  <line
+                    x1="135"
+                    y1="44"
+                    x2="135"
+                    y2="56"
+                    stroke="var(--jade)"
+                    stroke-width="5"
+                  />
+                  <line
+                    x1="147"
+                    y1="38"
+                    x2="147"
+                    y2="50"
+                    stroke="var(--jade)"
+                    stroke-width="5"
+                  />
+                  <line
+                    x1="159"
+                    y1="22"
+                    x2="159"
+                    y2="32"
+                    stroke="var(--jade)"
+                    stroke-width="5"
+                  />
+                  <line
+                    x1="171"
+                    y1="28"
+                    x2="171"
+                    y2="44"
+                    stroke="var(--seal)"
+                    stroke-width="5"
+                  />
+                  <line
+                    x1="183"
+                    y1="40"
+                    x2="183"
+                    y2="56"
+                    stroke="var(--seal)"
+                    stroke-width="5"
+                  />
+                  <line
+                    x1="195"
+                    y1="52"
+                    x2="195"
+                    y2="66"
+                    stroke="var(--seal)"
+                    stroke-width="5"
+                  />
+                  <text
+                    x="45"
+                    y="140"
+                    font-size="10"
+                    fill="var(--ink)"
+                    text-anchor="middle"
+                  >
+                    普通缺口
+                  </text>
+                  <text
+                    x="100"
+                    y="128"
+                    font-size="10"
+                    fill="var(--ink)"
+                    text-anchor="middle"
+                  >
+                    突破缺口
+                  </text>
+                  <text
+                    x="128"
+                    y="98"
+                    font-size="10"
+                    fill="var(--ink)"
+                    text-anchor="middle"
+                  >
+                    逃逸缺口
+                  </text>
+                  <text
+                    x="150"
+                    y="14"
+                    font-size="10"
+                    fill="var(--ink)"
+                    text-anchor="middle"
+                  >
+                    竭盡缺口
+                  </text>
+                </svg>
+              </div>
+              <div class="callout-line">
+                判斷口訣：盤整中的是普通、剛衝出去的是突破、半路的是逃逸、最後一跳的是竭盡<br />竭盡缺口出現後，若再出現反方向的突破缺口，中間的
+                K 線會像一座孤島，稱為「島狀反轉」
+                <span class="arrow">➜ 題目常問「出現在哪個階段」</span>
+              </div>
               <p class="sub-label">反轉型態：</p>
               <ul>
-                <li><strong>頭肩頂</strong>：代表即將反轉下跌，為賣出訊號</li>
+                <li><strong>頭肩頂</strong>：代表即將反轉下跌，為<strong>賣出</strong>訊號</li>
                 <li>
                   <strong>雙重頂</strong>（線型類似 M
-                  字）：代表即將反轉下跌，為賣出訊號
+                  字）：代表即將反轉下跌，為<strong>賣出</strong>訊號
                 </li>
                 <li>
                   <strong>雙重底</strong>（線型類似 W
-                  字）：代表即將上漲，為買進訊號
+                  字）：代表即將上漲，為<strong>買進</strong>訊號
+                </li>
+                <li>
+                  <strong>菱形</strong
+                  >：股價波動先擴大再收斂，形狀像鑽石，多出現在頭部，之後<strong>反轉下跌</strong>
+                </li>
+                <li>
+                  <strong>碟型（圓形底）</strong
+                  >：股價緩慢下跌、再緩慢回升，像碟子，之後反轉上漲（<strong>不屬於</strong>連續型態）
+                </li>
+                <li>
+                  <strong>V 型反轉</strong>：股價急跌後馬上急漲，像 V
+                  字，幾乎沒有整理期，很難事先判斷，轉折時通常伴隨大量（倒 V
+                  型則是急漲後急跌）
                 </li>
               </ul>
               <div class="diagram-card">
@@ -819,43 +1355,146 @@
                   </text>
                 </svg>
               </div>
-              <p class="sub-label">連續型態：</p>
-              <ul>
-                <li><strong>對稱三角形</strong>：一種連續型態</li>
-                <li>
-                  <strong>上升楔型（上升三角形）</strong
-                  >：通常為連續（上升）型態，是股價上升過程中出現盤整的繼續型態
-                </li>
-                <li>
-                  <strong>下降楔型（下降三角形）</strong
-                  >：通常為連續（下降）型態，是股價下降過程中出現盤整的繼續型態
-                </li>
-                <li>
-                  <strong>箱型</strong
-                  >：通常成交量會減少，但向上突破就會上漲，向下突破就會下跌
-                </li>
-              </ul>
               <div class="diagram-card">
-                <svg viewBox="0 0 300 205">
-                  <line
-                    x1="10"
-                    y1="20"
-                    x2="130"
-                    y2="55"
+                <svg viewBox="0 0 320 125">
+                  <polyline
+                    points="10,60 22,48 32,70 46,28 60,92 74,36 86,74 96,50 104,60 120,100"
+                    fill="none"
                     stroke="var(--seal)"
                     stroke-width="2"
                   />
-                  <line
-                    x1="10"
-                    y1="80"
-                    x2="130"
-                    y2="55"
+                  <text
+                    x="60"
+                    y="118"
+                    font-size="11"
+                    fill="var(--seal)"
+                    text-anchor="middle"
+                  >
+                    菱形
+                  </text>
+                  <path
+                    d="M 130 30 Q 170 140 210 30"
+                    fill="none"
                     stroke="var(--jade)"
                     stroke-width="2"
                   />
                   <text
-                    x="70"
-                    y="98"
+                    x="170"
+                    y="118"
+                    font-size="11"
+                    fill="var(--jade)"
+                    text-anchor="middle"
+                  >
+                    碟型（圓形底）
+                  </text>
+                  <polyline
+                    points="235,25 262,95 290,25"
+                    fill="none"
+                    stroke="var(--jade)"
+                    stroke-width="2"
+                  />
+                  <text
+                    x="262"
+                    y="118"
+                    font-size="11"
+                    fill="var(--jade)"
+                    text-anchor="middle"
+                  >
+                    V 型反轉
+                  </text>
+                </svg>
+              </div>
+              <div class="callout-line">
+                反轉型態＝趨勢「轉向」：頭肩頂、雙重頂、雙重底、菱形、碟型、V
+                型<br />連續型態＝趨勢中途「休息」後延續原方向：三角形、箱型、旗型、楔形
+                <span class="arrow">➜ 常考「何者屬於反轉／連續型態」</span>
+              </div>
+              <p class="sub-label">連續型態：</p>
+              <ul>
+                <li>
+                  <strong>對稱三角形</strong>：上緣往下、下緣往上，<strong>延續原趨勢</strong>
+                </li>
+                <li>
+                  <strong>上升三角形</strong
+                  >：上緣水平、下緣往上（買方越來越積極），通常向上突破 →
+                  <strong>上漲</strong>
+                </li>
+                <li>
+                  <strong>下降三角形</strong
+                  >：上緣往下、下緣水平（賣方越來越積極），通常向下跌破 →
+                  <strong>下跌</strong>
+                </li>
+                <li>
+                  <strong>楔形</strong
+                  >：兩條線往同一方向傾斜並收斂，整理完成後往<strong>傾斜的反方向</strong>走
+                  <ul>
+                    <li>
+                      <strong>上升楔形</strong
+                      >：兩條線都往上，整理完成後通常跌破支撐 →
+                      <strong>下跌</strong>
+                    </li>
+                    <li>
+                      <strong>下降楔形</strong
+                      >：兩條線都往下，在漲升格局中整理完畢後 →
+                      <strong>上漲</strong
+                      >，有時也會成為<strong>底部反轉</strong>型態
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>箱型</strong
+                  >：股價在水平的上下限之間整理，盤整時成交量逐漸<strong>減少</strong>，向上突破就會上漲，向下跌破且成交量放大
+                  → 繼續下跌
+                </li>
+                <li>
+                  <strong>旗型</strong
+                  >：急漲或急跌後，出現小幅反向的平行整理（像一面旗子），之後<strong>延續原方向</strong>
+                </li>
+              </ul>
+              <p class="sub-label">三角形 vs 楔形（最容易搞混）：</p>
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th></th>
+                    <th>上升</th>
+                    <th>下降</th>
+                    <th>為什麼</th>
+                  </tr>
+                  <tr>
+                    <td><strong>三角形</strong></td>
+                    <td><strong>漲</strong></td>
+                    <td><strong>跌</strong></td>
+                    <td>有一邊水平，另一邊一直往它推，最後突破水平那一邊，方向跟名字<strong>相同</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>楔形</strong></td>
+                    <td><strong>跌</strong></td>
+                    <td><strong>漲</strong></td>
+                    <td>兩條線同方向傾斜並收斂，代表越走越沒力，最後往反方向突破，方向跟名字<strong>相反</strong></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="diagram-card">
+                <svg viewBox="0 0 320 290">
+                  <line
+                    x1="10"
+                    y1="15"
+                    x2="80"
+                    y2="40"
+                    stroke="var(--ink)"
+                    stroke-width="2"
+                  />
+                  <line
+                    x1="10"
+                    y1="65"
+                    x2="80"
+                    y2="40"
+                    stroke="var(--ink)"
+                    stroke-width="2"
+                  />
+                  <text
+                    x="50"
+                    y="88"
                     font-size="11"
                     fill="var(--ink)"
                     text-anchor="middle"
@@ -863,96 +1502,255 @@
                     對稱三角形
                   </text>
                   <line
-                    x1="160"
-                    y1="55"
-                    x2="280"
-                    y2="20"
-                    stroke="var(--seal)"
+                    x1="117"
+                    y1="15"
+                    x2="187"
+                    y2="15"
+                    stroke="var(--ink)"
                     stroke-width="2"
                   />
                   <line
-                    x1="160"
-                    y1="85"
-                    x2="280"
-                    y2="25"
+                    x1="117"
+                    y1="65"
+                    x2="187"
+                    y2="18"
+                    stroke="var(--ink)"
+                    stroke-width="2"
+                  />
+                  <line
+                    x1="187"
+                    y1="16"
+                    x2="205"
+                    y2="4"
                     stroke="var(--jade)"
                     stroke-width="2"
                   />
                   <text
-                    x="220"
-                    y="98"
+                    x="155"
+                    y="88"
                     font-size="11"
                     fill="var(--ink)"
                     text-anchor="middle"
                   >
-                    上升楔型
+                    上升三角形 → 漲
                   </text>
                   <line
-                    x1="10"
-                    y1="120"
-                    x2="130"
-                    y2="155"
+                    x1="224"
+                    y1="15"
+                    x2="294"
+                    y2="62"
+                    stroke="var(--ink)"
+                    stroke-width="2"
+                  />
+                  <line
+                    x1="224"
+                    y1="65"
+                    x2="294"
+                    y2="65"
+                    stroke="var(--ink)"
+                    stroke-width="2"
+                  />
+                  <line
+                    x1="294"
+                    y1="64"
+                    x2="312"
+                    y2="78"
                     stroke="var(--seal)"
                     stroke-width="2"
                   />
-                  <line
-                    x1="10"
-                    y1="140"
-                    x2="130"
-                    y2="160"
-                    stroke="var(--jade)"
-                    stroke-width="2"
-                  />
                   <text
-                    x="70"
-                    y="198"
+                    x="262"
+                    y="88"
                     font-size="11"
                     fill="var(--ink)"
                     text-anchor="middle"
                   >
-                    下降楔型
+                    下降三角形 → 跌
                   </text>
                   <line
-                    x1="160"
+                    x1="10"
+                    y1="145"
+                    x2="80"
+                    y2="110"
+                    stroke="var(--ink)"
+                    stroke-width="2"
+                  />
+                  <line
+                    x1="10"
+                    y1="165"
+                    x2="80"
+                    y2="118"
+                    stroke="var(--ink)"
+                    stroke-width="2"
+                  />
+                  <line
+                    x1="80"
+                    y1="118"
+                    x2="96"
+                    y2="145"
+                    stroke="var(--seal)"
+                    stroke-width="2"
+                  />
+                  <text
+                    x="50"
+                    y="183"
+                    font-size="11"
+                    fill="var(--ink)"
+                    text-anchor="middle"
+                  >
+                    上升楔形 → 跌
+                  </text>
+                  <line
+                    x1="117"
+                    y1="110"
+                    x2="187"
+                    y2="148"
+                    stroke="var(--ink)"
+                    stroke-width="2"
+                  />
+                  <line
+                    x1="117"
                     y1="130"
-                    x2="280"
-                    y2="130"
-                    stroke="var(--seal)"
+                    x2="187"
+                    y2="154"
+                    stroke="var(--ink)"
                     stroke-width="2"
                   />
                   <line
-                    x1="160"
-                    y1="175"
-                    x2="280"
-                    y2="175"
+                    x1="187"
+                    y1="148"
+                    x2="205"
+                    y2="122"
                     stroke="var(--jade)"
                     stroke-width="2"
                   />
                   <text
-                    x="220"
-                    y="198"
+                    x="155"
+                    y="183"
+                    font-size="11"
+                    fill="var(--ink)"
+                    text-anchor="middle"
+                  >
+                    下降楔形 → 漲
+                  </text>
+                  <line
+                    x1="224"
+                    y1="115"
+                    x2="294"
+                    y2="115"
+                    stroke="var(--ink)"
+                    stroke-width="2"
+                  />
+                  <line
+                    x1="224"
+                    y1="155"
+                    x2="294"
+                    y2="155"
+                    stroke="var(--ink)"
+                    stroke-width="2"
+                  />
+                  <polyline
+                    points="224,152 238,118 252,152 266,118 280,152 294,118"
+                    fill="none"
+                    stroke="var(--ink-20)"
+                    stroke-width="1.5"
+                  />
+                  <line
+                    x1="294"
+                    y1="115"
+                    x2="312"
+                    y2="103"
+                    stroke="var(--jade)"
+                    stroke-width="2"
+                  />
+                  <line
+                    x1="294"
+                    y1="155"
+                    x2="312"
+                    y2="167"
+                    stroke="var(--seal)"
+                    stroke-width="2"
+                  />
+                  <text
+                    x="262"
+                    y="183"
                     font-size="11"
                     fill="var(--ink)"
                     text-anchor="middle"
                   >
                     箱型
                   </text>
+                  <line
+                    x1="10"
+                    y1="270"
+                    x2="35"
+                    y2="212"
+                    stroke="var(--jade)"
+                    stroke-width="2"
+                  />
+                  <line
+                    x1="35"
+                    y1="212"
+                    x2="70"
+                    y2="224"
+                    stroke="var(--ink)"
+                    stroke-width="2"
+                  />
+                  <line
+                    x1="35"
+                    y1="230"
+                    x2="70"
+                    y2="242"
+                    stroke="var(--ink)"
+                    stroke-width="2"
+                  />
+                  <line
+                    x1="70"
+                    y1="226"
+                    x2="92"
+                    y2="204"
+                    stroke="var(--jade)"
+                    stroke-width="2"
+                  />
+                  <text
+                    x="50"
+                    y="283"
+                    font-size="11"
+                    fill="var(--ink)"
+                    text-anchor="middle"
+                  >
+                    旗型 → 延續原方向
+                  </text>
                 </svg>
               </div>
+              <p class="sub-label">其他型態考點：</p>
+              <ul>
+                <li>
+                  <strong>擴大三角形</strong>：通常有
+                  <strong>3 個高點、2 個低點</strong>
+                </li>
+                <li>
+                  三角形突破位置：股價在距離三角形底線到尖端
+                  <strong>2/3</strong> 處突破最理想
+                </li>
+                <li>
+                  試驗趨勢線：收盤價突破趨勢線 <strong>3%</strong> 才算有效突破
+                </li>
+              </ul>
               <p class="sub-label">K 線：</p>
               <ul>
                 <li>
                   由開盤價、收盤價、最高價、最低價組成：<strong>實體</strong>部分代表開盤價與收盤價的範圍，<strong>線體（影線）</strong>部分代表最高最低價與開盤收盤價的範圍
                 </li>
-                <li><strong>陽線</strong>（白色）：代表收盤價高於開盤價</li>
-                <li><strong>陰線</strong>（黑色）：代表收盤價低於開盤價</li>
+                <li><strong>陽線</strong>（白色）：代表收盤價<strong>高於</strong>開盤價</li>
+                <li><strong>陰線</strong>（黑色）：代表收盤價<strong>低於</strong>開盤價</li>
                 <li>
                   <strong>十字線</strong>：代表開盤價＝收盤價，K
-                  線幾乎無實體部分，通常為反轉或盤整前兆
+                  線幾乎無實體部分，通常為<strong>反轉或盤整</strong>前兆
                 </li>
                 <li>
                   <strong>T 字線</strong
-                  >：代表開盤、收盤、最高價相同，表示買方積極，可能反轉向上
+                  >：代表開盤、收盤、最高價相同，表示<strong>買方積極</strong>，可能反轉向上
                 </li>
               </ul>
               <div class="diagram-card">
@@ -1060,6 +1858,111 @@
                     T 字線
                   </text>
                 </svg>
+              </div>
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th></th>
+                    <th>怎麼算</th>
+                    <th>很長代表</th>
+                  </tr>
+                  <tr>
+                    <td><strong>上影線</strong></td>
+                    <td>最高價 － 實體上緣（陽線是收盤價、陰線是開盤價）</td>
+                    <td>盤中曾漲很高，但被賣壓壓回，<strong>上檔壓力大</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>下影線</strong></td>
+                    <td>實體下緣（陽線是開盤價、陰線是收盤價）－ 最低價</td>
+                    <td>盤中曾跌很深，但被買盤拉回，<strong>下檔有支撐</strong></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="diagram-card">
+                <svg viewBox="0 0 340 165">
+                  <line x1="100" y1="15" x2="100" y2="135" stroke="var(--ink)" stroke-width="1.5" />
+                  <rect x="88" y="45" width="24" height="50" fill="var(--paper-raised)" stroke="var(--ink)" stroke-width="1.5" />
+                  <text x="120" y="18" font-size="10" fill="var(--ink-40)">最高價</text>
+                  <text x="120" y="49" font-size="10" fill="var(--ink-40)">收盤價</text>
+                  <text x="120" y="99" font-size="10" fill="var(--ink-40)">開盤價</text>
+                  <text x="120" y="138" font-size="10" fill="var(--ink-40)">最低價</text>
+                  <text x="80" y="33" font-size="10" fill="var(--seal)" text-anchor="end">上影線</text>
+                  <text x="80" y="73" font-size="10" fill="var(--ink)" text-anchor="end">實體</text>
+                  <text x="80" y="118" font-size="10" fill="var(--jade)" text-anchor="end">下影線</text>
+                  <text x="100" y="155" font-size="11" fill="var(--ink)" text-anchor="middle">陽線（收盤 ＞ 開盤）</text>
+                  <line x1="250" y1="15" x2="250" y2="135" stroke="var(--ink)" stroke-width="1.5" />
+                  <rect x="238" y="45" width="24" height="50" fill="var(--ink)" stroke="var(--ink)" stroke-width="1.5" />
+                  <text x="270" y="18" font-size="10" fill="var(--ink-40)">最高價</text>
+                  <text x="270" y="49" font-size="10" fill="var(--ink-40)">開盤價</text>
+                  <text x="270" y="99" font-size="10" fill="var(--ink-40)">收盤價</text>
+                  <text x="270" y="138" font-size="10" fill="var(--ink-40)">最低價</text>
+                  <text x="230" y="33" font-size="10" fill="var(--seal)" text-anchor="end">上影線</text>
+                  <text x="230" y="73" font-size="10" fill="var(--ink)" text-anchor="end">實體</text>
+                  <text x="230" y="118" font-size="10" fill="var(--jade)" text-anchor="end">下影線</text>
+                  <text x="250" y="155" font-size="11" fill="var(--ink)" text-anchor="middle">陰線（收盤 ＜ 開盤）</text>
+                </svg>
+              </div>
+              <div class="callout-line">
+                例：最高價 66、最低價 56、收盤價 62、開盤價 60 → 收盤 ＞ 開盤為陽線<br />上影線 ＝ 66 － 62 ＝ 4，下影線 ＝ 60 － 56 ＝ 4<br />T 字線：開盤＝收盤＝最高價，所以沒有上影線、只有長下影線，代表賣方壓低後被買方拉回最高點，買方積極
+                <span class="arrow">➜ 影線長短看多空力道</span>
+              </div>
+              <p class="sub-label">支撐與壓力：</p>
+              <ul>
+                <li>
+                  <strong>支撐（Support）</strong>：股價<strong>跌到</strong>某個價位附近時，<strong>買氣大於賣壓</strong>，股價不容易再往下跌，像「地板」
+                </li>
+                <li>
+                  <strong>壓力（Resistance，又稱阻力）</strong>：股價<strong>漲到</strong>某個價位附近時，<strong>賣壓大於買氣</strong>，股價不容易再往上漲，像「天花板」
+                </li>
+              </ul>
+              <div class="diagram-card">
+                <svg viewBox="0 0 340 150">
+                  <line x1="15" y1="40" x2="325" y2="40" stroke="var(--seal)" stroke-width="1.5" stroke-dasharray="5 4" />
+                  <line x1="15" y1="110" x2="325" y2="110" stroke="var(--jade)" stroke-width="1.5" stroke-dasharray="5 4" />
+                  <text x="20" y="33" font-size="10" fill="var(--seal)">壓力：賣壓 ＞ 買氣（天花板）</text>
+                  <text x="20" y="125" font-size="10" fill="var(--jade)">支撐：買氣 ＞ 賣壓（地板）</text>
+                  <polyline points="20,85 55,108 95,44 135,108 175,44 215,108 255,44 285,22 315,14" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round" />
+                  <circle cx="55" cy="108" r="3" fill="var(--jade)" />
+                  <circle cx="135" cy="108" r="3" fill="var(--jade)" />
+                  <circle cx="215" cy="108" r="3" fill="var(--jade)" />
+                  <circle cx="95" cy="44" r="3" fill="var(--seal)" />
+                  <circle cx="175" cy="44" r="3" fill="var(--seal)" />
+                  <text x="300" y="60" font-size="10" fill="var(--ink)" text-anchor="middle">突破</text>
+                  <text x="170" y="143" font-size="10" fill="var(--ink-40)" text-anchor="middle">碰到地板彈上來、碰到天花板被壓回，直到某一方力量用完才突破</text>
+                </svg>
+              </div>
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th></th>
+                    <th>支撐</th>
+                    <th>壓力</th>
+                  </tr>
+                  <tr>
+                    <td><strong>力量對比</strong></td>
+                    <td>買氣 ＞ 賣壓</td>
+                    <td>賣壓 ＞ 買氣</td>
+                  </tr>
+                  <tr>
+                    <td><strong>為什麼會形成</strong></td>
+                    <td>之前跌到這裡就反彈過，投資人覺得「到這價位就便宜了」，一跌到附近就有人進場買</td>
+                    <td>之前在這裡買進被套牢的人，好不容易等到漲回成本就想賣出解套；也有人覺得「到這價位就貴了」而獲利了結</td>
+                  </tr>
+                  <tr>
+                    <td><strong>常見位置</strong></td>
+                    <td>前波低點、上升趨勢線</td>
+                    <td>前波高點、下降趨勢線、套牢區</td>
+                  </tr>
+                  <tr>
+                    <td><strong>被突破之後</strong></td>
+                    <td>跌破支撐 → 代表買方守不住，往往續跌；原本的支撐會變成之後的壓力</td>
+                    <td>突破壓力 → 代表賣壓被消化完，往往續漲；原本的壓力會變成之後的支撐</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="callout-line">
+                跟 K 線影線一起看：長上影線＝漲上去碰到壓力被賣壓壓回；長下影線＝跌下去碰到支撐被買盤拉回<br />支撐、壓力只代表「不容易」突破，不是「不可能」突破，也不代表一定會反轉
+                <span class="arrow">➜ 選項寫「不可能被突破」「股價將反轉下跌」都是陷阱</span>
               </div>
             </div>
           </section>
@@ -1221,14 +2124,14 @@
             </div>
             <div class="explain">
               <ul>
-                <li>數值越大，代表股價相對越強勢</li>
+                <li>數值越大，代表股價相對<strong>越強勢</strong></li>
                 <li>
-                  天數越短，指標越敏感，但準確度也會跟著下降（常用區間 6～24
+                  天數越短，指標<strong>越敏感</strong>，但準確度也會跟著<strong>下降</strong>（常用區間 6～24
                   日）
                 </li>
               </ul>
               <div class="callout-line">
-                RSI ＞ 80 視為超買、＜ 20 視為超賣
+                RSI <strong>＞ 80</strong> 視為「超買」、<strong>＜ 20</strong> 視為「超賣」
                 <span class="arrow">➜ 考點注意</span>
               </div>
               <p class="sub-label">其他考點：</p>
@@ -1238,12 +2141,12 @@
                 </li>
                 <li>
                   跟其他價格類指標一樣，也會有「<span class="warn">鈍化</span
-                  >」現象 —— 數值卡在高檔或低檔卻遲遲不反轉
+                  >」現象：數值卡在高檔或低檔卻遲遲不反轉
                 </li>
               </ul>
             </div>
             <details class="practice">
-              <summary class="practice-label">考古題（4 題）</summary>
+              <summary class="practice-label">考古題（5 題）</summary>
               <div class="q-item">
                 <p class="qno">Q32</p>
                 <p class="qtext">
@@ -1309,8 +2212,21 @@
                   <div class="opt right">D．RSI 相對強弱分析</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong
-                  >ADR、PSY、VR 都屬於市場寬幅／成交量類指標，只有 RSI 是價的技術指標。
+                  <strong>解析：</strong>ADR、PSY、VR
+                  都屬於市場寬幅／成交量類指標，只有 RSI 是價的技術指標。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q91</p>
+                <p class="qtext">RSI 指標之最小值應是：</p>
+                <div class="opts">
+                  <div class="opt right">A．0</div>
+                  <div class="opt">B．－1</div>
+                  <div class="opt">C．＋1</div>
+                  <div class="opt">D．0.5</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>RSI 的範圍是 0～100。若期間內完全沒有上漲（上漲幅度平均值＝0），RS＝0，RSI 就是最小值 0；因為漲跌幅平均值都不會是負數，RSI 不可能小於 0。
                 </p>
               </div>
             </details>
@@ -1365,11 +2281,15 @@
                 K 快速線、D 慢速線交叉判斷買賣點，數值 0~100
               </div>
               <div class="formula-line">只用最高、最低、收盤價</div>
+              <div class="formula-line">
+                先算 RSV（未成熟隨機值）→ 再求 K 值 → 再求 D 值，日 KD 常用 9
+                日計算
+              </div>
             </div>
             <div class="explain">
               <ul>
-                <li>K 由下往上穿越 D 是買進訊號</li>
-                <li>K 由上往下穿越 D 是賣出訊號</li>
+                <li>K 由下往上穿越 D 是<strong>買進</strong>訊號</li>
+                <li>K 由上往下穿越 D 是<strong>賣出</strong>訊號</li>
               </ul>
               <div class="tbl-wrap">
                 <table>
@@ -1396,7 +2316,7 @@
                 </li>
                 <li>
                   「背離」是股價創新高／新低，但 KD
-                  卻沒有同步創新高／新低，代表反轉徵兆快出現了
+                  卻沒有同步創新高／新低，代表<strong>反轉徵兆</strong>快出現了
                 </li>
               </ul>
             </div>
@@ -1412,7 +2332,8 @@
                   <div class="opt">D．K 值為 20 以下屬於超買區</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>KD 值介於 0~100 之間，K 值連續在高檔或低檔時會出現鈍化現象。
+                  <strong>解析：</strong>KD 值介於 0~100 之間，K
+                  值連續在高檔或低檔時會出現鈍化現象。
                 </p>
               </div>
               <div class="q-item">
@@ -1464,10 +2385,13 @@
                   <div class="opt">A．K 值在 20 以下，由下往上突破 D 值</div>
                   <div class="opt">B．K 值在－10 以下</div>
                   <div class="opt">C．K 值在＋110 以上</div>
-                  <div class="opt right">D．K 值在 80 以上，由上向下跌破 D 值</div>
+                  <div class="opt right">
+                    D．K 值在 80 以上，由上向下跌破 D 值
+                  </div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>K 值在 80 以上（超買區）由上向下跌破 D 值，為賣出訊號。
+                  <strong>解析：</strong>K 值在 80 以上（超買區）由上向下跌破 D
+                  值，為賣出訊號。
                 </p>
               </div>
               <div class="q-item">
@@ -1477,15 +2401,20 @@
                   <div class="opt">A．大盤創新低點，RSI 值並沒有創新低點</div>
                   <div class="opt">B．大盤創新低點，DIF 值並沒有創新低點</div>
                   <div class="opt">C．大盤創新低點，ADX 值並沒有創新低點</div>
-                  <div class="opt right">D．大盤創新低點，K 值並沒有創新低點</div>
+                  <div class="opt right">
+                    D．大盤創新低點，K 值並沒有創新低點
+                  </div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>牛市背離是指大盤創新低，但 KD（K 值）並未同步創新低。
+                  <strong>解析：</strong>牛市背離是指大盤創新低，但 KD（K
+                  值）並未同步創新低。
                 </p>
               </div>
               <div class="q-item">
                 <p class="qno">Q41</p>
-                <p class="qtext">KD 線的理論基礎，在股價上漲時，當日收盤價會朝何方向接近？</p>
+                <p class="qtext">
+                  KD 線的理論基礎，在股價上漲時，當日收盤價會朝何方向接近？
+                </p>
                 <div class="opts">
                   <div class="opt">A．最低價</div>
                   <div class="opt right">B．最高價</div>
@@ -1493,12 +2422,15 @@
                   <div class="opt">D．開盤價</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>股價上漲時，當日收盤價總是朝向當日價格波動的最高價接近。
+                  <strong>解析：</strong
+                  >股價上漲時，當日收盤價總是朝向當日價格波動的最高價接近。
                 </p>
               </div>
               <div class="q-item">
                 <p class="qno">Q42</p>
-                <p class="qtext">KD 線的理論基礎，在股價下跌時，則當日收盤價會朝何方向接近？</p>
+                <p class="qtext">
+                  KD 線的理論基礎，在股價下跌時，則當日收盤價會朝何方向接近？
+                </p>
                 <div class="opts">
                   <div class="opt">A．開盤價</div>
                   <div class="opt">B．收盤價</div>
@@ -1506,7 +2438,8 @@
                   <div class="opt">D．最高價</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>股價下跌時，收盤價總是朝向當日價格波動的最低價接近。
+                  <strong>解析：</strong
+                  >股價下跌時，收盤價總是朝向當日價格波動的最低價接近。
                 </p>
               </div>
               <div class="q-item">
@@ -1544,13 +2477,15 @@
                   <div class="opt right">D．量增價跌</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>背離代表價量兩者走勢不一致，量增價跌即為量價背離。
+                  <strong>解析：</strong
+                  >背離代表價量兩者走勢不一致，量增價跌即為量價背離。
                 </p>
               </div>
               <div class="q-item">
                 <p class="qno">Q45</p>
                 <p class="qtext">
-                  技術指標在 0 至 100 之間，會有死角（或鈍化）現象產生，但下列何者沒有此現象？
+                  技術指標在 0 至 100
+                  之間，會有死角（或鈍化）現象產生，但下列何者沒有此現象？
                 </p>
                 <div class="opts">
                   <div class="opt">A．KD</div>
@@ -1559,8 +2494,8 @@
                   <div class="opt right">D．BIAS</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong
-                  >KD、RSI、WMS%R 數值介於 0~100 之間會有鈍化現象，BIAS（乖離率）沒有上下限，不會鈍化。
+                  <strong>解析：</strong>KD、RSI、WMS%R 數值介於 0~100
+                  之間會有鈍化現象，BIAS（乖離率）沒有上下限，不會鈍化。
                 </p>
               </div>
             </details>
@@ -1627,8 +2562,8 @@
             </div>
             <div class="explain">
               <ul>
-                <li>乖離率 為 正值，代表股價 站上 均線</li>
-                <li>乖離率 為 負值，代表股價 跌破 均線</li>
+                <li>乖離率為<strong>正值</strong>，代表股價<strong>站上</strong>均線</li>
+                <li>乖離率為<strong>負值</strong>，代表股價<strong>跌破</strong>均線</li>
               </ul>
               <div class="callout-line">
                 BIAS 是所有技術指標裡「唯一沒有鈍化現象」的指標
@@ -1643,7 +2578,9 @@
               <summary class="practice-label">考古題（5 題）</summary>
               <div class="q-item">
                 <p class="qno">Q46</p>
-                <p class="qtext">何者「不是」利用兩條平均線形成交易買賣訊號？</p>
+                <p class="qtext">
+                  何者「不是」利用兩條平均線形成交易買賣訊號？
+                </p>
                 <div class="opts">
                   <div class="opt">A．KD</div>
                   <div class="opt">B．MACD</div>
@@ -1651,7 +2588,8 @@
                   <div class="opt right">D．BIAS</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>BIAS 是價格與單一移動平均線的偏離程度，不是兩條平均線的交叉訊號。
+                  <strong>解析：</strong>BIAS
+                  是價格與單一移動平均線的偏離程度，不是兩條平均線的交叉訊號。
                 </p>
               </div>
               <div class="q-item">
@@ -1697,9 +2635,9 @@
                   <div class="opt">D．80 元</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>BIAS ＝ (今日價格－平均價格)÷平均價格<br />30
-                  日 BIAS ＝ (65－50)÷50 ＝ 0.3 ＝ 72 日 BIAS ＝ 0.3 ＝
-                  (65－MA₇₂)÷MA₇₂ → MA₇₂＝50。
+                  <strong>解析：</strong>BIAS ＝
+                  (今日價格－平均價格)÷平均價格<br />30 日 BIAS ＝ (65－50)÷50
+                  ＝ 0.3 ＝ 72 日 BIAS ＝ 0.3 ＝ (65－MA₇₂)÷MA₇₂ → MA₇₂＝50。
                 </p>
               </div>
               <div class="q-item">
@@ -1793,11 +2731,13 @@
             </div>
             <div class="explain">
               <ul>
-                <li>兩條線的差畫成柱狀圖：柱線轉正代表偏多、轉負代表偏空</li>
-                <li>主要用來判斷中長期趨勢，而非短線進出</li>
+                <li>DIF 由下往上突破 MACD（DEM）是<strong>買進</strong>訊號</li>
+                <li>DIF 由上往下跌破 MACD（DEM）是<strong>賣出</strong>訊號</li>
+                <li>兩條線的差畫成柱狀圖：柱線轉正代表<strong>偏多</strong>、轉負代表<strong>偏空</strong></li>
+                <li>主要用來判斷<strong>中長期趨勢</strong>，而非短線進出</li>
               </ul>
               <div class="callout-line">
-                跟 KD、RSI 一樣，只使用最高、最低、收盤價，不用開盤價
+                跟 KD、RSI 一樣，只使用最高、最低、收盤價，<strong>不用開盤價</strong>
                 <span class="arrow">➜ 考點注意</span>
               </div>
             </div>
@@ -1813,7 +2753,8 @@
                   <div class="opt">D．為價的技術指標</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>MACD 是用兩條移動平均線的關係研判趨勢，不是用漲跌比率測量。
+                  <strong>解析：</strong>MACD
+                  是用兩條移動平均線的關係研判趨勢，不是用漲跌比率測量。
                 </p>
               </div>
               <div class="q-item">
@@ -1828,7 +2769,8 @@
                   <div class="opt">D．DIF 線由下往上突破 MACD 線為買進訊號</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>MACD 沒有 0 至 100 的固定區間限制，柱線可正可負。
+                  <strong>解析：</strong>MACD 沒有 0 至 100
+                  的固定區間限制，柱線可正可負。
                 </p>
               </div>
               <div class="q-item">
@@ -1881,7 +2823,8 @@
                   </div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>MACD 柱線值大於零表示<strong>牛市</strong>（多頭），C 敘述不正確。
+                  <strong>解析：</strong>MACD
+                  柱線值大於零表示<strong>牛市</strong>（多頭），C 敘述不正確。
                 </p>
               </div>
               <div class="q-item">
@@ -1969,11 +2912,11 @@
             </div>
             <div class="explain">
               <ul>
-                <li>＋DI 由下往上突破－DI 是買進訊號</li>
-                <li>＋DI 由上往下跌破－DI 是賣出訊號</li>
+                <li>＋DI 由下往上突破－DI 是<strong>買進</strong>訊號</li>
+                <li>＋DI 由上往下跌破－DI 是<strong>賣出</strong>訊號</li>
               </ul>
               <div class="callout-line">
-                ADX 只代表趨勢「強不強」，不代表方向
+                ADX 只代表趨勢「強不強」，<strong>不代表方向</strong>
                 <span class="arrow">➜ 考點注意</span>
                 <span class="note"
                   >行情盤整時 ADX 會下降，趨勢明顯（不管漲跌）時 ADX
@@ -2029,7 +2972,9 @@
               </div>
               <div class="q-item">
                 <p class="qno">Q63</p>
-                <p class="qtext">DMI 中，大盤強勁上揚，對 ADX 值下列描述何者較為「正確」？</p>
+                <p class="qtext">
+                  DMI 中，大盤強勁上揚，對 ADX 值下列描述何者較為「正確」？
+                </p>
                 <div class="opts">
                   <div class="opt">A．ADX 小於 0</div>
                   <div class="opt">B．ADX 大於 100</div>
@@ -2037,7 +2982,8 @@
                   <div class="opt right">D．ADX 為 40 以上</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>上升或下降趨勢明確時，ADX 會往上增加（範圍 0~100）。
+                  <strong>解析：</strong>上升或下降趨勢明確時，ADX
+                  會往上增加（範圍 0~100）。
                 </p>
               </div>
               <div class="q-item">
@@ -2064,7 +3010,8 @@
                   <div class="opt">D．DIF 線由下向上突破 DEM 線</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>＋DI 由上往下跌破－DI 為 DMI 的賣出訊號。
+                  <strong>解析：</strong>＋DI 由上往下跌破－DI 為 DMI
+                  的賣出訊號。
                 </p>
               </div>
             </details>
@@ -2079,13 +3026,17 @@
               <ul>
                 <li>應用擺動原理，研判股市是否處於超買或超賣</li>
                 <li>
-                  跟 RSI、KD、DMI 一樣，只使用最高價、最低價、收盤價，<strong
-                    >不使用開盤價</strong
-                  >資訊
+                  方向跟其他指標相反：一般指標<strong>越小越超賣</strong>，WMS%R
+                  則是<span class="warn">越小越超買</span>
+                </li>
+                <li>
+                  跟 RSI、KD、DMI
+                  一樣，只使用最高價、最低價、收盤價，<strong>不使用開盤價</strong>資訊
                 </li>
               </ul>
               <div class="callout-line">
-                RSI、KD、DMI、WMS%R 都<strong>不用開盤價</strong>，且都有鈍化現象
+                RSI、KD、DMI、WMS%R
+                都<strong>不用開盤價</strong>，且都有鈍化現象
                 <span class="arrow">➜ 考點注意</span>
               </div>
             </div>
@@ -2097,9 +3048,13 @@
             <div class="explain">
               <ul>
                 <li>
-                  <strong>寶塔線</strong>：應用趨勢線的支撐區和阻力區的原理，來形成買賣訊號
+                  <strong>寶塔線</strong
+                  >：應用趨勢線的支撐區和阻力區的原理，來形成買賣訊號
                 </li>
-                <li><strong>動量指標</strong>：運用股價變動的加速度來測量股價變動的趨勢</li>
+                <li>
+                  <strong>動量指標</strong
+                  >：運用股價變動的加速度來測量股價變動的趨勢
+                </li>
                 <li><strong>平均量</strong>：可用以掌握底部量及頭部量</li>
               </ul>
             </div>
@@ -2117,13 +3072,15 @@
                   <div class="opt">D．MACD 線</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>寶塔線應用趨勢線的支撐區和阻力區原理形成買賣訊號。
+                  <strong>解析：</strong
+                  >寶塔線應用趨勢線的支撐區和阻力區原理形成買賣訊號。
                 </p>
               </div>
               <div class="q-item">
                 <p class="qno">Q58</p>
                 <p class="qtext">
-                  動量指標（Momentum，簡稱 MTM）是運用股價變動的何種觀念來測量股價變動的趨勢？
+                  動量指標（Momentum，簡稱
+                  MTM）是運用股價變動的何種觀念來測量股價變動的趨勢？
                 </p>
                 <div class="opts">
                   <div class="opt">A．相對速度</div>
@@ -2132,7 +3089,8 @@
                   <div class="opt">D．靜態觀念</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>動量指標運用股價變動的加速度來測量趨勢。
+                  <strong>解析：</strong
+                  >動量指標運用股價變動的加速度來測量趨勢。
                 </p>
               </div>
               <div class="q-item">
@@ -2147,7 +3105,9 @@
                   <div class="opt">D．選項 ABC 皆非</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>零股理論是反向操作策略，因此零股價格愈高愈值得賣出，B 敘述有誤。
+                  <strong>解析：</strong
+                  >零股理論是反向操作策略，因此零股價格愈高愈值得賣出，B
+                  敘述有誤。
                 </p>
               </div>
               <div class="q-item">
@@ -2260,7 +3220,7 @@
               <ul>
                 <li>
                   <strong>ADR</strong
-                  >（漲跌比率）是「比值」型指標，數值越大代表越接近超買
+                  >（漲跌比率）是「比值」型指標，數值越大代表越接近<strong>超買</strong>
                 </li>
                 <li>
                   <strong>ADL</strong
@@ -2272,7 +3232,7 @@
                 </li>
               </ul>
               <div class="callout-line">
-                OBOS 不是累積算法
+                OBOS <strong>不是</strong>累積算法
                 <span class="arrow">➜ 三者中最容易搞混的地方</span>
               </div>
             </div>
@@ -2319,12 +3279,18 @@
                 <p class="qno">Q69</p>
                 <p class="qtext">有關騰落指標（ADL）的敘述，何者「不正確」？</p>
                 <div class="opts">
-                  <div class="opt">A．ADL 是以股票漲跌家數累積差值研判大盤走勢</div>
-                  <div class="opt">B．ADL 的計算公式，其取樣的漲跌家數與 ADR 相同</div>
+                  <div class="opt">
+                    A．ADL 是以股票漲跌家數累積差值研判大盤走勢
+                  </div>
+                  <div class="opt">
+                    B．ADL 的計算公式，其取樣的漲跌家數與 ADR 相同
+                  </div>
                   <div class="opt">
                     C．ADL 能全面真實的反映股市的走勢方向，而不被個別大戶所操縱
                   </div>
-                  <div class="opt right">D．ADL 公式中，其下限為 0，上限則無限制</div>
+                  <div class="opt right">
+                    D．ADL 公式中，其下限為 0，上限則無限制
+                  </div>
                 </div>
                 <p class="why">
                   <strong>解析：</strong>ADL 無上限與下限，D 敘述不正確。
@@ -2345,15 +3311,15 @@
                   <div class="opt">D．2,850 家</div>
                 </div>
                 <p class="why">
-                  <strong>解析：</strong>ADR＝UP÷DOWN → DOWN＝UP÷ADR＝1,600÷0.5＝3,200
-                  家。
+                  <strong>解析：</strong>ADR＝UP÷DOWN →
+                  DOWN＝UP÷ADR＝1,600÷0.5＝3,200 家。
                 </p>
               </div>
               <div class="q-item">
                 <p class="qno">Q71</p>
                 <p class="qtext">
-                  14 日內股票上漲累計家數 80 家，14
-                  日內股票下跌累計家數 90 家，則下列描述何者「正確」？
+                  14 日內股票上漲累計家數 80 家，14 日內股票下跌累計家數 90
+                  家，則下列描述何者「正確」？
                 </p>
                 <div class="opts">
                   <div class="opt">A．ADR＝－10</div>
@@ -2368,8 +3334,8 @@
               <div class="q-item">
                 <p class="qno">Q72</p>
                 <p class="qtext">
-                  14 日內股票上漲累計家數 120 家，14
-                  日內股票下跌累計家數 108 家，其 ADL 為多少？
+                  14 日內股票上漲累計家數 120 家，14 日內股票下跌累計家數 108
+                  家，其 ADL 為多少？
                 </p>
                 <div class="opts">
                   <div class="opt">A．-120</div>
@@ -2462,7 +3428,7 @@
                 </li>
               </ul>
               <div class="callout-line">
-                跟同期漲跌的幅度大小完全無關
+                跟同期漲跌的幅度大小<strong>完全無關</strong>
                 <span class="arrow">➜ 最常見的誤答點</span>
               </div>
             </div>
@@ -2538,9 +3504,82 @@
                 上漲那天用「加」、下跌那天用「減」
                 <span class="arrow">➜ 計算題最容易出錯的地方</span>
               </div>
+              <p class="sub-label">OBV 背後的觀念：量先價行</p>
+              <p>
+                葛蘭碧認為<strong>成交量是股價的先行指標</strong>：股價要漲，得先有資金願意追價買進，所以「量」的變化會比「價」更早透露人氣是聚集還是散去。他在 OBV 分析中提出以下原則：
+              </p>
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th>葛蘭碧原則</th>
+                    <th>白話解釋</th>
+                  </tr>
+                  <tr>
+                    <td>買賣雙方對合理價格的認定<strong>愈不一致，成交量愈大</strong></td>
+                    <td>有人覺得便宜想買、有人覺得太貴想賣，看法分歧才湊得成交易；如果大家看法都一樣（都想買或都想賣），就找不到對手，成交量反而小</td>
+                  </tr>
+                  <tr>
+                    <td>成交量<strong>上升</strong>所需的能量較<strong>下跌</strong>為多</td>
+                    <td>股價往上要靠買方一直追價「推上去」，需要大量資金；往下只要沒人接手就會自己掉下來，像東西受重力往下掉一樣不費力</td>
+                  </tr>
+                  <tr>
+                    <td>股性愈活潑的股票，投資者繼續投入的傾向愈高；靜止不動的股票有繼續靜止的傾向</td>
+                    <td>類似物理學的<strong>慣性原理</strong>：動者恆動、靜者恆靜。熱門股會吸引更多人追進，冷門股則一直乏人問津</td>
+                  </tr>
+                  <tr>
+                    <td>成交量上升至某一程度<strong>終將下跌</strong></td>
+                    <td>成交量不可能無限放大，想買的人都已經買完，後面沒有新資金接手，量就會縮、價也跟著回落</td>
+                  </tr>
+                </table>
+              </div>
+              <p class="sub-label">用 OBV 判斷價量背離：</p>
+              <p>
+                正常情況下價和量會同方向走（價漲時 OBV 也上升）。如果兩者<strong>走勢相反</strong>，就叫<strong>價量背離</strong>，代表目前的價格走勢缺乏量的支持，很可能要反轉。
+              </p>
+              <div class="diagram-card">
+                <svg viewBox="0 0 340 165">
+                  <text x="15" y="18" font-size="10" fill="var(--ink-40)">股價</text>
+                  <polyline points="50,60 90,45 130,52 170,35 210,42 250,25 290,32 320,18" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round" />
+                  <text x="325" y="15" font-size="10" fill="var(--jade)" text-anchor="end">創新高 ↑</text>
+                  <line x1="15" y1="75" x2="325" y2="75" stroke="var(--ink-40)" stroke-width="0.8" stroke-dasharray="3 3" />
+                  <text x="15" y="93" font-size="10" fill="var(--ink-40)">OBV</text>
+                  <polyline points="50,90 90,95 130,93 170,104 210,102 250,113 290,111 320,122" fill="none" stroke="var(--seal)" stroke-width="2" stroke-linejoin="round" />
+                  <text x="325" y="138" font-size="10" fill="var(--seal)" text-anchor="end">一路下滑 ↓</text>
+                  <text x="170" y="160" font-size="10" fill="var(--ink)" text-anchor="middle">價漲 OBV 跌：漲勢沒有量撐腰 → 賣出訊號</text>
+                </svg>
+              </div>
+              <div class="tbl-wrap">
+                <table>
+                  <tr>
+                    <th>情況</th>
+                    <th>代表什麼</th>
+                    <th>訊號</th>
+                  </tr>
+                  <tr>
+                    <td>價漲、OBV 升</td>
+                    <td>價漲量增，有資金一路追進，漲勢健康</td>
+                    <td>偏多，可續抱</td>
+                  </tr>
+                  <tr>
+                    <td><strong>價漲、OBV 跌</strong></td>
+                    <td><strong>價量背離</strong>：價格還在漲，但願意追價的人愈來愈少，漲勢是「虛」的，隨時可能漲不動</td>
+                    <td><strong>賣出訊號</strong></td>
+                  </tr>
+                  <tr>
+                    <td>價跌、OBV 跌</td>
+                    <td>賣壓持續湧出，人氣在散去</td>
+                    <td>偏空</td>
+                  </tr>
+                  <tr>
+                    <td><strong>價跌、OBV 升</strong></td>
+                    <td><strong>價量背離</strong>：價格還在跌，但已經有資金默默進場承接，跌勢可能快到底</td>
+                    <td><strong>買進訊號</strong></td>
+                  </tr>
+                </table>
+              </div>
             </div>
             <details class="practice">
-              <summary class="practice-label">考古題（4 題）</summary>
+              <summary class="practice-label">考古題（7 題）</summary>
               <div class="q-item">
                 <p class="qno">Q76</p>
                 <p class="qtext">對能量潮指標 OBV 的描述，何者「不正確」？</p>
@@ -2614,7 +3653,47 @@
                 </div>
                 <p class="why">
                   <strong>解析：</strong
-                  >買賣雙方對合理價格認定愈不一致，成交量應該愈「大」而非愈小，C 敘述錯誤。
+                  >買賣雙方對合理價格認定愈不一致，成交量應該愈「大」而非愈小，C
+                  敘述錯誤。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q92</p>
+                <p class="qtext">所謂 OBV 是：</p>
+                <div class="opts">
+                  <div class="opt">A．一種成交價格的技術指標</div>
+                  <div class="opt right">B．一種成交量的技術指標</div>
+                  <div class="opt">C．一種價格監視制度</div>
+                  <div class="opt">D．是預測長期股價趨勢的分析法</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>OBV（能量潮）是用每天成交量累加或累減算出來的，屬於「量」的技術指標，不是價的指標。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q93</p>
+                <p class="qtext">關於 OBV 分析法之敘述何者「不」正確？</p>
+                <div class="opts">
+                  <div class="opt right">A．買賣雙方的合理價格認定愈不一致，成交量越低</div>
+                  <div class="opt">B．成交量上升所需的能量較下跌為多</div>
+                  <div class="opt">C．股性愈活潑的股票，投資者繼續投入傾向愈高，類似物理學慣性原理</div>
+                  <div class="opt">D．成交量上升至某一程度終將下跌</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>看法愈分歧，愈容易找到買賣對手，成交量應該愈「高」，A 說反了。B、C、D 都是葛蘭碧提出的原則。
+                </p>
+              </div>
+              <div class="q-item">
+                <p class="qno">Q94</p>
+                <p class="qtext">當股價持續上漲，而 OBV 線卻下滑時，代表：甲.價量背離；乙.買進訊號；丙.價漲量增；丁.賣出訊號</p>
+                <div class="opts">
+                  <div class="opt">A．甲、乙</div>
+                  <div class="opt right">B．甲、丁</div>
+                  <div class="opt">C．乙、丙</div>
+                  <div class="opt">D．丙、丁</div>
+                </div>
+                <p class="why">
+                  <strong>解析：</strong>價格往上、OBV 往下，兩者方向相反就是價量背離（甲）。OBV 下滑代表願意追價的量愈來愈少，漲勢缺乏支撐，所以是賣出訊號（丁）。丙錯在 OBV 下滑代表量並沒有跟著增加。
                 </p>
               </div>
             </details>
@@ -2684,10 +3763,10 @@
             </div>
             <div class="explain">
               <ul>
-                <li>VR 是「量」的技術指標，跟基本面分析無關</li>
+                <li>VR 是「量」的技術指標，跟基本面分析<strong>無關</strong></li>
               </ul>
               <div class="callout-line">
-                VR 值越小，代表越接近超賣區
+                VR 值越小，代表越接近<strong>超賣區</strong>
                 <span class="arrow">➜ 跟直覺相反，很好考</span>
               </div>
             </div>

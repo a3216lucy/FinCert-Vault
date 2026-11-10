@@ -57,9 +57,15 @@
     {
       group: "考前速記",
       base: "/",
-      chapters: [["memory-tips.html", "記憶技巧與口訣"]],
+      chapters: [
+        ["memory-tips.html", "記憶技巧與口訣"],
+        ["practice.html", "刷題練習"],
+        ["number-drill.html", "法規數字抽考"],
+        ["wrong-book.html", "錯題本"],
+      ],
     },
   ];
+  window.GY_SITE = SITE;
 
   function buildNav() {
     var current = window.location.pathname.replace(/\/+$/, "");
@@ -360,6 +366,11 @@
         return;
       collapseDesktop(true);
     });
+
+    // ---- 練習模式／錯題本（assets/practice.js） ----
+    var practiceScript = document.createElement("script");
+    practiceScript.src = "/assets/practice.js";
+    document.body.appendChild(practiceScript);
   }
 
   if (document.readyState === "loading") {

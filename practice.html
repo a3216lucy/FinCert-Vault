@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>刷題練習｜高業考前重點</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    />
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div id="site-nav"></div>
+      <div class="content">
+        <header class="masthead">
+          <div class="masthead-inner">
+            <span class="eyebrow">考前速記 · 刷題</span>
+            <h1>刷題練習</h1>
+            <p class="dek">
+              從各章考古題隨機抽題。練習是作答後馬上對答案，模擬考是計時、交卷才看結果。答錯的題目會自動收進錯題本。
+            </p>
+          </div>
+        </header>
+        <p class="crumb"><a href="/index.html">高業考前重點</a> ／ 刷題練習</p>
+
+        <main>
+          <section class="unit">
+            <div class="tool-panel tool-grid">
+              <label class="tool-field"
+                >科目
+                <select id="f-subj">
+                  <option value="regulations">證券交易相關法規與實務</option>
+                  <option value="inv-fin">證券投資與財務分析（初業第二科）</option>
+                  <option value="investment">投資學</option>
+                  <option value="finance">財務分析</option>
+                  <option value="wrong">錯題本（全部科目）</option>
+                </select>
+              </label>
+              <label class="tool-field"
+                >章節
+                <select id="f-ch"></select>
+              </label>
+              <label class="tool-field"
+                >題數
+                <select id="f-n">
+                  <option value="10">10 題</option>
+                  <option value="20" selected>20 題</option>
+                  <option value="50">50 題</option>
+                  <option value="0">全部</option>
+                </select>
+              </label>
+              <label class="tool-field"
+                >方式
+                <select id="f-mode">
+                  <option value="practice">練習：作答後馬上對答案</option>
+                  <option value="exam">模擬考：每題 72 秒，交卷才對答案</option>
+                </select>
+              </label>
+              <label class="tool-check"
+                ><input type="checkbox" id="f-calc" /> 只出計算／數字題</label
+              >
+              <button type="button" class="tool-btn" id="start" disabled>
+                開始
+              </button>
+              <p class="tool-hint" id="pool-info">題庫載入中…</p>
+            </div>
+
+            <div class="tool-status" id="status" hidden>
+              <span id="status-text"></span>
+              <span>
+                <span class="mono" id="timer"></span>
+                <button type="button" class="tool-btn" id="submit" hidden>
+                  交卷
+                </button>
+              </span>
+            </div>
+            <div class="quiz" id="quiz"></div>
+            <div id="result"></div>
+          </section>
+        </main>
+      </div>
+    </div>
+    <script src="/assets/nav.js"></script>
+    <script src="/assets/practice.js"></script>
+    <script>
+      (function () {
+        var SUBJ_BASES = {
+          regulations: ["/regulations/"],
+          "inv-fin": ["/investment/", "/finance/"],
+          investment: ["/investment/"],
+          finance: ["/finance/"],
+        };
+        var SEC_PER_Q = 72;
+
+        var $ = function (id) {
+          return document.getElementById(id);
+        };
+        var cache = {};
+        var pool = [];
+        var timerId = null;
+
+        function chaptersFor(subj) {
+          var bases = SUBJ_BASES[subj] || [];
+          var list = [];
+          (window.GY_SITE || []).forEach(function (sec) {
+            if (bases.indexOf(sec.base) === -1) return;
+            sec.chapters.forEach(function (ch) {
+              list.push({ url: sec.base + ch[0], subj: sec.group, title: ch[1] });
+            });
+          });
+          return list;
+        }
+
+        function textOf(el) {
+          return el ? el.textContent.replace(/\s+/g, " ").trim() : "";
+        }
+
+        // 題目有數字，且至少 3 個選項是數字 → 視為計算／數字題
+        function isCalc(q) {
+          if (!/\d/.test(textOf(q.querySelector(".qtext")))) return false;
+          var n = 0;
+          q.querySelectorAll(".opt").forEach(function (o) {
+            if (/\d/.test(textOf(o).replace(/^[A-D]．/, ""))) n++;
+          });
+          return n >= 3;
+        }
+
+        function fetchChapter(ch) {
+          if (cache[ch.url]) return Promise.resolve(cache[ch.url]);
+          return fetch(ch.url)
+            .then(function (r) {
+              return r.text();
+            })
+            .then(function (html) {
+              var doc = new DOMParser().parseFromString(html, "text/html");
+              var items = [];
+              doc.querySelectorAll(".q-item").forEach(function (q) {
+                var qno = textOf(q.querySelector(".qno"));
+                q.setAttribute("data-page", ch.url);
+                q.setAttribute("data-qno", qno);
+                items.push({ node: q, ch: ch, qno: qno, calc: isCalc(q) });
+              });
+              cache[ch.url] = items;
+              return items;
+            })
+            .catch(function () {
+              return [];
+            });
+        }
+
+        function wrongItems() {
+          var book = GYPractice.load(GYPractice.BOOK_KEY, {});
+          return Object.keys(book).map(function (id) {
+            var e = book[id];
+            var q = document.createElement("div");
+            q.className = "q-item";
+            q.innerHTML = e.html;
+            q.setAttribute("data-page", e.page);
+            q.setAttribute("data-qno", e.qno);
+            return {
+              node: q,
+              ch: { url: e.page, subj: e.subj, title: e.title },
+              qno: e.qno,
+              calc: isCalc(q),
+            };
+          });
+        }
+
+        function filtered() {
+          var ch = $("f-ch").value;
+          var calc = $("f-calc").checked;
+          return pool.filter(function (it) {
+            return (!ch || it.ch.url === ch) && (!calc || it.calc);
+          });
+        }
+
+        function updateInfo() {
+          var all = filtered();
+          $("pool-info").textContent = pool.length
+            ? "符合條件的題目：" + all.length + " 題"
+            : $("f-subj").value === "wrong"
+              ? "錯題本還是空的：在練習或章節頁的練習模式答錯，題目就會收進來。"
+              : "找不到題目。";
+          $("start").disabled = !all.length;
+        }
+
+        function loadSubject() {
+          var subj = $("f-subj").value;
+          var chSel = $("f-ch");
+          $("start").disabled = true;
+          if (subj === "wrong") {
+            chSel.innerHTML = '<option value="">全部章節</option>';
+            chSel.disabled = true;
+            pool = wrongItems();
+            updateInfo();
+            return;
+          }
+          var chs = chaptersFor(subj);
+          chSel.disabled = false;
+          chSel.innerHTML =
+            '<option value="">全部章節</option>' +
+            chs
+              .map(function (c) {
+                var label = (SUBJ_BASES[subj].length > 1 ? c.subj + " " : "") + c.title;
+                return '<option value="' + c.url + '">' + label + "</option>";
+              })
+              .join("");
+          $("pool-info").textContent = "題庫載入中…";
+          Promise.all(chs.map(fetchChapter)).then(function (lists) {
+            if ($("f-subj").value !== subj) return;
+            pool = [].concat.apply([], lists);
+            updateInfo();
+          });
+        }
+
+        function shuffle(a) {
+          for (var i = a.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var t = a[i];
+            a[i] = a[j];
+            a[j] = t;
+          }
+          return a;
+        }
+
+        function fmtTime(s) {
+          var m = Math.floor(s / 60);
+          var r = s % 60;
+          return m + ":" + (r < 10 ? "0" : "") + r;
+        }
+
+        var state = null;
+
+        function updateStatus() {
+          var qs = $("quiz").querySelectorAll(".q-item");
+          var done, right;
+          if (state.exam) {
+            done = $("quiz").querySelectorAll(".opt.picked").length;
+            $("status-text").textContent = "已作答 " + done + " / " + qs.length;
+          } else {
+            done = $("quiz").querySelectorAll(".q-item.answered").length;
+            right = $("quiz").querySelectorAll(".q-item.answered .opt.picked.right").length;
+            $("status-text").textContent =
+              "已作答 " + done + " / " + qs.length + " · 答對 " + right;
+            if (done === qs.length) showResult();
+          }
+        }
+
+        function start() {
+          var items = shuffle(filtered().slice());
+          var n = parseInt($("f-n").value, 10);
+          if (n) items = items.slice(0, n);
+          var quiz = $("quiz");
+          quiz.innerHTML = "";
+          $("result").innerHTML = "";
+          var exam = $("f-mode").value === "exam";
+          quiz.classList.toggle("quiz-exam", exam);
+          items.forEach(function (it, i) {
+            var q = it.node.cloneNode(true);
+            q.classList.remove("answered");
+            q.querySelectorAll(".opt.picked").forEach(function (o) {
+              o.classList.remove("picked");
+            });
+            var qno = q.querySelector(".qno");
+            if (qno)
+              qno.textContent =
+                "第 " + (i + 1) + " 題 · " + it.ch.subj + " " + it.ch.title + " · " + it.qno;
+            quiz.appendChild(q);
+          });
+          state = { exam: exam, total: items.length, left: items.length * SEC_PER_Q };
+          clearInterval(timerId);
+          $("status").hidden = false;
+          $("status").classList.remove("urgent");
+          $("submit").hidden = !exam;
+          $("timer").textContent = exam ? fmtTime(state.left) : "";
+          if (exam) {
+            timerId = setInterval(function () {
+              state.left -= 1;
+              $("timer").textContent = fmtTime(Math.max(state.left, 0));
+              $("status").classList.toggle("urgent", state.left <= 300);
+              if (state.left <= 0) submitExam();
+            }, 1000);
+          }
+          updateStatus();
+          $("status").scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+
+        function submitExam() {
+          clearInterval(timerId);
+          var quiz = $("quiz");
+          quiz.querySelectorAll(".q-item").forEach(function (q) {
+            if (!q.classList.contains("answered"))
+              GYPractice.grade(q, q.querySelector(".opt.picked"));
+          });
+          quiz.classList.remove("quiz-exam");
+          $("submit").hidden = true;
+          showResult();
+        }
+
+        function showResult() {
+          clearInterval(timerId);
+          var qs = $("quiz").querySelectorAll(".q-item");
+          var right = $("quiz").querySelectorAll(".opt.picked.right").length;
+          var blank = 0;
+          qs.forEach(function (q) {
+            if (!q.querySelector(".opt.picked")) blank++;
+          });
+          var score = Math.round((right / qs.length) * 100);
+          $("result").innerHTML =
+            '<div class="callout-line">答對 <strong>' +
+            right + " / " + qs.length +
+            "</strong>，換算 <strong>" + score + " 分</strong>" +
+            (blank ? "（" + blank + " 題沒作答，考試時不倒扣，一定要猜）" : "") +
+            '<span class="note">答錯的題目已收進錯題本，記得寫下「錯在哪個動作」。</span></div>' +
+            '<p><a class="tool-btn ghost" href="/wrong-book.html">打開錯題本</a></p>';
+          $("status-text").textContent = "完成 · 答對 " + right + " / " + qs.length;
+          $("timer").textContent = "";
+        }
+
+        $("quiz").addEventListener("gy-graded", function () {
+          if (!state.exam) updateStatus();
+        });
+        $("quiz").addEventListener("gy-picked", updateStatus);
+        $("submit").addEventListener("click", function () {
+          var left = $("quiz").querySelectorAll(".q-item").length -
+            $("quiz").querySelectorAll(".opt.picked").length;
+          if (left && !window.confirm("還有 " + left + " 題沒作答，確定交卷？")) return;
+          submitExam();
+        });
+        $("start").addEventListener("click", start);
+        $("f-subj").addEventListener("change", loadSubject);
+        $("f-ch").addEventListener("change", updateInfo);
+        $("f-calc").addEventListener("change", updateInfo);
+
+        if (/[?&]src=wrong/.test(window.location.search)) $("f-subj").value = "wrong";
+        loadSubject();
+      })();
+    </script>
+  </body>
+</html>

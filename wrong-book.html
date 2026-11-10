@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>錯題本｜高業考前重點</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    />
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div id="site-nav"></div>
+      <div class="content">
+        <header class="masthead">
+          <div class="masthead-inner">
+            <span class="eyebrow">考前速記 · 錯題</span>
+            <h1>錯題本</h1>
+            <p class="dek">
+              不用抄詳解，只寫「我錯在哪個動作」和「正確動作」。隔天先遮住右邊自己講一次，講得出來就按「已經會了」。
+            </p>
+          </div>
+        </header>
+        <p class="crumb"><a href="/index.html">高業考前重點</a> ／ 錯題本</p>
+
+        <main>
+          <section class="unit">
+            <div class="unit-head"><h2>考古題錯題</h2></div>
+            <div class="tool-panel">
+              <label class="tool-field"
+                >科目
+                <select id="f-subj"></select>
+              </label>
+              <label class="tool-field"
+                >排序
+                <select id="f-sort">
+                  <option value="wrong">錯最多次的在前</option>
+                  <option value="last">最近答錯的在前</option>
+                </select>
+              </label>
+              <a class="tool-btn" href="/practice.html?src=wrong">用錯題本出題</a>
+              <p class="tool-hint" id="wb-info"></p>
+            </div>
+            <div id="wb-list"></div>
+          </section>
+
+          <section class="unit">
+            <div class="unit-head"><h2>法規數字錯題</h2></div>
+            <div class="explain">
+              <p class="tool-hint" id="nd-info"></p>
+              <div class="tbl-wrap" id="nd-table"></div>
+              <p><a class="tool-btn ghost" href="/number-drill.html">去數字抽考刷錯題</a></p>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+    <script src="/assets/nav.js"></script>
+    <script src="/assets/practice.js"></script>
+    <script>
+      (function () {
+        var $ = function (id) {
+          return document.getElementById(id);
+        };
+        var BOOK_KEY = GYPractice.BOOK_KEY;
+
+        function esc(s) {
+          return String(s).replace(/[&<>"]/g, function (c) {
+            return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+          });
+        }
+        function day(ts) {
+          if (!ts) return "";
+          var d = new Date(ts);
+          return d.getMonth() + 1 + "/" + d.getDate();
+        }
+
+        function renderBook() {
+          var book = GYPractice.load(BOOK_KEY, {});
+          var ids = Object.keys(book);
+          var subjSel = $("f-subj");
+          var current = subjSel.value;
+          var subjs = [];
+          ids.forEach(function (id) {
+            if (subjs.indexOf(book[id].subj) === -1) subjs.push(book[id].subj);
+          });
+          subjSel.innerHTML =
+            '<option value="">全部（' + ids.length + " 題）</option>" +
+            subjs
+              .map(function (s) {
+                var n = ids.filter(function (id) {
+                  return book[id].subj === s;
+                }).length;
+                return '<option value="' + esc(s) + '">' + esc(s) + "（" + n + " 題）</option>";
+              })
+              .join("");
+          if (subjs.indexOf(current) !== -1) subjSel.value = current;
+
+          var list = ids
+            .filter(function (id) {
+              return !subjSel.value || book[id].subj === subjSel.value;
+            })
+            .sort(function (a, b) {
+              var x = book[a];
+              var y = book[b];
+              return $("f-sort").value === "wrong"
+                ? y.wrong - x.wrong || (y.last || 0) - (x.last || 0)
+                : (y.last || 0) - (x.last || 0);
+            });
+
+          $("wb-info").textContent = ids.length
+            ? "共 " + list.length + " 題"
+            : "還沒有錯題。到「刷題練習」，或在章節頁打開側邊欄的「練習模式」作答，答錯的題目會自動收進來。";
+
+          $("wb-list").innerHTML = list
+            .map(function (id) {
+              var e = book[id];
+              return (
+                '<div class="wb-entry" data-id="' + esc(id) + '">' +
+                '<div class="wb-meta"><span>' +
+                esc(e.subj + " " + e.title + " · " + e.qno) +
+                " · 錯 " + e.wrong + " 次 · " + day(e.last) +
+                '</span><button type="button" class="tool-btn ghost" data-act="remove">已經會了，移除</button></div>' +
+                '<div class="q-item answered">' +
+                e.html.replace(/<p class="qno">[\s\S]*?<\/p>/, "") +
+                "</div>" +
+                '<div class="tool-note">' +
+                '<label>我錯在哪個動作<textarea data-field="note" placeholder="例：分子用了期末存貨">' +
+                esc(e.note || "") + "</textarea></label>" +
+                '<label>正確動作<textarea data-field="fix" placeholder="例：分子是銷貨成本，分母用平均存貨">' +
+                esc(e.fix || "") + "</textarea></label>" +
+                "</div></div>"
+              );
+            })
+            .join("");
+        }
+
+        $("wb-list").addEventListener("input", function (e) {
+          var field = e.target.getAttribute("data-field");
+          if (!field) return;
+          var id = e.target.closest(".wb-entry").getAttribute("data-id");
+          var book = GYPractice.load(BOOK_KEY, {});
+          if (!book[id]) return;
+          book[id][field] = e.target.value;
+          GYPractice.save(BOOK_KEY, book);
+        });
+        $("wb-list").addEventListener("click", function (e) {
+          if (e.target.getAttribute("data-act") !== "remove") return;
+          var id = e.target.closest(".wb-entry").getAttribute("data-id");
+          var book = GYPractice.load(BOOK_KEY, {});
+          delete book[id];
+          GYPractice.save(BOOK_KEY, book);
+          renderBook();
+        });
+        $("f-subj").addEventListener("change", renderBook);
+        $("f-sort").addEventListener("change", renderBook);
+        renderBook();
+
+        // ---- 數字抽考的錯題（答錯過、還沒連續答對 2 次） ----
+        var store = GYPractice.load("gy-numdrill", {});
+        fetch("/assets/number-drill.json")
+          .then(function (r) {
+            return r.json();
+          })
+          .then(function (data) {
+            var rows = data
+              .filter(function (it) {
+                var rec = store[it.id];
+                return rec && rec.w > 0 && rec.s < 2;
+              })
+              .sort(function (a, b) {
+                return store[b.id].w - store[a.id].w;
+              });
+            $("nd-info").textContent = rows.length
+              ? "共 " + rows.length + " 題，連續答對 2 次會自動移出。"
+              : "目前沒有數字錯題。";
+            if (!rows.length) return;
+            $("nd-table").innerHTML =
+              "<table><tr><th>情境</th><th>正解</th><th>易混</th><th>錯</th></tr>" +
+              rows
+                .map(function (it) {
+                  return (
+                    "<tr><td>" + esc(it.q) + "</td><td><strong>" + esc(it.a) +
+                    "</strong></td><td>" + esc(it.mix || "") + "</td><td>" +
+                    store[it.id].w + "</td></tr>"
+                  );
+                })
+                .join("") +
+              "</table>";
+          });
+      })();
+    </script>
+  </body>
+</html>

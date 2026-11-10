@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>法規數字抽考｜高業考前重點</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    />
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div id="site-nav"></div>
+      <div class="content">
+        <header class="masthead">
+          <div class="masthead-inner">
+            <span class="eyebrow">考前速記 · 數字</span>
+            <h1>法規數字抽考</h1>
+            <p class="dek">
+              一題一個情境，數字挖空，干擾選項都是容易搞混的相近數字。答錯的題目這一輪會再出現一次，也會記進錯題本。
+            </p>
+          </div>
+        </header>
+        <p class="crumb"><a href="/index.html">高業考前重點</a> ／ 法規數字抽考</p>
+
+        <main>
+          <section class="unit">
+            <div class="tool-panel">
+              <label class="tool-field"
+                >章節
+                <select id="f-ch"></select>
+              </label>
+              <label class="tool-field"
+                >類型
+                <select id="f-kind">
+                  <option value="">全部</option>
+                  <option>比例</option>
+                  <option>日數</option>
+                  <option>月數</option>
+                  <option>年數</option>
+                  <option>金額</option>
+                  <option>次數</option>
+                  <option>人數</option>
+                </select>
+              </label>
+              <label class="tool-field"
+                >題數
+                <select id="f-n">
+                  <option value="20" selected>20 題</option>
+                  <option value="50">50 題</option>
+                  <option value="0">全部</option>
+                </select>
+              </label>
+              <label class="tool-check"
+                ><input type="checkbox" id="f-wrong" /> 只練錯題</label
+              >
+              <button type="button" class="tool-btn" id="start" disabled>
+                開始
+              </button>
+              <p class="tool-hint" id="pool-info">題庫載入中…</p>
+            </div>
+
+            <div class="tool-status" id="status" hidden>
+              <span id="status-text"></span>
+              <span class="mono" id="score"></span>
+            </div>
+            <div class="drill" id="drill"></div>
+          </section>
+        </main>
+      </div>
+    </div>
+    <script src="/assets/nav.js"></script>
+    <script>
+      (function () {
+        var STORE_KEY = "gy-numdrill";
+        var $ = function (id) {
+          return document.getElementById(id);
+        };
+        var data = [];
+        var round = null;
+
+        function load() {
+          try {
+            return JSON.parse(localStorage.getItem(STORE_KEY)) || {};
+          } catch (e) {
+            return {};
+          }
+        }
+        function save(s) {
+          try {
+            localStorage.setItem(STORE_KEY, JSON.stringify(s));
+          } catch (e) {}
+        }
+        // 答錯過、而且還沒連續答對 2 次 → 算錯題
+        function isWrong(rec) {
+          return rec && rec.w > 0 && rec.s < 2;
+        }
+        function esc(s) {
+          return String(s).replace(/[&<>"]/g, function (c) {
+            return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+          });
+        }
+        function shuffle(a) {
+          for (var i = a.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var t = a[i];
+            a[i] = a[j];
+            a[j] = t;
+          }
+          return a;
+        }
+
+        function regChapters() {
+          var sec = (window.GY_SITE || []).filter(function (s) {
+            return s.base === "/regulations/";
+          })[0];
+          return sec ? sec.chapters : [];
+        }
+        function chTitle(ch) {
+          var n = parseInt(ch.replace(/\D/g, ""), 10);
+          var c = regChapters()[n - 1];
+          return c ? c[1] : ch;
+        }
+
+        function filtered() {
+          var ch = $("f-ch").value;
+          var kind = $("f-kind").value;
+          var onlyWrong = $("f-wrong").checked;
+          var store = load();
+          return data.filter(function (it) {
+            return (
+              (!ch || it.ch === ch) &&
+              (!kind || it.kind === kind) &&
+              (!onlyWrong || isWrong(store[it.id]))
+            );
+          });
+        }
+
+        function updateInfo() {
+          var store = load();
+          var wrongCount = data.filter(function (it) {
+            return isWrong(store[it.id]);
+          }).length;
+          var n = filtered().length;
+          $("pool-info").textContent =
+            "符合條件 " + n + " 題 · 目前錯題 " + wrongCount + " 題（連續答對 2 次就會移出）";
+          $("start").disabled = !n;
+        }
+
+        function start() {
+          var items = shuffle(filtered().slice());
+          var n = parseInt($("f-n").value, 10);
+          if (n) items = items.slice(0, n);
+          round = { queue: items, pos: 0, right: 0, done: 0, requeued: {} };
+          $("status").hidden = false;
+          show();
+          $("status").scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+
+        function show() {
+          var box = $("drill");
+          if (round.pos >= round.queue.length) {
+            $("status-text").textContent = "這一輪完成";
+            box.innerHTML =
+              '<div class="callout-line">答對 <strong>' + round.right + " / " + round.done +
+              '</strong><span class="note">答錯的題目已記下，勾「只練錯題」再刷一輪。</span></div>' +
+              '<div class="drill-next"><button type="button" class="tool-btn" id="again">再來一輪</button></div>';
+            $("again").addEventListener("click", start);
+            updateInfo();
+            return;
+          }
+          var it = round.queue[round.pos];
+          var opts = shuffle([it.a].concat(it.d));
+          var letters = ["A", "B", "C", "D"];
+          $("status-text").textContent =
+            "第 " + (round.pos + 1) + " / " + round.queue.length + " 題";
+          $("score").textContent = "答對 " + round.right + " / " + round.done;
+          box.innerHTML =
+            '<div class="q-item">' +
+            '<p class="qno">' + esc(it.ch) + " " + esc(chTitle(it.ch)) + " · " + esc(it.kind) + "</p>" +
+            '<p class="qtext">' + esc(it.q) + "</p>" +
+            '<div class="opts">' +
+            opts
+              .map(function (o, i) {
+                return (
+                  '<div class="opt' + (o === it.a ? " right" : "") + '" data-i="' + i + '">' +
+                  letters[i] + "．" + esc(o) + "</div>"
+                );
+              })
+              .join("") +
+            "</div>" +
+            '<p class="why"><strong>答案：</strong>' + esc(it.a) +
+            (it.mix ? "<br />易混：" + esc(it.mix) : "") +
+            (it.url ? '<br />出處：<a href="' + it.url + '">' + esc(chTitle(it.ch)) + "</a>" : "") +
+            "</p></div>" +
+            '<div class="drill-next" hidden><button type="button" class="tool-btn" id="next">下一題 →</button></div>';
+          box.querySelectorAll(".opt").forEach(function (el) {
+            el.addEventListener("click", function () {
+              answer(el);
+            });
+          });
+          $("next").addEventListener("click", next);
+        }
+
+        function answer(el) {
+          var q = el.closest(".q-item");
+          if (q.classList.contains("answered")) return;
+          var it = round.queue[round.pos];
+          var ok = el.classList.contains("right");
+          q.classList.add("answered");
+          el.classList.add("picked");
+          round.done++;
+          if (ok) round.right++;
+          var store = load();
+          var rec = store[it.id] || { w: 0, s: 0 };
+          if (ok) {
+            rec.s += 1;
+          } else {
+            rec.w += 1;
+            rec.s = 0;
+            // 這一輪 3 題後再考一次
+            if (!round.requeued[it.id]) {
+              round.requeued[it.id] = true;
+              round.queue.splice(Math.min(round.pos + 4, round.queue.length), 0, it);
+            }
+          }
+          store[it.id] = rec;
+          save(store);
+          $("score").textContent = "答對 " + round.right + " / " + round.done;
+          $("drill").querySelector(".drill-next").hidden = false;
+          $("next").focus();
+        }
+
+        function next() {
+          round.pos++;
+          show();
+        }
+
+        // 鍵盤：1–4 或 A–D 作答，Enter 下一題
+        document.addEventListener("keydown", function (e) {
+          if (!round || e.target.tagName === "SELECT" || e.target.tagName === "INPUT") return;
+          var q = $("drill").querySelector(".q-item");
+          if (!q) return;
+          var k = e.key.toUpperCase();
+          var idx = "1234".indexOf(k) !== -1 ? "1234".indexOf(k) : "ABCD".indexOf(k);
+          if (idx !== -1 && k.length === 1 && !q.classList.contains("answered")) {
+            var el = q.querySelectorAll(".opt")[idx];
+            if (el) answer(el);
+          } else if (e.key === "Enter" && q.classList.contains("answered") && e.target.id !== "next") {
+            next();
+          }
+        });
+
+        $("f-ch").innerHTML =
+          '<option value="">全部章節</option>' +
+          regChapters()
+            .map(function (c, i) {
+              var code = "CH" + (i < 9 ? "0" : "") + (i + 1);
+              return '<option value="' + code + '">' + esc(c[1]) + "</option>";
+            })
+            .join("");
+        ["f-ch", "f-kind", "f-wrong"].forEach(function (id) {
+          $(id).addEventListener("change", updateInfo);
+        });
+        $("start").addEventListener("click", start);
+
+        fetch("/assets/number-drill.json")
+          .then(function (r) {
+            return r.json();
+          })
+          .then(function (d) {
+            data = d;
+            updateInfo();
+          })
+          .catch(function () {
+            $("pool-info").textContent = "題庫載入失敗，請重新整理。";
+          });
+      })();
+    </script>
+  </body>
+</html>

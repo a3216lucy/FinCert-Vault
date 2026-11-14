@@ -18,9 +18,7 @@
           <div class="masthead-inner">
             <span class="eyebrow">考前速記 · 刷題</span>
             <h1>刷題練習</h1>
-            <p class="dek">
-              從各章考古題隨機抽題。練習是作答後馬上對答案，模擬考是計時、交卷才看結果。答錯的題目會自動收進錯題本。
-            </p>
+            <p class="dek">從各章考古題隨機抽題。</p>
           </div>
         </header>
         <p class="crumb"><a href="/index.html">高業考前重點</a> ／ 刷題練習</p>
@@ -31,11 +29,19 @@
               <label class="tool-field"
                 >科目
                 <select id="f-subj">
-                  <option value="regulations">證券交易相關法規與實務</option>
-                  <option value="inv-fin">證券投資與財務分析（初業第二科）</option>
-                  <option value="investment">投資學</option>
-                  <option value="finance">財務分析</option>
-                  <option value="wrong">錯題本（全部科目）</option>
+                  <optgroup label="初業">
+                    <option value="c-regulations">初業｜證券交易相關法規與實務</option>
+                    <option value="inv-fin">初業｜證券投資與財務分析</option>
+                    <option value="chuye">初業｜我的錯題（兩科）</option>
+                  </optgroup>
+                  <optgroup label="高業">
+                    <option value="regulations">高業｜證券交易相關法規與實務</option>
+                    <option value="investment">高業｜投資學</option>
+                    <option value="finance">高業｜財務分析</option>
+                  </optgroup>
+                  <optgroup label="錯題">
+                    <option value="wrong">錯題本（全部科目）</option>
+                  </optgroup>
                 </select>
               </label>
               <label class="tool-field"
@@ -88,6 +94,7 @@
       (function () {
         var SUBJ_BASES = {
           regulations: ["/regulations/"],
+          "c-regulations": ["/regulations/"],
           "inv-fin": ["/investment/", "/finance/"],
           investment: ["/investment/"],
           finance: ["/finance/"],
@@ -101,13 +108,72 @@
         var pool = [];
         var timerId = null;
 
+        // 初業錯題：題目放在 /concept-review.html，依 data-cat 分成法規／投資／財分三個章節，只出現在初業科目
+        var CHUYE_URL = "/concept-review.html";
+        var CHUYE_CATS = {
+          reg: {
+            url: CHUYE_URL + "#reg",
+            subj: "初業錯題",
+            title: "初業錯題－法規與實務",
+          },
+          inv: {
+            url: CHUYE_URL + "#inv",
+            subj: "初業錯題",
+            title: "初業錯題－投資學",
+          },
+          fin: {
+            url: CHUYE_URL + "#fin",
+            subj: "初業錯題",
+            title: "初業錯題－財務分析",
+          },
+        };
+        var CHUYE_FOR = {
+          chuye: ["reg", "inv", "fin"],
+          "c-regulations": ["reg"],
+          "inv-fin": ["inv", "fin"],
+        };
+        SUBJ_BASES.chuye = [];
+
+        function chuyeChapters(subj) {
+          return (CHUYE_FOR[subj] || []).map(function (c) {
+            return CHUYE_CATS[c];
+          });
+        }
+
+        function fetchChuye(subj) {
+          var cats = CHUYE_FOR[subj] || [];
+          if (!cats.length) return Promise.resolve([]);
+          return fetchChapter({
+            url: CHUYE_URL,
+            subj: "初業錯題",
+            title: "初業錯題",
+          }).then(function (items) {
+            return items
+              .filter(function (it) {
+                return cats.indexOf(it.node.getAttribute("data-cat")) !== -1;
+              })
+              .map(function (it) {
+                return {
+                  node: it.node,
+                  ch: CHUYE_CATS[it.node.getAttribute("data-cat")],
+                  qno: it.qno,
+                  calc: it.calc,
+                };
+              });
+          });
+        }
+
         function chaptersFor(subj) {
           var bases = SUBJ_BASES[subj] || [];
           var list = [];
           (window.GY_SITE || []).forEach(function (sec) {
             if (bases.indexOf(sec.base) === -1) return;
             sec.chapters.forEach(function (ch) {
-              list.push({ url: sec.base + ch[0], subj: sec.group, title: ch[1] });
+              list.push({
+                url: sec.base + ch[0],
+                subj: sec.group,
+                title: ch[1],
+              });
             });
           });
           return list;
@@ -198,21 +264,30 @@
             return;
           }
           var chs = chaptersFor(subj);
+          var extra = chuyeChapters(subj);
           chSel.disabled = false;
           chSel.innerHTML =
             '<option value="">全部章節</option>' +
             chs
               .map(function (c) {
-                var label = (SUBJ_BASES[subj].length > 1 ? c.subj + " " : "") + c.title;
+                var label =
+                  (SUBJ_BASES[subj].length > 1 ? c.subj + " " : "") + c.title;
                 return '<option value="' + c.url + '">' + label + "</option>";
+              })
+              .join("") +
+            extra
+              .map(function (c) {
+                return '<option value="' + c.url + '">' + c.title + "</option>";
               })
               .join("");
           $("pool-info").textContent = "題庫載入中…";
-          Promise.all(chs.map(fetchChapter)).then(function (lists) {
-            if ($("f-subj").value !== subj) return;
-            pool = [].concat.apply([], lists);
-            updateInfo();
-          });
+          Promise.all(chs.map(fetchChapter).concat([fetchChuye(subj)])).then(
+            function (lists) {
+              if ($("f-subj").value !== subj) return;
+              pool = [].concat.apply([], lists);
+              updateInfo();
+            },
+          );
         }
 
         function shuffle(a) {
@@ -241,7 +316,9 @@
             $("status-text").textContent = "已作答 " + done + " / " + qs.length;
           } else {
             done = $("quiz").querySelectorAll(".q-item.answered").length;
-            right = $("quiz").querySelectorAll(".q-item.answered .opt.picked.right").length;
+            right = $("quiz").querySelectorAll(
+              ".q-item.answered .opt.picked.right",
+            ).length;
             $("status-text").textContent =
               "已作答 " + done + " / " + qs.length + " · 答對 " + right;
             if (done === qs.length) showResult();
@@ -266,10 +343,21 @@
             var qno = q.querySelector(".qno");
             if (qno)
               qno.textContent =
-                "第 " + (i + 1) + " 題 · " + it.ch.subj + " " + it.ch.title + " · " + it.qno;
+                "第 " +
+                (i + 1) +
+                " 題 · " +
+                it.ch.subj +
+                " " +
+                it.ch.title +
+                " · " +
+                it.qno;
             quiz.appendChild(q);
           });
-          state = { exam: exam, total: items.length, left: items.length * SEC_PER_Q };
+          state = {
+            exam: exam,
+            total: items.length,
+            left: items.length * SEC_PER_Q,
+          };
           clearInterval(timerId);
           $("status").hidden = false;
           $("status").classList.remove("urgent");
@@ -310,12 +398,19 @@
           var score = Math.round((right / qs.length) * 100);
           $("result").innerHTML =
             '<div class="callout-line">答對 <strong>' +
-            right + " / " + qs.length +
-            "</strong>，換算 <strong>" + score + " 分</strong>" +
-            (blank ? "（" + blank + " 題沒作答，考試時不倒扣，一定要猜）" : "") +
+            right +
+            " / " +
+            qs.length +
+            "</strong>，換算 <strong>" +
+            score +
+            " 分</strong>" +
+            (blank
+              ? "（" + blank + " 題沒作答，考試時不倒扣，一定要猜）"
+              : "") +
             '<span class="note">答錯的題目已收進錯題本，記得寫下「錯在哪個動作」。</span></div>' +
             '<p><a class="tool-btn ghost" href="/wrong-book.html">打開錯題本</a></p>';
-          $("status-text").textContent = "完成 · 答對 " + right + " / " + qs.length;
+          $("status-text").textContent =
+            "完成 · 答對 " + right + " / " + qs.length;
           $("timer").textContent = "";
         }
 
@@ -324,9 +419,11 @@
         });
         $("quiz").addEventListener("gy-picked", updateStatus);
         $("submit").addEventListener("click", function () {
-          var left = $("quiz").querySelectorAll(".q-item").length -
+          var left =
+            $("quiz").querySelectorAll(".q-item").length -
             $("quiz").querySelectorAll(".opt.picked").length;
-          if (left && !window.confirm("還有 " + left + " 題沒作答，確定交卷？")) return;
+          if (left && !window.confirm("還有 " + left + " 題沒作答，確定交卷？"))
+            return;
           submitExam();
         });
         $("start").addEventListener("click", start);
@@ -334,7 +431,8 @@
         $("f-ch").addEventListener("change", updateInfo);
         $("f-calc").addEventListener("change", updateInfo);
 
-        if (/[?&]src=wrong/.test(window.location.search)) $("f-subj").value = "wrong";
+        if (/[?&]src=wrong/.test(window.location.search))
+          $("f-subj").value = "wrong";
         loadSubject();
       })();
     </script>

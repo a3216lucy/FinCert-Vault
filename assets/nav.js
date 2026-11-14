@@ -59,6 +59,7 @@
       base: "/",
       chapters: [
         ["memory-tips.html", "記憶技巧與口訣"],
+        ["concept-review.html", "錯題觀念白話整理"],
         ["practice.html", "刷題練習"],
         ["number-drill.html", "法規數字抽考"],
         ["wrong-book.html", "錯題本"],
